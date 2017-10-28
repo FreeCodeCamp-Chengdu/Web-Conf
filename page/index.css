@@ -51,35 +51,35 @@ body {
 }
 
 .guest-avater0 {
-    background: url('./lib/guests/guest0.jpeg');
+    background: url('../lib/guests/guest0.jpeg');
 }
 
 .guest-avater1 {
-    background: url('./lib/guests/guest1.jpeg');
+    background: url('../lib/guests/guest1.jpeg');
 }
 
 .guest-avater2 {
-    background: url('./lib/guests/guest2.jpeg');
+    background: url('../lib/guests/guest2.jpeg');
 }
 
 .guest-avater3 {
-    background: url('./lib/guests/guest3.jpeg');
+    background: url('../lib/guests/guest3.jpeg');
 }
 
 .guest-avater4 {
-    background: url('./lib/guests/guest4.jpeg');
+    background: url('../lib/guests/guest4.jpeg');
 }
 
 .guest-avater5 {
-    background: url('./lib/guests/guest5.jpeg');
+    background: url('../lib/guests/guest5.jpeg');
 }
 
 .guest-avater6 {
-    background: url('./lib/guests/guest6.jpeg');
+    background: url('../lib/guests/guest6.jpeg');
 }
 
 .guest-avater7 {
-    background: url('./lib/guests/guest7.jpeg');
+    background: url('../lib/guests/guest7.jpeg');
 }
 
 .guest .guest-name {
@@ -95,7 +95,7 @@ body {
 #map {
     width: 100%;
     height: 400px;
-    background: url('./lib/address.jpeg');
+    background: url('../lib/address.jpeg');
     background-position: center;
     background-size: cover;
 }
@@ -137,6 +137,9 @@ body {
     margin: auto;
     max-width: 280px;
     max-height: 70px;
+}
+footer {
+    text-align:    center;
 }
 
 @media (max-width: 680px) {
