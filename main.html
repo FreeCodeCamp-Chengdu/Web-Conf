@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>2017成都WEB前端交流大会</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="FCC成都" name="author" />
+    <meta content="2017成都web前端交流大会" name="description" />
+    <meta content="前端交流大会" name="description" />
+    <link rel="shortcut icon" href="./lib/favicon.ico" type="image/x-icon" />
+    <!-- 引入样式 -->
+    <link href="https://cdn.bootcss.com/element-ui/2.0.0-alpha.2/theme-chalk/index.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+    <!-- 先引入 Vue -->
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.min.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://cdn.bootcss.com/element-ui/2.0.0-alpha.2/index.js"></script>
+    <!-- 高德地图 -->
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.1&key=35ab387f5545fcac92ea3a1aa1b4b21c"></script>
+</head>
+
+<body>
+    <div id="app">
+        <el-row style="box-shadow: 0px 3px 15px #aaa;">
+            <el-col :span="24">
+                <div id="logo">
+                    <img src="./lib/banner.jpeg" />
+                </div>
+            </el-col>
+            <el-col :span="24">
+                <div id="introduce">
+                    <h2 class="title">
+                        <span>INTRODUCE</span>
+                        <span>活动介绍</span>
+                    </h2>
+                    <p>【2017成都前端交流大会】是由FreeCodeCamp成都社区组织者之一的何青松(前端工程师)发起，整个社区主办的一场大型前端交流大会。目的是为成都的前端开发工程师、前端爱好者、技术爱好者以及用户提供一个开放互动的交流大会，为成都前端圈带来一场饕餮盛宴。热情邀约你的参与...</p>
+                </div>
+            </el-col>
+        </el-row>
+        <el-row style="margin: auto;margin-top: 48px;width: 80%;">
+            <el-col :xs="24" :sm="12" :md="6" :lg="6" v-for="guest in guests">
+                <div class="guest">
+                    <div class="guest-avater" :class='guest.avater'></div>
+                    <h2 class="guest-name">{{guest.name}}</h2>
+                    <p>{{guest.description}}</p>
+                </div>
+            </el-col>
+        </el-row>
+        <el-row style="margin: auto;margin-top: 48px;width: 80%;">
+            <el-col :span="24">
+                <h2 class="title">
+                    <span>SCHEDULE</span>
+                    <span>活动流程</span>
+                </h2>
+                <el-collapse v-model="activeNames" accordion>
+                    <el-collapse-item :name="key" v-for="(flow, key) in flows">
+                        <template slot="title">
+                            <span style="width: 62px;display: inline-flex;">{{flow.time}}</span>
+                            <span>{{flow.contnet}}</span>
+                        </template>
+                        <div v-if="flow.guest">【主题描述】 {{flow.description}}</div>
+                    </el-collapse-item>
+                </el-collapse>
+            </el-col>
+        </el-row>
+        <el-row style="margin: auto;margin-top: 48px;width: 80%;">
+            <el-col :span="24">
+                <h2 class="title">
+                    <span>ADDRESS</span>
+                    <span>活动地址</span>
+                </h2>
+                <div id="map"></div>
+            </el-col>
+        </el-row>
+        <el-row style="margin: auto;margin-top: 48px;width: 80%;">
+            <el-col :span="24" class="logos">
+                <h2 class="title">
+                    <span>SPONSORS</span>
+                    <span>主办单位</span>
+                </h2>
+                <a href="https://www.freecodecamp.cn">
+                    <img src="./lib/logos/logo.jpeg" />
+                </a>
+                <h2 class="title">
+                    <span>冠名赞助</span>
+                </h2>
+                <a href="https://www.bbdservice.com">
+                    <img src="./lib/logos/logo1.jpeg" />
+                </a>
+                <h2 class="title">
+                    <span>赞助单位</span>
+                </h2>
+                <ul>
+                    <li>
+                        <a href="https://www.3wcoffee.com">
+                            <img src="./lib/logos/logo2.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.broadview.com.cn/">
+                            <img src="./lib/logos/logo3.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.doctorwork.com/">
+                            <img src="./lib/logos/logo4.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.shiyanlou.com/">
+                            <img src="./lib/logos/logo9.jpeg" />
+                        </a>
+                    </li>
+                </ul>
+                <h2 class="title">
+                    <span>合作社区</span>
+                </h2>
+                <ul>
+                    <li>
+                        <a href=" https://www.oschina.net/">
+                            <img src="./lib/logos/logo5.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://segmentfault.com/">
+                            <img src="./lib/logos/logo6.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href=" https://juejin.im/">
+                            <img src="./lib/logos/logo7.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.maiziedu.com/">
+                            <img src="./lib/logos/logo8.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.google.com">
+                            <img src="./lib/logos/logo11.jpeg" />
+                        </a>
+                    </li>
+                </ul>
+                <h2 class="title">
+                    <span>合作媒体</span>
+                </h2>
+                <a href="http://www.itdks.com/">
+                    <img src="./lib/logos/logo10.jpeg" />
+                </a>
+            </el-col>
+            <el-col :span="24">
+                <a href="http://cn.mikecrm.com/rdVltvT" class="btn">我 要 报 名</a>
+            </el-col>
+        </el-row>
+    </div>
+</body>
+<script>
+    // var map = new AMap.Map('map', {
+    //     resizeEnable: true,
+    //     zoom: 11,
+    //     center: [104.062948, 30.539245]
+    // });
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                activeNames: ['1'],
+                menu: [
+                    { en: 'INTRODUCE', zn: '活动介绍' },
+                    { en: 'SPEAKER', zn: '分享嘉宾' },
+                    { en: 'SCHEDULE', zn: '活动流程' },
+                    { en: 'ADDRESS', zn: '活动地址' },
+                    { en: 'SPONSORS', zn: '主办单位' },
+                ],
+                guests: [
+                    { name: '叶小钗', avater: 'guest-avater0', contnet: '叶小钗嘉宾开场演讲', description: '原医联研发副总监，现为企鹅医生技术总监，研发负责人。先后任职于携程百度等公司，擅长前端开发，混合开发，对大型前端项目开发有一些认识，平时喜欢霹雳布袋戏。' },
+                    { name: '陈洋彬', avater: 'guest-avater7', contnet: '一个node模块的自我修养', description: '麦麦养老软件研发负责人，持续创业者。在研发团队搭建、管理与技术体系渐进增强方面有一定心得。多年web前端、服务端研发及架构设计经验，关注技术的原理与融会贯通，主张编码与工程的专业、规范、极简。' },
+                    { name: '水歌', avater: 'guest-avater4', contnet: '轻量级 Web MVVM 引擎的实现', description: '东方天呈web前端工程师，JavaScript 全栈开发者、开源软件作者、FreeCodeCamp 中文社区技术布道师、四川大学飞扬俱乐部研发部创始团队成员、jQuery贡献者。' },
+                    { name: '廖伟', avater: 'guest-avater5', contnet: 'HTML5跨平台解决方案实践', description: '乐车邦前端开发负责人。曾就职于携程移动端框架技术部，负责构建代码的打包平台，维护共用组件，目前在乐车邦主要负责整个前端（浏览器，微信，小程序，app），致力于解决一套代码多端运行的方案，主要擅长SPA应用的开发，具有丰富的SPA开发经验。' },
+                    { name: '胡敏', avater: 'guest-avater2', contnet: 'Vue开发那些事', description: '新蛋高级软件工程师。目前主要负责Web模块化开发平台建设与开发工作，擅长功能设计与实现。对前后端开发有较多实践经验。' },
+                    { name: '董涛', avater: 'guest-avater6', contnet: '大数据可视化之美', description: '5年前端经验，热爱钻研各种技术，喜欢写代码，工作之余著有MTUI、H5DS两个开源项目。现BBD前端部部门经理，对web交互，以及数据可视化有丰富经验。' },
+                    { name: '卢林', avater: 'guest-avater3', contnet: 'React组件化通用模式', description: '国双科技高级软件工程师，曾供职于奇虎360奇舞团、麦客CRM。目前专注于端技术体系，喜欢思考软件开发的通用模式。' },
+                    { name: '余泽江', avater: 'guest-avater1', contnet: 'Angular挣脱舒适区的枷锁', description: 'ThoughtWorks 咨询师，有着丰富的前后端项目开发经验，目前专注于前端领域的技术实践。Angular 项目活跃的 Community Contributor，广泛涉猎于国内的 Angular 技术布道工作。' },
+                ],
+                flows: [
+                    { time: '09：00', guest: false, contnet: '签到,早鸟有礼品 ', description: '' },
+                    { time: '09：30', guest: false, contnet: '主办方致辞、活动开场 ', description: '' },
+                    { time: '09：50', guest: 0, contnet: '叶小钗嘉宾开场演讲 ', description: '' },
+                    { time: '10：20', guest: 1, contnet: '一个node模块的自我修养 ', description: '作为一个“全干”工程师，与你朝夕相处的Node模块，说简单可以简单到一个index.js和一个package.json，说复杂也可以复杂到必须引入工程化的理念来管理。本分享来一起探讨下一个开源Node模块，所应该考虑的目录结构、代码检查、单元测试、基准测试、持续集成、自动构建、版本发布、变更记录等等这些需求，如何高效、规范的去实现' },
+                    { time: '11：10', guest: 2, contnet: '轻量级 Web MVVM 引擎的实现 ', description: '只依赖 HTML 5、JS (ES 5) 的纯异步加载、声明式的 MVVM 引擎，它的简洁用法与内部实现' },
+                    { time: '12：00', guest: false, contnet: '午餐时间&与嘉宾近距离交流时间  ', description: '' },
+                    { time: '13：00', guest: 3, contnet: 'HTML5跨平台解决方案实践 ', description: '乐车邦创业阶段，前端开发人数相对较少，但是平台众多，常用的如: 浏览器，乐车邦App,微信公众号网页版本，微信小程序。还有不计其数的定制化流量平台，如： 手淘，百度地图，汽车之家，百度糯米，58到家，新美大等等，虽然渠道众多，但是业务流程相对统一，如何利用一套h5代码解决多终端运行问题成了前端重中之重。' },
+                    { time: '13：50', guest: 4, contnet: 'Vue开发那些事 ', description: '通过对Vue项目开发中遇到的部分通用问题进行分解，探索特定问题或场景的解决方案。从目录结构划分、业务封装等方面来提升项目的可维护性。' },
+                    { time: '14：40', guest: 5, contnet: '大数据可视化之美 ', description: '如何让繁杂的数据以最简最直观的形式呈现在用户的眼前？数据可视化真的那么高不可攀吗？今天就让我们来聊聊大数据可视化的常用技巧和常用算法吧！' },
+                    { time: '15：40', guest: 6, contnet: 'React组件化通用模式 ', description: '通过 React 项目的开发过程以及多个框架的使用，提取组件化开发的通用思路，对组件化、组件容器化以及微服务前端开发方式的一点思考。' },
+                    { time: '16：35', guest: 7, contnet: 'Angular挣脱舒适区的枷锁 ', description: '作为一个大而全的开发平台，Angular 团队提供了完善的开发环境：各类功能库、命令行工具、IDE 集成、移动端支持等等。然而，原生支持的完备性也为部分 Angular 开发者建立起了狭隘的舒适区，使得一些人放弃了探索，把官方支持当作了 Angular 的一切，自身沦落到日复一日调试 Component 和 Service 的搬砖工作中。其实，在 Angular 官方舒适区之外仍然存在很大的世界。比如我们可以使用 Webpack 之外的工具构建出比 jQuery 更小的完整应用，可以动态加载任意远程组件而无需统一打包，可以在 AOT 编译下实现运行时动态拼接视图...本次分享将会带来舒适区之外的无限可能。' },
+                    { time: '17：25', guest: false, contnet: '活动结束、留影 ', description: '' },
+                ]
+            }
+        }
+    })
+</script>
+
+</html>

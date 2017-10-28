@@ -1,0 +1,160 @@
+body {
+    padding: 0px;
+    margin: 0px auto 40px;
+    max-width: 1600px;
+    width: 100%;
+    color: #666;
+    line-height: 26px;
+}
+
+.title {
+    margin: 40px auto 20px;
+}
+
+.title span {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #006400;
+}
+
+#logo {
+    width: 100%;
+    background-position: center;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#introduce {
+    min-height: 200px;
+    height: auto;
+    width: 80%;
+    margin: auto;
+}
+
+.guest {
+    margin: 15px;
+    text-align: center;
+}
+
+.guest .guest-avater {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid 2px #ddd;
+    box-shadow: 0px 5px 15px #aaa;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.guest-avater0 {
+    background: url('./lib/guests/guest0.jpeg');
+}
+
+.guest-avater1 {
+    background: url('./lib/guests/guest1.jpeg');
+}
+
+.guest-avater2 {
+    background: url('./lib/guests/guest2.jpeg');
+}
+
+.guest-avater3 {
+    background: url('./lib/guests/guest3.jpeg');
+}
+
+.guest-avater4 {
+    background: url('./lib/guests/guest4.jpeg');
+}
+
+.guest-avater5 {
+    background: url('./lib/guests/guest5.jpeg');
+}
+
+.guest-avater6 {
+    background: url('./lib/guests/guest6.jpeg');
+}
+
+.guest-avater7 {
+    background: url('./lib/guests/guest7.jpeg');
+}
+
+.guest .guest-name {
+    font-size: 20px;
+}
+
+.guest p {
+    font-size: 12px;
+    text-align: left;
+}
+
+/* 地图 */
+#map {
+    width: 100%;
+    height: 400px;
+    background: url('./lib/address.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* 报名链接 */
+.btn {
+    width: 100%;
+    display: block;
+    background: #409eff;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 40px auto;
+}
+
+/* 主办方、赞助方、合作社区 */
+.logos {
+    text-align: center;
+}
+.logos a {
+    display: inline-flex;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: 0px 4px 15px #999;
+    justify-content: center;
+    align-items: center;
+}
+.logos ul,
+.logos ul li {
+    list-style: none;
+    padding-left: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+.logos img {
+    margin: auto;
+    max-width: 280px;
+    max-height: 70px;
+}
+
+@media (max-width: 680px) {
+    #introduce {
+        font-size: 12px;
+    }
+    .guest .guest-name {
+        font-size: 16px;
+    }
+    .title {
+        margin: 20px auto 20px;
+        font-size: 18px;
+    }
+    .title span {
+        margin-bottom: 5px;
+    }
+    .logos ul,
+    .logos ul li {
+        margin: 10px 0px;
+    }
+}
