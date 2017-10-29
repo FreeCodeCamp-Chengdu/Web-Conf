@@ -145,5 +145,80 @@ define({
             "contnet": "活动结束、留影 ",
             "description": ""
         }
+    ],
+    logos: [
+        {
+            title: '主办单位',
+            childrens: [
+                {
+                    img: './lib/logos/logo.jpeg',
+                    url: 'https://www.freecodecamp.cn'
+                }
+            ]
+        },
+        {
+            title: '冠名赞助',
+            childrens: [
+                {
+                    img: './lib/logos/logo1.jpeg',
+                    url: 'https://www.bbdservice.com'
+                }
+            ]
+        },
+        {
+            title: '赞助单位',
+            childrens: [
+                {
+                    img: './lib/logos/logo2.jpeg',
+                    url: 'http://www.3wcoffee.com/'
+                },
+                {
+                    img: './lib/logos/logo3.jpeg',
+                    url: 'http://www.3wcoffee.com/'
+                },
+                {
+                    img: './lib/logos/logo4.jpeg',
+                    url: 'https://www.doctorwork.com/'
+                },
+                {
+                    img: './lib/logos/logo9.jpeg',
+                    url: 'https://www.shiyanlou.com/'
+                }
+            ]
+        },
+        {
+            title: '合作社区',
+            childrens: [
+                {
+                    img: './lib/logos/logo5.jpeg',
+                    url: 'https://www.oschina.net/'
+                },
+                {
+                    img: './lib/logos/logo6.jpeg',
+                    url: 'https://segmentfault.com/'
+                },
+                {
+                    img: './lib/logos/logo7.jpeg',
+                    url: 'https://juejin.im/'
+                },
+                {
+                    img: './lib/logos/logo8.jpeg',
+                    url: 'http://www.maiziedu.com/'
+                },
+                {
+                    img: './lib/logos/logo1.jpeg',
+                    url: 'https://www.google.com/'
+                }
+            ]
+        },
+        {
+            title: '合作媒体',
+            childrens: [
+                {
+                    img: './lib/logos/logo10.jpeg',
+                    url: 'http://www.itdks.com/'
+                }
+            ]
+        },
     ]
 });

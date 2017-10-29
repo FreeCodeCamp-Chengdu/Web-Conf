@@ -11,7 +11,7 @@
 
     <title>2017 成都 Web 前端交流大会</title>
 
-    <meta content="FCC 成都" name="author" />
+    <meta content="FCC成都 姜姜姜" name="author" />
     <meta content="前端交流大会" name="description" />
     <meta content="2017 成都 Web 前端交流大会" name="description" />
 
@@ -93,92 +93,18 @@
         </el-row>
         <el-row class="web-content">
             <el-col :span="24" class="logos">
-                <h2 class="title">
-                    <span>SPONSORS</span>
-                    <span>主办单位</span>
-                </h2>
-                <ul>
-                    <li>
-                        <a href="https://www.freecodecamp.cn">
-                            <img src="./lib/logos/logo.jpeg" />
-                        </a>
-                    </li>
-                </ul>
-                <h2 class="title">
-                    <span>冠名赞助</span>
-                </h2>
-                <ul>
-                    <li>
-                        <a href="https://www.bbdservice.com">
-                            <img src="./lib/logos/logo1.jpeg" />
-                        </a>
-                    </li>
-                </ul>
-                <h2 class="title">
-                    <span>赞助单位</span>
-                </h2>
-                <ul>
-                    <li>
-                        <a href="http://www.3wcoffee.com/">
-                            <img src="./lib/logos/logo2.jpeg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.broadview.com.cn/">
-                            <img src="./lib/logos/logo3.jpeg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.doctorwork.com/">
-                            <img src="./lib/logos/logo4.jpeg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.shiyanlou.com/">
-                            <img src="./lib/logos/logo9.jpeg" />
-                        </a>
-                    </li>
-                </ul>
-                <h2 class="title">
-                    <span>合作社区</span>
-                </h2>
-                <ul>
-                    <li>
-                        <a href=" https://www.oschina.net/">
-                            <img src="./lib/logos/logo5.jpeg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://segmentfault.com/">
-                            <img src="./lib/logos/logo6.jpeg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href=" https://juejin.im/">
-                            <img src="./lib/logos/logo7.jpeg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.maiziedu.com/">
-                            <img src="./lib/logos/logo8.jpeg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com/">
-                            <img src="./lib/logos/logo11.jpeg" />
-                        </a>
-                    </li>
-                </ul>
-                <h2 class="title">
-                    <span>合作媒体</span>
-                </h2>
-                <ul>
-                    <li>
-                        <a href="http://www.itdks.com/">
-                            <img src="./lib/logos/logo10.jpeg" />
-                        </a>
-                    </li>
-                </ul>
+                <div v-for="logo in logos">
+                    <h2 class="title">
+                        <span>{{logo.title}}</span>
+                    </h2>
+                    <ul>
+                        <li v-for="children in logo.childrens">
+                            <a :href="children.url">
+                                <img :src="children.img" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <h2 class="title">
                     <span>海报设计师</span>
                 </h2>
