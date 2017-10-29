@@ -160,7 +160,16 @@ footer .qrcode{
     margin: 15px;
 }
 
+footer p, footer a{
+    color: #444;
+    font-size: 14px;
+}
+
 @media (max-width: 768px) {
+    #logo img {
+        width: 140%;
+        margin-left: -20%;
+    }
     #introduce {
         font-size: 12px;
         padding: 0px 0px 20px 0px;

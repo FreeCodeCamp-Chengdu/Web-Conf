@@ -128,19 +128,25 @@ define({
             "description": "【主题描述】如何让繁杂的数据以最简最直观的形式呈现在用户的眼前？数据可视化真的那么高不可攀吗？今天就让我们来聊聊大数据可视化的常用技巧和常用算法吧！"
         },
         {
-            "time": "15：40",
+            "time": "15：20",
+            "guest": false,
+            "contnet": "茶歇&开放式交流",
+            "description": ""
+        },
+        {
+            "time": "15：50",
             "guest": 7,
             "contnet": "React组件化通用模式 ",
             "description": "【主题描述】通过 React 项目的开发过程以及多个框架的使用，提取组件化开发的通用思路，对组件化、组件容器化以及微服务前端开发方式的一点思考。"
         },
         {
-            "time": "16：35",
+            "time": "16：40",
             "guest": 8,
             "contnet": "Angular挣脱舒适区的枷锁 ",
             "description": "【主题描述】作为一个大而全的开发平台，Angular 团队提供了完善的开发环境：各类功能库、命令行工具、IDE 集成、移动端支持等等。然而，原生支持的完备性也为部分 Angular 开发者建立起了狭隘的舒适区，使得一些人放弃了探索，把官方支持当作了 Angular 的一切，自身沦落到日复一日调试 Component 和 Service 的搬砖工作中。其实，在 Angular 官方舒适区之外仍然存在很大的世界。比如我们可以使用 Webpack 之外的工具构建出比 jQuery 更小的完整应用，可以动态加载任意远程组件而无需统一打包，可以在 AOT 编译下实现运行时动态拼接视图...本次分享将会带来舒适区之外的无限可能。"
         },
         {
-            "time": "17：25",
+            "time": "17：30",
             "guest": false,
             "contnet": "活动结束、留影 ",
             "description": ""
@@ -174,7 +180,7 @@ define({
                 },
                 {
                     img: './lib/logos/logo3.jpeg',
-                    url: 'http://www.3wcoffee.com/'
+                    url: 'http://www.broadview.com.cn/'
                 },
                 {
                     img: './lib/logos/logo4.jpeg',
@@ -206,8 +212,12 @@ define({
                     url: 'http://www.maiziedu.com/'
                 },
                 {
-                    img: './lib/logos/logo1.jpeg',
-                    url: 'https://www.google.com/'
+                    img: './lib/logos/logo11.jpeg',
+                    url: 'https://developers.google.com/groups'
+                },
+                {
+                    img: './lib/logos/logo12.png',
+                    url: 'http://www.tianhukeji.com/'
                 }
             ]
         },
