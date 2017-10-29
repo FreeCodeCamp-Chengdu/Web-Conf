@@ -27,6 +27,7 @@ body {
 
 #logo {
     width: 100%;
+    overflow-x: hidden;
     background-position: center;
 }
 
