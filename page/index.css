@@ -47,7 +47,7 @@ body {
     margin: 15px;
     text-align: center;
 }
-.guest .guest-avater {
+.guest .guest-avatar {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -56,30 +56,6 @@ body {
     margin: auto;
     background-position: center;
     background-size: cover;
-}
-.guest-avater0 {
-    background: url('../lib/guests/guest0.jpeg');
-}
-.guest-avater1 {
-    background: url('../lib/guests/guest1.jpeg');
-}
-.guest-avater2 {
-    background: url('../lib/guests/guest2.jpeg');
-}
-.guest-avater3 {
-    background: url('../lib/guests/guest3.jpeg');
-}
-.guest-avater4 {
-    background: url('../lib/guests/guest4.jpeg');
-}
-.guest-avater5 {
-    background: url('../lib/guests/guest5.jpeg');
-}
-.guest-avater6 {
-    background: url('../lib/guests/guest6.jpeg');
-}
-.guest-avater7 {
-    background: url('../lib/guests/guest7.jpeg');
 }
 .guest .guest-name {
     font-size: 20px;
@@ -106,7 +82,19 @@ body {
     background-position: center;
     background-size: cover;
 }
-
+#Map_Info {
+	display:         none;
+    padding-left:    4px;
+}
+#Map_Info > h3 {
+	margin:    0;
+}
+#Map_Info > ul {
+    font-size:    14px;
+}
+#Map_Info > small {
+	color:    red;
+}
 /* 报名链接 */
 .btn {
     width: 100%;
@@ -178,7 +166,7 @@ footer p, footer a{
         font-size: 12px;
         line-height: 18px;
     }
-    .guest .guest-avater {
+    .guest .guest-avatar {
         width: 80px;
         height: 80px;
     }

@@ -1,6 +1,5 @@
 <!DocType HTML>
 <html lang="zh-CN">
-
 <head>
     <meta charset="utf-8" />
 
@@ -15,6 +14,8 @@
     <meta content="前端交流大会" name="description" />
     <meta content="2017 成都 Web 前端交流大会" name="description" />
 
+    <base href="http://web-conf.leanapp.cn/" />
+
     <link rel="shortcut icon" href="./lib/favicon.ico" type="image/x-icon" />
     <!-- 引入样式 -->
     <link href="https://cdn.bootcss.com/element-ui/2.0.0-alpha.2/theme-chalk/index.css" rel="stylesheet">
@@ -23,12 +24,12 @@
     <script src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
     <script>
         require.config({
-            baseUrl: 'lib/',
-            paths: {
-                jquery: 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min',
-                vue: 'https://cdn.bootcss.com/vue/2.4.4/vue.min',
-                ELEMENT: 'https://cdn.bootcss.com/element-ui/2.0.0-alpha.2/index',
-                index: '../page/index-json'
+            baseUrl:    'lib/',
+            paths:      {
+                jquery:     'https://cdn.bootcss.com/jquery/3.2.1/jquery.min',
+                vue:        'https://cdn.bootcss.com/vue/2.4.4/vue.min',
+                ELEMENT:    'https://cdn.bootcss.com/element-ui/2.0.0-alpha.2/index',
+                index:      '../page/index-json'
             }
         });
     </script>
@@ -36,7 +37,6 @@
     <!-- 高德地图 -->
     <script src="https://webapi.amap.com/maps?v=1.4.1&key=35ab387f5545fcac92ea3a1aa1b4b21c"></script>
 </head>
-
 <body>
     <img style="display: none;" src="./lib/wechatLogo.jpeg" />
     <div id="app">
@@ -54,7 +54,9 @@
                         <span>INTRODUCE</span>
                         <span>活动介绍</span>
                     </h2>
-                    <p style="text-indent: 2em;">在过去的一年里，freeCodeCamp 成都社区成功举办了 30+ 次活动。2017 年已接近尾声，在组织部何青松的倡议下，我们筹备了这次【2017成都WEB前端交流大会】。目的是为成都的前端开发工程师、前端爱好者、技术爱好者以及用户提供一个开放互动的交流大会，为成都前端圈带来一场饕餮盛宴，我们热情邀约你的参与...</p>
+                    <p style="text-indent: 2em;">
+                        在过去的一年里，freeCodeCamp 成都社区成功举办了 30+ 次活动。2017 年已接近尾声，在组织部何青松的倡议下，我们筹备了这次【2017 成都 Web 前端交流大会】。目的是为成都的前端开发工程师、前端爱好者、技术爱好者以及用户提供一个开放互动的交流大会，为成都前端圈带来一场饕餮盛宴，我们热情邀约你的参与……
+                    </p>
                 </div>
             </el-col>
         </el-row>
@@ -65,7 +67,9 @@
             </h2>
             <el-col :xs="24" :sm="12" :md="6" :lg="6" v-for="guest in guests">
                 <div class="guest">
-                    <div class="guest-avater" :class='guest.avater'></div>
+                    <div class="guest-avatar"
+                         :style="'background-image: url(lib/guests/' + guest.avatar + ')'">
+                    </div>
                     <h2 class="guest-name">{{guest.name}}</h2>
                     <p>{{guest.description}}</p>
                 </div>
@@ -81,7 +85,7 @@
                     <el-collapse-item :name="key" v-for="(flow, key) in flows">
                         <template slot="title">
                             <span class="flow-time">{{flow.time}}</span>
-                            <span :class="{flowtheme: flow.guest}">{{flow.contnet}}</span>
+                            <span :class="{flowtheme: flow.guest}">{{flow.content}}</span>
                         </template>
                         <div>{{flow.description}}</div>
                     </el-collapse-item>
@@ -94,7 +98,7 @@
                     <span>ADDRESS</span>
                     <span>活动地址</span>
                 </h2>
-                <p style="text-align: center;">成都市高新区天府五街200号菁蓉国际广场6栋A区 3W COFFEE</p>
+                <p style="text-align: center;">成都市高新区天府五街 200 号菁蓉国际广场 6 栋 A 区 3W COFFEE</p>
             </el-col>
         </el-row>
         <el-row class="web-content">
@@ -120,11 +124,22 @@
     <footer>
         <img class="qrcode" src="./lib/qrcode.jpeg" />
         <p style="margin-top: 0px;">
-            <a target="_blank" href="https://github.com/FreeCodeCamp-Chengdu/FreeCodeCamp-Chengdu.github.io">freeCodeCamp 成都社区</a>
+            <a target="_blank" href="https://chengdu.freecodecamp.cn/">
+                freeCodeCamp 成都社区
+            </a>
         </p>
         <div id="map"></div>
-        <p style="color: #ddd;font-size: 12px;">Copyright © 2017 freeCodeCamp 成都社区</p>
+        <div id="Map_Info">
+            <h3>会场信息</h3>
+            <ul>
+                <li>电话：15196426026（宋美女）</li>
+                <li>地铁：一号线 天府五街 B 出口（步行 800 米）</li>
+                <li>公交：天府五街站、天府四街站</li>
+                <li>地址：高新区天府五街 200 号菁蓉国际广场 6 栋 A 区 3W COFFEE</li>
+            </ul>
+            <small>点击图标 - 打开高德地图进行导航</small>
+        </div>
+        <p style="color: #ddd;font-size: 12px;">© 2017 freeCodeCamp 成都社区</p>
     </footer>
 </body>
-
 </html>

@@ -1,0 +1,35 @@
+{
+  "name": "web-conf",
+  "version": "1.0.0",
+  "description": "Web Developer Conference in Chengdu, China",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreeCodeCamp-Chengdu/WFE-Conf.git"
+  },
+  "keywords": [
+    "Web",
+    "developer",
+    "conference",
+    "China",
+    "Chengdu"
+  ],
+  "author": "FreeCodeCamp Chengdu Group",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/issues"
+  },
+  "homepage": "https://github.com/FreeCodeCamp-Chengdu/WFE-Conf#readme",
+  "engines": {
+    "node": "^6.5"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "leancloud-storage": "^3.3.1",
+    "leanengine": "^3.0.2"
+  }
+}
