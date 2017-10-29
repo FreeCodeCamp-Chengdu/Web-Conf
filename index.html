@@ -11,7 +11,7 @@
 
     <title>2017 成都 Web 前端交流大会</title>
 
-    <meta content="FCC成都 姜姜姜" name="author" />
+    <meta content="FCC成都" name="author" />
     <meta content="前端交流大会" name="description" />
     <meta content="2017 成都 Web 前端交流大会" name="description" />
 
@@ -38,14 +38,16 @@
 </head>
 
 <body>
+    <img style="display: none;" src="./lib/wechatLogo.jpeg" />
     <div id="app">
         <el-row>
             <el-col :span="24">
                 <div id="logo">
-                    <img src="./lib/banner1.jpeg" />
-                    <!-- <i class="el-icon-arrow-down" /> -->
+                    <img src="./lib/banner.jpeg" />
                 </div>
             </el-col>
+        </el-row>
+        <el-row>
             <el-col :span="24">
                 <div id="introduce">
                     <h2 class="title">
@@ -57,6 +59,10 @@
             </el-col>
         </el-row>
         <el-row class="web-content">
+            <h2 class="title">
+                <span>SPEAKER</span>
+                <span>分享嘉宾</span>
+            </h2>
             <el-col :xs="24" :sm="12" :md="6" :lg="6" v-for="guest in guests">
                 <div class="guest">
                     <div class="guest-avater" :class='guest.avater'></div>
@@ -88,7 +94,7 @@
                     <span>ADDRESS</span>
                     <span>活动地址</span>
                 </h2>
-                <div id="map"></div>
+                <p style="text-align: center;">成都市高新区天府五街200号菁蓉国际广场6栋A区 3W COFFEE</p>
             </el-col>
         </el-row>
         <el-row class="web-content">
@@ -116,6 +122,7 @@
         <p style="margin-top: 0px;">
             <a target="_blank" href="https://github.com/FreeCodeCamp-Chengdu/FreeCodeCamp-Chengdu.github.io">freeCodeCamp 成都社区</a>
         </p>
+        <div id="map"></div>
         <p style="color: #ddd;font-size: 12px;">Copyright © 2017 freeCodeCamp 成都社区</p>
     </footer>
 </body>

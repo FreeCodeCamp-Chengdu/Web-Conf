@@ -5,6 +5,7 @@ body {
     width: 100%;
     color: #666;
     line-height: 26px;
+    overflow-x: hidden;
 }
 
 .web-content{
@@ -151,7 +152,7 @@ footer {
     width: 100%;
     padding: 32px 10%;
     box-sizing: border-box;
-    height: 340px;
+    /* height: 340px; */
 }
 
 footer .qrcode{
@@ -171,8 +172,10 @@ footer p, footer a{
         margin-left: -20%;
     }
     #introduce {
-        font-size: 12px;
         padding: 0px 0px 20px 0px;
+    }
+    #introduce p{
+        font-size: 12px;
         line-height: 18px;
     }
     .guest .guest-avater {
