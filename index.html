@@ -39,10 +39,11 @@
 
 <body>
     <div id="app">
-        <el-row style="box-shadow: 0px 3px 15px #aaa;">
+        <el-row>
             <el-col :span="24">
                 <div id="logo">
                     <img src="./lib/banner.jpeg" />
+                    <!-- <i class="el-icon-arrow-down" /> -->
                 </div>
             </el-col>
             <el-col :span="24">
@@ -74,9 +75,9 @@
                     <el-collapse-item :name="key" v-for="(flow, key) in flows">
                         <template slot="title">
                             <span class="flow-time">{{flow.time}}</span>
-                            <span>{{flow.contnet}}</span>
+                            <span :class="{flowtheme: flow.guest}">{{flow.contnet}}</span>
                         </template>
-                        <div v-if="flow.guest">【主题描述】 {{flow.description}}</div>
+                        <div>{{flow.description}}</div>
                     </el-collapse-item>
                 </el-collapse>
             </el-col>

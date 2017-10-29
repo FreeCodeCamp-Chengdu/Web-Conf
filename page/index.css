@@ -34,7 +34,7 @@ body {
 }
 
 #introduce {
-    min-height: 200px;
+    /* min-height: 200px; */
     height: auto;
     width: 80%;
     margin: auto;
@@ -92,6 +92,9 @@ body {
 .flow-time{
     width: 62px;
     display: inline-flex;
+}
+.flowtheme{
+    color: #409eff;
 }
 
 /* 地图 */
@@ -161,9 +164,17 @@ footer .qrcode{
     #introduce {
         font-size: 12px;
         padding: 0px 0px 20px 0px;
+        line-height: 18px;
+    }
+    .guest .guest-avater {
+        width: 80px;
+        height: 80px;
     }
     .guest .guest-name {
         font-size: 16px;
+    }
+    .guest p{
+        line-height: 18px;
     }
     .title {
         margin: 20px auto 20px;
