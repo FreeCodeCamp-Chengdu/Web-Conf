@@ -43,13 +43,13 @@ define({
         },
         {
             "name": "廖伟",
-            "avater": "guest-avater5",
+            "avater": "guest-avater2",
             "contnet": "HTML5跨平台解决方案实践",
             "description": "乐车邦前端开发负责人。曾就职于携程移动端框架技术部，负责构建代码的打包平台，维护共用组件，目前在乐车邦主要负责整个前端（浏览器，微信，小程序，app），致力于解决一套代码多端运行的方案，主要擅长SPA应用的开发，具有丰富的SPA开发经验。"
         },
         {
             "name": "胡敏",
-            "avater": "guest-avater2",
+            "avater": "guest-avater5",
             "contnet": "Vue开发那些事",
             "description": "新蛋高级软件工程师。目前主要负责Web模块化开发平台建设与开发工作，擅长功能设计与实现。对前后端开发有较多实践经验。"
         },
@@ -77,13 +77,13 @@ define({
             "time": "09：00",
             "guest": false,
             "contnet": "签到,早鸟有礼品 ",
-            "description": ""
+            "description": "【备注】扫码签到"
         },
         {
             "time": "09：30",
             "guest": false,
             "contnet": "主办方致辞、活动开场 ",
-            "description": ""
+            "description": "【备注】为了更好的活动参与体验，将手机调制静音，方便你我他..."
         },
         {
             "time": "09：50",
@@ -131,7 +131,7 @@ define({
             "time": "15：20",
             "guest": false,
             "contnet": "茶歇&开放式交流",
-            "description": ""
+            "description": "【备注】BBD 为大家准备了精美的茶歇~ "
         },
         {
             "time": "15：50",
@@ -149,7 +149,7 @@ define({
             "time": "17：30",
             "guest": false,
             "contnet": "活动结束、留影 ",
-            "description": ""
+            "description": "留下美好的瞬间~"
         }
     ],
     logos: [
