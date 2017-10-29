@@ -29,9 +29,9 @@ require([
                     position:marker.getPosition()
                 })
             })
-            if(AMap.UA.mobile){
-                document.getElementById('button_group').style.display='none';
-            }
+            // if(AMap.UA.mobile){
+            //     document.getElementById('button_group').style.display='none';
+            // }
         }
 
         //在指定位置打开信息窗体
