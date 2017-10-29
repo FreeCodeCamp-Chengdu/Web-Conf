@@ -1,10 +1,16 @@
 body {
     padding: 0px;
-    margin: 0px auto 40px;
+    margin: 0px auto;
     max-width: 1600px;
     width: 100%;
     color: #666;
     line-height: 26px;
+}
+
+.web-content{
+    margin: auto;
+    margin-top: 48px;
+    width: 80%;
 }
 
 .title {
@@ -34,11 +40,12 @@ body {
     margin: auto;
 }
 
+
+/* 嘉宾 */
 .guest {
     margin: 15px;
     text-align: center;
 }
-
 .guest .guest-avater {
     width: 100px;
     height: 100px;
@@ -49,46 +56,42 @@ body {
     background-position: center;
     background-size: cover;
 }
-
 .guest-avater0 {
     background: url('../lib/guests/guest0.jpeg');
 }
-
 .guest-avater1 {
     background: url('../lib/guests/guest1.jpeg');
 }
-
 .guest-avater2 {
     background: url('../lib/guests/guest2.jpeg');
 }
-
 .guest-avater3 {
     background: url('../lib/guests/guest3.jpeg');
 }
-
 .guest-avater4 {
     background: url('../lib/guests/guest4.jpeg');
 }
-
 .guest-avater5 {
     background: url('../lib/guests/guest5.jpeg');
 }
-
 .guest-avater6 {
     background: url('../lib/guests/guest6.jpeg');
 }
-
 .guest-avater7 {
     background: url('../lib/guests/guest7.jpeg');
 }
-
 .guest .guest-name {
     font-size: 20px;
 }
-
 .guest p {
     font-size: 12px;
     text-align: left;
+}
+
+/* 流程 */
+.flow-time{
+    width: 62px;
+    display: inline-flex;
 }
 
 /* 地图 */
@@ -108,7 +111,7 @@ body {
     text-align: center;
     color: #fff;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 0px;
     margin: 40px auto;
 }
 
@@ -138,8 +141,20 @@ body {
     max-width: 280px;
     max-height: 70px;
 }
+
 footer {
     text-align:    center;
+    background-color: #f7fbfd;
+    width: 100%;
+    padding: 40px 10%;
+    box-sizing: border-box;
+    height: 340px;
+}
+
+footer .qrcode{
+    width: 160px;
+    display: inline-block;
+    margin: 15px;
 }
 
 @media (max-width: 680px) {
@@ -160,5 +175,20 @@ footer {
     .logos ul,
     .logos ul li {
         margin: 10px 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .web-content{
+        margin-top: 36px;
+        width: 90%;
+    }
+    .logos a{
+        width: 280px;
+        height: 100px;
+    }
+    .logos img {
+        max-width: 260px;
+        max-height: 60px;
     }
 }
