@@ -46,7 +46,7 @@ define({
         {
             "name": "余泽江",
             "avatar": "guest1.jpeg",
-            "content": "Angular 挣脱舒适区的枷锁",
+            "content": "Angular: 挣脱舒适区的枷锁",
             "description": "ThoughtWorks 咨询师，有着丰富的前后端项目开发经验，目前专注于前端领域的技术实践。Angular 项目活跃的 Community Contributor，广泛涉猎于国内的 Angular 技术布道工作。"
         }
     ],
