@@ -135,7 +135,7 @@ define({
             title: '主办单位',
             childrens: [
                 {
-                    img: 'lib/logos/logo.jpeg',
+                    img: 'lib/logos/FCC.png',
                     url: 'https://www.freecodecamp.cn'
                 }
             ]
@@ -144,7 +144,7 @@ define({
             title: '冠名赞助',
             childrens: [
                 {
-                    img: 'lib/logos/logo1.jpeg',
+                    img: 'lib/logos/BBD.png',
                     url: 'https://www.bbdservice.com'
                 }
             ]
@@ -153,19 +153,19 @@ define({
             title: '赞助单位',
             childrens: [
                 {
-                    img: 'lib/logos/logo2.jpeg',
+                    img: 'lib/logos/3W.png',
                     url: 'http://www.3wcoffee.com/'
                 },
                 {
-                    img: 'lib/logos/logo3.jpeg',
+                    img: 'lib/logos/BW.png',
                     url: 'http://www.broadview.com.cn/'
                 },
                 {
-                    img: 'lib/logos/logo4.jpeg',
+                    img: 'lib/logos/QE.png',
                     url: 'https://www.doctorwork.com/'
                 },
                 {
-                    img: 'lib/logos/logo9.jpeg',
+                    img: 'lib/logos/SYL.png',
                     url: 'https://www.shiyanlou.com/'
                 }
             ]
@@ -174,28 +174,36 @@ define({
             title: '合作社区',
             childrens: [
                 {
-                    img: 'lib/logos/logo5.jpeg',
+                    img: 'lib/logos/QS.png',
                     url: 'https://www.oschina.net/'
                 },
                 {
-                    img: 'lib/logos/logo6.jpeg',
+                    img: 'lib/logos/SF.png',
                     url: 'https://segmentfault.com/'
                 },
                 {
-                    img: 'lib/logos/logo7.jpeg',
+                    img: 'lib/logos/JJ.png',
                     url: 'https://juejin.im/'
                 },
                 {
-                    img: 'lib/logos/logo8.jpeg',
+                    img: 'lib/logos/MZ.png',
                     url: 'http://www.maiziedu.com/'
                 },
                 {
-                    img: 'lib/logos/logo11.jpeg',
+                    img: 'lib/logos/GDG.png',
                     url: 'https://developers.google.com/groups'
                 },
                 {
-                    img: 'lib/logos/logo12.png',
+                    img: 'lib/logos/TH.png',
                     url: 'http://www.tianhukeji.com/'
+                },
+                {
+                    img: 'lib/logos/ZDK.png',
+                    url: 'http://www.zaoduke.net/'
+                },
+                {
+                    img: 'lib/logos/WORK.png',
+                    url: 'http://workjia.cn/'
                 }
             ]
         },
@@ -203,7 +211,7 @@ define({
             title: '合作媒体',
             childrens: [
                 {
-                    img: 'lib/logos/logo10.jpeg',
+                    img: 'lib/logos/DKS.png',
                     url: 'http://www.itdks.com/'
                 }
             ]
