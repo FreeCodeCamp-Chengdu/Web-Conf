@@ -186,6 +186,10 @@ define({
                     url: 'https://juejin.im/'
                 },
                 {
+                    img: 'lib/logos/TW.png',
+                    url: 'https://www.thoughtworks.com/cn/'
+                },
+                {
                     img: 'lib/logos/MZ.png',
                     url: 'http://www.maiziedu.com/'
                 },
