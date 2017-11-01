@@ -174,7 +174,7 @@ define({
             title: '合作社区',
             childrens: [
                 {
-                    img: 'lib/logos/QS.png',
+                    img: 'lib/logos/OS.png',
                     url: 'https://www.oschina.net/'
                 },
                 {
