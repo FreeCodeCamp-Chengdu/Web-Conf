@@ -120,6 +120,7 @@ body {
     box-shadow: 0px 4px 15px #999;
     justify-content: center;
     align-items: center;
+    padding: 1em;
 }
 .logos ul,
 .logos ul li {
@@ -130,9 +131,8 @@ body {
     margin: 10px;
 }
 .logos img {
-    margin: auto;
-    max-width: 280px;
-    max-height: 70px;
+    max-width:     100%;
+    max-height:    100%;
 }
 
 footer {

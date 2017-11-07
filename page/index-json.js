@@ -46,7 +46,7 @@ define({
         {
             "name": "余泽江",
             "avatar": "guest1.jpeg",
-            "content": "Angular: 挣脱舒适区的枷锁",
+            "content": "Angular：挣脱舒适区的枷锁",
             "description": "ThoughtWorks 咨询师，有着丰富的前后端项目开发经验，目前专注于前端领域的技术实践。Angular 项目活跃的 Community Contributor，广泛涉猎于国内的 Angular 技术布道工作。"
         }
     ],
@@ -120,7 +120,7 @@ define({
         {
             "time": "16：40",
             "guest": 8,
-            "content": "Angular 挣脱舒适区的枷锁",
+            "content": "Angular：挣脱舒适区的枷锁",
             "description": "【主题描述】作为一个大而全的开发平台，Angular 团队提供了完善的开发环境：各类功能库、命令行工具、IDE 集成、移动端支持等等。然而，原生支持的完备性也为部分 Angular 开发者建立起了狭隘的舒适区，使得一些人放弃了探索，把官方支持当作了 Angular 的一切，自身沦落到日复一日调试 Component 和 Service 的搬砖工作中。其实，在 Angular 官方舒适区之外仍然存在很大的世界。比如我们可以使用 Webpack 之外的工具构建出比 jQuery 更小的完整应用，可以动态加载任意远程组件而无需统一打包，可以在 AOT 编译下实现运行时动态拼接视图…… 本次分享将会带来舒适区之外的无限可能。"
         },
         {
@@ -135,7 +135,7 @@ define({
             title: '主办单位',
             childrens: [
                 {
-                    img: 'lib/logos/FCC.png',
+                    img: 'lib/logos/FCC-CDG.jpg',
                     url: 'https://www.freecodecamp.cn'
                 }
             ]
