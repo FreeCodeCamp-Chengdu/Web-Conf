@@ -157,7 +157,7 @@ define({
                     url: 'http://www.3wcoffee.com/'
                 },
                 {
-                    img: 'lib/logos/QRGC.png',
+                    img: 'lib/logos/QRGJ.png',
                     url: 'http://www.cdht.gov.cn/cycjcyyq/50449.jhtml'
                 },
                 {
