@@ -150,12 +150,25 @@ define({
             ]
         },
         {
-            title: '赞助单位',
+            title: '协办单位',
             childrens: [
                 {
                     img: 'lib/logos/3W.png',
                     url: 'http://www.3wcoffee.com/'
                 },
+                {
+                    img: 'lib/logos/QRGC.png',
+                    url: 'http://www.cdht.gov.cn/cycjcyyq/50449.jhtml'
+                },
+                {
+                    img: 'lib/logos/HCXY.png',
+                    url: 'hhttp://www.hechuangxinye.com/'
+                }
+            ]
+        },
+        {
+            title: '赞助单位',
+            childrens: [
                 {
                     img: 'lib/logos/BW.png',
                     url: 'http://www.broadview.com.cn/'
@@ -174,6 +187,10 @@ define({
             title: '合作社区',
             childrens: [
                 {
+                    img: 'lib/logos/JJ.png',
+                    url: 'https://juejin.im/'
+                },
+                {
                     img: 'lib/logos/OS.png',
                     url: 'https://www.oschina.net/'
                 },
@@ -182,12 +199,8 @@ define({
                     url: 'https://segmentfault.com/'
                 },
                 {
-                    img: 'lib/logos/JJ.png',
-                    url: 'https://juejin.im/'
-                },
-                {
-                    img: 'lib/logos/TW.png',
-                    url: 'https://www.thoughtworks.com/cn/'
+                    img: 'lib/logos/ZDK.png',
+                    url: 'http://www.zaoduke.net/'
                 },
                 {
                     img: 'lib/logos/MZ.png',
@@ -202,12 +215,12 @@ define({
                     url: 'http://www.tianhukeji.com/'
                 },
                 {
-                    img: 'lib/logos/ZDK.png',
-                    url: 'http://www.zaoduke.net/'
-                },
-                {
                     img: 'lib/logos/WORK.png',
                     url: 'http://workjia.cn/'
+                },
+                {
+                    img: 'lib/logos/TW.png',
+                    url: 'https://www.thoughtworks.com/cn/'
                 }
             ]
         },
