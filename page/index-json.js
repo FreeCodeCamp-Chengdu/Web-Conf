@@ -174,12 +174,16 @@ define({
                     url: 'http://www.broadview.com.cn/'
                 },
                 {
-                    img: 'lib/logos/QE.png',
-                    url: 'https://www.doctorwork.com/'
+                    img: 'lib/logos/GT.png',
+                    url: 'http://www.getui.com/cn/index.html'
                 },
                 {
                     img: 'lib/logos/SYL.png',
                     url: 'https://www.shiyanlou.com/'
+                },
+                {
+                    img: 'lib/logos/QE.png',
+                    url: 'https://www.doctorwork.com/'
                 }
             ]
         },
