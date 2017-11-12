@@ -170,7 +170,11 @@ define({
             title: '赞助单位',
             childrens: [
                 {
-                    img: 'lib/logos/BW.png',
+                    img: 'lib/logos/DevEco.png',
+                    url: 'https://www.freecodecamp.cn'
+                },
+                {
+                    img: 'lib/logos/BW.jpg',
                     url: 'http://www.broadview.com.cn/'
                 },
                 {
@@ -215,16 +219,16 @@ define({
                     url: 'https://developers.google.com/groups'
                 },
                 {
+                    img: 'lib/logos/TW.png',
+                    url: 'https://www.thoughtworks.com/cn/'
+                },
+                {
                     img: 'lib/logos/TH.png',
                     url: 'http://www.tianhukeji.com/'
                 },
                 {
                     img: 'lib/logos/WORK.png',
                     url: 'http://workjia.cn/'
-                },
-                {
-                    img: 'lib/logos/TW.png',
-                    url: 'https://www.thoughtworks.com/cn/'
                 }
             ]
         },
