@@ -170,11 +170,11 @@ define({
             title: '赞助单位',
             childrens: [
                 {
-                    img: 'lib/logos/DevEco.png',
+                    img: 'lib/logos/DevEco.jpg',
                     url: 'https://www.freecodecamp.cn'
                 },
                 {
-                    img: 'lib/logos/BW.jpg',
+                    img: 'lib/logos/BW.png',
                     url: 'http://www.broadview.com.cn/'
                 },
                 {
