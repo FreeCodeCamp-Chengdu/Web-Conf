@@ -135,6 +135,10 @@ define({
             title: '主办单位',
             childrens: [
                 {
+                    img: 'lib/logos/QRGJ.png',
+                    url: 'http://www.cdht.gov.cn/cycjcyyq/50449.jhtml'
+                },
+                {
                     img: 'lib/logos/FCC-CDG.jpg',
                     url: 'https://www.freecodecamp.cn'
                 }
@@ -152,10 +156,6 @@ define({
         {
             title: '协办单位',
             childrens: [
-                {
-                    img: 'lib/logos/QRGJ.png',
-                    url: 'http://www.cdht.gov.cn/cycjcyyq/50449.jhtml'
-                },
                 {
                     img: 'lib/logos/HCXY.png',
                     url: 'hhttp://www.hechuangxinye.com/'
