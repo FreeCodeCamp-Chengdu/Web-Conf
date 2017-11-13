@@ -153,16 +153,16 @@ define({
             title: '协办单位',
             childrens: [
                 {
-                    img: 'lib/logos/3W.png',
-                    url: 'http://www.3wcoffee.com/'
-                },
-                {
                     img: 'lib/logos/QRGJ.png',
                     url: 'http://www.cdht.gov.cn/cycjcyyq/50449.jhtml'
                 },
                 {
                     img: 'lib/logos/HCXY.png',
                     url: 'hhttp://www.hechuangxinye.com/'
+                },
+                {
+                    img: 'lib/logos/3W.png',
+                    url: 'http://www.3wcoffee.com/'
                 }
             ]
         },
