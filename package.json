@@ -1,35 +1,43 @@
 {
-  "name": "web-conf",
-  "version": "1.0.0",
-  "description": "Web Developer Conference in Chengdu, China",
-  "main": "server/index.js",
-  "scripts": {
-    "start": "node ./server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FreeCodeCamp-Chengdu/WFE-Conf.git"
-  },
-  "keywords": [
-    "Web",
-    "developer",
-    "conference",
-    "China",
-    "Chengdu"
-  ],
-  "author": "FreeCodeCamp Chengdu Group",
-  "license": "AGPL-3.0",
-  "bugs": {
-    "url": "https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/issues"
-  },
-  "homepage": "https://github.com/FreeCodeCamp-Chengdu/WFE-Conf#readme",
-  "engines": {
-    "node": "^6.5"
-  },
-  "dependencies": {
-    "express": "^4.16.2",
-    "leancloud-storage": "^3.3.1",
-    "leanengine": "^3.0.2"
-  }
+    "name": "web-conf",
+    "version": "2.0.0",
+    "description": "Web Developer Conference in Chengdu, China",
+    "keywords": [
+        "Web",
+        "developer",
+        "conference",
+        "China",
+        "Chengdu"
+    ],
+    "author": "freeCodeCamp Chengdu Group",
+    "license": "AGPL-3.0",
+    "homepage": "https://web-conf.tk/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FreeCodeCamp-Chengdu/WFE-Conf.git"
+    },
+    "bugs": {
+        "url": "https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/issues"
+    },
+    "engines": {
+        "node": "^6.3.0"
+    },
+    "scripts": {
+        "start": "web-server -p LEANCLOUD_APP_PORT",
+        "format": "prettier --write \"{,!(node_modules|.git)/**/}*.{js,json,css,md}\"",
+        "test": "npm run format  &&  eslint page/ --fix"
+    },
+    "husky": {
+        "hook": {
+            "pre-commit": "npm test  &&  git add ."
+        }
+    },
+    "dependencies": {
+        "koapache": "^1.0.4"
+    },
+    "devDependencies": {
+        "eslint": "^5.6.1",
+        "husky": "^1.1.1",
+        "prettier": "^1.14.3"
+    }
 }

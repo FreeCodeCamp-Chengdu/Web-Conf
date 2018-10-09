@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-.web-content{
+.web-content {
     margin: auto;
     margin-top: 48px;
     width: 80%;
@@ -42,7 +42,6 @@ body {
     margin: auto;
 }
 
-
 /* 嘉宾 */
 .guest {
     margin: 15px;
@@ -67,11 +66,11 @@ body {
 }
 
 /* 流程 */
-.flow-time{
+.flow-time {
     width: 62px;
     display: inline-flex;
 }
-.flowtheme{
+.flowtheme {
     color: #409eff;
 }
 
@@ -79,22 +78,22 @@ body {
 #map {
     width: 100%;
     height: 400px;
-    background: url('../lib/address.jpeg');
+    background: url("../lib/address.jpeg");
     background-position: center;
     background-size: cover;
 }
 #Map_Info {
-	display:         none;
-    padding-left:    4px;
+    display: none;
+    padding-left: 4px;
 }
 #Map_Info > h3 {
-	margin:    0;
+    margin: 0;
 }
 #Map_Info > ul {
-    font-size:    14px;
+    font-size: 14px;
 }
 #Map_Info > small {
-	color:    red;
+    color: red;
 }
 /* 报名链接 */
 .btn {
@@ -131,12 +130,12 @@ body {
     margin: 10px;
 }
 .logos img {
-    max-width:     100%;
-    max-height:    100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 footer {
-    text-align:    center;
+    text-align: center;
     background-color: #f7fbfd;
     width: 100%;
     padding: 32px 10%;
@@ -144,13 +143,14 @@ footer {
     /* height: 340px; */
 }
 
-footer .qrcode{
+footer .qrcode {
     width: 160px;
     display: inline-block;
     margin: 15px;
 }
 
-footer p, footer a{
+footer p,
+footer a {
     color: #444;
     font-size: 14px;
 }
@@ -163,7 +163,7 @@ footer p, footer a{
     #introduce {
         padding: 0px 0px 20px 0px;
     }
-    #introduce p{
+    #introduce p {
         font-size: 12px;
         line-height: 18px;
     }
@@ -174,7 +174,7 @@ footer p, footer a{
     .guest .guest-name {
         font-size: 16px;
     }
-    .guest p{
+    .guest p {
         line-height: 18px;
     }
     .title {
@@ -191,11 +191,11 @@ footer p, footer a{
 }
 
 @media (max-width: 480px) {
-    .web-content{
+    .web-content {
         margin-top: 36px;
         width: 90%;
     }
-    .logos a{
+    .logos a {
         width: 140px;
         height: 50px;
     }

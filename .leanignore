@@ -3,3 +3,7 @@
 .avoscloud/
 .leancloud/
 node_modules/
+README.md
+.editorconfig
+.eslintrc.json
+CNAME

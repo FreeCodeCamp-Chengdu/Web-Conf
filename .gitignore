@@ -1,6 +1,7 @@
-.svn/*
-node_modules/*
-.idea/*
-.vscode/*
-.leancloud/*
+.svn/
+node_modules/
+package-lock.json
+.idea/
+.vscode/
+.leancloud/
 .DS_Store
