@@ -55,13 +55,13 @@ section > h2 {
 }
 .lecture-list > div {
     padding: 10px;
-    background: white;
 }
 .lecture {
     height: 500px;
     border: 1px solid #eee;
     text-align: center;
     padding: 25px 15px;
+    background: white;
 }
 .lecture-name {
     font-weight: bold;
