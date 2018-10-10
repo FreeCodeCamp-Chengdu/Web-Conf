@@ -28,13 +28,13 @@
         "test": "npm run format  &&  eslint . --fix"
     },
     "husky": {
-        "hook": {
+        "hooks": {
             "pre-commit": "npm test  &&  git add ."
         }
     },
     "dependencies": {
         "koapache": "^1.0.4",
-        "web-cell": "^0.10.0",
+        "web-cell": "^0.10.1",
         "whatwg-fetch": "^3.0.0"
     },
     "devDependencies": {

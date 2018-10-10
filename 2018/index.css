@@ -93,6 +93,16 @@ tbody[data-array] td:first-child::before {
     width: 100%;
     height: 600px;
 }
+.PopOver {
+    display: none;
+    padding: 0.8rem;
+}
+.PopOver > * {
+    margin: 0.75rem 0;
+}
+.PopOver > h3 {
+    font-size: 1.25rem;
+}
 .photos:not(:last-child) {
     margin-bottom: 25px;
 }
@@ -106,9 +116,6 @@ tbody[data-array] td:first-child::before {
 }
 .companies > li:hover {
     background: #fafafa;
-}
-.logos img {
-    height: 50px;
 }
 footer {
     padding: 25px 0 15px 0;

@@ -1,7 +1,11 @@
 (function($, WebCell) {
-    var ObjectView = WebCell.ObjectView;
+    var request = WebCell.request,
+        documentReady = WebCell.documentReady,
+        ObjectView = WebCell.ObjectView;
 
-    Promise.all([$.getJSON('common/index.json'), $.ready]).then(function(list) {
+    Promise.all([request('common/index.json'), documentReady]).then(function(
+        list
+    ) {
         var body = new ObjectView($('body > main')[0]);
 
         body.render({
