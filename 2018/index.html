@@ -34,10 +34,16 @@
     <div class="container">
         <section id="Introduction">
             <h2>大会介绍</h2>
-            <p>
-                2018成都web前端交流大会是
-                FCC成都社区举办的每年一度大型的技术交流活动。活动主要针对各地行业技术人才、技术爱好者、当地企业技术管理等。同时该活动又是一场高度人才集中、高度明星企业集结的一场大型互联网与软件行业的狂欢盛会。
-            </p>
+            <div class="row">
+                <div class="col-md-7">
+                    <p>
+                        2018成都web前端交流大会是 FCC 成都社区举办的每年一度大型的技术交流活动。活动主要针对各地行业技术人才、技术爱好者、当地企业技术管理等。同时该活动又是一场高度人才集中、高度明星企业集结的一场大型互联网与软件行业的狂欢盛会。
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid" src="image/undraw_01.png">
+                </div>
+            </div>
         </section>
         <section id="Lecturer">
             <h2>与会嘉宾</h2>
@@ -95,16 +101,13 @@
                 </tbody>
             </table>
         </section>
-        <section id="Address">
+        <section id="Address" class="text-center">
             <h2>地址</h2>
-            <p class="text-muted text-center">天府大道北段966号天府国际金融中心4号楼1楼1号会议厅</p>
-            <div id="map" class="map"></div>
-            <div class="PopOver">
-                <h3>2018 成都Web前端大会会场</h3>
-                <p>
-                    天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
-                </p>
-            </div>
+            <p class="text-muted">
+                天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
+            </p>
+            <iframe frameborder="0" scrolling="no" width="560" height="440"
+                    src="//f.amap.com/4UcWn_02C5Ty3"></iframe>
         </section>
         <section id="Review">
             <h2>往期精彩回顾</h2>
@@ -162,7 +165,6 @@
     <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://lib.baomitu.com/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="../node_modules/web-cell/dist/web-cell.min.js"></script>
-    <script src="https://webapi.amap.com/maps?v=1.4.10&key=35ab387f5545fcac92ea3a1aa1b4b21c"></script>
     <script src="index.js"></script>
 </body>
 </html>

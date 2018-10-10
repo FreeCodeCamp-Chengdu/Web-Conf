@@ -64,6 +64,20 @@ section > h2 {
     font-size: 14px;
     text-align: left;
 }
+.subjects {
+    position: relative;
+}
+.subjects::after {
+    content: "";
+    background: #fff url("image/undraw_02.png") no-repeat right center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
 .subjects > li {
     padding: 25px 0;
     display: flex;
@@ -88,20 +102,6 @@ tbody[data-array] {
 tbody[data-array] td:first-child::before {
     counter-increment: index;
     content: counter(index);
-}
-.map {
-    width: 100%;
-    height: 600px;
-}
-.PopOver {
-    display: none;
-    padding: 0.8rem;
-}
-.PopOver > * {
-    margin: 0.75rem 0;
-}
-.PopOver > h3 {
-    font-size: 1.25rem;
 }
 .photos:not(:last-child) {
     margin-bottom: 25px;

@@ -1,4 +1,4 @@
-(function($, WebCell, AMap) {
+(function($, WebCell) {
     var request = WebCell.request,
         documentReady = WebCell.documentReady,
         ObjectView = WebCell.ObjectView;
@@ -29,34 +29,4 @@
 
         return false;
     });
-
-    //  加载地图
-
-    var map = new AMap.Map('map', {
-        center: [104.065317, 30.581311],
-        zoom: 14,
-        resizeEnable: true
-    });
-
-    AMap.plugin('AMap.ToolBar', function() {
-        var toolbar = new AMap.ToolBar();
-        map.addControl(toolbar);
-    });
-
-    var marker = new AMap.Marker({
-            map: map,
-            position: [104.065317, 30.581311]
-        }),
-        infoWindow = new AMap.InfoWindow({
-            content: $('#map + .PopOver')
-                .remove()
-                .css('display', 'block')[0].outerHTML,
-            offset: new AMap.Pixel(16, -50)
-        });
-
-    infoWindow.open(map, map.getCenter());
-
-    AMap.event.addListener(marker, 'click', function() {
-        infoWindow.open(map, marker.getPosition());
-    });
-})(self.jQuery, self['web-cell'], self.AMap);
+})(self.jQuery, self['web-cell']);
