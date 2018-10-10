@@ -1,18 +1,23 @@
-<!DOCTYPE html>
+<!DocType HTML>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>2018 成都 Web 前端交流大会</title>
-    <meta name="author" content="FCC成都" />
-    <meta name="description" content="2018 成都 Web 前端交流大会" />
-    <link rel="shortcut icon" href="../common/favicon.ico" type="image/x-icon" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./assets/css/main.css" rel="stylesheet">
-</head>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link rel="shortcut icon" href="../common/favicon.ico" type="image/x-icon" />
+    <title>2018 成都 Web 前端交流大会</title>
+    <meta name="description" content="2018 成都 Web 前端交流大会" />
+    <meta name="author" content="FCC成都" />
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://lib.baomitu.com/babel-polyfill/7.0.0/polyfill.min.js"></script>
+    <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
+    <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-loader.js"></script>
+</head>
 <body>
     <div class="jumbotron">
         <ul class="nav top-nav">
@@ -52,229 +57,32 @@
         </section>
         <section>
             <h2>与会嘉宾</h2>
-            <div class="row guest-list">
+            <div class="row guest-list" data-array="lecturer">
                 <div class="col-md-3">
                     <div class="guest">
-                        <img src="./assets//img/default.avatar.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">Guest Name</p>
-                        <p class="guest-intro">
-                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-                            felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam
-                            quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac,
-                            vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="guest">
-                        <img src="./assets//img/default.avatar.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">Guest Name</p>
-                        <p class="guest-intro">
-                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-                            felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam
-                            quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac,
-                            vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="guest">
-                        <img src="./assets//img/default.avatar.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">Guest Name</p>
-                        <p class="guest-intro">
-                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-                            felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam
-                            quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac,
-                            vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="guest">
-                        <img src="./assets//img/default.avatar.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">Guest Name</p>
-                        <p class="guest-intro">
-                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-                            felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam
-                            quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac,
-                            vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row guest-list">
-                <div class="col-md-3">
-                    <div class="guest">
-                        <img src="./assets//img/default.avatar.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">Guest Name</p>
-                        <p class="guest-intro">
-                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-                            felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam
-                            quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac,
-                            vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="guest">
-                        <img src="./assets//img/default.avatar.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">Guest Name</p>
-                        <p class="guest-intro">
-                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-                            felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam
-                            quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac,
-                            vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="guest">
-                        <img src="./assets//img/default.avatar.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">Guest Name</p>
-                        <p class="guest-intro">
-                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-                            felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam
-                            quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac,
-                            vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="guest">
-                        <img src="./assets//img/default.avatar.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">Guest Name</p>
-                        <p class="guest-intro">
-                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-                            felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam
-                            quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac,
-                            vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
+                        <img src="img/lecturer/${view.englishName}.png" class="avatar" alt="guest name" />
+                        <p class="guest-name">${view.name}</p>
+                        <p class="guest-intro">${view.description}</p>
                     </div>
                 </div>
             </div>
         </section>
         <section>
             <h2>议题</h2>
-            <ol class="subjects">
+            <ol class="subjects" data-array="topic">
                 <li>
                     <div class="text-center">
-                        <p><strong>Quincy Larson</strong></p>
-                        <img src="./assets/img/default.avatar.png" class="avatar-sm">
-
+                        <p><strong>
+                            ${scope.lecturer[view.lecturer].name}
+                        </strong></p>
+                        <img class="avatar-sm"
+                             src="img/lecturer/${scope.lecturer[view.lecturer].englishName}.png">
                     </div>
                     <div>
-                        <h5>freeCodeCamp创始人完整讲述他的求学和职业生涯</h5>
-                        <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit
-                            sit
-                            amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non
-                            commodo
-                            luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                        <h5>${view.title}</h5>
+                        <p>${view.description}</p>
                     </div>
                 </li>
-                <li>
-                    <div class="text-center">
-                        <p><strong>熊节</strong></p>
-                        <img src="./assets/img/default.avatar.png" class="avatar-sm">
-
-                    </div>
-                    <div>
-                        <h5>敏捷中国史</h5>
-                        <p>Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod. Lorem
-                            ipsum
-                            dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget
-                            metus.
-
-                            Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare
-                            vel
-                            eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus
-                            vel
-                            augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque
-                            nisl
-                            consectetur et. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="text-center">
-                        <p><strong>黄轶</strong></p>
-                        <img src="./assets/img/default.avatar.png" class="avatar-sm">
-
-                    </div>
-                    <div>
-                        <h5>打造 Vue 组件库</h5>
-                        <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit
-                            sit
-                            amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non
-                            commodo
-                            luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="text-center">
-                        <p><strong>余澈</strong></p>
-                        <img src="./assets/img/default.avatar.png" class="avatar-sm">
-
-                    </div>
-                    <div>
-                        <h5>开源项目维护</h5>
-                        <p>Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur
-                            ac,
-                            vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Praesent
-                            commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque
-                            ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis
-                            euismod.
-
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus
-                            porttitor.
-                            Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus
-                            commodo,
-                            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque
-                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget
-                            urna
-                            mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="text-center">
-                        <p><strong>死月</strong></p>
-                        <img src="./assets/img/default.avatar.png" class="avatar-sm">
-
-                    </div>
-                    <div>
-                        <h5>给 Node.js 插上 C++ 的翅膀 </h5>
-                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
-                            justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia
-                            bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor
-                            ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="text-center">
-                        <p><strong>郭达峰</strong></p>
-                        <img src="./assets/img/default.avatar.png" class="avatar-sm">
-                    </div>
-                    <div>
-                        <h5>高可用React服务端渲染</h5>
-                        <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit
-                            sit
-                            amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non
-                            commodo
-                            luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                    </div>
-                </li>
-                <li>
-                        <div class="text-center">
-                            <p><strong>郭林烁</strong></p>
-                            <img src="./assets/img/default.avatar.png" class="avatar-sm">
-                        </div>
-                        <div>
-                            <h5>高效 H5 动画开发方式</h5>
-                            <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit
-                                sit
-                                amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non
-                                commodo
-                                luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                        </div>
-                    </li>
             </ol>
         </section>
         <section>
@@ -287,66 +95,18 @@
                         <th scope="col">活动</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody data-array="schedule">
                     <tr>
-                        <td>1</td>
-                        <td>09：00 - 09：30</td>
-                        <td>签到与逛“市集”</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>09：30 - 10：20</td>
-                        <td>《freeCodeCamp技术架构》 Quincy Larson</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>10：20 - 11：10</td>
-                        <td>《给 Node.js 插上 C++ 的翅膀》死月</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>11：10 - 12：00</td>
-                        <td>《开源项目维护》余澈</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>12：00 - 13：55</td>
-                        <td>午餐与逛“市集”</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>13：55 - 14：00 </td>
-                        <td>抽奖环节</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>14：00 - 14：50</td>
-                        <td>《敏捷中国史》熊节</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>14：50 - 15：40 </td>
-                        <td>《高效 H5 动画开发方式》郭林烁</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>15：40 - 16：10</td>
-                        <td>休息 & 现场交流 & 逛“市集”</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>16：10 - 17：00</td>
-                        <td>《高可用React服务端渲染》郭达峰</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>17：00 - 17：50</td>
-                        <td>《打造 Vue 组件库》黄轶</td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>17：50 -17：55 </td>
-                        <td>抽奖环节</td>
+                        <td></td>
+                        <td>${view.time}</td>
+                        <td>${
+                            view.title || (
+                                scope.topic[view.topic].title + ' ' +
+                                scope.lecturer[
+                                    scope.topic[view.topic].lecturer
+                                ].name
+                            )
+                        }</td>
                     </tr>
                 </tbody>
             </table>
@@ -359,83 +119,35 @@
         <section>
             <h2>往期精彩回顾</h2>
             <div class="row photos">
-                <div class="col-md-4"><img src="./assets/img/photos/1.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="./assets/img/photos/2.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="./assets/img/photos/3.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/1.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/2.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/3.jpg" class="img-fluid" /></div>
             </div>
             <div class="row photos">
-                <div class="col-md-4"><img src="./assets/img/photos/4.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="./assets/img/photos/5.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="./assets/img/photos/6.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/4.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/5.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/6.jpg" class="img-fluid" /></div>
             </div>
             <div class="row photos">
-                <div class="col-md-4"><img src="./assets/img/photos/7.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="./assets/img/photos/8.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="./assets/img/photos/6.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/7.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/8.jpg" class="img-fluid" /></div>
+                <div class="col-md-4"><img src="img/photos/6.jpg" class="img-fluid" /></div>
             </div>
         </section>
         <section>
             <h2>参会企业</h2>
-            <ul class="companies">
-                <li>蚂蚁金服</li>
-                <li>支付宝</li>
-                <li>腾讯云</li>
-                <li>爱奇艺</li>
-                <li>美团</li>
-                <li>Thoughtworks</li>
-                <li>BBD</li>
-                <li>知道创宇</li>
-                <li>京东成都研究院</li>
-                <li>企鹅医生</li>
-                <li>tap4fun</li>
-                <li>Camera360</li>
-                <li>咕咚网</li>
-                <li>百词斩</li>
-                <li>医联</li>
-                <li>喜马拉雅FM</li>
-                <li>点融网</li>
-                <li>汇通天下G7</li>
-                <li>去哪儿</li>
-                <li>客如云</li>
-                <li>23魔方</li>
-                <li>咪咕音乐</li>
-                <li>陌陌</li>
-                <li>科大讯飞</li>
-                <li>上线了</li>
-                <li>Testbird</li>
-                <li>知乎</li>
-                <li>途风网</li>
-                <li>微云推</li>
-                <li>希望教育集团</li>
-                <li>折800</li>
-                <li>积微物联</li>
-                <li>柠檬云</li>
-                <li>连心医疗</li>
-                <li>乐车邦</li>
-                <li>国双科技</li>
-                <li>货车帮</li>
-                <li>鱼说</li>
-                <li>麦麦养老</li>
-                <li>麦客CRM</li>
-                <li>街电</li>
-                <li>未一</li>
-                <li>锤子科技</li>
-                <li>麦子学院</li>
-                <li>龙熙科技</li>
-                <li>西瓜创客</li>
-                <li>冰鉴科技</li>
-                <li>睿沿科技</li>
+            <ul class="companies" data-array="company">
+                <li>${view.name}</li>
             </ul>
         </section>
         <section>
             <h2>赞助商</h2>
-            <div class="row logos">
-                <div class="col-md-2"><img src="./assets/img/default.logo.png" class="img-fluid" /></div>
-                <div class="col-md-2"><img src="./assets/img/default.logo.png" class="img-fluid" /></div>
-                <div class="col-md-2"><img src="./assets/img/default.logo.png" class="img-fluid" /></div>
-                <div class="col-md-2"><img src="./assets/img/default.logo.png" class="img-fluid" /></div>
-                <div class="col-md-2"><img src="./assets/img/default.logo.png" class="img-fluid" /></div>
-                <div class="col-md-2"><img src="./assets/img/default.logo.png" class="img-fluid" /></div>
+            <div class="row logos" data-array="sponsor">
+                <div class="col-md-2">
+                    <img class="img-fluid"
+                         title="${view.name}"
+                         src="img/sponsor/${view.englishName}.png">
+                </div>
             </div>
         </section>
     </div>
@@ -474,8 +186,11 @@
         </div>
     </footer>
     <div class="copyright">&copy; freeCodeCamp 成都 2018</div>
-    <script src="https://webapi.amap.com/maps?v=1.4.10&key=35ab387f5545fcac92ea3a1aa1b4b21c"></script>
-    <script src="./assets/js/main.js"></script>
-</body>
 
+    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/web-cell/dist/web-cell.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.10&key=35ab387f5545fcac92ea3a1aa1b4b21c"></script>
+    <script src="index.js"></script>
+</body>
 </html>

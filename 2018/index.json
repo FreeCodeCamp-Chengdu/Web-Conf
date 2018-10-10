@@ -1,0 +1,182 @@
+{
+    "lecturer": [
+        {
+            "name": "昆西·拉尔森",
+            "englishName": "Quincy Larson",
+            "description": "Quincy Larson 是 freeCodeCamp.org 社区创始人，致力于帮助数百万人们免费学习编程。他曾在美国一所高校执教，并在中国分校任职校长。Quincy 在 31 岁时开始学习编程，希望通过程序使学校的各项事务处理更高效。在接触编程之后，他意识到这是一项人人都应该掌握的技能，可以帮助众多组织提升效率。\n\n在天津财经大学攻读研究生学位期间，Quincy 遇到了他的妻子 Jade。现在他们拥有一双可爱的儿女，一家人居住在美国俄克拉荷马城，有时也会回到在中国东莞的家。"
+        },
+        {
+            "name": "熊节",
+            "englishName": "Xiong Jie",
+            "description": "宝尊电商成都研发中心总经理，拥有超过十七年 IT 行业的从业经验，在金融、政府、电信、物流等行业的信息化建设方面有着丰富经验。熊节曾翻译了《重构》、《最后期限》、《与熊共舞》、《软件工艺》等行业重要著作，参与了 Selenium、RubyWorks、OpenLMIS 等开源软件社区，并在各种媒体发表过数十篇文章，获得利物浦大学 MBA 学位。"
+        },
+        {
+            "name": "黄轶",
+            "englishName": "Huang Yi",
+            "description": "北京科技大学毕业，计算机专业硕士。曾任职百度，滴滴，滴滴WebApp前端架构组负责人，专家工程师；擅长前端自动化、工程化，前端架构方向。开源项目better-scroll、cube-ui作者，《Vue.js权威指南》作者，乐于技术分享，追求极致，慕课网精英讲师。"
+        },
+        {
+            "name": "死月",
+            "englishName": "Si Yue",
+            "description": "蚂蚁金服体验技术部研发工程师，Node.JS核心贡献者（Node.JS Core Collaborator）之一，CNode社区版主之一，杭州Node Party组织者之一，曾任大搜车无线架构组Node.JS团队负责人；浙江大学软件工程硕士，退役OI、ACM选手，《Node.JS来一打C++ 扩展》作者。"
+        },
+        {
+            "name": "余澈",
+            "englishName": "Yu Che",
+            "description": "京东凹凸实验室前端工程师，主要负责基础设施建设和前端性能优化。热爱开源事业，先后作为主要开发者参与了 Vue.js第一个大型UI库：vue-strap；高性能类React框架：Nerv；多端统一开发框架：Taro的开源和维护。在技术之外，他喜欢玩Dota2和游泳。"
+        },
+        {
+            "name": "郭林烁",
+            "englishName": "Guo LinShuo",
+            "description": "腾讯AlloyTeam前端工程师，参与过腾讯文档、互动直播等大型Web项目开发与优化，专注于前端性能优化、前端可用性及开发效率提升，乐于分享。"
+        },
+        {
+            "name": "郭达峰",
+            "englishName": "Guo DaFeng",
+            "description": "郭达峰，Strikingly CTO。毕业于香港中文大学，于2010年开发了三款Facebook平台的应用，获取了超过2千万的用户。2012年创立了市面上最简易的建站平台Strikingly，成为第一家进入YC孵化器的华人团队。"
+        }
+    ],
+    "topic": [
+        {
+            "title": "freeCodeCamp创始人完整讲述他的求学和职业生涯",
+            "lecturer": 0,
+            "description": ""
+        },
+        {
+            "title": "敏捷中国史",
+            "lecturer": 1,
+            "description": ""
+        },
+        {
+            "title": "打造 Vue 组件库",
+            "lecturer": 2,
+            "description": ""
+        },
+        {
+            "title": "开源项目维护",
+            "lecturer": 4,
+            "description": ""
+        },
+        {
+            "title": "给 Node.js 插上 C++ 的翅膀",
+            "lecturer": 3,
+            "description": ""
+        },
+        {
+            "title": "高可用React服务端渲染",
+            "lecturer": 6,
+            "description": ""
+        },
+        {
+            "title": "高效 H5 动画开发方式",
+            "lecturer": 5,
+            "description": ""
+        }
+    ],
+    "schedule": [
+        {
+            "title": "签到与逛“市集”",
+            "time": "09:00 - 09:30"
+        },
+        {
+            "topic": 0,
+            "time": "09:30 - 10:20"
+        },
+        {
+            "topic": 4,
+            "time": "10:20 - 11:10"
+        },
+        {
+            "topic": 3,
+            "time": "11:10 - 12:00"
+        },
+        {
+            "title": "午餐与逛“市集”",
+            "time": "12:00 - 13:55"
+        },
+        {
+            "title": "抽奖环节",
+            "time": "13:55 - 14:00"
+        },
+        {
+            "topic": 1,
+            "time": "14:00 - 14:50"
+        },
+        {
+            "topic": 6,
+            "time": "14:50 - 15:40"
+        },
+        {
+            "title": "休息 & 现场交流 & 逛“市集”",
+            "time": "15:40 - 16:10"
+        },
+        {
+            "topic": 5,
+            "time": "16:10 - 17:00"
+        },
+        {
+            "topic": 2,
+            "time": "17:00 - 17:50"
+        },
+        {
+            "title": "抽奖环节",
+            "time": "17:50 -17:55"
+        }
+    ],
+    "sponsor": [
+        {
+            "name": "谷歌",
+            "englishName": "Google"
+        }
+    ],
+    "company": [
+        "蚂蚁金服",
+        "支付宝",
+        "腾讯云",
+        "爱奇艺",
+        "美团",
+        "Thoughtworks",
+        "BBD",
+        "知道创宇",
+        "京东成都研究院",
+        "企鹅医生",
+        "tap4fun",
+        "Camera360",
+        "咕咚网",
+        "百词斩",
+        "医联",
+        "喜马拉雅FM",
+        "点融网",
+        "汇通天下G7",
+        "去哪儿",
+        "客如云",
+        "23魔方",
+        "咪咕音乐",
+        "陌陌",
+        "科大讯飞",
+        "上线了",
+        "Testbird",
+        "知乎",
+        "途风网",
+        "微云推",
+        "希望教育集团",
+        "折800",
+        "积微物联",
+        "柠檬云",
+        "连心医疗",
+        "乐车邦",
+        "国双科技",
+        "货车帮",
+        "鱼说",
+        "麦麦养老",
+        "麦客CRM",
+        "街电",
+        "未一",
+        "锤子科技",
+        "麦子学院",
+        "龙熙科技",
+        "西瓜创客",
+        "冰鉴科技",
+        "睿沿科技"
+    ]
+}

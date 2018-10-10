@@ -1,22 +1,35 @@
-~ function displayMap(){
- 
+(function($, WebCell, AMap) {
+    var ObjectView = WebCell.ObjectView;
+
+    Promise.all([$.getJSON('index.json'), $.ready]).then(function(data) {
+        data = data[0];
+
+        data.company = data.company.map(function(name) {
+            return { name: name };
+        });
+
+        var body = new ObjectView($('body > .container')[0]);
+
+        body.render(data);
+    });
+
     var map = new AMap.Map('map', {
-        center: [104.065317,30.581311],
+        center: [104.065317, 30.581311],
         zoom: 14,
         resizeEnable: true
     });
 
-    AMap.plugin('AMap.ToolBar',function(){
+    AMap.plugin('AMap.ToolBar', function() {
         var toolbar = new AMap.ToolBar();
         map.addControl(toolbar);
     });
 
     var marker = new AMap.Marker({
         map: map,
-        position: [104.065317,30.581311]
+        position: [104.065317, 30.581311]
     });
 
-    function createInfoWindow (){
+    function createInfoWindow() {
         return [
             '<div style="padding:10px;">',
             '<p style="font-size:14px;margin-bottom:5px;font-weight:bold;">2018 成都Web前端大会会场</p>',
@@ -32,4 +45,4 @@
     AMap.event.addListener(marker, 'click', function() {
         infoWindow.open(map, marker.getPosition());
     });
-}();
+})(self.jQuery, self['web-cell'], self.AMap);
