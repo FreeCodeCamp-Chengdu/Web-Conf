@@ -47,6 +47,7 @@ section > h2 {
 }
 .guest-list > div {
     padding: 10px;
+    background: #fff;
 }
 .guest {
     height: 500px;
@@ -64,33 +65,19 @@ section > h2 {
     font-size: 14px;
     text-align: left;
 }
-<<<<<<< HEAD
 .subjects {
-=======
-.subjects{
->>>>>>> 新增插图
     position: relative;
 }
 .subjects::after {
     content: "";
-<<<<<<< HEAD
     background: #fff url("image/undraw_02.png") no-repeat right center;
-=======
-    background:#fff url(./img/undraw_02.png) no-repeat right center;
->>>>>>> 新增插图
     opacity: 0.3;
     top: 0;
     left: 0;
     bottom: 0;
-<<<<<<< HEAD
-    right: 0;
-    position: absolute;
-    z-index: -1;
-=======
     right: -200px;
     position: absolute;
-    z-index: -1;   
->>>>>>> 新增插图
+    z-index: -1;
 }
 .subjects > li {
     padding: 25px 0;
@@ -119,6 +106,11 @@ tbody[data-array] td:first-child::before {
 }
 .photos:not(:last-child) {
     margin-bottom: 25px;
+}
+.logos {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
 }
 .companies > li {
     list-style: none;
