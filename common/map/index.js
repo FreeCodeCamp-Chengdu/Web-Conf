@@ -7,7 +7,7 @@
 
     var infoWindow,
         map,
-        level = 11,
+        level = 14,
         center = {
             lng: lnglat[0],
             lat: lnglat[1]
