@@ -64,6 +64,20 @@ section > h2 {
     font-size: 14px;
     text-align: left;
 }
+.subjects{
+    position: relative;
+}
+.subjects::after {
+    content: "";
+    background:#fff url(./img/undraw_02.png) no-repeat right center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: -200px;
+    position: absolute;
+    z-index: -1;   
+}
 .subjects > li {
     padding: 25px 0;
     display: flex;
