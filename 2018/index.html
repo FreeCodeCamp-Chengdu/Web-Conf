@@ -1,5 +1,6 @@
 <!DocType HTML>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
 
@@ -20,53 +21,56 @@
     <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
     <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-loader.js"></script>
 </head>
+
 <body>
     <div class="jumbotron">
         <ul class="nav top-nav" data-array="section">
             <li class="nav-item">
-                <a class="nav-link ${view.index ? '' : 'active'}"
-                   href="#${view.name}">
+                <a class="nav-link ${view.index ? '' : 'active'}" href="#${view.name}">
                     ${view.title}
                 </a>
             </li>
         </ul>
     </div>
-    <div class="container">
-        <section id="Introduction">
-            <h2>大会介绍</h2>
+    <section id="Introduction">
+        <h2>大会介绍</h2>
+        <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <p>
-                        2018成都web前端交流大会是 FCC 成都社区举办的每年一度大型的技术交流活动。活动主要针对各地行业技术人才、技术爱好者、当地企业技术管理等。同时该活动又是一场高度人才集中、高度明星企业集结的一场大型互联网与软件行业的狂欢盛会。
+                    <p>2018成都web前端交流大会是
+                        FCC成都社区举办的每年一度大型的技术交流活动。活动主要针对各地行业技术人才、技术爱好者、当地企业技术管理等。同时该活动又是一场高度人才集中、高度明星企业集结的一场大型互联网与软件行业的狂欢盛会。
                     </p>
                 </div>
                 <div class="col-md-5">
-                    <img class="img-fluid" src="image/undraw_01.png">
+                    <img src="./image/undraw_01.png" class="img-fluid" />
                 </div>
             </div>
-        </section>
-        <section id="Lecturer">
-            <h2>与会嘉宾</h2>
-            <div class="row guest-list" data-array="lecturer">
+        </div>
+    </section>
+    <section id="Lecturer" class="sparked">
+        <h2>与会嘉宾</h2>
+        <div class="container">
+            <div class="row lecture-list" data-array="lecturer">
                 <div class="col-md-3">
-                    <div class="guest">
+                    <div class="lecture">
                         <img src="image/lecturer/${view.englishName}.png" class="avatar" alt="guest name" />
-                        <p class="guest-name">${view.name}</p>
-                        <p class="guest-intro">${view.description}</p>
+                        <p class="lecture-name">${view.name}</p>
+                        <p class="lecture-intro">${view.description}</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="Topic">
-            <h2>议题</h2>
+        </div>
+    </section>
+    <section id="Topic">
+        <h2>议题</h2>
+        <div class="container">
             <ol class="subjects" data-array="topic">
                 <li>
                     <div class="text-center">
                         <p><strong>
-                            ${scope.lecturer[view.lecturer].name}
-                        </strong></p>
-                        <img class="avatar-sm"
-                             src="image/lecturer/${scope.lecturer[view.lecturer].englishName}.png">
+                                ${scope.lecturer[view.lecturer].name}
+                            </strong></p>
+                        <img class="avatar-sm" src="image/lecturer/${scope.lecturer[view.lecturer].englishName}.png">
                     </div>
                     <div>
                         <h5>${view.title}</h5>
@@ -74,9 +78,11 @@
                     </div>
                 </li>
             </ol>
-        </section>
-        <section id="Schedule">
-            <h2>日程</h2>
+        </div>
+    </section>
+    <section id="Schedule" class="sparked">
+        <h2>日程</h2>
+        <div class="container">
             <table class="table table-striped table-responsive-sm">
                 <thead>
                     <tr>
@@ -91,16 +97,18 @@
                         <td>${view.time}</td>
                         <td>${
                             view.title || (
-                                '《' + scope.topic[view.topic].title + '》 ' +
-                                scope.lecturer[
-                                    scope.topic[view.topic].lecturer
-                                ].name
+                            '《' + scope.topic[view.topic].title + '》 ' +
+                            scope.lecturer[
+                            scope.topic[view.topic].lecturer
+                            ].name
                             )
-                        }</td>
+                            }</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
+    </section>
+    <div class="container">
         <section id="Address" class="text-center">
             <h2>地址</h2>
             <p class="text-muted">
@@ -134,19 +142,21 @@
                      src="image/sponsor/${view.englishName}.jpg">
             </div>
         </section>
-        <section id="Enterprise">
-            <h2>参会企业</h2>
+    </div>
+    <section id="Enterprise" class="sparked">
+        <h2>参会企业</h2>
+        <div class="container">
             <ul class="companies" data-array="company">
                 <li>${view.name}</li>
             </ul>
-        </section>
+        </div>
+    </section>
     </div>
     <footer>
         <div class="container">
             <ul class="nav" data-array="section">
                 <li class="nav-item">
-                    <a class="nav-link ${view.index ? '' : 'active'}"
-                       href="#${view.name}">
+                    <a class="nav-link ${view.index ? '' : 'active'}" href="#${view.name}">
                         ${view.title}
                     </a>
                 </li>
@@ -173,4 +183,5 @@
     <script src="../node_modules/web-cell/dist/web-cell.min.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>

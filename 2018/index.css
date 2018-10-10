@@ -17,6 +17,9 @@ a {
 a:hover {
     color: #666;
 }
+.table {
+    background: #fff;
+}
 .jumbotron {
     width: 100%;
     height: 800px;
@@ -45,20 +48,25 @@ section > h2 {
     text-align: center;
     margin-bottom: 50px;
 }
-.guest-list > div {
+.sparked {
+    background: #fff url(./image/bg.png) repeat top left;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.lecture-list > div {
     padding: 10px;
     background: white;
 }
-.guest {
+.lecture {
     height: 500px;
     border: 1px solid #eee;
     text-align: center;
     padding: 25px 15px;
 }
-.guest-name {
+.lecture-name {
     font-weight: bold;
 }
-.guest-intro {
+.lecture-intro {
     max-height: 18rem;
     overflow: auto;
     color: #666;
@@ -70,14 +78,14 @@ section > h2 {
 }
 .subjects::after {
     content: "";
+    position: absolute;
+    z-index: -1;
     background: #fff url("image/undraw_02.png") no-repeat right center;
     opacity: 0.3;
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
+    right: -200px;
 }
 .subjects > li {
     padding: 25px 0;
@@ -116,6 +124,7 @@ tbody[data-array] td:first-child::before {
     justify-content: space-around;
     align-content: center;
 }
+
 .companies > li {
     list-style: none;
     display: inline-block;
@@ -123,13 +132,13 @@ tbody[data-array] td:first-child::before {
     margin: 5px;
     border: 1px dashed #ddd;
     border-radius: 4px;
+    background: #fff;
 }
 .companies > li:hover {
     background: #fafafa;
 }
 footer {
     padding: 25px 0 15px 0;
-    border-top: 1px solid #eee;
     height: 240px;
 }
 footer .qrcode {
