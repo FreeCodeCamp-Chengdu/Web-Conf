@@ -75,25 +75,9 @@ body {
 }
 
 /* 地图 */
-#map {
+body > footer > iframe {
     width: 100%;
-    height: 400px;
-    background: url("../lib/address.jpeg");
-    background-position: center;
-    background-size: cover;
-}
-#Map_Info {
-    display: none;
-    padding-left: 4px;
-}
-#Map_Info > h3 {
-    margin: 0;
-}
-#Map_Info > ul {
-    font-size: 14px;
-}
-#Map_Info > small {
-    color: red;
+    height: 50vh;
 }
 /* 报名链接 */
 .btn {
