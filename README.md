@@ -6,5 +6,16 @@ https://web-conf.tk/
 
 ## 开发者
 
-[@jiangyuzhen](https://github.com/jiangyuzhen/)
-[@TechQuery](https://github.com/TechQuery/)
+https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/graphs/contributors
+
+## 全栈框架
+
+1.  [BootStrap v4](https://getbootstrap.com/)
+2.  [WebCell](https://web-cell.tk/)
+3.  [Vue v2](https://cn.vuejs.org/)
+4.  [Element UI v2](https://element.eleme.io/)
+5.  [KoApache](https://techquery.github.io/KoApache/)
+
+## 贡献指南
+
+[阅读](Contributing.md)
