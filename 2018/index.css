@@ -39,7 +39,7 @@ a:visited {
 .poster {
     width: 100%;
     min-height: 600px;
-    background: #eeeeee;
+    background: #fff url(./image/poster_bg.jpg) repeat-x top left;
     position: relative;
     padding: 0;
     margin: 0;
@@ -48,10 +48,29 @@ a:visited {
     position: absolute;
     right: 25px;
     top: 25px;
+    z-index: 999;
+}
+.poster .navbar-toggler {
+    background: #f8f9fa;
+}
+
+@media screen and (min-width: 767.98px) {
+    .poster .navbar {
+        background: #f8f9fa;
+    }
 }
 @media screen and (max-width: 767.98px) {
+    .poster {
+        min-height: 100px;
+    }
     .poster .top-nav {
-        left: 25px;
+        left: 5px;
+    }
+    .poster .navbar-nav {
+        background: #f8f9fa;
+        padding: 10px;
+        border: 1px solid #eee;
+        width: 160px;
     }
 }
 .avatar {
