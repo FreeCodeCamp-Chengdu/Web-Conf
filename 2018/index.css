@@ -31,10 +31,17 @@ a:visited {
 .table {
     background: #fff;
 }
+a.btn-primary {
+    color: #fff;
+    background-color: #246af7;
+}
 @media screen and (max-width: 767.98px) {
     td {
         font-size: 12px;
     }
+}
+.padded {
+    padding: 25px;
 }
 .poster {
     width: 100%;
@@ -67,10 +74,13 @@ a:visited {
         left: 5px;
     }
     .poster .navbar-nav {
-        background: #f8f9fa;
+        background: #246af7;
         padding: 10px;
-        border: 1px solid #eee;
         width: 160px;
+        box-shadow: 1px 1px 10px 3px #aaa;
+    }
+    .poster .navbar-light .navbar-nav .nav-link {
+        color: #fff;
     }
 }
 .avatar {
@@ -227,7 +237,6 @@ tbody[data-array] td:first-child::before {
     background: #fafafa;
 }
 footer {
-    border-top: 1px solid #eee;
     padding: 25px 0 15px 0;
     clear: both;
 }
