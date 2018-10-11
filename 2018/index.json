@@ -89,72 +89,72 @@
         {
             "title": "开源项目维护",
             "lecturer": 4,
-            "description": ""
+            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus."
         },
         {
             "title": "给 Node.js 插上 C++ 的翅膀",
             "lecturer": 3,
-            "description": ""
+            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus."
         },
         {
             "title": "高可用React服务端渲染",
             "lecturer": 6,
-            "description": ""
+            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus."
         },
         {
             "title": "高效 H5 动画开发方式",
             "lecturer": 5,
-            "description": ""
+            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus."
         }
     ],
     "schedule": [
         {
             "title": "签到与逛“市集”",
-            "time": "09:00 - 09:30"
+            "time": "09:00 ~ 09:30"
         },
         {
             "topic": 0,
-            "time": "09:30 - 10:20"
+            "time": "09:30 ~ 10:20"
         },
         {
             "topic": 4,
-            "time": "10:20 - 11:10"
+            "time": "10:20 ~ 11:10"
         },
         {
             "topic": 3,
-            "time": "11:10 - 12:00"
+            "time": "11:10 ~ 12:00"
         },
         {
             "title": "午餐与逛“市集”",
-            "time": "12:00 - 13:55"
+            "time": "12:00 ~ 13:55"
         },
         {
             "title": "抽奖环节",
-            "time": "13:55 - 14:00"
+            "time": "13:55 ~ 14:00"
         },
         {
             "topic": 1,
-            "time": "14:00 - 14:50"
+            "time": "14:00 ~ 14:50"
         },
         {
             "topic": 6,
-            "time": "14:50 - 15:40"
+            "time": "14:50 ~ 15:40"
         },
         {
             "title": "休息 & 现场交流 & 逛“市集”",
-            "time": "15:40 - 16:10"
+            "time": "15:40 ~ 16:10"
         },
         {
             "topic": 5,
-            "time": "16:10 - 17:00"
+            "time": "16:10 ~ 17:00"
         },
         {
             "topic": 2,
-            "time": "17:00 - 17:50"
+            "time": "17:00 ~ 17:50"
         },
         {
             "title": "抽奖环节",
-            "time": "17:50 -17:55"
+            "time": "17:50 ~ 17:55"
         }
     ],
     "sponsor": [
