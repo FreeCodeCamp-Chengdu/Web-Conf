@@ -207,6 +207,10 @@ tbody[data-array] td:first-child::before {
 @media screen and (min-width: 767.98px) {
     flex-wrap: nowrap;
 }
+.bazaar > div > div > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
 .companies {
     padding-left: 0;
 }
@@ -223,6 +227,7 @@ tbody[data-array] td:first-child::before {
     background: #fafafa;
 }
 footer {
+    border-top: 1px solid #eee;
     padding: 25px 0 15px 0;
     clear: both;
 }

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <!--<base href="https://web-conf.leanapp.cn/2018/">-->
+    <base href="https://web-conf.leanapp.cn/2018/">
 
     <link rel="shortcut icon" href="../common/favicon.ico" type="image/x-icon" />
     <title>2018 成都 Web 前端交流大会</title>
@@ -39,7 +39,7 @@
                 </ul>
             </div>
         </nav>
-        <img src="image/poster.jpg" class="img-fluid"/>
+        <img src="image/poster.jpg" class="img-fluid" />
     </div>
     <section id="Introduction">
         <h2>大会介绍</h2>
@@ -89,7 +89,47 @@
             </ol>
         </div>
     </section>
-    <section id="Schedule" class="sparked">
+    <div class="sparked">
+        <div class="container">
+            <section id="Bazaar" class="bazaar">
+                <h2>市集</h2>
+                <div class="row">
+                    <div class="col-md-7">
+                        <h5>企业招聘</h5>
+                        <p>在活动当天活动开始之前（上午9点之前，下午14点之前）和下午休息环节（15：40 - 16：10），会给企业提供现场招聘技术人才的专有位置，方便企业在技术活动上现场招聘技术人才。</p>
+                        <br>
+                        <h5>开源项目</h5>
+                        <ul>
+                            <li>面向群体：开源项目、开源社团（国人、西南地区创立的优先）</li>
+                            <li>主要形式：
+                                <ul>
+                                    <li>主会场外：摆展位宣传、交流、接受捐助</li>
+                                    <li>主会场内：演讲休息间隙大屏幕展播</li>
+                                </ul>
+                            </li>
+                            <li>观众参与：票选“最受欢迎开源项目/社团”
+                                <ul>
+                                    <li>奖励优胜项目、社团</li>
+                                    <li>在投票人中抽奖</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="image/undraw_04.png" class="img-fluid" />
+                    </div>
+                </div>
+            </section>
+            <div id="Enterprise" class="text-center">
+                <h2>参会企业</h2>
+                <br>
+                <ul class="companies" data-array="company">
+                    <li>${view.name}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section id="Schedule">
         <h2>日程</h2>
         <div class="container">
             <table class="table table-striped table-responsive-sm">
@@ -117,16 +157,9 @@
             </table>
         </div>
     </section>
-    <div class="container">
-        <section id="Address" class="text-center">
-            <h2>地址</h2>
-            <p class="text-muted">
-                天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
-            </p>
-            <iframe frameborder="0" scrolling="no" src="../common/map/?lnglat=104.07287,30.593133&title=2018 成都 Web 前端大会&detail=天府大道北段966号天府国际金融中心 4 号楼1楼1号会议厅"></iframe>
-        </section>
-        <section id="Review">
-            <h2>往期精彩回顾</h2>
+    <section id="Review" class="sparked">
+        <h2>往期精彩回顾</h2>
+        <div class="container">
             <div class="row photos">
                 <div class="col-md-4"><img src="image/photos/1.jpg" class="img-fluid" /></div>
                 <div class="col-md-4"><img src="image/photos/2.jpg" class="img-fluid" /></div>
@@ -142,20 +175,24 @@
                 <div class="col-md-4"><img src="image/photos/8.jpg" class="img-fluid" /></div>
                 <div class="col-md-4"><img src="image/photos/9.jpg" class="img-fluid" /></div>
             </div>
-        </section>
-        <section id="Sponsor">
-            <h2>赞助商</h2>
+        </div>
+    </section>
+
+    <section id="Address" class="text-center">
+        <h2>地址</h2>
+        <div class="container">
+            <p class="text-muted">
+                天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
+            </p>
+            <iframe frameborder="0" scrolling="no" src="../common/map/?lnglat=104.07287,30.593133&title=2018 成都 Web 前端大会&detail=天府大道北段966号天府国际金融中心 4 号楼1楼1号会议厅"></iframe>
+        </div>
+    </section>
+    <section id="Sponsor">
+        <h2>赞助商</h2>
+        <div class="container">
             <div class="row logos" data-array="sponsor">
                 <img title="${view.name}" src="image/sponsor/${view.englishName}.jpg" class="img-fluid">
             </div>
-        </section>
-    </div>
-    <section id="Enterprise" class="sparked">
-        <h2>参会企业</h2>
-        <div class="container">
-            <ul class="companies" data-array="company">
-                <li>${view.name}</li>
-            </ul>
         </div>
     </section>
     <footer>
