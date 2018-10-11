@@ -12,14 +12,29 @@ body {
     font-size: 16px;
     overflow-x: hidden;
 }
+@media screen and (max-width: 767.98px) {
+    body {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
 a {
     color: #222;
 }
 a:hover {
     color: #666;
 }
+a:visited {
+    color: #222;
+}
 .table {
     background: #fff;
+}
+@media screen and (max-width: 767.98px) {
+    td {
+        font-size: 12px;
+    }
 }
 .jumbotron {
     width: 100%;
@@ -31,6 +46,11 @@ a:hover {
     position: absolute;
     right: 25px;
     top: 25px;
+}
+@media screen and (max-width: 767.98px) {
+    .jumbotron .top-nav {
+        left: 25px;
+    }
 }
 .avatar {
     width: 128px;
@@ -44,6 +64,11 @@ a:hover {
 }
 section {
     padding: 100px 0;
+}
+@media screen and (max-width: 767.98px) {
+    section {
+        padding: 50px 0;
+    }
 }
 section > h2 {
     text-align: center;
@@ -77,27 +102,51 @@ section > h2 {
 .subjects {
     position: relative;
 }
-.subjects::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background: #fff url("image/undraw_02.png") no-repeat right center;
-    opacity: 0.3;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: -200px;
-}
 .subjects > li {
-    padding: 25px 0;
-    display: flex;
-    justify-content: flex-start;
+    list-style-type: none;
 }
-.subjects > li > div:first-child {
-    padding: 0 15px;
-    margin-right: 15px;
-    border-right: 1px solid #eee;
+@media screen and (max-width: 767.98px) {
+    .subjects {
+        padding-left: 0;
+    }
+    .subjects > li {
+        padding: 15px;
+        border-bottom: 1px dotted #eee;
+    }
+    .subjects > li > div:first-child {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .subjects > li > div > h5 {
+        text-align: center;
+        margin: 15px 0;
+    }
 }
+@media screen and (min-width: 767.98px) {
+    .subjects::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: #fff url("image/undraw_02.png") no-repeat right center;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: -200px;
+    }
+    .subjects > li {
+        padding: 25px 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .subjects > li > div:first-child {
+        padding: 0 15px;
+        margin-right: 15px;
+        border-right: 1px solid #eee;
+    }
+}
+
 .subjects > li > .avatar {
     flex-grow: 0;
     flex-shrink: 0;
@@ -117,15 +166,28 @@ tbody[data-array] td:first-child::before {
     counter-increment: index;
     content: counter(index);
 }
-.photos:not(:last-child) {
-    margin-bottom: 25px;
+
+@media screen and (min-width: 767.98px) {
+    .photos:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 767.98px) {
+    .photos > div {
+        margin-bottom: 15px;
+    }
 }
 .logos {
     display: flex;
     justify-content: space-around;
     align-content: center;
 }
-
+@media screen and (min-width: 767.98px) {
+    flex-wrap: nowrap;
+}
+.companies {
+    padding-left: 0;
+}
 .companies > li {
     list-style: none;
     display: inline-block;
@@ -140,14 +202,24 @@ tbody[data-array] td:first-child::before {
 }
 footer {
     padding: 25px 0 15px 0;
-    height: 240px;
+    clear: both;
+}
+@media screen and (min-width: 767.98px) {
+    footer {
+        height: 240px;
+    }
 }
 footer .qrcode {
-    width: 128px;
-    height: 128px;
     font-size: 12px;
     color: #333;
     text-align: center;
+}
+@media screen and (min-width: 767.98px) {
+    footer .qrcode {
+        width: 128px;
+        height: 128px;
+        float: right;
+    }
 }
 .copyright {
     font-size: 12px;
