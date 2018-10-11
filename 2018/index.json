@@ -13,6 +13,14 @@
             "name": "Topic"
         },
         {
+            "title": "市集",
+            "name": "Bazaar"
+        },
+        {
+            "title": "参会企业",
+            "name": "Enterprise"
+        },
+        {
             "title": "日程",
             "name": "Schedule"
         },
@@ -27,10 +35,6 @@
         {
             "title": "赞助商",
             "name": "Sponsor"
-        },
-        {
-            "title": "参会企业",
-            "name": "Enterprise"
         }
     ],
     "lecturer": [
