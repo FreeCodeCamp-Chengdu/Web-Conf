@@ -21,215 +21,222 @@
     <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
     <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-loader.js"></script>
 </head>
-
 <body>
-    <div class="poster">
-        <nav class="navbar navbar-expand-lg navbar-light top-nav">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav" aria-controls="top-nav"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="top-nav">
-                <ul class="navbar-nav" data-array="section">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#${view.name}">
-                            ${view.title}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <img src="image/poster.jpg" class="img-fluid" />
+    <div id="preload-1"></div>
+    <div id="preload-2"></div>
+    <div class="loading">
+        <img src="image/spinner.svg"  onerror="this.src='image/spinner.gif'" class="spinner">
+        <p class="text-muted text-sm-center">努力加载中</p>
     </div>
-    <section id="Introduction">
-        <h2>大会介绍</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <p>2018成都web前端交流大会是
-                        FCC成都社区举办的每年一度大型的技术交流活动。活动主要针对各地行业技术人才、技术爱好者、当地企业技术管理等。同时该活动又是一场高度人才集中、高度明星企业集结的一场大型互联网与软件行业的狂欢盛会。
-                    </p>
-                    <div class="padded text-center">
-                        <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
-                    </div>
+    <main>
+        <div class="poster">
+            <nav class="navbar navbar-expand-lg navbar-light top-nav">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav" aria-controls="top-nav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="top-nav">
+                    <ul class="navbar-nav" data-array="section">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#${view.name}">
+                                ${view.title}
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-md-5">
-                    <img src="./image/undraw_01.png" class="img-fluid" />
-                </div>
-            </div>
+            </nav>
+            <img src="image/poster.jpg" class="img-fluid" />
         </div>
-    </section>
-    <section id="Lecturer" class="sparked">
-        <h2>与会嘉宾</h2>
-        <div class="container">
-            <div class="row lecture-list" data-array="lecturer">
-                <div class="col-md-3">
-                    <div class="lecture">
-                        <img src="image/lecturer/${view.englishName}.png" class="avatar" alt="guest name" />
-                        <p class="lecture-name">${view.name}</p>
-                        <p class="lecture-intro">${view.description}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="Topic">
-        <h2>议题</h2>
-        <div class="container">
-            <ol class="subjects" data-array="topic">
-                <li>
-                    <div class="text-center">
-                        <p><strong>
-                                ${scope.lecturer[view.lecturer].name}
-                            </strong></p>
-                        <img class="avatar-sm" src="image/lecturer/${scope.lecturer[view.lecturer].englishName}.png">
-                    </div>
-                    <div>
-                        <h5>${view.title}</h5>
-                        <p>${view.description}</p>
-                    </div>
-                </li>
-            </ol>
-        </div>
-    </section>
-    <div class="sparked">
-        <div class="container">
-            <section id="Bazaar" class="bazaar">
-                <h2>市集</h2>
+        <section id="Introduction">
+            <h2>大会介绍</h2>
+            <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <h5>企业招聘</h5>
-                        <p>在活动当天活动开始之前（上午9点之前，下午14点之前）和下午休息环节（15：40 - 16：10），会给企业提供现场招聘技术人才的专有位置，方便企业在技术活动上现场招聘技术人才。</p>
-                        <br>
-                        <h5>开源项目</h5>
-                        <ul>
-                            <li>面向群体：开源项目、开源社团（国人、西南地区创立的优先）</li>
-                            <li>主要形式：
-                                <ul>
-                                    <li>主会场外：摆展位宣传、交流、接受捐助</li>
-                                    <li>主会场内：演讲休息间隙大屏幕展播</li>
-                                </ul>
-                            </li>
-                            <li>观众参与：票选“最受欢迎开源项目/社团”
-                                <ul>
-                                    <li>奖励优胜项目、社团</li>
-                                    <li>在投票人中抽奖</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <p>2018成都web前端交流大会是
+                            FCC成都社区举办的每年一度大型的技术交流活动。活动主要针对各地行业技术人才、技术爱好者、当地企业技术管理等。同时该活动又是一场高度人才集中、高度明星企业集结的一场大型互联网与软件行业的狂欢盛会。
+                        </p>
+                        <div class="padded text-center">
+                            <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
+                        </div>
                     </div>
                     <div class="col-md-5">
-                        <img src="image/undraw_04.png" class="img-fluid" />
+                        <img src="./image/undraw_01.png" class="img-fluid" />
                     </div>
                 </div>
-            </section>
-            <div id="Enterprise" class="text-center">
-                <h2>参会企业</h2>
-                <br>
-                <ul class="companies" data-array="company">
-                    <li>${view.name}</li>
-                </ul>
             </div>
-        </div>
-    </div>
-    <section id="Schedule">
-        <h2>日程</h2>
-        <div class="container">
-            <table class="table table-striped table-responsive-sm">
-                <thead>
-                    <tr>
-                        <th scope="col" class="d-none d-md-block">#</th>
-                        <th scope="col">时间</th>
-                        <th scope="col">活动</th>
-                    </tr>
-                </thead>
-                <tbody data-array="schedule">
-                    <tr>
-                        <td class="d-none d-md-block"></td>
-                        <td style="white-space: nowrap">${view.time}</td>
-                        <td>${
-                            view.title || (
-                            '《' + scope.topic[view.topic].title + '》 ' +
-                            scope.lecturer[
-                            scope.topic[view.topic].lecturer
-                            ].name
-                            )
-                            }</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <section id="Review" class="sparked">
-        <h2>往期精彩回顾</h2>
-        <div class="container">
-            <div class="row photos">
-                <div class="col-md-4"><img src="image/photos/1.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/2.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/3.jpg" class="img-fluid" /></div>
+        </section>
+        <section id="Lecturer" class="sparked">
+            <h2>与会嘉宾</h2>
+            <div class="container">
+                <div class="row lecture-list" data-array="lecturer">
+                    <div class="col-md-3">
+                        <div class="lecture">
+                            <img src="image/lecturer/${view.englishName}.png" class="avatar" alt="guest name" />
+                            <p class="lecture-name">${view.name}</p>
+                            <p class="lecture-intro">${view.description}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row photos">
-                <div class="col-md-4"><img src="image/photos/4.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/5.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/6.jpg" class="img-fluid" /></div>
-            </div>
-            <div class="row photos">
-                <div class="col-md-4"><img src="image/photos/7.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/8.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/9.jpg" class="img-fluid" /></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="Address" class="text-center">
-        <h2>地址</h2>
-        <div class="container">
-            <p class="text-muted">
-                天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
-            </p>
-            <iframe frameborder="0" scrolling="no" src="../common/map/?lnglat=104.07287,30.593133&title=2018 成都 Web 前端大会&detail=天府大道北段966号天府国际金融中心 4 号楼1楼1号会议厅"></iframe>
-        </div>
-    </section>
-    <section id="Sponsor">
-        <h2>赞助商</h2>
-        <div class="container">
-            <div class="row logos" data-array="sponsor">
-                <img title="${view.name}" src="image/sponsor/${view.englishName}.jpg" class="img-fluid">
-            </div>
-        </div>
-    </section>
-    <section id="Sponsor" class="sparked">
-        <div class="container text-center">
-            <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="d-none d-md-block">
-                <ul class="nav" data-array="section">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#${view.name}">
-                            ${view.title}
-                        </a>
+        </section>
+        <section id="Topic">
+            <h2>议题</h2>
+            <div class="container">
+                <ol class="subjects" data-array="topic">
+                    <li>
+                        <div class="text-center">
+                            <p><strong>
+                                    ${scope.lecturer[view.lecturer].name}
+                                </strong></p>
+                            <img class="avatar-sm" src="image/lecturer/${scope.lecturer[view.lecturer].englishName}.png">
+                        </div>
+                        <div>
+                            <h5>${view.title}</h5>
+                            <p>${view.description}</p>
+                        </div>
                     </li>
-                </ul>
+                </ol>
             </div>
-            <div class="qrcode align-middle">
-                <img src="../common/FCC-WeChat.jpg" class="img-fluid" />
-                <div>微信扫一扫关注我们</div>
+        </section>
+        <div class="sparked">
+            <div class="container">
+                <section id="Bazaar" class="bazaar">
+                    <h2>市集</h2>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h5>企业招聘</h5>
+                            <p>在活动当天活动开始之前（上午9点之前，下午14点之前）和下午休息环节（15：40 - 16：10），会给企业提供现场招聘技术人才的专有位置，方便企业在技术活动上现场招聘技术人才。</p>
+                            <br>
+                            <h5>开源项目</h5>
+                            <ul>
+                                <li>面向群体：开源项目、开源社团（国人、西南地区创立的优先）</li>
+                                <li>主要形式：
+                                    <ul>
+                                        <li>主会场外：摆展位宣传、交流、接受捐助</li>
+                                        <li>主会场内：演讲休息间隙大屏幕展播</li>
+                                    </ul>
+                                </li>
+                                <li>观众参与：票选“最受欢迎开源项目/社团”
+                                    <ul>
+                                        <li>奖励优胜项目、社团</li>
+                                        <li>在投票人中抽奖</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="image/undraw_04.png" class="img-fluid" />
+                        </div>
+                    </div>
+                </section>
+                <div id="Enterprise" class="text-center">
+                    <h2>参会企业</h2>
+                    <br>
+                    <ul class="companies" data-array="company">
+                        <li>${view.name}</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </footer>
-    <div class="copyright">
-        &copy;2018 freeCodeCamp 成都
-        <p>
-            自豪地使用
-            <a href="https://getbootstrap.com/">BootStrap v4</a>
-            &amp;
-            <a href="https://web-cell.tk/">WebCell</a>
-            开发
-        </p>
-    </div>
+        <section id="Schedule">
+            <h2>日程</h2>
+            <div class="container">
+                <table class="table table-striped table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="d-none d-md-block">#</th>
+                            <th scope="col">时间</th>
+                            <th scope="col">活动</th>
+                        </tr>
+                    </thead>
+                    <tbody data-array="schedule">
+                        <tr>
+                            <td class="d-none d-md-block"></td>
+                            <td style="white-space: nowrap">${view.time}</td>
+                            <td>${
+                                view.title || (
+                                '《' + scope.topic[view.topic].title + '》 ' +
+                                scope.lecturer[
+                                scope.topic[view.topic].lecturer
+                                ].name
+                                )
+                                }</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="Review" class="sparked">
+            <h2>往期精彩回顾</h2>
+            <div class="container">
+                <div class="row photos">
+                    <div class="col-md-4"><img src="image/photos/1.jpg" class="img-fluid" /></div>
+                    <div class="col-md-4"><img src="image/photos/2.jpg" class="img-fluid" /></div>
+                    <div class="col-md-4"><img src="image/photos/3.jpg" class="img-fluid" /></div>
+                </div>
+                <div class="row photos">
+                    <div class="col-md-4"><img src="image/photos/4.jpg" class="img-fluid" /></div>
+                    <div class="col-md-4"><img src="image/photos/5.jpg" class="img-fluid" /></div>
+                    <div class="col-md-4"><img src="image/photos/6.jpg" class="img-fluid" /></div>
+                </div>
+                <div class="row photos">
+                    <div class="col-md-4"><img src="image/photos/7.jpg" class="img-fluid" /></div>
+                    <div class="col-md-4"><img src="image/photos/8.jpg" class="img-fluid" /></div>
+                    <div class="col-md-4"><img src="image/photos/9.jpg" class="img-fluid" /></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Address" class="text-center">
+            <h2>地址</h2>
+            <div class="container">
+                <p class="text-muted">
+                    天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
+                </p>
+                <iframe frameborder="0" scrolling="no" src="../common/map/?lnglat=104.07287,30.593133&title=2018 成都 Web 前端大会&detail=天府大道北段966号天府国际金融中心 4 号楼1楼1号会议厅"></iframe>
+            </div>
+        </section>
+        <section id="Sponsor">
+            <h2>赞助商</h2>
+            <div class="container">
+                <div class="row logos" data-array="sponsor">
+                    <img title="${view.name}" src="image/sponsor/${view.englishName}.jpg" class="img-fluid">
+                </div>
+            </div>
+        </section>
+        <section id="Sponsor" class="sparked">
+            <div class="container text-center">
+                <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="d-none d-md-block">
+                    <ul class="nav" data-array="section">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#${view.name}">
+                                ${view.title}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="qrcode align-middle">
+                    <img src="../common/FCC-WeChat.jpg" class="img-fluid" />
+                    <div>微信扫一扫关注我们</div>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright">
+            &copy;2018 freeCodeCamp 成都
+            <p>
+                自豪地使用
+                <a href="https://getbootstrap.com/">BootStrap v4</a>
+                &amp;
+                <a href="https://web-cell.tk/">WebCell</a>
+                开发
+            </p>
+        </div>
+    </main>
     <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://lib.baomitu.com/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="../node_modules/web-cell/dist/web-cell.min.js"></script>

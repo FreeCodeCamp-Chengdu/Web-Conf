@@ -8,10 +8,14 @@
         data.company = data.company.map(function(name) {
             return { name: name };
         });
-
         var body = new ObjectView(document.body);
-
         body.render(data);
+        setTimeout(function() {
+            $('.loading').hide('fast', function() {
+                $('body').css({ 'overflow-y': 'auto' });
+                $('main').css({ visibility: 'visible' });
+            });
+        }, 1500);
     });
 
     //  导航滚动
