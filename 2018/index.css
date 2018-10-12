@@ -11,7 +11,15 @@ body {
     color: #333;
     font-size: 16px;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
+#preload-01 {
+    background: url(image/spinner.svg) no-repeat -9999px -9999px;
+}
+#preload-02 {
+    background: url(image/spinner.gif) no-repeat -9999px -9999px;
+}
+
 @media screen and (max-width: 767.98px) {
     body {
         font-size: 14px;
@@ -43,6 +51,27 @@ a.btn-primary {
 .padded {
     padding: 25px;
 }
+.loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background: #fff url(image/bg.png) repeat top left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.spinner {
+    width: 256px;
+    height: 256px;
+}
+main {
+    visibility: hidden;
+}
 .poster {
     width: 100%;
     min-height: 600px;
@@ -55,7 +84,7 @@ a.btn-primary {
     position: absolute;
     right: 25px;
     top: 25px;
-    z-index: 999;
+    z-index: 998;
 }
 .poster .navbar-toggler {
     background: #f8f9fa;
