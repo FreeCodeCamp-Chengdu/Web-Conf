@@ -5,9 +5,13 @@
         "amd": true,
         "jquery": true
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 9,
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
     },
     "extends": "eslint:recommended",
     "rules": {

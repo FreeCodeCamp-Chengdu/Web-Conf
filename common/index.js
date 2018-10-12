@@ -1,4 +1,4 @@
-(function($, WebCell) {
+(function($, WebCell, Loading) {
     var request = WebCell.request,
         documentReady = WebCell.documentReady,
         ObjectView = WebCell.ObjectView;
@@ -21,9 +21,11 @@
         });
     });
 
+    self.addEventListener('load', Loading.closeAll.bind(Loading));
+
     $(document).on('click', 'footer a[href="#top"]', function() {
         self.scrollTo(0, 0);
 
         return false;
     });
-})(self.jQuery, self['web-cell']);
+})(self.jQuery, self['web-cell'], self['Loading'].default);
