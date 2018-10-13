@@ -41,7 +41,7 @@
         {
             "name": "昆西·拉尔森",
             "englishName": "Quincy Larson",
-            "description": "Quincy Larson 是 freeCodeCamp.org 社区创始人，致力于帮助数百万人们免费学习编程。他曾在美国一所高校执教，并在中国分校任职校长。Quincy 在 31 岁时开始学习编程，希望通过程序使学校的各项事务处理更高效。在接触编程之后，他意识到这是一项人人都应该掌握的技能，可以帮助众多组织提升效率。\n\n在天津财经大学攻读研究生学位期间，Quincy 遇到了他的妻子 Jade。现在他们拥有一双可爱的儿女，一家人居住在美国俄克拉荷马城，有时也会回到在中国东莞的家。"
+            "description": "Quincy Larson 是 freeCodeCamp.org 社区创始人，致力于帮助数百万人们免费学习编程。他曾在美国一所高校执教，并在中国分校任职校长。Quincy 在 31 岁时开始学习编程，希望通过程序使学校的各项事务处理更高效。在接触编程之后，他意识到这是一项人人都应该掌握的技能，可以帮助众多组织提升效率。"
         },
         {
             "name": "熊节",
@@ -76,9 +76,9 @@
     ],
     "topic": [
         {
-            "title": "freeCodeCamp创始人完整讲述他的求学和职业生涯",
+            "title": "freeCodeCamp 从 0 到 29 万 star",
             "lecturer": 0,
-            "description": "Quincy Larson 完整讲述他的求学和职业生涯：为什么转行学编程？为什么创立freeCodeCamp？freeCodeCamp是怎么逐渐流行起来的？中间遇到哪些困难和调整，是如何解决的？freeCodeCamp的技术架构变迁史？核心团队和代码贡献者介绍。"
+            "description": "Quincy Larson 完整讲述他的求学和职业生涯：为什么转行学编程？为什么创立 freeCodeCamp？freeCodeCamp 是怎么逐渐流行起来的？中间遇到哪些困难和调整，是如何解决的？以及 freeCodeCamp 的技术架构变迁史、核心团队和代码贡献者介绍。"
         },
         {
             "title": "敏捷中国史",
@@ -88,32 +88,32 @@
         {
             "title": "打造 Vue 组件库",
             "lecturer": 2,
-            "description": "为什么要做组件库、组件的设计、模块设计、生态建设、最佳实践。"
+            "description": "为什么要做组件库、组件的设计、模块设计、生态建设、最佳实践"
         },
         {
             "title": "开源项目维护",
             "lecturer": 4,
-            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus."
+            "description": "如何做好一个开源项目？做开源项目对一个人的影响、在做开源中学到的一些东西"
         },
         {
             "title": "给 Node.js 插上 C++ 的翅膀",
             "lecturer": 3,
-            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus."
+            "description": "本主题围绕着何时、为何、如何在 Node.js 中使用 C++ 来赋予它更多的可能性（如提升性能、降低开发成本、做一些神奇的事情等）"
         },
         {
-            "title": "高可用React服务端渲染",
+            "title": "高可用 React 服务端渲染",
             "lecturer": 6,
-            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus."
+            "description": "深入浅出地分享“高可用 React SSR（服务端渲染）”技术栈在企业中应用实践"
         },
         {
             "title": "高效 H5 动画开发方式",
             "lecturer": 5,
-            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus."
+            "description": "随着设备性能的不断提升，越来越多的需求希望以动画的形式去表达呈现。在 Web 开发中，动画的实现成本无疑是重头之一。如何选择合适的实现方式，如何提高动画的开发效率，值得大家一起探讨。本次分享将围绕“保质保量”高效动画开发方式的主题，分享团队的一些探索心得与成果。"
         }
     ],
     "schedule": [
         {
-            "title": "签到与逛“市集”",
+            "title": "签到与逛“集市”",
             "time": "09:00 ~ 09:30"
         },
         {
@@ -129,7 +129,7 @@
             "time": "11:10 ~ 12:00"
         },
         {
-            "title": "午餐与逛“市集”",
+            "title": "午餐与逛“集市”",
             "time": "12:00 ~ 13:55"
         },
         {
@@ -145,7 +145,7 @@
             "time": "14:50 ~ 15:40"
         },
         {
-            "title": "休息 & 现场交流 & 逛“市集”",
+            "title": "休息 & 现场交流 & 逛“集市”",
             "time": "15:40 ~ 16:10"
         },
         {
@@ -161,6 +161,42 @@
             "time": "17:50 ~ 17:55"
         }
     ],
+    "project": [
+        {
+            "title": "深度操作系统",
+            "name": "Deepin",
+            "type": 0,
+            "URL": "https://www.deepin.org",
+            "detail": "有全球影响力的中国 Linux 发行版"
+        },
+        {
+            "title": "WebCell",
+            "name": "WebCell",
+            "type": 0,
+            "URL": "https://web-cell.tk/",
+            "detail": "轻量级 Web 组件化引擎，基于 HTML 5.3、DOM 4.1、ECMAScript 2018 和 装饰器提案 提供 MVVM 模型"
+        },
+        {
+            "title": "Ubuntu Kylin",
+            "name": "UKylin",
+            "type": 0,
+            "URL": "http://www.ubuntukylin.com",
+            "detail": "优麒麟（Ubuntu Kylin）是由中国 CCN（由 CSIP、Canonical、NUDT 三方联合组建）开源创新联合实验室与天津麒麟信息技术有限公司主导开发的全球开源项目，其宗旨是通过研发用户友好的桌面环境以及特定需求的应用软件，为全球 Linux 桌面用户带来非凡的全新体验！优麒麟操作系统是 Ubuntu 官方衍生版，得到来自 Debian、Ubuntu、Mate、LUPA 等国际社区及众多国内外社区爱好者的广泛参与和热情支持！"
+        },
+        {
+            "title": "HTML 5 design software",
+            "name": "H5DS",
+            "type": 0,
+            "URL": "http://www.h5ds.com",
+            "detail": "H5DS(HTML 5 design software) 是一款 B/S 的 H5 代码生成工具，通过可视化操作让不会代码的人也能轻松制作 H5 页面"
+        },
+        {
+            "title": "Fun loading",
+            "type": 0,
+            "URL": "https://fanerge.github.io/fun-loading/dist/",
+            "detail": "基于 React 的 loading 组件库"
+        }
+    ],
     "sponsor": [
         {
             "name": "上线了",
@@ -172,53 +208,44 @@
         }
     ],
     "company": [
-        "蚂蚁金服",
-        "支付宝",
-        "腾讯云",
-        "爱奇艺",
-        "美团",
-        "Thoughtworks",
-        "BBD",
-        "知道创宇",
-        "京东成都研究院",
-        "企鹅医生",
-        "tap4fun",
-        "Camera360",
-        "咕咚网",
-        "百词斩",
-        "医联",
-        "喜马拉雅FM",
-        "点融网",
-        "汇通天下G7",
-        "去哪儿",
-        "客如云",
-        "23魔方",
-        "咪咕音乐",
-        "陌陌",
-        "科大讯飞",
         "上线了",
-        "Testbird",
-        "知乎",
-        "途风网",
-        "微云推",
-        "希望教育集团",
-        "折800",
-        "积微物联",
-        "柠檬云",
-        "连心医疗",
+        "宝尊电商",
+        "企鹅医生",
+        "新蛋",
         "乐车邦",
-        "国双科技",
-        "货车帮",
-        "鱼说",
+        "tap4fun",
+        "ThoughtWorks",
         "麦麦养老",
-        "麦客CRM",
+        "BBD",
+        "美团",
+        "腾讯",
+        "知道创宇",
+        "陌陌成都",
+        "孔明科技",
+        "知乎",
+        "去哪儿",
+        "医联",
+        "极米科技",
+        "今日头条",
+        "点融网",
+        "客如云",
         "街电",
-        "未一",
-        "锤子科技",
-        "麦子学院",
-        "龙熙科技",
+        "华为云",
+        "Camera360",
+        "鱼说科技",
+        "折800",
+        "TestBird",
+        "汇通天下",
+        "科大讯飞",
+        "咕咚",
         "西瓜创客",
-        "冰鉴科技",
-        "睿沿科技"
+        "实验楼",
+        "四方伟业",
+        "京东",
+        "猪八戒",
+        "陌陌",
+        "货车邦",
+        "活跃网络",
+        "蚂蚁金服"
     ]
 }

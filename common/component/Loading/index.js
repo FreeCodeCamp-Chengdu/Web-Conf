@@ -1,15 +1,19 @@
-import { component, blobURI, $ } from 'web-cell';
+import { component, mapProperty, blobURI, $ } from 'web-cell';
 
 import template from './index.html';
 
 import image from './spinner.svg';
 
-@component({ template })
-export default class CellLoading extends HTMLElement {
-    constructor() {
-        super();
+const media = ['img', 'iframe', 'audio', 'video'];
 
-        this.buildDOM();
+@component({
+    template,
+    data: { count: 0 }
+})
+export default class CellLoading extends HTMLElement {
+    @mapProperty
+    static get observedAttributes() {
+        return ['count'];
     }
 
     @blobURI
@@ -17,8 +21,26 @@ export default class CellLoading extends HTMLElement {
         return image;
     }
 
+    constructor() {
+        super();
+
+        this.buildDOM();
+
+        const reduce = () => this.count && this.count--;
+
+        new MutationObserver(list => {
+            for (let entry of list)
+                for (let node of entry.addedNodes)
+                    if (media.includes(node.nodeName.toLowerCase())) {
+                        this.count++;
+
+                        node.onload = node.onerror = reduce;
+                    }
+        }).observe(this, { childList: true });
+    }
+
     toggle(open) {
-        return this.classList.toggle('done', !open);
+        this.count = +(open != null ? open : !this.count);
     }
 
     static closeAll() {

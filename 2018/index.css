@@ -116,11 +116,16 @@ section h2 {
     padding: 10px;
 }
 .lecture {
-    height: 500px;
+    height: 30rem;
     border: 1px solid #eee;
     text-align: center;
     padding: 25px 15px;
     background: white;
+}
+@media (max-width: 720px) {
+    .lecture {
+        height: auto;
+    }
 }
 .lecture-name {
     font-weight: bold;
@@ -221,6 +226,13 @@ tbody[data-array] td:first-child::before {
 .bazaar > div > div > ul {
     list-style-type: none;
     padding-left: 0;
+}
+#Bazaar .card-body p {
+    max-height: 15rem;
+    overflow: auto;
+}
+#Bazaar .card-img-top {
+    padding: 1rem;
 }
 .companies {
     padding-left: 0;

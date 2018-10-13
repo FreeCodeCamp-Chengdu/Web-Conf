@@ -14,20 +14,20 @@
             align-items:       center;
             transition:        0.25s;
         }
+        main.done {
+            width:    0;
+            height:   0;
+            opacity:  0;
+        }
         main > img {
             min-width:   150px;
             max-width:   150px;
             max-width:   25%;
             max-height:  25%;
         }
-        :host(.done) main {
-            width:    0;
-            height:   0;
-            opacity:  0;
-        }
     </style>
 
-    <main>
+    <main class="${view.count ? '' : 'done'}">
         <img src="${host.constructor.image}">
         Loading...
     </main>

@@ -18,7 +18,7 @@
 
     <script src="https://lib.baomitu.com/babel-polyfill/7.0.0/polyfill.min.js"></script>
     <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
-    <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-loader.js"></script>
+    <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>
     <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/custom-elements-es5-adapter.js"></script>
     <script src="../node_modules/web-cell/dist/web-cell.min.js"></script>
     <script src="../dist/Loading.js"></script>
@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <p>
-                        2018成都web前端交流大会是FCC成都社区举办的每年一度大型的技术交流活动。活动主要针对各地行业技术人才、技术爱好者、当地企业技术管理等。同时该活动又是一场高度人才集中、高度明星企业集结的一场大型互联网与软件行业的狂欢盛会。
+                        成都 Web 前端大会是 freeCodeCamp 成都社区一年一度举办的大型技术交流活动，主要面向西南地区 Web 应用、JavaScript 全栈开发领域的程序员、架构师、研发团队管理者和技术爱好者。我们在借鉴同类行业大会技术分享宝贵经验的同时，也创新地增加了优秀企业现场招聘、开源项目/社团宣传展位，为互联网、软件开发技术从业者提供从学习、求职到合作洽谈的一站式资讯平台，全力打造西南一流的 IT 行业盛会。
                     </p>
                     <div class="padded text-center">
                         <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
@@ -97,40 +97,31 @@
     <section class="sparked">
         <div class="container">
             <div id="Bazaar" class="bazaar">
-                <h2>市集</h2>
+                <h2>开源集市</h2>
+                <div class="card-columns" data-array="project">
+                    <div class="card">
+                        <img class="card-img-top" style="display: ${view.name ? '' : 'none'}"
+                                src="image/project/${view.name}.png" alt="${view.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${view.title}</h5>
+                            <p class="card-text">${view.detail}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Enterprise" class="text-center">
+                <h2>参会企业</h2>
+                <small>部分企业开放现场招聘位，欢迎优秀人才携简历前来~</small>
                 <div class="row">
                     <div class="col-md-7">
-                        <h5>企业招聘</h5>
-                        <p>在活动当天活动开始之前（上午9点之前，下午14点之前）和下午休息环节（15：40 - 16：10），会给企业提供现场招聘技术人才的专有位置，方便企业在技术活动上现场招聘技术人才。</p>
-                        <br>
-                        <h5>开源项目</h5>
-                        <ul>
-                            <li>面向群体：开源项目、开源社团（国人、西南地区创立的优先）</li>
-                            <li>主要形式：
-                                <ul>
-                                    <li>主会场外：摆展位宣传、交流、接受捐助</li>
-                                    <li>主会场内：演讲休息间隙大屏幕展播</li>
-                                </ul>
-                            </li>
-                            <li>观众参与：票选“最受欢迎开源项目/社团”
-                                <ul>
-                                    <li>奖励优胜项目、社团</li>
-                                    <li>在投票人中抽奖</li>
-                                </ul>
-                            </li>
+                        <ul class="companies" data-array="company">
+                            <li>${view.name}</li>
                         </ul>
                     </div>
                     <div class="col-md-5">
                         <img src="image/undraw_04.png" class="img-fluid" />
                     </div>
                 </div>
-            </div>
-            <div id="Enterprise" class="text-center">
-                <h2>参会企业</h2>
-                <br>
-                <ul class="companies" data-array="company">
-                    <li>${view.name}</li>
-                </ul>
             </div>
         </div>
     </section>

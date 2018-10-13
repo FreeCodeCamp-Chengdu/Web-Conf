@@ -598,7 +598,7 @@
                 });
                 exports.default = void 0;
                 var _default =
-                    '<template>\n    <style>\n        main {\n            position:          fixed;\n            left:              0;\n            top:               0;\n            width:             100%;\n            height:            100%;\n            z-index:           999;\n            background-color:  white;\n            display:           flex;\n            flex-direction:    column;\n            justify-content:   center;\n            align-items:       center;\n            transition:        0.25s;\n        }\n        main > img {\n            min-width:   150px;\n            max-width:   150px;\n            max-width:   25%;\n            max-height:  25%;\n        }\n        :host(.done) main {\n            width:    0;\n            height:   0;\n            opacity:  0;\n        }\n    </style>\n\n    <main>\n        <img src="${host.constructor.image}">\n        Loading...\n    </main>\n</template>\n';
+                    "<template>\n    <style>\n        main {\n            position:          fixed;\n            left:              0;\n            top:               0;\n            width:             100%;\n            height:            100%;\n            z-index:           999;\n            background-color:  white;\n            display:           flex;\n            flex-direction:    column;\n            justify-content:   center;\n            align-items:       center;\n            transition:        0.25s;\n        }\n        main.done {\n            width:    0;\n            height:   0;\n            opacity:  0;\n        }\n        main > img {\n            min-width:   150px;\n            max-width:   150px;\n            max-width:   25%;\n            max-height:  25%;\n        }\n    </style>\n\n    <main class=\"${view.count ? '' : 'done'}\">\n        <img src=\"${host.constructor.image}\">\n        Loading...\n    </main>\n</template>\n";
                 exports.default = _default;
             }
         },
@@ -625,10 +625,15 @@
                           };
                 }
 
+                var media = ["img", "iframe", "audio", "video"];
+
                 var CellLoading = _decorate(
                     [
                         (0, _webCell.component)({
-                            template: _index.default
+                            template: _index.default,
+                            data: {
+                                count: 0
+                            }
                         })
                     ],
                     function(_initialize, _HTMLElement) {
@@ -655,55 +660,71 @@
 
                                     _this.buildDOM();
 
-                                    return _this;
-                                }
+                                    var reduce = function reduce() {
+                                        return _this.count && _this.count--;
+                                    };
 
-                                return CellLoading;
-                            })(_HTMLElement);
-
-                        return {
-                            F: CellLoading,
-                            d: [
-                                {
-                                    kind: "get",
-                                    decorators: [_webCell.blobURI],
-                                    static: true,
-                                    key: "image",
-                                    value: function value() {
-                                        return _spinner.default;
-                                    }
-                                },
-                                {
-                                    kind: "method",
-                                    key: "toggle",
-                                    value: function value(open) {
-                                        return this.classList.toggle(
-                                            "done",
-                                            !open
-                                        );
-                                    }
-                                },
-                                {
-                                    kind: "method",
-                                    static: true,
-                                    key: "closeAll",
-                                    value: function value() {
+                                    new MutationObserver(function(list) {
                                         var _iteratorNormalCompletion = true;
                                         var _didIteratorError = false;
                                         var _iteratorError = undefined;
 
                                         try {
                                             for (
-                                                var _iterator = (0, _webCell.$)(
-                                                        this.tagName
-                                                    )[Symbol.iterator](),
+                                                var _iterator = list[
+                                                        Symbol.iterator
+                                                    ](),
                                                     _step;
                                                 !(_iteratorNormalCompletion = (_step = _iterator.next())
                                                     .done);
                                                 _iteratorNormalCompletion = true
                                             ) {
-                                                var that = _step.value;
-                                                that.toggle(false);
+                                                var entry = _step.value;
+                                                var _iteratorNormalCompletion2 = true;
+                                                var _didIteratorError2 = false;
+                                                var _iteratorError2 = undefined;
+
+                                                try {
+                                                    for (
+                                                        var _iterator2 = entry.addedNodes[
+                                                                Symbol.iterator
+                                                            ](),
+                                                            _step2;
+                                                        !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next())
+                                                            .done);
+                                                        _iteratorNormalCompletion2 = true
+                                                    ) {
+                                                        var node = _step2.value;
+
+                                                        if (
+                                                            media.includes(
+                                                                node.nodeName.toLowerCase()
+                                                            )
+                                                        ) {
+                                                            _this.count++;
+                                                            node.onload = node.onerror = reduce;
+                                                        }
+                                                    }
+                                                } catch (err) {
+                                                    _didIteratorError2 = true;
+                                                    _iteratorError2 = err;
+                                                } finally {
+                                                    try {
+                                                        if (
+                                                            !_iteratorNormalCompletion2 &&
+                                                            _iterator2.return !=
+                                                                null
+                                                        ) {
+                                                            _iterator2.return();
+                                                        }
+                                                    } finally {
+                                                        if (
+                                                            _didIteratorError2
+                                                        ) {
+                                                            throw _iteratorError2;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         } catch (err) {
                                             _didIteratorError = true;
@@ -719,6 +740,90 @@
                                             } finally {
                                                 if (_didIteratorError) {
                                                     throw _iteratorError;
+                                                }
+                                            }
+                                        }
+                                    }).observe(
+                                        _assertThisInitialized(
+                                            _assertThisInitialized(_this)
+                                        ),
+                                        {
+                                            childList: true
+                                        }
+                                    );
+                                    return _this;
+                                }
+
+                                return CellLoading;
+                            })(_HTMLElement);
+
+                        return {
+                            F: CellLoading,
+                            d: [
+                                {
+                                    kind: "get",
+                                    decorators: [_webCell.mapProperty],
+                                    static: true,
+                                    key: "observedAttributes",
+                                    value: function value() {
+                                        return ["count"];
+                                    }
+                                },
+                                {
+                                    kind: "get",
+                                    decorators: [_webCell.blobURI],
+                                    static: true,
+                                    key: "image",
+                                    value: function value() {
+                                        return _spinner.default;
+                                    }
+                                },
+                                {
+                                    kind: "method",
+                                    key: "toggle",
+                                    value: function value(open) {
+                                        this.count = +(open != null
+                                            ? open
+                                            : !this.count);
+                                    }
+                                },
+                                {
+                                    kind: "method",
+                                    static: true,
+                                    key: "closeAll",
+                                    value: function value() {
+                                        var _iteratorNormalCompletion3 = true;
+                                        var _didIteratorError3 = false;
+                                        var _iteratorError3 = undefined;
+
+                                        try {
+                                            for (
+                                                var _iterator3 = (0,
+                                                    _webCell.$)(this.tagName)[
+                                                        Symbol.iterator
+                                                    ](),
+                                                    _step3;
+                                                !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next())
+                                                    .done);
+                                                _iteratorNormalCompletion3 = true
+                                            ) {
+                                                var that = _step3.value;
+                                                that.toggle(false);
+                                            }
+                                        } catch (err) {
+                                            _didIteratorError3 = true;
+                                            _iteratorError3 = err;
+                                        } finally {
+                                            try {
+                                                if (
+                                                    !_iteratorNormalCompletion3 &&
+                                                    _iterator3.return != null
+                                                ) {
+                                                    _iterator3.return();
+                                                }
+                                            } finally {
+                                                if (_didIteratorError3) {
+                                                    throw _iteratorError3;
                                                 }
                                             }
                                         }
