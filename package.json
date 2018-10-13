@@ -40,13 +40,13 @@
     },
     "dependencies": {
         "koapache": "^1.0.4",
-        "web-cell": "^0.10.2",
+        "web-cell": "^0.10.3",
         "whatwg-fetch": "^3.0.0"
     },
     "devDependencies": {
         "@babel/plugin-proposal-decorators": "^7.1.2",
         "babel-eslint": "^10.0.1",
-        "eslint": "^5.6.1",
+        "eslint": "^5.7.0",
         "husky": "^1.1.2",
         "prettier": "^1.14.3",
         "web-cell-cli": "^0.6.0"

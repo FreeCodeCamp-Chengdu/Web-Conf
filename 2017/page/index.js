@@ -11,7 +11,8 @@ require(['jquery', 'vue', 'ELEMENT', 'index'], function(
 
         new Vue({
             el: '#app',
-            data: index
+            data: index,
+            mounted: () => self.Loading.default.closeAll()
         });
     });
 });

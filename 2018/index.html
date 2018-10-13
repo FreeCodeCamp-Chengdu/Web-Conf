@@ -20,11 +20,13 @@
     <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
     <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>
     <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/custom-elements-es5-adapter.js"></script>
+
     <script src="../node_modules/web-cell/dist/web-cell.min.js"></script>
     <script src="../dist/Loading.js"></script>
+    <script src="https://lib.baomitu.com/marked/0.5.1/marked.min.js"></script>
 </head>
 <body>
-    <cell-loading></cell-loading>
+    <cell-loading count="1"></cell-loading>
     <div class="poster">
         <nav class="navbar navbar-expand-lg navbar-light top-nav">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav" aria-controls="top-nav"
@@ -69,7 +71,7 @@
                     <div class="lecture">
                         <img src="image/lecturer/${view.englishName}.png" class="avatar" alt="guest name" />
                         <p class="lecture-name">${view.name}</p>
-                        <p class="lecture-intro">${view.description}</p>
+                        <p class="lecture-intro">${view.detail}</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +90,7 @@
                     </div>
                     <div>
                         <h5>${view.title}</h5>
-                        <p>${view.description}</p>
+                        <p>${view.detail}</p>
                     </div>
                 </li>
             </ol>
@@ -105,6 +107,9 @@
                         <div class="card-body">
                             <h5 class="card-title">${view.title}</h5>
                             <p class="card-text">${view.detail}</p>
+                            <a class="btn btn-primary" target="_blank" href="${view.URL}">
+                                访问官网
+                            </a>
                         </div>
                     </div>
                 </div>

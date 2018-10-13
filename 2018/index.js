@@ -1,4 +1,4 @@
-(function($, WebCell, Loading) {
+(function($, WebCell, marked, Loading) {
     var request = WebCell.request,
         documentReady = WebCell.documentReady,
         ObjectView = WebCell.ObjectView;
@@ -11,6 +11,11 @@
         data.company = data.company.map(function(name) {
             return { name: name };
         });
+
+        for (var key in data)
+            if ('detail' in data[key][0])
+                for (var i = 0; data[key][i]; i++)
+                    data[key][i].detail = marked(data[key][i].detail);
 
         var body = new ObjectView(document.body);
 
@@ -30,4 +35,4 @@
 
         return false;
     });
-})(self.jQuery, self['web-cell'], self['Loading'].default);
+})(self.jQuery, self['web-cell'], self.marked, self['Loading'].default);

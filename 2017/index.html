@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="https://lib.baomitu.com/element-ui/2.4.7/theme-chalk/index.css">
     <link rel="stylesheet" href="page/index.css" />
 
+    <script src="https://lib.baomitu.com/babel-polyfill/7.0.0/polyfill.min.js"></script>
+    <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
+    <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>
+    <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/custom-elements-es5-adapter.js"></script>
+
+    <script src="../node_modules/web-cell/dist/web-cell.min.js"></script>
+    <script src="../dist/Loading.js"></script>
+
     <script src="https://lib.baomitu.com/require.js/2.3.6/require.min.js"></script>
     <script>
         require.config({
@@ -36,6 +44,7 @@
     <script src="page/index.js"></script>
 </head>
 <body>
+    <cell-loading count="1"></cell-loading>
     <img style="display: none;" src="lib/wechatLogo.jpeg" />
     <div id="app">
         <el-row>
