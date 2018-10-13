@@ -1,9 +1,9 @@
 (function() {
     var parameter = new URLSearchParams(location.search);
 
-    var title = (document.title = parameter.get('title')),
-        detail = parameter.get('detail'),
-        lnglat = (parameter.get('lnglat') || '').split(',');
+    var title = (document.title = parameter.get("title")),
+        detail = parameter.get("detail"),
+        lnglat = (parameter.get("lnglat") || "").split(",");
 
     var infoWindow,
         map,
@@ -14,11 +14,11 @@
         },
         features = [
             {
-                type: 'Marker',
+                type: "Marker",
                 name: title,
                 desc: detail,
-                color: 'red',
-                icon: 'cir',
+                color: "red",
+                icon: "cir",
                 offset: { x: -9, y: -31 },
                 lnglat: { lng: lnglat[0], lat: lnglat[1] }
             }
@@ -32,7 +32,7 @@
         ) {
             data = features[i];
             switch (data.type) {
-                case 'Marker':
+                case "Marker":
                     feature = new AMap.Marker({
                         map: map,
                         position: new AMap.LngLat(
@@ -46,14 +46,14 @@
                         content:
                             '<div class="icon icon-' +
                             data.icon +
-                            ' icon-' +
+                            " icon-" +
                             data.icon +
-                            '-' +
+                            "-" +
                             data.color +
                             '"></div>'
                     });
                     break;
-                case 'Polyline':
+                case "Polyline":
                     for (
                         j = 0, jl = data.lnglat.length, path = [];
                         j < jl;
@@ -76,7 +76,7 @@
                         strokeOpacity: data.strokeOpacity
                     });
                     break;
-                case 'Polygon':
+                case "Polygon":
                     for (
                         j = 0, jl = data.lnglat.length, path = [];
                         j < jl;
@@ -105,7 +105,7 @@
                     feature = null;
             }
             if (feature) {
-                AMap.event.addListener(feature, 'click', mapFeatureClick);
+                AMap.event.addListener(feature, "click", mapFeatureClick);
             }
         }
     }
@@ -118,20 +118,20 @@
         }
         var extData = e.target.getExtData();
         infoWindow.setContent(
-            '<h5>' + extData.name + '</h5><div>' + extData.desc + '</div>'
+            "<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>"
         );
         infoWindow.open(map, e.lnglat);
     }
 
-    map = new AMap.Map('mapContainer', {
+    map = new AMap.Map("mapContainer", {
         center: new AMap.LngLat(center.lng, center.lat),
         level: level
     });
 
     loadFeatures();
 
-    map.on('complete', function() {
-        map.plugin(['AMap.ToolBar', 'AMap.OverView', 'AMap.Scale'], function() {
+    map.on("complete", function() {
+        map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function() {
             map.addControl(new AMap.ToolBar());
             map.addControl(
                 new AMap.OverView({
