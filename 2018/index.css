@@ -103,7 +103,7 @@ section {
         padding: 50px 0;
     }
 }
-section > h2 {
+section h2 {
     text-align: center;
     margin-bottom: 50px;
 }
