@@ -1,4 +1,4 @@
-require(['jquery', 'vue', 'ELEMENT', 'index'], function(
+require(["jquery", "vue", "ELEMENT", "index"], function(
     $,
     Vue,
     ElementUI,
@@ -10,7 +10,7 @@ require(['jquery', 'vue', 'ELEMENT', 'index'], function(
         Vue.use(ElementUI);
 
         new Vue({
-            el: '#app',
+            el: "#app",
             data: index
         });
     });
