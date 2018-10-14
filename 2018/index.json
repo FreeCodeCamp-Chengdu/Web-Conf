@@ -197,14 +197,64 @@
             "detail": "基于 React 的 loading 组件库"
         }
     ],
+    "host": [
+        {
+            "name": "FCC 成都",
+            "path": "host/fcccd.png"
+        }
+    ],
+    "cohost": [
+        {
+            "name": " 掘金",
+            "path": "cohost/juejin.png"
+        }
+    ],
     "sponsor": [
         {
             "name": "上线了",
-            "englishName": "sxl"
+            "path": "sponsor/sxl.png"
         },
         {
             "name": "宝尊电商",
-            "englishName": "baozun"
+            "path": "sponsor/baozun.png"
+        }
+    ],
+    "partner": [
+        {
+            "name": "博文",
+            "path": "partner/broadview.png"
+        },
+        {
+            "name": "极米",
+            "path": "partner/gimi.png"
+        },
+        {
+            "name": "开源中国",
+            "path": "partner/oschina.png"
+        },
+        {
+            "name": "麦克",
+            "path": "partner/mikecrm.png"
+        },
+        {
+            "name": "前端早读课",
+            "path": "partner/fezaoduke.png"
+        },
+        {
+            "name": "实验楼",
+            "path": "partner/shiyanlou.jpeg"
+        },
+        {
+            "name": "图灵社区",
+            "path": "partner/turing.jpeg"
+        },
+        {
+            "name": "异步社区",
+            "path": "partner/epubit.png"
+        },
+        {
+            "name": "SegmentFault",
+            "path": "partner/sf.png"
         }
     ],
     "company": [
