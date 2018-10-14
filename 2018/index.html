@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <base href="https://web-conf.leanapp.cn/2018/">
+    <!-- <base href="https://web-conf.leanapp.cn/2018/"> -->
 
     <link rel="shortcut icon" href="../common/favicon.ico" type="image/x-icon" />
     <title>2018 成都 Web 前端交流大会</title>
@@ -43,7 +43,7 @@
                 </ul>
             </div>
         </nav>
-        <img src="image/poster.jpg" class="img-fluid" />
+        <img src="image/poster.png" class="img-fluid" />
     </div>
     <section id="Introduction">
         <h2>大会介绍</h2>
@@ -99,13 +99,20 @@
     <section class="sparked">
         <div class="container">
             <div id="Bazaar" class="bazaar">
-                <h2>开源集市</h2>
+                <h2>开源市集</h2>
                 <div class="card-columns" data-array="project">
                     <div class="card">
                         <img class="card-img-top" style="display: ${view.name ? '' : 'none'}"
                                 src="image/project/${view.name}.png" alt="${view.name}">
                         <div class="card-body">
-                            <h5 class="card-title"><a class="text-primary" target="_blank" href="${view.URL}">${view.title}</a></h5>
+                            <h5 class="card-title">
+                                <a class="text-primary" target="_blank" href="${view.URL}">
+                                    ${view.title}
+                                </a>
+                                <span class="badge badge-${view.type ? 'primary' : 'success'} float-right">
+                                    开源${view.type ? '社团' : '项目'}
+                                </span>
+                            </h5>
                             <p class="card-text">${view.detail}</p>
                         </div>
                     </div>

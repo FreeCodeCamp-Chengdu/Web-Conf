@@ -193,8 +193,8 @@ section h2 {
 .subjects > li p {
     font-size: 14px;
 }
-.subjects > li p img {
-    max-width: 100%;
+.subjects > li p h6 {
+    margin: 0.5rem 0;
 }
 #Address iframe {
     width: 100%;
