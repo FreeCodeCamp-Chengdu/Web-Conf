@@ -252,6 +252,32 @@ tbody[data-array] td:first-child::before {
 .companies > li:hover {
     background: #fafafa;
 }
+.contributor-group {
+    text-align: center;
+    margin: 25px 0;
+}
+.contributor-group .logos {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.contributor-group h5 {
+    padding: 15px 0;
+    color: #666;
+    text-align: center;
+}
+.contributor-group img {
+    width: 150px;
+    height: 50px;
+    margin: 15px 5px;
+    flex-flow: 0;
+    flex-shrink: 0;
+}
+.contributor-group p {
+    color: #999;
+    font-size: 12px;
+}
 footer {
     padding: 25px 0 15px 0;
     clear: both;

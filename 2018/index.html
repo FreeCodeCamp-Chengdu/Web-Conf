@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <base href="https://web-conf.leanapp.cn/2018/">
+    <!--<base href="https://web-conf.leanapp.cn/2018/">-->
 
     <link rel="shortcut icon" href="../common/favicon.ico" type="image/x-icon" />
     <title>2018 成都 Web 前端交流大会</title>
@@ -189,11 +189,38 @@
                     src="../common/map/?lnglat=104.065789,30.582013&title=2018 成都 Web 前端大会&detail=天府大道北段966号天府国际金融中心 4 号楼1楼1号会议厅"></iframe>
         </div>
     </section>
-    <section id="Sponsor">
-        <h2>赞助商</h2>
+    <section id="Contributor">
+        <h2>共创伙伴</h2>
         <div class="container">
-            <div class="row logos" data-array="sponsor">
-                <img title="${view.name}" src="image/sponsor/${view.englishName}.jpg" class="img-fluid">
+            <div class="contributor-group">
+                <h5>主办方</h5>
+                <div class="logos" data-array="host">
+                    <img title="${view.name}" src="image/logo/${view.path}">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="contributor-group">
+                <h5>协办方</h5>
+                <div class="logos" data-array="cohost">
+                    <img title="${view.name}" src="image/logo/${view.path}">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="contributor-group">
+                <h5>赞助商</h5>
+                <div class="logos" data-array="sponsor">
+                    <img title="${view.name}" src="image/logo/${view.path}">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="contributor-group">
+                <h5>合作伙伴</h5>
+                <div class="logos" data-array="partner">
+                    <img title="${view.name}" src="image/logo/${view.path}">
+                </div>
             </div>
         </div>
     </section>

@@ -12,11 +12,11 @@
             return { name: name };
         });
 
-        for (var key in data)
+        for (var key in data) {
             if ('detail' in data[key][0])
                 for (var i = 0; data[key][i]; i++)
                     data[key][i].detail = marked(data[key][i].detail);
-
+        }
         var body = new ObjectView(document.body);
 
         body.render(data);
