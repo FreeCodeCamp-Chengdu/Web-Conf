@@ -105,18 +105,15 @@
                         <img class="card-img-top" style="display: ${view.name ? '' : 'none'}"
                                 src="image/project/${view.name}.png" alt="${view.name}">
                         <div class="card-body">
-                            <h5 class="card-title">${view.title}</h5>
+                            <h5 class="card-title"><a class="text-primary" target="_blank" href="${view.URL}">${view.title}</a></h5>
                             <p class="card-text">${view.detail}</p>
-                            <a class="btn btn-primary" target="_blank" href="${view.URL}">
-                                访问官网
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="Enterprise" class="text-center">
                 <h2>参会企业</h2>
-                <small>部分企业开放现场招聘位，欢迎优秀人才携简历前来~</small>
+                <p class="text-muted">部分企业开放现场招聘位，欢迎优秀人才携简历前来~</p>
                 <div class="row">
                     <div class="col-md-7">
                         <ul class="companies" data-array="company">

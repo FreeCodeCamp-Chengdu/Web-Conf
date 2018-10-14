@@ -226,6 +226,9 @@ tbody[data-array] td:first-child::before {
 @media screen and (min-width: 767.98px) {
     flex-wrap: nowrap;
 }
+.bazaar {
+    margin-bottom: 35px;
+}
 .bazaar > div > div > ul {
     list-style-type: none;
     padding-left: 0;
@@ -233,6 +236,7 @@ tbody[data-array] td:first-child::before {
 #Bazaar .card-text {
     max-height: 15rem;
     overflow: auto;
+    font-size: 12px;
 }
 #Bazaar .card-img-top {
     padding: 1rem;
