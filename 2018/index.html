@@ -103,8 +103,9 @@
                 <h2>开源市集</h2>
                 <div class="card-columns" data-array="project">
                     <div class="card">
-                        <img class="card-img-top" style="display: ${view.name ? '' : 'none'}"
-                                src="image/project/${view.name}.png" alt="${view.name}">
+                        <img class="card-img-top"
+                             src="image/project/${view.name}.png"
+                             title="${view.name}">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <a class="text-primary" target="_blank" href="${view.URL}">
@@ -121,7 +122,10 @@
             </div>
             <div id="Enterprise" class="text-center">
                 <h2>参会企业</h2>
-                <p class="text-muted">部分企业开放现场招聘位，欢迎优秀人才携简历前来~</p>
+                <p class="text-muted">
+                    部分企业开放现场招聘位，欢迎优秀人才携简历前来~
+                </p>
+                <p class="text-muted">（排名不分先后）</p>
                 <div class="row">
                     <div class="col-md-7">
                         <ul class="companies" data-array="company">
@@ -215,7 +219,9 @@
             <div class="contributor-group">
                 <h5>合作伙伴</h5>
                 <div class="logos" data-array="partner">
+                    <a target="_blank" href="${view.URL}">
                         <img title="${view.name}" src="image/logo/${view.path}">
+                    </a>
                 </div>
             </div>
         </div>

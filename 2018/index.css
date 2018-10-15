@@ -47,7 +47,6 @@ a.btn-primary {
 .poster {
     width: 100%;
     min-height: 600px;
-    background: #fff url(./image/poster_bg.jpg) repeat-x top left;
     position: relative;
     padding: 0;
     margin: 0;
@@ -275,8 +274,6 @@ tbody[data-array] td:first-child::before {
     text-align: center;
 }
 .contributor-group img {
-    width: 150px;
-    height: 50px;
     margin: 15px 5px;
     flex-flow: 0;
     flex-shrink: 0;
