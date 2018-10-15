@@ -12,14 +12,32 @@
             return { name: name };
         });
 
-        for (var key in data) {
+        for (var key in data)
             if ('detail' in data[key][0])
                 for (var i = 0; data[key][i]; i++)
                     data[key][i].detail = marked(data[key][i].detail);
-        }
+
         var body = new ObjectView(document.body);
 
         body.render(data);
+
+        var intersection = new IntersectionObserver(function(entry, observer) {
+            $.each(entry, function() {
+                if (!this.isIntersecting) return;
+
+                var data = this.target.dataset;
+
+                this.target.src = data.src;
+
+                delete data.src;
+
+                observer.unobserve(this.target);
+            });
+        });
+
+        $('[data-src]').each(function() {
+            intersection.observe(this);
+        });
     });
 
     self.addEventListener('load', Loading.closeAll.bind(Loading));

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <!-- <base href="https://web-conf.leanapp.cn/2018/"> -->
+    <base href="https://web-conf.leanapp.cn/2018/">
 
     <link rel="shortcut icon" href="../common/favicon.ico" type="image/x-icon" />
     <title>2018 成都 Web 前端交流大会</title>
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="index.css">
 
     <script src="https://lib.baomitu.com/babel-polyfill/7.0.0/polyfill.min.js"></script>
+    <script src="../node_modules/intersection-observer/intersection-observer.js"></script>
     <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
     <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>
     <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/custom-elements-es5-adapter.js"></script>
@@ -165,20 +166,11 @@
     <section id="Review" class="sparked">
         <h2>往期精彩回顾</h2>
         <div class="container">
-            <div class="row photos">
-                <div class="col-md-4"><img src="image/photos/1.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/2.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/3.jpg" class="img-fluid" /></div>
-            </div>
-            <div class="row photos">
-                <div class="col-md-4"><img src="image/photos/4.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/5.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/6.jpg" class="img-fluid" /></div>
-            </div>
-            <div class="row photos">
-                <div class="col-md-4"><img src="image/photos/7.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/8.jpg" class="img-fluid" /></div>
-                <div class="col-md-4"><img src="image/photos/9.jpg" class="img-fluid" /></div>
+            <div class="row" data-array="review">
+                <div class="col-md-4">
+                    <img class="img-fluid" title="${view.title}"
+                         data-src="image/photos/${view.index + 1}.jpg">
+                </div>
             </div>
         </div>
     </section>
@@ -190,7 +182,7 @@
                 天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
             </p>
             <iframe frameborder="0" scrolling="no"
-                    src="../common/map/?lnglat=104.065789,30.582013&title=2018 成都 Web 前端大会&detail=天府大道北段966号天府国际金融中心 4 号楼1楼1号会议厅"></iframe>
+                    data-src="../common/map/?lnglat=104.065789,30.582013&title=2018 成都 Web 前端大会&detail=天府大道北段 966 号天府国际金融中心 4 号楼 1 层 1 号会议厅"></iframe>
         </div>
     </section>
     <section id="Contributor">

@@ -211,6 +211,35 @@
             "detail": "开源社是由中国支持开源的企业，社区及个人所组织的一个开源联盟，旨在推广开源，各成员按照“共治、共识、贡献”的原则自发设立。"
         }
     ],
+    "review": [
+        {
+            "title": "React 技术演讲"
+        },
+        {
+            "title": "React 技术提问"
+        },
+        {
+            "title": "React 技术讲师"
+        },
+        {
+            "title": "React 大会观众"
+        },
+        {
+            "title": "React 大会招聘"
+        },
+        {
+            "title": "Code for City 黑客松茶歇"
+        },
+        {
+            "title": "Code for City 黑客松 FCC 合影"
+        },
+        {
+            "title": "茶歇一览"
+        },
+        {
+            "title": "React 大会招聘"
+        }
+    ],
     "host": [
         {
             "name": "FCC 成都",
@@ -235,7 +264,7 @@
     ],
     "partner": [
         {
-            "name": "博文",
+            "name": "博文视点",
             "path": "partner/broadview.png"
         },
         {
@@ -305,7 +334,6 @@
         "西瓜创客",
         "实验楼",
         "四方伟业",
-        "京东",
         "猪八戒",
         "陌陌",
         "货车邦",

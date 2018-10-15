@@ -241,6 +241,9 @@ tbody[data-array] td:first-child::before {
 #Bazaar .card-img-top {
     padding: 1rem;
 }
+#Review .row > * {
+    padding: 0.7rem 1rem;
+}
 .companies {
     padding-left: 0;
 }

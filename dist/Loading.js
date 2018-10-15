@@ -5,8 +5,8 @@
     if (typeof define === "function" && define.amd)
         define("Loading", ["web-cell"], factory);
     else if (typeof module === "object")
-        return (module.exports = factory.call(global, require("web-cell")));
-    else return (this["Loading"] = factory.call(self, this["web-cell"]));
+        return (module.exports = factory(require("web-cell")));
+    else return (this["Loading"] = factory(this["web-cell"]));
 })(function(web_cell) {
     function merge(base, path) {
         return (base + "/" + path)
@@ -21,14 +21,12 @@
         return /^[^./]/.test(name);
     }
 
-    var require =
-        typeof this.require === "function"
-            ? this.require
-            : function(name) {
-                  if (self[name] != null) return self[name];
+    if (typeof require !== "function")
+        require = function(name) {
+            if (self[name] != null) return self[name];
 
-                  throw ReferenceError("Can't find \"" + name + '" module');
-              };
+            throw ReferenceError("Can't find \"" + name + '" module');
+        };
 
     var _include_ = include.bind(null, "./");
 
