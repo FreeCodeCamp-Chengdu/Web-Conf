@@ -4,7 +4,10 @@ import template from './index.html';
 
 import image from './spinner.svg';
 
-const media = ['img', 'iframe', 'audio', 'video'];
+import _image_ from './spinner.gif';
+
+const media = ['img', 'iframe', 'audio', 'video'],
+    MS_HTML = /(?:MSIE|Trident|Edge)\/(\d+)/;
 
 @component({
     template,
@@ -18,7 +21,7 @@ export default class CellLoading extends HTMLElement {
 
     @blobURI
     static get image() {
-        return image;
+        return MS_HTML.test(navigator.userAgent) ? _image_ : image;
     }
 
     constructor() {

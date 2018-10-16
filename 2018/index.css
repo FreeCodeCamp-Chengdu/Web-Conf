@@ -56,6 +56,7 @@ a.btn-primary {
     right: 25px;
     top: 25px;
     z-index: 998;
+    display: block; /* For IE 11 */
 }
 .poster .navbar-toggler {
     background: #f8f9fa;
@@ -232,13 +233,22 @@ tbody[data-array] td:first-child::before {
     list-style-type: none;
     padding-left: 0;
 }
+#Bazaar .card-img-top {
+    padding: 1rem;
+}
+#Bazaar .card-title > * {
+    display: inline-block;
+    vertical-align: middle;
+}
 #Bazaar .card-text {
     max-height: 15rem;
     overflow: auto;
     font-size: 12px;
 }
-#Bazaar .card-img-top {
-    padding: 1rem;
+@media (min-width: 577px) and (max-width: 768px) {
+    #Bazaar .card-columns {
+        column-count: 2;
+    }
 }
 #Review .row > * {
     padding: 0.7rem 1rem;

@@ -19,9 +19,11 @@
     <link rel="stylesheet" href="common/index.css">
 
     <script src="https://lib.baomitu.com/babel-polyfill/7.0.0/polyfill.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Element.prototype.append,DocumentFragment.prototype.append"></script>
     <script src="node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
-    <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>
-    <script src="https://lib.baomitu.com/webcomponentsjs/2.0.2/custom-elements-es5-adapter.js"></script>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script src="node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+
     <script src="node_modules/web-cell/dist/web-cell.min.js"></script>
     <script src="dist/Loading.js"></script>
 </head>
@@ -105,8 +107,9 @@
                 <div class="row" data-array="conf_list">
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="${view.banner}"
-                                alt="Card image cap">
+                            <div class="card-img-top"
+                                 style="background-image: url(${view.banner})">
+                            </div>
                             <div class="card-body">
                                 <p class="card-text">
                                     ${view.title}

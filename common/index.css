@@ -27,6 +27,17 @@
     max-width: 40rem;
 }
 
+.card-img-top {
+    height: 15rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    transition: 0.25s;
+}
+.card-img-top:hover {
+    background-size: 150%;
+}
+
 footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
