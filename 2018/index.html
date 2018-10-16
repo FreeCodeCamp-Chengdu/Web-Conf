@@ -103,7 +103,8 @@
             <div id="Bazaar" class="bazaar">
                 <h2>开源市集</h2>
                 <div class="card-columns" data-array="project">
-                    <div class="card">
+                    <div class="card" style="overflow:hidden">
+                        <div class="cr cr-top cr-right  cr-${view.type ? 'red' : 'blue'}">${view.type ? '社团' : '项目'}</div>
                         <img class="card-img-top"
                              src="image/project/${view.name}.png"
                              title="${view.name}">
@@ -112,9 +113,6 @@
                                 <a class="text-primary" target="_blank" href="${view.URL}">
                                     ${view.title}
                                 </a>
-                                <span class="badge badge-${view.type ? 'primary' : 'success'}">
-                                    开源${view.type ? '社团' : '项目'}
-                                </span>
                             </h5>
                             <p class="card-text">${view.detail}</p>
                         </div>
@@ -227,11 +225,13 @@
             </div>
         </div>
     </section>
-    <section id="CallInAction" class="sparked">
-        <div class="container text-center">
-            <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
-        </div>
-    </section>
+    <div class="sparked">
+        <section id="CallInAction" >
+            <div class="container text-center">
+                <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
+            </div>
+        </section>
+    </div>
     <footer>
         <div class="container">
             <div class="d-none d-md-block">
