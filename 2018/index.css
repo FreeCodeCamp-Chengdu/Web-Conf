@@ -218,10 +218,23 @@ tbody[data-array] td:first-child::before {
         margin-bottom: 15px;
     }
 }
+#CallInAction {
+    background: url(image/bg2.png) no-repeat center calc(100% + 24px);
+    background-size: 30%;
+}
+@media screen and (max-width: 767.98px) {
+    #CallInAction {
+        background: transparent;
+    }
+}
 .logos {
     display: flex;
     justify-content: space-around;
     align-content: center;
+}
+.logos img {
+    width: 210px;
+    height: 70px;
 }
 @media screen and (min-width: 767.98px) {
     flex-wrap: nowrap;
@@ -318,4 +331,26 @@ footer .qrcode {
     text-align: center;
     color: #999;
     padding: 5px;
+}
+.cr {
+    width: 200px;
+    padding: 8px;
+    position: absolute;
+    text-align: center;
+    color: #f0f0f0;
+}
+.cr-top {
+    top: 15px;
+}
+.cr-right {
+    right: -70px;
+}
+.cr-top.cr-right {
+    transform: rotate(45deg);
+}
+.cr-blue {
+    background-color: rgba(35, 107, 247, 0.8);
+}
+.cr-red {
+    background-color: rgba(248, 71, 89, 1);
 }
