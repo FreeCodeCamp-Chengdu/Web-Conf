@@ -36,13 +36,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="top-nav">
-                <ul class="navbar-nav" data-array="section">
+                <ul class="navbar-nav" data-array="section"><template>
                     <li class="nav-item">
                         <a class="nav-link" href="#${view.name}">
                             ${view.title}
                         </a>
                     </li>
-                </ul>
+                </template></ul>
             </div>
         </nav>
         <img src="image/poster.png" class="img-fluid" />
@@ -68,7 +68,7 @@
     <section id="Lecturer" class="sparked">
         <h2>与会嘉宾</h2>
         <div class="container">
-            <div class="row lecture-list" data-array="lecturer">
+            <div class="row lecture-list" data-array="lecturer"><template>
                 <div class="col-md-3">
                     <div class="lecture">
                         <img src="image/lecturer/${view.englishName}.png" class="avatar" alt="guest name" />
@@ -76,13 +76,13 @@
                         <p class="lecture-intro">${view.detail}</p>
                     </div>
                 </div>
-            </div>
+            </template></div>
         </div>
     </section>
     <section id="Topic">
         <h2>议题</h2>
         <div class="container">
-            <ol class="subjects" data-array="topic">
+            <ol class="subjects" data-array="topic"><template>
                 <li>
                     <div class="text-center">
                         <p><strong>
@@ -95,14 +95,14 @@
                         <p>${view.detail}</p>
                     </div>
                 </li>
-            </ol>
+            </template></ol>
         </div>
     </section>
     <section class="sparked">
         <div class="container">
             <div id="Bazaar" class="bazaar">
                 <h2>开源市集</h2>
-                <div class="card-columns" data-array="project">
+                <div class="card-columns" data-array="project"><template>
                     <div class="card" style="overflow:hidden">
                         <div class="cr cr-top cr-right  cr-${view.type ? 'red' : 'blue'}">${view.type ? '社团' : '项目'}</div>
                         <img class="card-img-top"
@@ -117,7 +117,7 @@
                             <p class="card-text">${view.detail}</p>
                         </div>
                     </div>
-                </div>
+                </template></div>
             </div>
             <div id="Enterprise" class="text-center">
                 <h2>参会企业</h2>
@@ -127,9 +127,9 @@
                 <p class="text-muted">（排名不分先后）</p>
                 <div class="row">
                     <div class="col-md-7">
-                        <ul class="companies" data-array="company">
+                        <ul class="companies" data-array="company"><template>
                             <li>${view.name}</li>
-                        </ul>
+                        </template></ul>
                     </div>
                     <div class="col-md-5">
                         <img src="image/undraw_04.png" class="img-fluid" />
@@ -149,7 +149,7 @@
                         <th scope="col">活动</th>
                     </tr>
                 </thead>
-                <tbody data-array="schedule">
+                <tbody data-array="schedule"><template>
                     <tr>
                         <td class="d-none d-md-block"></td>
                         <td style="white-space: nowrap">${view.time}</td>
@@ -162,19 +162,19 @@
                             )
                         }</td>
                     </tr>
-                </tbody>
+                </template></tbody>
             </table>
         </div>
     </section>
     <section id="Review" class="sparked">
         <h2>往期精彩回顾</h2>
         <div class="container">
-            <div class="row" data-array="review">
+            <div class="row" data-array="review"><template>
                 <div class="col-md-4">
                     <img class="img-fluid" title="${view.title}"
                          data-src="image/photos/${view.index + 1}.jpg">
                 </div>
-            </div>
+            </template></div>
         </div>
     </section>
 
@@ -193,35 +193,35 @@
         <div class="container">
             <div class="contributor-group">
                 <h5>主办方</h5>
-                <div class="logos" data-array="host">
+                <div class="logos" data-array="host"><template>
                     <img title="${view.name}" src="image/logo/${view.path}">
-                </div>
+                </template></div>
             </div>
         </div>
         <div class="container">
             <div class="contributor-group">
                 <h5>协办方</h5>
-                <div class="logos" data-array="cohost">
+                <div class="logos" data-array="cohost"><template>
                     <img title="${view.name}" src="image/logo/${view.path}">
-                </div>
+                </template></div>
             </div>
         </div>
         <div class="container">
             <div class="contributor-group">
                 <h5>赞助商</h5>
-                <div class="logos" data-array="sponsor">
+                <div class="logos" data-array="sponsor"><template>
                     <img title="${view.name}" src="image/logo/${view.path}">
-                </div>
+                </template></div>
             </div>
         </div>
         <div class="container">
             <div class="contributor-group">
                 <h5>合作伙伴</h5>
-                <div class="logos" data-array="partner">
+                <div class="logos" data-array="partner"><template>
                     <a target="_blank" href="${view.URL}">
                         <img title="${view.name}" src="image/logo/${view.path}">
                     </a>
-                </div>
+                </template></div>
             </div>
         </div>
     </section>
@@ -235,13 +235,13 @@
     <footer>
         <div class="container">
             <div class="d-none d-md-block">
-                <ul class="nav" data-array="section">
+                <ul class="nav" data-array="section"><template>
                     <li class="nav-item">
                         <a class="nav-link" href="#${view.name}">
                             ${view.title}
                         </a>
                     </li>
-                </ul>
+                </template></ul>
             </div>
             <div class="qrcode align-middle">
                 <img class="img-fluid" src="../common/FCC-CDG-WeChat.png">
