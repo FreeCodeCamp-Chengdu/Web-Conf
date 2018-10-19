@@ -1,4 +1,4 @@
-import { component, mapProperty, blobURI, $ } from 'web-cell';
+import { component, blobURI, mapProperty, mapData, $ } from 'web-cell';
 
 import template from './index.html';
 
@@ -14,11 +14,6 @@ const media = ['img', 'iframe', 'audio', 'video'],
     data: { count: 0 }
 })
 export default class CellLoading extends HTMLElement {
-    @mapProperty
-    static get observedAttributes() {
-        return ['count'];
-    }
-
     @blobURI
     static get image() {
         return MS_HTML.test(navigator.userAgent) ? _image_ : image;
@@ -41,6 +36,14 @@ export default class CellLoading extends HTMLElement {
                     }
         }).observe(this, { childList: true });
     }
+
+    @mapProperty
+    static get observedAttributes() {
+        return ['count'];
+    }
+
+    @mapData
+    attributeChangedCallback() {}
 
     toggle(open) {
         this.count = +(open != null ? open : !this.count);

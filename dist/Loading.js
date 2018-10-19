@@ -780,15 +780,6 @@
                             d: [
                                 {
                                     kind: "get",
-                                    decorators: [_webCell.mapProperty],
-                                    static: true,
-                                    key: "observedAttributes",
-                                    value: function value() {
-                                        return ["count"];
-                                    }
-                                },
-                                {
-                                    kind: "get",
                                     decorators: [_webCell.blobURI],
                                     static: true,
                                     key: "image",
@@ -797,6 +788,21 @@
                                             ? _spinner2.default
                                             : _spinner.default;
                                     }
+                                },
+                                {
+                                    kind: "get",
+                                    decorators: [_webCell.mapProperty],
+                                    static: true,
+                                    key: "observedAttributes",
+                                    value: function value() {
+                                        return ["count"];
+                                    }
+                                },
+                                {
+                                    kind: "method",
+                                    decorators: [_webCell.mapData],
+                                    key: "attributeChangedCallback",
+                                    value: function value() {}
                                 },
                                 {
                                     kind: "method",
