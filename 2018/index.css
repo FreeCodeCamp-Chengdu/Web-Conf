@@ -94,16 +94,16 @@ a.btn-primary {
     height: 88px;
     border-radius: 44px;
 }
-section {
+body > section {
     padding: 100px 0;
     margin: 0;
 }
 @media screen and (max-width: 767.98px) {
-    section {
+    body > section {
         padding: 50px 0;
     }
 }
-section h2 {
+body > section h2 {
     text-align: center;
     margin-bottom: 50px;
 }
@@ -218,12 +218,22 @@ tbody[data-array] td:first-child::before {
         margin-bottom: 15px;
     }
 }
-#CallInAction {
+#CallInAction,
+#CallInAction > * {
+    position: relative;
+}
+#CallInAction::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     background: url(image/bg2.png) no-repeat center calc(100% + 24px);
     background-size: 30%;
 }
 @media screen and (max-width: 767.98px) {
-    #CallInAction {
+    #CallInAction::before {
         background: transparent;
     }
 }

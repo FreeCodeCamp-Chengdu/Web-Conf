@@ -190,27 +190,27 @@
     </section>
     <section id="Contributor">
         <h2>共创伙伴</h2>
-        <div class="container">
+        <div class="container" data-array="host"><template>
             <div class="contributor-group">
-                <h5>主办方</h5>
-                <div class="logos" data-array="host"><template>
-                    <img title="${view.name}" src="image/logo/${view.path}">
+                <h5>${view.title}办方</h5>
+                <div class="logos" data-array="member"><template>
+                    <a target="_blank" href="${view.URL}">
+                        <img title="${view.name}" src="image/logo/${view.path}">
+                    </a>
                 </template></div>
             </div>
-        </div>
+        </template></div>
         <div class="container">
             <div class="contributor-group">
-                <h5>协办方</h5>
-                <div class="logos" data-array="cohost"><template>
-                    <img title="${view.name}" src="image/logo/${view.path}">
-                </template></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="contributor-group">
-                <h5>赞助商</h5>
-                <div class="logos" data-array="sponsor"><template>
-                    <img title="${view.name}" src="image/logo/${view.path}">
+                <div data-array="sponsor"><template>
+                    <section>
+                        <h5>${view.title}赞助</h5>
+                        <div class="logos" data-array="member"><template>
+                            <a target="_blank" href="${view.URL}">
+                                <img title="${view.name}" src="image/logo/${view.path}">
+                            </a>
+                        </template></div>
+                    </section>
                 </template></div>
             </div>
         </div>
@@ -225,13 +225,14 @@
             </div>
         </div>
     </section>
-    <div class="sparked">
-        <section id="CallInAction" >
-            <div class="container text-center">
-                <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
-            </div>
-        </section>
-    </div>
+    <section id="CallInAction" class="sparked">
+        <div class="container text-center">
+            <a class="btn btn-primary btn-lg btn-cia" target="_blank"
+               href="http://fccchengdu.mikecrm.com/tFM8Rk8">
+               立即报名参加
+            </a>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div class="d-none d-md-block">

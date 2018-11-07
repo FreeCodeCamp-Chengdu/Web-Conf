@@ -145,7 +145,7 @@
             "time": "14:50 ~ 15:40"
         },
         {
-            "title": "休息 & 现场交流 & 逛“市集”",
+            "title": "茶歇 & 逛“市集” & “可好玩乐”趣味编程赛",
             "time": "15:40 ~ 16:10"
         },
         {
@@ -177,11 +177,18 @@
             "detail": "轻量级 Web 组件化引擎，基于 Web components（HTML 5.3、DOM 4.1）、ECMAScript 2018 和 装饰器提案 提供 MVVM 模型，并有官方封装的 BootStrap v4、Material Design 组件库。"
         },
         {
-            "title": "React Admin",
-            "name": "React Admin",
+            "title": "HTML 5 design software",
+            "name": "H5DS",
             "type": 0,
-            "URL": "https://github.com/yezihaohao/react-admin",
-            "detail": "一套基于 React、Ant design 和 create-react-app 的后台管理系统解决方案。完整的代码目录结构设计、权限管理、自定义主题、路由配置以及 Redux 的基本用法等，一个完整且简单的 demo 让你快速上手 React 和后台系统。"
+            "URL": "http://www.h5ds.com",
+            "detail": "H5DS (HTML 5 design software) 是一款 B/S 的 H5 代码生成工具，通过可视化操作让不会代码的人也能轻松制作 H5 页面"
+        },
+        {
+            "title": "Fun loading",
+            "name": "Fun loading",
+            "type": 0,
+            "URL": "https://fanerge.github.io/fun-loading/dist/",
+            "detail": "基于 React 的 loading 组件库"
         },
         {
             "title": "Ubuntu Kylin",
@@ -191,11 +198,25 @@
             "detail": "优麒麟（Ubuntu Kylin）是由中国 CCN（由 CSIP、Canonical、NUDT 三方联合组建）开源创新联合实验室与天津麒麟信息技术有限公司主导开发的全球开源项目，其宗旨是通过研发用户友好的桌面环境以及特定需求的应用软件，为全球 Linux 桌面用户带来非凡的全新体验！\n\n优麒麟操作系统是 Ubuntu 官方衍生版，得到来自 Debian、Ubuntu、Mate、LUPA 等国际社区及众多国内外社区爱好者的广泛参与和热情支持！"
         },
         {
-            "title": "HTML 5 design software",
-            "name": "H5DS",
+            "title": "Covariant Script",
+            "name": "Covariant Script",
             "type": 0,
-            "URL": "http://www.h5ds.com",
-            "detail": "H5DS (HTML 5 design software) 是一款 B/S 的 H5 代码生成工具，通过可视化操作让不会代码的人也能轻松制作 H5 页面"
+            "URL": "http://covscript.org",
+            "detail": "Covariant Script 编程语言是一个新兴的开源编程语言，发展前景广阔"
+        },
+        {
+            "title": "PI6",
+            "name": "PI6",
+            "type": 0,
+            "URL": "http://github.com/visi-pivi-sivi/PI6",
+            "detail": "PI6 is a bash shell based framework, allow author to add comments in the script, and provides a good interactive experience for user, who needs to know what will be done in the next, while running the script in step by step mode."
+        },
+        {
+            "title": "React Admin",
+            "name": "React Admin",
+            "type": 0,
+            "URL": "https://github.com/yezihaohao/react-admin",
+            "detail": "一套基于 React、Ant design 和 create-react-app 的后台管理系统解决方案。完整的代码目录结构设计、权限管理、自定义主题、路由配置以及 Redux 的基本用法等，一个完整且简单的 demo 让你快速上手 React 和后台系统。"
         },
         {
             "title": "开源社",
@@ -205,11 +226,18 @@
             "detail": "开源社是由中国支持开源的企业，社区及个人所组织的一个开源联盟，旨在推广开源，各成员按照“共治、共识、贡献”的原则自发设立。"
         },
         {
-            "title": "Fun loading",
-            "name": "Fun loading",
+            "title": "洛书协议",
+            "name": "Vena Network",
             "type": 0,
-            "URL": "https://fanerge.github.io/fun-loading/dist/",
-            "detail": "基于 React 的 loading 组件库"
+            "URL": "https://github.com/venanetwork",
+            "detail": "洛书协议 —— 资产融通代币化的开放协议"
+        },
+        {
+            "title": "成都 Linux 用户组",
+            "name": "CD-LUG",
+            "type": 1,
+            "URL": "https://cdlug.org/",
+            "detail": "成都 GNU/Linux 自组建以来，已经集聚了一批 Linux 爱好者、开发者、创业者。"
         }
     ],
     "review": [
@@ -243,28 +271,61 @@
     ],
     "host": [
         {
-            "name": "FCC 成都",
-            "path": "host/fcccd.png"
-        }
-    ],
-    "cohost": [
+            "title": "主",
+            "member": [
+                {
+                    "name": "FCC 成都",
+                    "path": "host/fcccd.png",
+                    "URL": "https://freecodecamp-chengdu.github.io/"
+                }
+            ]
+        },
         {
-            "name": " 掘金",
-            "path": "cohost/juejin.png"
+            "title": "协",
+            "member": [
+                {
+                    "name": " 掘金",
+                    "path": "cohost/juejin.png",
+                    "URL": "https://juejin.im/"
+                }
+            ]
         }
     ],
     "sponsor": [
         {
-            "name": "上线了",
-            "path": "sponsor/sxl.png"
+            "title": "金牌",
+            "member": [
+                {
+                    "name": "上线了",
+                    "path": "sponsor/sxl.png",
+                    "URL": "https://www.sxl.cn/"
+                }
+            ]
         },
         {
-            "name": "宝尊电商",
-            "path": "sponsor/baozun.png"
+            "title": "银牌",
+            "member": [
+                {
+                    "name": "宝尊电商",
+                    "path": "sponsor/baozun.png",
+                    "URL": "https://www.baozun.com/cn/"
+                }
+            ]
         },
         {
-            "name": "可好玩乐 ",
-            "path": "sponsor/cocoet.png"
+            "title": "铜牌",
+            "member": [
+                {
+                    "name": "可好玩乐",
+                    "path": "sponsor/cocoet.png",
+                    "URL": "https://cocoet.cn/"
+                },
+                {
+                    "name": "百词斩",
+                    "path": "sponsor/BaiCiZhan.png",
+                    "URL": "http://www.baicizhan.com/"
+                }
+            ]
         }
     ],
     "partner": [
@@ -272,11 +333,6 @@
             "name": "博文视点",
             "path": "partner/broadview.png",
             "URL": "http://www.broadview.com.cn/"
-        },
-        {
-            "name": "极米",
-            "path": "partner/gimi.png",
-            "URL": "https://www.xgimi.com/"
         },
         {
             "name": "开源中国",
