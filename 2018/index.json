@@ -261,6 +261,10 @@
         {
             "name": "宝尊电商",
             "path": "sponsor/baozun.png"
+        },
+        {
+            "name": "可好玩乐 ",
+            "path": "sponsor/cocoet.png"
         }
     ],
     "partner": [
