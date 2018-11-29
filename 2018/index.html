@@ -1,267 +1,354 @@
-<!DocType HTML>
+<!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-    <base href="https://web-conf.leanapp.cn/2018/">
+        <base href="https://web-conf.leanapp.cn/2018/" />
 
-    <link rel="shortcut icon" href="../common/favicon.ico" type="image/x-icon" />
-    <title>2018 成都 Web 前端交流大会</title>
-    <meta name="description" content="2018 成都 Web 前端交流大会" />
-    <meta name="author" content="FCC成都" />
+        <link
+            rel="shortcut icon"
+            href="../common/favicon.ico"
+            type="image/x-icon"
+        />
+        <title>2018 成都 Web 前端交流大会</title>
+        <meta name="description" content="2018 成都 Web 前端交流大会" />
+        <meta name="author" content="FCC成都" />
 
-    <link rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css">
+        <link
+            rel="stylesheet"
+            href="https://lib.baomitu.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="index.css" />
 
-    <script src="https://lib.baomitu.com/babel-polyfill/7.0.0/polyfill.min.js"></script>
-    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Element.prototype.append,DocumentFragment.prototype.append"></script>
-    <script src="../node_modules/intersection-observer/intersection-observer.js"></script>
-    <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-    <script src="../node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+        <script src="https://lib.baomitu.com/babel-polyfill/7.0.0/polyfill.min.js"></script>
+        <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Element.prototype.append,DocumentFragment.prototype.append"></script>
+        <script src="../node_modules/intersection-observer/intersection-observer.js"></script>
+        <script src="../node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
+        <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+        <script src="../node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
 
-    <script src="../node_modules/web-cell/dist/web-cell.min.js"></script>
-    <script src="../dist/Loading.js"></script>
-    <script src="https://lib.baomitu.com/marked/0.5.1/marked.min.js"></script>
-</head>
-<body>
-    <cell-loading count="1"></cell-loading>
-    <div class="poster">
-        <nav class="navbar navbar-expand-lg navbar-light top-nav">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav" aria-controls="top-nav"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="top-nav">
-                <ul class="navbar-nav" data-array="section"><template>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#${view.name}">
-                            ${view.title}
-                        </a>
-                    </li>
-                </template></ul>
-            </div>
-        </nav>
-        <img src="image/poster.png" class="img-fluid" />
-    </div>
-    <section id="Introduction">
-        <h2>大会介绍</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <p>
-                        成都 Web 前端大会是 freeCodeCamp 成都社区一年一度举办的大型技术交流活动，主要面向西南地区 Web 应用、JavaScript 全栈开发领域的程序员、架构师、研发团队管理者和技术爱好者。我们在借鉴同类行业大会技术分享宝贵经验的同时，也创新地增加了优秀企业现场招聘、开源项目/社团宣传展位，为互联网、软件开发技术从业者提供从学习、求职到合作洽谈的一站式资讯平台，全力打造西南一流的 IT 行业盛会。
-                    </p>
-                    <div class="padded text-center">
-                        <a class="btn btn-primary btn-lg btn-cia" href="http://fccchengdu.mikecrm.com/tFM8Rk8" target="_blank">立即报名参加</a>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <img src="./image/undraw_01.png" class="img-fluid" />
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="Lecturer" class="sparked">
-        <h2>与会嘉宾</h2>
-        <div class="container">
-            <div class="row lecture-list" data-array="lecturer"><template>
-                <div class="col-md-3">
-                    <div class="lecture">
-                        <img src="image/lecturer/${view.englishName}.png" class="avatar" alt="guest name" />
-                        <p class="lecture-name">${view.name}</p>
-                        <p class="lecture-intro">${view.detail}</p>
-                    </div>
-                </div>
-            </template></div>
-        </div>
-    </section>
-    <section id="Topic">
-        <h2>议题</h2>
-        <div class="container">
-            <ol class="subjects" data-array="topic"><template>
-                <li>
-                    <div class="text-center">
-                        <p><strong>
-                                ${scope.lecturer[view.lecturer].name}
-                            </strong></p>
-                        <img class="avatar-sm" src="image/lecturer/${scope.lecturer[view.lecturer].englishName}.png">
-                    </div>
-                    <div>
-                        <h5>${view.title}</h5>
-                        <p>${view.detail}</p>
-                    </div>
-                </li>
-            </template></ol>
-        </div>
-    </section>
-    <section class="sparked">
-        <div class="container">
-            <div id="Bazaar" class="bazaar">
-                <h2>开源市集</h2>
-                <div class="card-columns" data-array="project"><template>
-                    <div class="card" style="overflow:hidden">
-                        <div class="cr cr-top cr-right  cr-${view.type ? 'red' : 'blue'}">${view.type ? '社团' : '项目'}</div>
-                        <img class="card-img-top"
-                             src="image/project/${view.name}.png"
-                             title="${view.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a class="text-primary" target="_blank" href="${view.URL}">
+        <script src="../node_modules/web-cell/dist/web-cell.min.js"></script>
+        <script src="../dist/Loading.js"></script>
+        <script src="https://lib.baomitu.com/marked/0.5.1/marked.min.js"></script>
+    </head>
+    <body>
+        <cell-loading count="1"></cell-loading>
+        <div class="poster">
+            <nav class="navbar navbar-expand-lg navbar-light top-nav">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#top-nav"
+                    aria-controls="top-nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="top-nav">
+                    <ul class="navbar-nav" data-array="section">
+                        <template>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#${view.name}">
                                     ${view.title}
                                 </a>
-                            </h5>
-                            <p class="card-text">${view.detail}</p>
-                        </div>
-                    </div>
-                </template></div>
-            </div>
-            <div id="Enterprise" class="text-center">
-                <h2>参会企业</h2>
-                <p class="text-muted">
-                    部分企业开放现场招聘位，欢迎优秀人才携简历前来~
-                </p>
-                <p class="text-muted">（排名不分先后）</p>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </nav>
+            <img src="image/poster.png" class="img-fluid" />
+        </div>
+        <section id="Introduction">
+            <h2>大会介绍</h2>
+            <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <ul class="companies" data-array="company"><template>
-                            <li>${view.name}</li>
-                        </template></ul>
+                        <p>
+                            成都 Web 前端大会是 freeCodeCamp
+                            成都社区一年一度举办的大型技术交流活动，主要面向西南地区
+                            Web 应用、JavaScript
+                            全栈开发领域的程序员、架构师、研发团队管理者和技术爱好者。我们在借鉴同类行业大会技术分享宝贵经验的同时，也创新地增加了优秀企业现场招聘、开源项目/社团宣传展位，为互联网、软件开发技术从业者提供从学习、求职到合作洽谈的一站式资讯平台，全力打造西南一流的
+                            IT 行业盛会。
+                        </p>
+                        <div class="padded text-center">
+                            <a
+                                class="btn btn-primary btn-lg btn-cia"
+                                href="http://fccchengdu.mikecrm.com/tFM8Rk8"
+                                target="_blank"
+                                >立即报名参加</a
+                            >
+                        </div>
                     </div>
                     <div class="col-md-5">
-                        <img src="image/undraw_04.png" class="img-fluid" />
+                        <img src="./image/undraw_01.png" class="img-fluid" />
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="Schedule">
-        <h2>日程</h2>
-        <div class="container">
-            <table class="table table-striped table-responsive-sm">
-                <thead>
-                    <tr>
-                        <th scope="col" class="d-none d-md-block">#</th>
-                        <th scope="col">时间</th>
-                        <th scope="col">活动</th>
-                    </tr>
-                </thead>
-                <tbody data-array="schedule"><!--
-                    <tr>
-                        <td class="d-none d-md-block"></td>
-                        <td style="white-space: nowrap">${view.time}</td>
-                        <td>${
-                            view.title || (
-                                '《' + scope.topic[view.topic].title + '》 ' +
-                                scope.lecturer[
-                                    scope.topic[view.topic].lecturer
-                                ].name
-                            )
-                        }</td>
-                    </tr>
-             --></tbody>
-            </table>
-        </div>
-    </section>
-    <section id="Review" class="sparked">
-        <h2>往期精彩回顾</h2>
-        <div class="container">
-            <div class="row" data-array="review"><template>
-                <div class="col-md-4">
-                    <img class="img-fluid" title="${view.title}"
-                         data-src="image/photos/${view.index + 1}.jpg">
+        </section>
+        <section id="Lecturer" class="sparked">
+            <h2>与会嘉宾</h2>
+            <div class="container">
+                <div class="row lecture-list" data-array="lecturer">
+                    <template>
+                        <div class="col-md-3">
+                            <div class="lecture">
+                                <img
+                                    src="image/lecturer/${view.englishName}.png"
+                                    class="avatar"
+                                    alt="guest name"
+                                />
+                                <p class="lecture-name">${view.name}</p>
+                                <p class="lecture-intro">${view.detail}</p>
+                            </div>
+                        </div>
+                    </template>
                 </div>
-            </template></div>
-        </div>
-    </section>
+            </div>
+        </section>
+        <section id="Topic">
+            <h2>议题</h2>
+            <div class="container">
+                <ol class="subjects" data-array="topic">
+                    <template>
+                        <li>
+                            <div class="text-center">
+                                <p>
+                                    <strong>
+                                        ${scope.lecturer[view.lecturer].name}
+                                    </strong>
+                                </p>
+                                <img
+                                    class="avatar-sm"
+                                    src="image/lecturer/${scope.lecturer[view.lecturer].englishName}.png"
+                                />
+                            </div>
+                            <div>
+                                <h5>${view.title}</h5>
+                                <p>${view.detail}</p>
+                            </div>
+                        </li>
+                    </template>
+                </ol>
+            </div>
+        </section>
+        <section class="sparked">
+            <div class="container">
+                <div id="Bazaar" class="bazaar">
+                    <h2>开源市集</h2>
+                    <div class="card-columns" data-array="project">
+                        <template>
+                            <div class="card" style="overflow:hidden">
+                                <div
+                                    class="cr cr-top cr-right  cr-${view.type ? 'red' : 'blue'}"
+                                >
+                                    ${view.type ? '社团' : '项目'}
+                                </div>
+                                <img
+                                    class="card-img-top"
+                                    src="image/project/${view.name}.png"
+                                    title="${view.name}"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a
+                                            class="text-primary"
+                                            target="_blank"
+                                            href="${view.URL}"
+                                        >
+                                            ${view.title}
+                                        </a>
+                                    </h5>
+                                    <p class="card-text">${view.detail}</p>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div id="Enterprise" class="text-center">
+                    <h2>参会企业</h2>
+                    <p class="text-muted">
+                        部分企业开放现场招聘位，欢迎优秀人才携简历前来~
+                    </p>
+                    <p class="text-muted">（排名不分先后）</p>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <ul class="companies" data-array="company">
+                                <template>
+                                    <li>${view.name}</li>
+                                </template>
+                            </ul>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="image/undraw_04.png" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Schedule">
+            <h2>日程</h2>
+            <div class="container">
+                <table class="table table-striped table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="d-none d-md-block">#</th>
+                            <th scope="col">时间</th>
+                            <th scope="col">活动</th>
+                        </tr>
+                    </thead>
+                    <tbody data-array="schedule">
+                        <!--
+                            <tr>
+                                <td class="d-none d-md-block"></td>
+                                <td style="white-space: nowrap">${view.time}</td>
+                                <td>${
+                                    view.title || (
+                                        '《' + scope.topic[view.topic].title + '》 ' +
+                                        scope.lecturer[
+                                            scope.topic[view.topic].lecturer
+                                        ].name
+                                    )
+                                }</td>
+                            </tr>
+                        -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="Review" class="sparked">
+            <h2>往期精彩回顾</h2>
+            <div class="container">
+                <div class="row" data-array="review">
+                    <template>
+                        <div class="col-md-4">
+                            <img
+                                class="img-fluid"
+                                title="${view.title}"
+                                data-src="image/photos/${view.index + 1}.jpg"
+                            />
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
 
-    <section id="Address" class="text-center">
-        <h2>地址</h2>
-        <div class="container">
-            <p class="text-muted">
-                天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
-            </p>
-            <iframe frameborder="0" scrolling="no"
-                    data-src="../common/map/?lnglat=104.065789,30.582013&title=2018 成都 Web 前端大会&detail=天府大道北段 966 号天府国际金融中心 4 号楼 1 层 1 号会议厅"></iframe>
-        </div>
-    </section>
-    <section id="Contributor">
-        <h2>共创伙伴</h2>
-        <div class="container" data-array="host"><template>
-            <div class="contributor-group">
-                <h5>${view.title}办方</h5>
-                <div class="logos" data-array="member"><template>
-                    <a target="_blank" href="${view.URL}">
-                        <img title="${view.name}" src="image/logo/${view.path}">
-                    </a>
-                </template></div>
+        <section id="Address" class="text-center">
+            <h2>地址</h2>
+            <div class="container">
+                <p class="text-muted">
+                    天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
+                </p>
+                <iframe
+                    frameborder="0"
+                    scrolling="no"
+                    data-src="../common/map/?lnglat=104.065789,30.582013&title=2018 成都 Web 前端大会&detail=天府大道北段 966 号天府国际金融中心 4 号楼 1 层 1 号会议厅"
+                ></iframe>
             </div>
-        </template></div>
-        <div class="container">
-            <div class="contributor-group">
-                <div data-array="sponsor"><template>
-                    <section>
-                        <h5>${view.title}赞助</h5>
-                        <div class="logos" data-array="member"><template>
+        </section>
+        <section id="Contributor">
+            <h2>共创伙伴</h2>
+            <div class="container" data-array="host">
+                <template>
+                    <div class="contributor-group">
+                        <h5>${view.title}办方</h5>
+                        <div class="logos" data-array="member">
+                            <template>
+                                <a target="_blank" href="${view.URL}">
+                                    <img
+                                        title="${view.name}"
+                                        src="image/logo/${view.path}"
+                                    />
+                                </a>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class="container">
+                <div class="contributor-group">
+                    <div data-array="sponsor">
+                        <template>
+                            <section>
+                                <h5>${view.title}赞助</h5>
+                                <div class="logos" data-array="member">
+                                    <template>
+                                        <a target="_blank" href="${view.URL}">
+                                            <img
+                                                title="${view.name}"
+                                                src="image/logo/${view.path}"
+                                            />
+                                        </a>
+                                    </template>
+                                </div>
+                            </section>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="contributor-group">
+                    <h5>合作伙伴</h5>
+                    <div class="logos" data-array="partner">
+                        <template>
                             <a target="_blank" href="${view.URL}">
-                                <img title="${view.name}" src="image/logo/${view.path}">
+                                <img
+                                    title="${view.name}"
+                                    src="image/logo/${view.path}"
+                                />
                             </a>
-                        </template></div>
-                    </section>
-                </template></div>
+                        </template>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="contributor-group">
-                <h5>合作伙伴</h5>
-                <div class="logos" data-array="partner"><template>
-                    <a target="_blank" href="${view.URL}">
-                        <img title="${view.name}" src="image/logo/${view.path}">
-                    </a>
-                </template></div>
+        </section>
+        <section id="CallInAction" class="sparked">
+            <div class="container text-center">
+                <a
+                    class="btn btn-primary btn-lg btn-cia"
+                    target="_blank"
+                    href="http://fccchengdu.mikecrm.com/tFM8Rk8"
+                >
+                    立即报名参加
+                </a>
             </div>
-        </div>
-    </section>
-    <section id="CallInAction" class="sparked">
-        <div class="container text-center">
-            <a class="btn btn-primary btn-lg btn-cia" target="_blank"
-               href="http://fccchengdu.mikecrm.com/tFM8Rk8">
-               立即报名参加
-            </a>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="d-none d-md-block">
-                <ul class="nav" data-array="section"><template>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#${view.name}">
-                            ${view.title}
-                        </a>
-                    </li>
-                </template></ul>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="d-none d-md-block">
+                    <ul class="nav" data-array="section">
+                        <template>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#${view.name}">
+                                    ${view.title}
+                                </a>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <div class="qrcode align-middle">
+                    <img class="img-fluid" src="../common/FCC-CDG-WeChat.png" />
+                    <div>微信扫一扫关注我们</div>
+                </div>
             </div>
-            <div class="qrcode align-middle">
-                <img class="img-fluid" src="../common/FCC-CDG-WeChat.png">
-                <div>微信扫一扫关注我们</div>
-            </div>
+        </footer>
+        <div class="copyright">
+            &copy;2018 freeCodeCamp 成都社区
+            <p>
+                自豪地使用
+                <a href="https://getbootstrap.com/">BootStrap v4</a> &amp;
+                <a href="https://web-cell.tk/">WebCell</a> 开发
+            </p>
         </div>
-    </footer>
-    <div class="copyright">
-        &copy;2018 freeCodeCamp 成都社区
-        <p>
-            自豪地使用
-            <a href="https://getbootstrap.com/">BootStrap v4</a>
-            &amp;
-            <a href="https://web-cell.tk/">WebCell</a>
-            开发
-        </p>
-    </div>
-    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://lib.baomitu.com/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="index.js"></script>
-</body>
+        <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://lib.baomitu.com/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="index.js"></script>
+    </body>
 </html>

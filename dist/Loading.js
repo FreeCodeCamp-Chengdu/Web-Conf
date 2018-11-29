@@ -173,8 +173,8 @@ function _createElementDescriptor(def) {
         placement: def.static
             ? 'static'
             : def.kind === 'field'
-                ? 'own'
-                : 'prototype',
+            ? 'own'
+            : 'prototype',
         descriptor: descriptor
     };
     if (def.decorators) element.decorators = def.decorators;
@@ -580,7 +580,7 @@ var _module_ = {
             });
             exports.default = void 0;
             var _default =
-                '<template>\n    <style>\n        main {\n            position:          fixed;\n            left:              0;\n            top:               0;\n            width:             100%;\n            height:            100%;\n            z-index:           999;\n            background-color:  white;\n            display:           flex;\n            flex-direction:    column;\n            justify-content:   center;\n            align-items:       center;\n            transition:        0.25s;\n        }\n        main.done {\n            width:    0;\n            height:   0;\n            opacity:  0;\n        }\n        main &gt; img {\n            min-width:   150px;\n            max-width:   150px;\n            max-width:   25%;\n            max-height:  25%;\n        }\n    </style>\n\n    <main class="${view.count ? \'\' : \'done\'}">\n        <img src="${host.constructor.image}" />\n        Loading...\n    </main>\n</template>\n';
+                '<template>\n    <style>\n        main {\n            position: fixed;\n            left: 0;\n            top: 0;\n            width: 100%;\n            height: 100%;\n            z-index: 999;\n            background-color: white;\n            display: flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n            transition: 0.25s;\n        }\n        main.done {\n            width: 0;\n            height: 0;\n            opacity: 0;\n        }\n        main > img {\n            min-width: 150px;\n            max-width: 150px;\n            max-width: 25%;\n            max-height: 25%;\n        }\n    </style>\n\n    <main class="${view.count ? \'\' : \'done\'}">\n        <img src="${host.constructor.image}"> Loading...\n    </main>\n</template>\n';
             exports.default = _default;
         }
     },
@@ -628,22 +628,20 @@ var _module_ = {
                             _inherits(CellLoading, _HTMLElement2);
 
                             function CellLoading() {
-                                var _this;
+                                var _temp, _this;
 
                                 _classCallCheck(this, CellLoading);
 
-                                _this = _possibleConstructorReturn(
+                                ((_temp = _this = _possibleConstructorReturn(
                                     this,
                                     _getPrototypeOf(CellLoading).call(this)
-                                );
-
+                                )),
                                 _initialize(
                                     _assertThisInitialized(
                                         _assertThisInitialized(_this)
                                     )
-                                );
-
-                                _this.buildDOM();
+                                ),
+                                _temp).buildDOM();
 
                                 var reduce = function reduce() {
                                     return _this.count && _this.count--;

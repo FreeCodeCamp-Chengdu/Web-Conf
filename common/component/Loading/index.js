@@ -20,9 +20,7 @@ export default class CellLoading extends HTMLElement {
     }
 
     constructor() {
-        super();
-
-        this.buildDOM();
+        super().buildDOM();
 
         const reduce = () => this.count && this.count--;
 

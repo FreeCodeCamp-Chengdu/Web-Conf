@@ -368,6 +368,11 @@
             "name": "SegmentFault",
             "path": "partner/sf.png",
             "URL": "https://segmentfault.com/"
+        },
+        {
+            "name": "小样青年社区",
+            "path": "partner/young.png",
+            "URL": "http://www.xypark.com/"
         }
     ],
     "company": [
