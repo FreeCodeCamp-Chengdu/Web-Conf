@@ -1,17 +1,23 @@
-(function($, WebCell, marked, Loading) {
-    var request = WebCell.request,
+(function(DOM_Renderer, WebCell, marked) {
+    var ViewList = DOM_Renderer.ViewList,
+        request = WebCell.request,
         documentReady = WebCell.documentReady,
+        $ = WebCell.$,
         mediaReady = WebCell.mediaReady,
-        ObjectView = WebCell.ObjectView;
+        delegate = WebCell.delegate;
 
     //  渲染数据
 
     Promise.all([request('index.json'), documentReady])
         .then(function(data) {
-            data = data[0];
+            data = data[0].body;
 
             data.company = data.company.map(function(name) {
                 return { name: name };
+            });
+
+            data.review.forEach(function(item, index) {
+                item.index = index;
             });
 
             for (var key in data)
@@ -19,44 +25,49 @@
                     for (var i = 0; data[key][i]; i++)
                         data[key][i].detail = marked(data[key][i].detail);
 
-            var body = new ObjectView(document.body);
-
-            body.render(data);
-
+            return Promise.all(
+                $('[data-view]').map(function(view) {
+                    return new ViewList(view, data).render(
+                        data[view.dataset.view]
+                    );
+                })
+            );
+        })
+        .then(function() {
             var intersection = new IntersectionObserver(function(
                 entry,
                 observer
             ) {
-                $.each(entry, function() {
-                    if (!this.isIntersecting) return;
+                entry.forEach(function(item) {
+                    if (!item.isIntersecting) return;
 
-                    var data = this.target.dataset;
+                    var data = item.target.dataset;
 
-                    this.target.src = data.src;
+                    item.target.src = data.src;
 
                     delete data.src;
 
-                    observer.unobserve(this.target);
+                    observer.unobserve(item.target);
                 });
             });
 
-            $('[data-src]').each(function() {
-                intersection.observe(this);
-            });
+            $('[data-src]').forEach(intersection.observe.bind(intersection));
 
             return mediaReady();
         })
-        .then(Loading.closeAll.bind(Loading));
-
-    //  导航滚动
-    $(document).on('click', 'a[href^="#"]', function() {
-        var offset = $(this.getAttribute('href')).offset();
-
-        $(document.scrollingElement).animate({
-            scrollTop: offset.top,
-            scrollLeft: offset.left
+        .then(function() {
+            $('load-cover')[0].open = false;
         });
 
-        return false;
-    });
-})(self.jQuery, self['web-cell'], self.marked, self['Loading'].default);
+    //  导航滚动
+    document.addEventListener(
+        'click',
+        delegate('a[href^="#"]', function(event) {
+            event.preventDefault();
+
+            $(this.getAttribute('href'))[0].scrollIntoView({
+                behavior: 'smooth'
+            });
+        })
+    );
+})(self['dom-renderer'], self['web-cell'], self.marked);

@@ -1,10 +1,7 @@
-require(['jquery', 'vue', 'ELEMENT', 'index'], function(
-    $,
-    Vue,
-    ElementUI,
-    index
-) {
-    $(document).ready(function() {
+require(['vue', 'ELEMENT', 'index'], function(Vue, ElementUI, index) {
+    var WebCell = self['web-cell'];
+
+    WebCell.documentReady.then(function() {
         //  主要内容 动态渲染
 
         Vue.use(ElementUI);
@@ -12,7 +9,9 @@ require(['jquery', 'vue', 'ELEMENT', 'index'], function(
         new Vue({
             el: '#app',
             data: index,
-            mounted: () => self.Loading.default.closeAll()
+            mounted: function() {
+                WebCell.$('load-cover')[0].open = false;
+            }
         });
     });
 });

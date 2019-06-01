@@ -2,14 +2,10 @@
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8" />
-
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-
-        <base href="https://web-conf.leanapp.cn/" />
-
         <link rel="icon" href="common/favicon.ico" />
         <title>成都 Web 开发者大会</title>
         <meta name="description" content="成都 Web 开发者大会官网" />
@@ -18,23 +14,23 @@
         <!-- Bootstrap core CSS -->
         <link
             rel="stylesheet"
-            href="https://lib.baomitu.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+            href="https://lib.baomitu.com/twitter-bootstrap/4.2.1/css/bootstrap.min.css"
         />
-
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="common/index.css" />
 
-        <script src="https://lib.baomitu.com/babel-polyfill/7.0.0/polyfill.min.js"></script>
-        <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Element.prototype.append,DocumentFragment.prototype.append"></script>
-        <script src="node_modules/whatwg-fetch/dist/fetch.umd.js"></script>
-        <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-        <script src="node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+        <script src="https://lib.baomitu.com/babel-polyfill/7.4.4/polyfill.min.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CDocumentFragment.prototype.append%2CElement.prototype.append"></script>
+        <script src="https://lib.baomitu.com/webcomponentsjs/2.2.10/webcomponents-bundle.js"></script>
+        <script src="https://lib.baomitu.com/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
 
-        <script src="node_modules/web-cell/dist/web-cell.min.js"></script>
-        <script src="dist/Loading.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dom-renderer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web-cell"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/cell-common/dist/load-cover.js"></script>
     </head>
     <body>
-        <cell-loading count="1"></cell-loading>
+        <load-cover open></load-cover>
         <header>
             <div class="collapse bg-dark" id="navbarHeader">
                 <div class="container">
@@ -124,64 +120,68 @@
         </header>
 
         <main role="main">
-            <section class="jumbotron text-center">
-                <div class="container">
-                    <h1 class="jumbotron-heading">成都 Web 开发者大会</h1>
-                    <p class="lead text-muted">
-                        中国西南地区 Web、JavaScript 全栈开发者的年度盛会
-                    </p>
-                    <p>
-                        <a
-                            class="btn btn-primary my-2"
-                            href="${view.conf_list[0].URL}"
-                        >
-                            报名最新大会
-                        </a>
-                        <a
-                            class="btn btn-secondary my-2"
-                            href="${view.conf_list[1].URL}"
-                        >
-                            回顾上次大会
-                        </a>
-                    </p>
-                </div>
-            </section>
+            <template>
+                <section class="jumbotron text-center">
+                    <div class="container">
+                        <h1 class="jumbotron-heading">成都 Web 开发者大会</h1>
+                        <p class="lead text-muted">
+                            中国西南地区 Web、JavaScript 全栈开发者的年度盛会
+                        </p>
+                        <p>
+                            <a
+                                class="btn btn-primary my-2"
+                                href="${view.conf_list[0].URL}"
+                            >
+                                报名最新大会
+                            </a>
+                            <a
+                                class="btn btn-secondary my-2"
+                                href="${view.conf_list[1].URL}"
+                            >
+                                回顾上次大会
+                            </a>
+                        </p>
+                    </div>
+                </section>
 
-            <div class="album py-5 bg-light">
-                <div class="container">
-                    <div class="row" data-array="conf_list">
-                        <template>
-                            <div class="col-md-4">
-                                <div class="card mb-4 box-shadow">
-                                    <div
-                                        class="card-img-top"
-                                        style="background-image: url(${view.banner})"
-                                    ></div>
-                                    <div class="card-body">
-                                        <p class="card-text">${view.title}</p>
+                <div class="album py-5 bg-light">
+                    <div class="container">
+                        <div class="row" data-view="conf_list">
+                            <template>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
                                         <div
-                                            class="d-flex justify-content-between align-items-center"
-                                        >
-                                            <div class="btn-group">
-                                                <a
-                                                    class="btn btn-sm btn-${view.passed ? 'secondary' : 'primary'}"
-                                                    href="${view.URL}"
-                                                >
-                                                    ${view.passed ? '回顾' :
-                                                    '报名'}
-                                                </a>
+                                            class="card-img-top"
+                                            style="background-image: url(${view.banner})"
+                                        ></div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                ${view.title}
+                                            </p>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center"
+                                            >
+                                                <div class="btn-group">
+                                                    <a
+                                                        class="btn btn-sm btn-${view.passed ? 'secondary' : 'primary'}"
+                                                        href="${view.URL}"
+                                                    >
+                                                        ${view.passed ? '回顾' :
+                                                        '报名'}
+                                                    </a>
+                                                </div>
+                                                <small class="text-muted">
+                                                    ${view.date}
+                                                </small>
                                             </div>
-                                            <small class="text-muted">
-                                                ${view.date}
-                                            </small>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </template>
+                            </template>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </template>
         </main>
 
         <footer class="text-muted">
@@ -195,8 +195,8 @@
             </div>
         </footer>
 
-        <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://lib.baomitu.com/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://lib.baomitu.com/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://lib.baomitu.com/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
         <script src="common/index.js"></script>
     </body>
 </html>

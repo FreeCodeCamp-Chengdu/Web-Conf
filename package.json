@@ -1,6 +1,6 @@
 {
     "name": "web-conf",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Web Developer Conference in Chengdu, China",
     "keywords": [
         "Web",
@@ -9,7 +9,7 @@
         "China",
         "Chengdu"
     ],
-    "author": "freeCodeCamp Chengdu Group",
+    "author": "freeCodeCamp Chengdu community",
     "license": "AGPL-3.0",
     "homepage": "https://web-conf.tk/",
     "repository": {
@@ -19,20 +19,14 @@
     "bugs": {
         "url": "https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/issues"
     },
-    "directories": {
-        "lib": "common/component/",
-        "test": "."
-    },
     "engines": {
         "node": "^8.0.0"
     },
     "scripts": {
-        "dev": "web-cell preview",
         "start": "web-server -p LEANCLOUD_APP_PORT --CORS",
         "format": "prettier --write \"{,!(node_modules|.git|dist|docs)/**/}*.{html,md,css,less,js,json}\"",
         "lint": "eslint . --ignore-pattern dist/ --fix",
-        "build": "npm run format  &&  npm run lint  &&  web-cell pack",
-        "test": "npm run build"
+        "test": "npm run format  &&  npm run lint"
     },
     "husky": {
         "hooks": {
@@ -40,28 +34,11 @@
         }
     },
     "dependencies": {
-        "@webcomponents/webcomponentsjs": "^2.2.1",
-        "intersection-observer": "^0.5.1",
-        "koapache": "^1.0.4",
-        "web-cell": "^0.10.10",
-        "whatwg-fetch": "^3.0.0"
+        "koapache": "^1.0.6"
     },
     "devDependencies": {
-        "@babel/plugin-proposal-decorators": "^7.1.6",
-        "babel-eslint": "^10.0.1",
-        "eslint": "^5.9.0",
-        "husky": "^1.2.0",
-        "prettier": "^1.15.2",
-        "web-cell-cli": "^0.7.5"
-    },
-    "babel": {
-        "plugins": [
-            [
-                "@babel/plugin-proposal-decorators",
-                {
-                    "decoratorsBeforeExport": true
-                }
-            ]
-        ]
+        "eslint": "^5.16.0",
+        "husky": "^2.3.0",
+        "prettier": "^1.17.1"
     }
 }
