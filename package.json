@@ -40,7 +40,7 @@
         }
     },
     "dependencies": {
-        "web-cell": "^2.0.0-alpha.10"
+        "web-cell": "^2.0.0-alpha.11"
     },
     "devDependencies": {
         "@babel/core": "^7.6.0",

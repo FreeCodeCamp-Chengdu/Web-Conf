@@ -8,16 +8,21 @@ export default function NavBar({
 }) {
     return (
         <header>
-            <div class={`collapse bg-${background}`} id="navbarHeader">
+            <div className={`collapse bg-${background}`} id="navbarHeader">
                 {children}
             </div>
-            <div class={`navbar navbar-${theme} bg-${background} box-shadow`}>
-                <div class="container d-flex justify-content-between">
-                    <a href="." class="navbar-brand d-flex align-items-center">
+            <div
+                className={`navbar navbar-${theme} bg-${background} box-shadow`}
+            >
+                <div className="container d-flex justify-content-between">
+                    <a
+                        href="."
+                        className="navbar-brand d-flex align-items-center"
+                    >
                         <strong>{title}</strong>
                     </a>
                     <button
-                        class="navbar-toggler"
+                        className="navbar-toggler"
                         type="button"
                         data-toggle="collapse"
                         data-target="#navbarHeader"
@@ -25,7 +30,7 @@ export default function NavBar({
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        <span class="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
             </div>
