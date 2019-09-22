@@ -1,6 +1,6 @@
 {
     "name": "web-conf",
-    "version": "2.1.0",
+    "version": "3.0.0-alpha",
     "description": "Web Developer Conference in Chengdu, China",
     "keywords": [
         "Web",
@@ -23,22 +23,36 @@
         "node": "^8.0.0"
     },
     "scripts": {
-        "start": "web-server -p LEANCLOUD_APP_PORT --CORS",
-        "format": "prettier --write \"{,!(node_modules|.git|dist|docs)/**/}*.{html,md,css,less,js,json}\"",
-        "lint": "eslint . --ignore-pattern dist/ --fix",
-        "test": "npm run format  &&  npm run lint"
+        "clean": "rm -rf dist/ .cache/",
+        "start": "npm run clean  &&  parcel source/index.html",
+        "build": "npm run clean  &&  parcel build source/index.html",
+        "test": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{html,md,css,less,js,ts,tsx,json}": [
+            "prettier --write",
+            "git add"
+        ]
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm test  &&  git add ."
+            "pre-commit": "npm test"
         }
     },
     "dependencies": {
-        "koapache": "^1.0.6"
+        "web-cell": "^2.0.0-alpha.10"
     },
     "devDependencies": {
-        "eslint": "^5.16.0",
-        "husky": "^2.3.0",
-        "prettier": "^1.17.1"
+        "@babel/core": "^7.6.0",
+        "eslint": "^6.4.0",
+        "husky": "^3.0.5",
+        "lint-staged": "^9.2.5",
+        "parcel-bundler": "^1.12.3",
+        "parcel-plugin-text": "^0.9.5",
+        "prettier": "^1.18.2",
+        "typescript": "^3.6.3"
+    },
+    "prettier": {
+        "singleQuote": true
     }
 }
