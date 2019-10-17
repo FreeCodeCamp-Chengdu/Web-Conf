@@ -1,12 +1,11 @@
-import * as WebCell from 'web-cell';
+import { createCell } from 'web-cell';
+import { NavBar } from 'boot-cell/source/NavBar';
+import { Card } from 'boot-cell/source/Card';
 
-import NavBar from '../component/NavBar';
-import Card from '../component/Card';
+import WeChat_QRC from '../../../common/FCC-CDG-WeChat.png';
+import conf_list from '../../../common/index.json';
 
-import WeChat_QRC from '../../common/FCC-CDG-WeChat.png';
-import conf_list from '../../common/index.json';
-
-export default function PageIndex() {
+export function Page2019() {
     return (
         <div>
             <NavBar title="freeCodeCamp 成都社区">
@@ -92,9 +91,9 @@ export default function PageIndex() {
                             return (
                                 <div className="col-md-4">
                                     <Card
-                                        text={title}
+                                        title={title}
                                         image={banner}
-                                        href={URL}
+                                        link={{ path: URL }}
                                     >
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
