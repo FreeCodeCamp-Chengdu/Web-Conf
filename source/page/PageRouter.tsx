@@ -4,7 +4,8 @@ import { HTMLRouter } from 'cell-router/source';
 
 import { history } from '../model';
 
-import { Page2019 } from './2019';
+import { PageEntry } from './PageEntry';
+import { Page2018 } from './2018';
 
 @observer
 @component({
@@ -16,13 +17,34 @@ export class PageRouter extends HTMLRouter {
 
     renderPage() {
         switch (history.path) {
-            case '2019':
+            case '2018/':
+                return <Page2018 />;
             default:
-                return <Page2019 />;
+                return <PageEntry />;
         }
     }
 
     render() {
-        return <div>{this.renderPage()}</div>;
+        return (
+            <div>
+                {this.renderPage()}
+
+                <footer className="text-muted">
+                    <div className="container">
+                        <p className="float-right">
+                            <a href="#top">返回页顶</a>
+                        </p>
+                        <p>
+                            自豪地使用
+                            <a href="https://getbootstrap.com/">
+                                BootStrap v4
+                            </a>{' '}
+                            &amp;
+                            <a href="https://web-cell.tk/">WebCell v2</a> 开发
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        );
     }
 }

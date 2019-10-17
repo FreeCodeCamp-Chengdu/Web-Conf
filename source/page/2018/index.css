@@ -1,6 +1,6 @@
 body {
-    font-family: "PingFang SC", "Lantinghei SC", "Helvetica Neue", Helvetica,
-        Arial, "Microsoft YaHei", "STHeitiSC-Light", simsun, "sans-serif";
+    font-family: 'PingFang SC', 'Lantinghei SC', 'Helvetica Neue', Helvetica,
+        Arial, 'Microsoft YaHei', 'STHeitiSC-Light', simsun, 'sans-serif';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-size-adjust: 100% !important;
@@ -162,10 +162,10 @@ body > section h2 {
 }
 @media screen and (min-width: 767.98px) {
     .subjects::after {
-        content: "";
+        content: '';
         position: absolute;
         z-index: -1;
-        background: #fff url("image/undraw_02.png") no-repeat right center;
+        background: #fff url('image/undraw_02.png') no-repeat right center;
         opacity: 0.3;
         top: 0;
         left: 0;
@@ -223,7 +223,7 @@ tbody[data-array] td:first-child::before {
     position: relative;
 }
 #CallInAction::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;

@@ -2,10 +2,10 @@ import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
 import { Card } from 'boot-cell/source/Card';
 
-import WeChat_QRC from '../../../common/FCC-CDG-WeChat.png';
-import conf_list from '../../../common/index.json';
+import WeChat_QRC from '../../common/FCC-CDG-WeChat.png';
+import conf_list from './data';
 
-export function Page2019() {
+export function PageEntry() {
     return (
         <div>
             <NavBar title="freeCodeCamp 成都社区">
@@ -90,11 +90,7 @@ export function Page2019() {
 
                             return (
                                 <div className="col-md-4">
-                                    <Card
-                                        title={title}
-                                        image={banner}
-                                        link={{ path: URL }}
-                                    >
+                                    <Card title={title} image={banner}>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
                                                 <a
@@ -119,22 +115,6 @@ export function Page2019() {
                     </div>
                 </div>
             </div>
-
-            <footer className="text-muted">
-                <div className="container">
-                    <p className="float-right">
-                        <a href="#top">返回页顶</a>
-                    </p>
-                    <p>
-                        自豪地使用
-                        <a href="https://getbootstrap.com/">
-                            BootStrap v4
-                        </a>{' '}
-                        &amp;
-                        <a href="https://web-cell.tk/">WebCell v2</a> 开发
-                    </p>
-                </div>
-            </footer>
         </div>
     );
 }
