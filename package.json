@@ -14,10 +14,10 @@
     "homepage": "https://web-conf.tk/",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/FreeCodeCamp-Chengdu/WFE-Conf.git"
+        "url": "git+https://github.com/FreeCodeCamp-Chengdu/Web-Conf.git"
     },
     "bugs": {
-        "url": "https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/issues"
+        "url": "https://github.com/FreeCodeCamp-Chengdu/Web-Conf/issues"
     },
     "scripts": {
         "clean": "rm -rf dist/ .cache/",
@@ -37,7 +37,7 @@
         }
     },
     "dependencies": {
-        "boot-cell": "^0.7.1",
+        "boot-cell": "^0.7.2",
         "cell-router": "^2.0.0-beta.6",
         "classnames": "^2.2.6",
         "mobx": "^5.14.0",
@@ -46,14 +46,26 @@
     },
     "devDependencies": {
         "@babel/core": "^7.6.4",
+        "@types/classnames": "^2.2.9",
+        "autoprefixer": "^9.6.5",
         "eslint": "^6.5.1",
         "husky": "^3.0.9",
+        "less": "^3.10.3",
         "lint-staged": "^9.4.2",
         "parcel-bundler": "^1.12.4",
+        "postcss-modules": "^1.4.1",
         "prettier": "^1.18.2",
         "typescript": "^3.6.4"
     },
     "prettier": {
         "singleQuote": true
+    },
+    "postcss": {
+        "modules": true,
+        "plugins": {
+            "autoprefixer": {
+                "grid": true
+            }
+        }
     }
 }

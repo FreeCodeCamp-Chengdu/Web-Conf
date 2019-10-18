@@ -1,5 +1,4 @@
 import { createCell } from 'web-cell';
-import { logo } from './image';
 
 interface Logo {
     name: string;

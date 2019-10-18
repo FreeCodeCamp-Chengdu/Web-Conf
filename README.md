@@ -6,7 +6,7 @@ https://web-conf.tk/
 
 ## 开发者
 
-https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/graphs/contributors
+https://github.com/FreeCodeCamp-Chengdu/Web-Conf/graphs/contributors
 
 ## 全栈框架
 
@@ -19,7 +19,7 @@ https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/graphs/contributors
 ## 本地开发
 
 ```shell
-git clone https://github.com/FreeCodeCamp-Chengdu/WFE-Conf.git
+git clone https://github.com/FreeCodeCamp-Chengdu/Web-Conf.git
 
 npm install
 

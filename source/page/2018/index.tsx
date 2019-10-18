@@ -1,7 +1,7 @@
 import { createCell } from 'web-cell';
 
 import { LogoList } from './LogoList';
-import './index.css';
+// import './index.css';
 import data from './data';
 import { lecturer as lecturerImg, project, photos, undraw } from './image';
 

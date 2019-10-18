@@ -1,0 +1,110 @@
+{
+    "mentors": [
+        {
+            "id": 1,
+            "name": "死月",
+            "GitHub": "XadillaX",
+            "organization": "蚂蚁金服",
+            "title": "Node.js 工程师"
+        },
+        {
+            "id": 2,
+            "name": "慕阳",
+            "GitHub": "myzhibie",
+            "organization": "华为云",
+            "title": "Web 前端工程师"
+        },
+        {
+            "id": 3,
+            "name": "尹吉峰",
+            "GitHub": "flisky",
+            "title": "全栈工程师"
+        },
+        {
+            "id": 4,
+            "name": "贺师俊",
+            "GitHub": "hax",
+            "organization": "奇虎 360",
+            "title": "技术委员会 Web 前端 TC 委员"
+        },
+        {
+            "id": 5,
+            "name": "陈森森",
+            "GitHub": "wanyicss",
+            "organization": "阿里云",
+            "title": "Web 前端工程师"
+        },
+        {
+            "id": 6,
+            "name": "陈成",
+            "GitHub": "sorrycc",
+            "organization": "蚂蚁金服",
+            "title": "Web 前端技术专家"
+        },
+        {
+            "id": 7,
+            "name": "陈洋彬",
+            "GitHub": "imnemo",
+            "organization": "麦麦养老",
+            "title": "软件研发负责人"
+        }
+    ],
+    "topics": [
+        {
+            "title": "蚂蚁前端研发最佳实践",
+            "type": "lecture",
+            "mentorId": 6,
+            "date": "2019-11-16",
+
+            "image": "https://github.com/ant-design.png"
+        },
+        {
+            "title": "基于 Node.js 打造研发团队的瑞士军刀",
+            "type": "lecture",
+            "mentorId": 7,
+            "date": "2019-11-16",
+
+            "image": "https://github.com/nodejs.png"
+        },
+        {
+            "title": "DevCloud Web Components 实践",
+            "type": "lecture",
+            "mentorId": 2,
+            "date": "2019-11-16",
+
+            "image": "https://github.com/webcomponents.png"
+        },
+        {
+            "title": "基于 GraphQL 的业务中台实践",
+            "type": "lecture",
+            "mentorId": 3,
+            "date": "2019-11-16",
+
+            "image": "https://github.com/graphql.png"
+        },
+        {
+            "title": "聊聊 Node.js 构建部署时我们要关心的数据",
+            "type": "lecture",
+            "mentorId": 1,
+            "date": "2019-11-16",
+
+            "image": "https://github.com/nodejs.png"
+        },
+        {
+            "title": "城市大脑地图可视化技术实践",
+            "type": "lecture",
+            "mentorId": 5,
+            "date": "2019-11-17",
+
+            "image": "https://github.com/aliyun.png"
+        },
+        {
+            "title": "（待定）",
+            "type": "lecture",
+            "mentorId": 4,
+            "date": "2019-11-17",
+
+            "image": "https://github.com/tc39.png"
+        }
+    ]
+}

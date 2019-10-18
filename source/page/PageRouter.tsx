@@ -6,6 +6,7 @@ import { history } from '../model';
 
 import { PageEntry } from './PageEntry';
 import { Page2018 } from './2018';
+import { Page2019 } from './2019';
 
 @observer
 @component({
@@ -19,6 +20,8 @@ export class PageRouter extends HTMLRouter {
         switch (history.path) {
             case '2018/':
                 return <Page2018 />;
+            case '2019/':
+                return <Page2019 />;
             default:
                 return <PageEntry />;
         }

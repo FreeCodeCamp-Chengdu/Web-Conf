@@ -100,6 +100,7 @@ export function PageEntry() {
                                                             : 'primary'
                                                     }`}
                                                     href={URL}
+                                                    title={title}
                                                 >
                                                     {passed ? '回顾' : '报名'}
                                                 </a>
