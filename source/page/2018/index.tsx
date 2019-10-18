@@ -1,8 +1,9 @@
 import { createCell } from 'web-cell';
 
 import { LogoList } from './LogoList';
-// import './index.css'
-import data from './index.json';
+import './index.css';
+import data from './data';
+import { lecturer as lecturerImg, project, photos, undraw } from './image';
 
 export function Page2018() {
     return (
@@ -57,10 +58,7 @@ export function Page2018() {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            <img
-                                src="./image/undraw_01.png"
-                                className="img-fluid"
-                            />
+                            <img src={undraw.undraw_01} className="img-fluid" />
                         </div>
                     </div>
                 </div>
@@ -73,7 +71,7 @@ export function Page2018() {
                             <div className="col-md-3">
                                 <div className="lecture">
                                     <img
-                                        src={`image/lecturer/${englishName}.png"`}
+                                        src={lecturerImg[englishName]}
                                         className="avatar"
                                         alt="guest name"
                                     />
@@ -99,7 +97,12 @@ export function Page2018() {
                                     </p>
                                     <img
                                         className="avatar-sm"
-                                        src={`image/lecturer/${data.lecturer[lecturer].englishName}.png`}
+                                        src={
+                                            lecturerImg[
+                                                data.lecturer[lecturer]
+                                                    .englishName
+                                            ]
+                                        }
                                     />
                                 </div>
                                 <div>
@@ -128,7 +131,7 @@ export function Page2018() {
                                         </div>
                                         <img
                                             className="card-img-top"
-                                            src={`image/project/${name}.png`}
+                                            src={project[name]}
                                             title={name}
                                         />
                                         <div className="card-body">
@@ -166,7 +169,7 @@ export function Page2018() {
                             </div>
                             <div className="col-md-5">
                                 <img
-                                    src="image/undraw_04.png"
+                                    src={undraw.undraw_04}
                                     className="img-fluid"
                                 />
                             </div>
@@ -211,7 +214,7 @@ export function Page2018() {
                                 <img
                                     className="img-fluid"
                                     title={title}
-                                    data-src={`image/photos/${index + 1}.jpg`}
+                                    src={photos[index + 1]}
                                 />
                             </div>
                         ))}

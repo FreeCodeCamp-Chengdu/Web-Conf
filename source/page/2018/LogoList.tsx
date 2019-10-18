@@ -1,4 +1,5 @@
 import { createCell } from 'web-cell';
+import { logo } from './image';
 
 interface Logo {
     name: string;
@@ -11,7 +12,7 @@ export function LogoList({ member }: { member: Logo[] }) {
         <div className="logos" data-view="member">
             {member.map(({ URL, name, path }) => (
                 <a target="_blank" href={URL}>
-                    <img title={name} src={`image/logo/${path}`} />
+                    <img title={name} src={path} />
                 </a>
             ))}
         </div>
