@@ -12,8 +12,9 @@ cache:
 install:
     - npm install
 script:
-    - npm run build
+    - npm run ${SCRIPT}
     - cd ${FOLDER}
+    - echo ${DOMAIN} > CNAME
     - git init
     - git config user.name ${UID}
     - git config user.email ${EMAIL}

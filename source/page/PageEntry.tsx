@@ -2,7 +2,7 @@ import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
 import { Card } from 'boot-cell/source/Card';
 
-import WeChat_QRC from '../../common/FCC-CDG-WeChat.png';
+import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import conf_list from './data';
 
 export function PageEntry() {

@@ -2,35 +2,17 @@
     "env": {
         "es6": true,
         "browser": true,
-        "amd": true
+        "node": true
     },
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 9,
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "plugin:prettier/recommended"],
     "rules": {
-        "indent": ["error", 4, { "SwitchCase": 1 }],
-        "linebreak-style": ["error", "unix"],
-        "quotes": ["error", "single"],
-        "semi": ["error", "always"],
-        "no-cond-assign": "off",
-        "no-console": [
-            "error",
-            {
-                "allow": ["info", "warn", "error", "time", "timeEnd"]
-            }
-        ],
-        "valid-jsdoc": [
-            "error",
-            {
-                "prefer": {
-                    "returns": "return"
-                },
-                "requireParamDescription": false,
-                "requireReturn": false,
-                "requireReturnDescription": false
-            }
-        ]
+        "no-unused-vars": "warn"
     }
 }

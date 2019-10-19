@@ -26,6 +26,11 @@
         "build": "npm run clean  &&  parcel build source/index.html --public-url ."
     },
     "lint-staged": {
+        "*.{ts,tsx}": [
+            "prettier --write",
+            "eslint --fix",
+            "git add"
+        ],
         "*.{html,md,css,less,js,ts,tsx,json}": [
             "prettier --write",
             "git add"
@@ -41,15 +46,18 @@
         "boot-cell": "^0.8.0",
         "cell-router": "^2.0.0-beta.6",
         "classnames": "^2.2.6",
-        "mobx": "^5.14.0",
+        "mobx": "^5.14.2",
         "mobx-web-cell": "^0.2.3",
         "web-cell": "^2.0.0-beta.6"
     },
     "devDependencies": {
         "@babel/core": "^7.6.4",
         "@types/classnames": "^2.2.9",
+        "@typescript-eslint/parser": "^2.4.0",
         "autoprefixer": "^9.6.5",
         "eslint": "^6.5.1",
+        "eslint-config-prettier": "^6.4.0",
+        "eslint-plugin-prettier": "^3.1.1",
         "husky": "^3.0.9",
         "less": "^3.10.3",
         "lint-staged": "^9.4.2",
