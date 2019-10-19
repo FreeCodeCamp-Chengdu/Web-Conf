@@ -1,5 +1,4 @@
 import { createCell } from 'web-cell';
-import classNames from 'classnames';
 import { Card } from 'boot-cell/source/Card';
 
 import style from './TopicGroup.less';
@@ -13,8 +12,9 @@ export interface Topic {
     type: string;
     title: string;
     date: string;
+    time: string[];
     image: string;
-    mentorId: number;
+    mentorId?: number;
 }
 
 export function TopicGroup({
@@ -24,27 +24,32 @@ export function TopicGroup({
     topics: Topic[];
     mentors: Mentor[];
 }) {
+    topics.sort((A, B) => A.time[0].localeCompare(B.time[0]));
+
     return (
         <section>
             <h3 className="text-center mt-4">{topics[0].date}</h3>
 
             <div className="card-deck justify-content-center">
-                {topics.map(({ title, image, mentorId, date }) => {
-                    const mentor = mentors.find(({ id }) => id === mentorId)!;
+                {topics.map(({ title, image, mentorId, time }) => {
+                    const mentor =
+                        mentorId && mentors.find(({ id }) => id === mentorId)!;
 
                     return (
                         <Card
-                            className={classNames(style.card, 'mt-4')}
+                            className={style.topic}
                             direction="horizontal"
                             title={title}
                             image={image}
                             text={
-                                <a href={'mentor/' + mentor.id}>
-                                    {mentor.name}
-                                </a>
+                                mentor && (
+                                    <a href={'mentor/' + mentor.id}>
+                                        {mentor.name}
+                                    </a>
+                                )
                             }
                         >
-                            <time>{date}</time>
+                            <time>{time.join(' ~ ')}</time>
                         </Card>
                     );
                 })}

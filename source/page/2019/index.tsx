@@ -1,7 +1,9 @@
 import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
+import { Card } from 'boot-cell/source/Card';
 
 import { TopicGroup, Topic } from './TopicGroup';
+import style from './index.less';
 import data from './index.json';
 
 export function Page2019() {
@@ -27,6 +29,34 @@ export function Page2019() {
                         mentors={data.mentors}
                     />
                 ))}
+                <hr className="m-5" />
+
+                <h2 className="text-center">大咖讲师</h2>
+                <p className="lead text-center">（排名不分先后）</p>
+
+                <div className="card-columns">
+                    {data.mentors.map(
+                        ({ name, avatar, organization, title, GitHub }) => (
+                            <Card
+                                className={style.mentor}
+                                title={name}
+                                image={avatar}
+                                text={
+                                    organization
+                                        ? `${organization} - ${title}`
+                                        : title
+                                }
+                            >
+                                <a
+                                    target="_blank"
+                                    href={'https://github.com/' + GitHub}
+                                >
+                                    @{GitHub}
+                                </a>
+                            </Card>
+                        )
+                    )}
+                </div>
             </div>
         </main>
     );
