@@ -1,6 +1,7 @@
 import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
 import { Card } from 'boot-cell/source/Card';
+import { CountDown } from 'boot-cell/source/CountDown';
 
 import { TopicGroup, Topic } from './TopicGroup';
 import style from './index.less';
@@ -14,13 +15,20 @@ export function Page2019() {
     }, {});
 
     return (
-        <main>
-            <NavBar
-                title="2019 成都 Web 全栈大会"
-                theme="light"
-                background="light"
-            />
-            <div className="container mt-5 pt-5">
+        <div>
+            <NavBar title={data.title} theme="light" background="light" />
+            <main className="container mt-5 pt-5">
+                <header className="jumbotron text-center">
+                    <h1>{data.title}</h1>
+
+                    <ul className="list-unstyled my-4">
+                        <li>2019 年 11 月 16 ~ 17 日</li>
+                        <li>成都市高新区天府五街菁蓉国际广场 7 号楼主会场</li>
+                    </ul>
+
+                    <CountDown endTime="2019-11-16 09:00:00" />
+                </header>
+
                 <h2 className="text-center">大会议程</h2>
 
                 {Object.values(splitByDay).map(list => (
@@ -57,7 +65,18 @@ export function Page2019() {
                         )
                     )}
                 </div>
-            </div>
-        </main>
+                <hr className="m-5" />
+
+                <h2 className="text-center">会场交通</h2>
+                <iframe
+                    className={style.map}
+                    frameborder="0"
+                    scrolling="no"
+                    lazyload="1"
+                    loading="lazy"
+                    src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.06309,30.538734&name=${data.title}`}
+                ></iframe>
+            </main>
+        </div>
     );
 }

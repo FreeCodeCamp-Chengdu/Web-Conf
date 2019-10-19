@@ -20,10 +20,10 @@
         "url": "https://github.com/FreeCodeCamp-Chengdu/Web-Conf/issues"
     },
     "scripts": {
+        "test": "lint-staged",
         "clean": "rm -rf dist/ .cache/",
         "start": "npm run clean  &&  parcel source/index.html",
-        "build": "npm run clean  &&  parcel build source/index.html --public-url .",
-        "test": "lint-staged"
+        "build": "npm run clean  &&  parcel build source/index.html --public-url ."
     },
     "lint-staged": {
         "*.{html,md,css,less,js,ts,tsx,json}": [
@@ -33,11 +33,12 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm test"
+            "pre-commit": "npm test",
+            "pre-push": "npm run build"
         }
     },
     "dependencies": {
-        "boot-cell": "^0.7.2",
+        "boot-cell": "^0.8.0",
         "cell-router": "^2.0.0-beta.6",
         "classnames": "^2.2.6",
         "mobx": "^5.14.0",

@@ -1,4 +1,6 @@
-# 成都 Web 前端交流大会
+# 成都 Web 开发者大会
+
+[![Build Status](https://travis-ci.com/FreeCodeCamp-Chengdu/Web-Conf.svg?branch=v3)](https://travis-ci.com/FreeCodeCamp-Chengdu/Web-Conf)
 
 ## 官网地址
 
