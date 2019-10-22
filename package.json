@@ -1,6 +1,6 @@
 {
     "name": "web-conf",
-    "version": "3.0.0-alpha",
+    "version": "3.0.0-beta",
     "description": "Web Developer Conference in Chengdu, China",
     "keywords": [
         "Web",
@@ -14,21 +14,23 @@
     "homepage": "https://web-conf.tk/",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/FreeCodeCamp-Chengdu/WFE-Conf.git"
+        "url": "git+https://github.com/FreeCodeCamp-Chengdu/Web-Conf.git"
     },
     "bugs": {
-        "url": "https://github.com/FreeCodeCamp-Chengdu/WFE-Conf/issues"
-    },
-    "engines": {
-        "node": "^8.0.0"
+        "url": "https://github.com/FreeCodeCamp-Chengdu/Web-Conf/issues"
     },
     "scripts": {
+        "test": "lint-staged",
         "clean": "rm -rf dist/ .cache/",
         "start": "npm run clean  &&  parcel source/index.html",
-        "build": "npm run clean  &&  parcel build source/index.html",
-        "test": "lint-staged"
+        "build": "npm run clean  &&  parcel build source/index.html --public-url ."
     },
     "lint-staged": {
+        "*.{ts,tsx}": [
+            "prettier --write",
+            "eslint --fix",
+            "git add"
+        ],
         "*.{html,md,css,less,js,ts,tsx,json}": [
             "prettier --write",
             "git add"
@@ -36,23 +38,43 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm test"
+            "pre-commit": "npm test",
+            "pre-push": "npm run build"
         }
     },
     "dependencies": {
-        "web-cell": "^2.0.0-alpha.11"
+        "boot-cell": "^0.9.0",
+        "cell-router": "^2.0.0-rc.1",
+        "classnames": "^2.2.6",
+        "mobx": "^5.14.2",
+        "mobx-web-cell": "^0.2.3",
+        "web-cell": "^2.0.0-beta.6"
     },
     "devDependencies": {
-        "@babel/core": "^7.6.0",
-        "eslint": "^6.4.0",
-        "husky": "^3.0.5",
-        "lint-staged": "^9.2.5",
-        "parcel-bundler": "^1.12.3",
-        "parcel-plugin-text": "^0.9.5",
+        "@babel/core": "^7.6.4",
+        "@types/classnames": "^2.2.9",
+        "@typescript-eslint/parser": "^2.5.0",
+        "autoprefixer": "^9.6.5",
+        "eslint": "^6.5.1",
+        "eslint-config-prettier": "^6.4.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "husky": "^3.0.9",
+        "less": "^3.10.3",
+        "lint-staged": "^9.4.2",
+        "parcel-bundler": "^1.12.4",
+        "postcss-modules": "^1.4.1",
         "prettier": "^1.18.2",
-        "typescript": "^3.6.3"
+        "typescript": "^3.6.4"
     },
     "prettier": {
         "singleQuote": true
+    },
+    "postcss": {
+        "modules": true,
+        "plugins": {
+            "autoprefixer": {
+                "grid": true
+            }
+        }
     }
 }

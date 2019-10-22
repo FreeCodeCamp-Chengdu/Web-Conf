@@ -1,5 +1,5 @@
-import * as WebCell from 'web-cell';
+import { render, createCell } from 'web-cell';
 
-import PageIndex from './page';
+import { PageRouter } from './page/PageRouter';
 
-WebCell.render(<PageIndex />);
+render(<PageRouter />);
