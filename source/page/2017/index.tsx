@@ -4,13 +4,14 @@ import { AccordionList } from 'boot-cell/source/Accordion';
 
 import style from './index.less';
 import data from './data';
+import { banner, qrcode } from './image';
 
 export function Page2017() {
     return (
         <main>
             <div className="container">
                 <header id="logo">
-                    <img src="lib/banner.jpeg" />
+                    <img src={banner} />
                 </header>
                 <div id="introduce">
                     <h2 className="mt-5 mb-4 text-center">
@@ -90,7 +91,7 @@ export function Page2017() {
                 </div>
             </div>
             <footer>
-                <img className="qrcode" src="lib/qrcode.jpeg" />
+                <img className="qrcode" src={qrcode} />
                 <p className="mt-0">
                     特别鸣谢
                     <a target="_blank" href="http://918930.lofter.com">
