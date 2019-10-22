@@ -42,7 +42,7 @@ export function Page2019() {
                 <h2 className="text-center">大咖讲师</h2>
                 <p className="lead text-center">（排名不分先后）</p>
 
-                <div className="card-columns">
+                <section className="card-columns">
                     {data.mentors.map(
                         ({ name, avatar, organization, title, GitHub }) => (
                             <Card
@@ -65,7 +65,18 @@ export function Page2019() {
                             </Card>
                         )
                     )}
-                </div>
+                </section>
+                <hr className="m-5" />
+
+                <h2 className="text-center">共创伙伴</h2>
+                <section className="text-center">
+                    {data.partners.map(({ title, name, logo }) => (
+                        <div>
+                            <h3 className="mt-4 mb-3">{title}</h3>
+                            {logo ? <img src={logo} alt={name} /> : name}
+                        </div>
+                    ))}
+                </section>
                 <hr className="m-5" />
 
                 <h2 className="text-center">会场交通</h2>

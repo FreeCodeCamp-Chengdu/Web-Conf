@@ -242,5 +242,36 @@
             "time": ["16:20", "17:00"],
             "image": "https://github.com/tc39.png"
         }
+    ],
+    "partners": [
+        {
+            "title": "钻石赞助",
+            "name": "阿里云计算",
+            "logo": "https://img.alicdn.com/tfs/TB1Ly5oS3HqK1RjSZFPXXcwapXa-238-54.png"
+        },
+
+        {
+            "title": "金牌赞助",
+            "name": "（虚位以待）"
+        },
+
+        {
+            "title": "银牌赞助",
+            "name": "（虚位以待）"
+        },
+        {
+            "name": "亚马逊 AWS",
+            "logo": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/AWS.png"
+        },
+        {
+            "title": "主办",
+            "name": "freeCodeCamp 成都社区",
+            "logo": "https://fcc-cd.tk/images/FCC-CDC-v1-1.png"
+        },
+        {
+            "title": "协办",
+            "name": "四川捷云信通",
+            "logo": "https://tvax3.sinaimg.cn/crop.4.0.237.237.180/00729vHHly8fp6nb4mncdj308a07raa2.jpg?KID=imgbed,tva&Expires=1571330231&ssig=Fs1dNMHnlm"
+        }
     ]
 }

@@ -1,4 +1,5 @@
-define({
+export default {
+    title: '2017 成都 Web 前端大会',
     activeNames: ['1'],
     guests: [
         {
@@ -259,4 +260,4 @@ define({
             ]
         }
     ]
-});
+};

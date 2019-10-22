@@ -1,6 +1,6 @@
 {
     "name": "web-conf",
-    "version": "3.0.0-alpha",
+    "version": "3.0.0-beta",
     "description": "Web Developer Conference in Chengdu, China",
     "keywords": [
         "Web",
@@ -43,7 +43,7 @@
         }
     },
     "dependencies": {
-        "boot-cell": "^0.8.1",
+        "boot-cell": "^0.9.0",
         "cell-router": "^2.0.0-rc.1",
         "classnames": "^2.2.6",
         "mobx": "^5.14.2",
