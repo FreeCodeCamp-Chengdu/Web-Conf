@@ -7,56 +7,56 @@ export default {
     guests: [
         {
             name: '叶小钗',
-            avatar: guests.guest0,
+            avatar: guests[0],
             content: '叶小钗嘉宾开场演讲',
             description:
                 '原医联研发副总监，现为企鹅医生技术总监，研发负责人。先后任职于携程百度等公司，擅长前端开发，混合开发，对大型前端项目开发有一些认识，平时喜欢霹雳布袋戏。'
         },
         {
             name: '陈洋彬',
-            avatar: guests.guest7,
+            avatar: guests[7],
             content: '一个 Node 模块的自我修养',
             description:
                 '麦麦养老软件研发负责人，持续创业者。在研发团队搭建、管理与技术体系渐进增强方面有一定心得。多年 Web 前端、服务端研发及架构设计经验，关注技术的原理与融会贯通，主张编码与工程的专业、规范、极简。'
         },
         {
             name: '水歌',
-            avatar: guests.guest4,
+            avatar: guests[4],
             content: '轻量级 Web MVVM 引擎的实现',
             description:
                 '东方天呈 Web 前端工程师，JavaScript 全栈开发者、开源软件作者、freeCodeCamp 中文社区技术布道师、四川大学飞扬俱乐部·研发部 创始团队成员、jQuery贡献者。'
         },
         {
             name: '廖伟',
-            avatar: guests.guest2,
+            avatar: guests[2],
             content: 'HTML 5 跨平台解决方案实践',
             description:
                 '乐车邦前端开发负责人。曾就职于携程移动端框架技术部，负责构建代码的打包平台，维护共用组件，目前在乐车邦主要负责整个前端（浏览器，微信，小程序，app），致力于解决一套代码多端运行的方案，主要擅长 SPA 应用的开发，具有丰富的SPA开发经验。'
         },
         {
             name: '胡敏',
-            avatar: guests.guest5,
+            avatar: guests[5],
             content: 'Vue 开发那些事',
             description:
                 '新蛋高级软件工程师。目前主要负责 Web 模块化开发平台建设与开发工作，擅长功能设计与实现。对前后端开发有较多实践经验。'
         },
         {
             name: '董涛',
-            avatar: guests.guest6,
+            avatar: guests[6],
             content: '大数据可视化之美',
             description:
                 '5年前端经验，热爱钻研各种技术，喜欢写代码，工作之余著有 MTUI、H5DS 两个开源项目。现 BBD 前端部部门经理，对 Web 交互，以及数据可视化有丰富经验。'
         },
         {
             name: '卢林',
-            avatar: guests.guest3,
+            avatar: guests[3],
             content: 'React 组件化通用模式',
             description:
                 '国双科技高级软件工程师，曾供职于奇虎 360 奇舞团、麦客 CRM。目前专注于端技术体系，喜欢思考软件开发的通用模式。'
         },
         {
             name: '余泽江',
-            avatar: guests.guest1,
+            avatar: guests[1],
             content: 'Angular：挣脱舒适区的枷锁',
             description:
                 'ThoughtWorks 咨询师，有着丰富的前后端项目开发经验，目前专注于前端领域的技术实践。Angular 项目活跃的 Community Contributor，广泛涉猎于国内的 Angular 技术布道工作。'

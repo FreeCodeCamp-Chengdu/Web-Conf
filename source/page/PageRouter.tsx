@@ -39,13 +39,16 @@ export class PageRouter extends HTMLRouter {
                             自豪地使用
                             <a
                                 className="px-1"
-                                href="https://getbootstrap.com/"
+                                href="https://github.com/EasyWebApp/WebCell/tree/v2"
                             >
-                                BootStrap v4
+                                WebCell v2
                             </a>
                             &amp;
-                            <a className="px-1" href="https://web-cell.tk/">
-                                WebCell v2
+                            <a
+                                className="px-1"
+                                href="https://web-cell.dev/BootCell"
+                            >
+                                BootCell v1
                             </a>
                             开发
                         </p>

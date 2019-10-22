@@ -1,29 +1,7 @@
 {
     "title": "2019 成都 Web 全栈大会",
+    "address": "成都市高新区天府五街菁蓉国际广场 7 号楼主会场",
     "mentors": [
-        {
-            "id": 1,
-            "name": "死月",
-            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-0/SiYue.jpg",
-            "GitHub": "XadillaX",
-            "organization": "蚂蚁金服",
-            "title": "Node.js 工程师"
-        },
-        {
-            "id": 2,
-            "name": "慕阳",
-            "GitHub": "myzhibie",
-            "organization": "华为云",
-            "title": "Web 前端工程师",
-            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-0/MuYang.jpeg"
-        },
-        {
-            "id": 3,
-            "name": "尹吉峰",
-            "GitHub": "flisky",
-            "title": "全栈工程师",
-            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/Yin-JiFeng.jpg"
-        },
         {
             "id": 4,
             "name": "贺师俊",
@@ -41,20 +19,27 @@
             "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-0/ChenSenSen.png"
         },
         {
-            "id": 6,
-            "name": "陈成",
-            "GitHub": "sorrycc",
-            "organization": "蚂蚁金服",
-            "title": "Web 前端技术专家",
-            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/Chen-Cheng.jpeg"
+            "id": 2,
+            "name": "慕阳",
+            "GitHub": "myzhibie",
+            "organization": "华为云",
+            "title": "Web 前端工程师",
+            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-0/MuYang.jpeg"
         },
         {
-            "id": 7,
-            "name": "陈洋彬",
-            "GitHub": "imnemo",
-            "organization": "麦麦养老",
-            "title": "软件研发负责人",
-            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/Chen-YangBing.jpg"
+            "id": 3,
+            "name": "尹吉峰",
+            "GitHub": "flisky",
+            "title": "全栈工程师",
+            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/Yin-JiFeng.jpg"
+        },
+        {
+            "id": 1,
+            "name": "死月",
+            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-0/SiYue.jpg",
+            "GitHub": "XadillaX",
+            "organization": "蚂蚁金服",
+            "title": "Node.js 工程师"
         },
         {
             "id": 8,
@@ -65,12 +50,12 @@
             "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/Meng-Wei.jpg"
         },
         {
-            "id": 9,
-            "name": "谢扬",
-            "GitHub": "leinue",
-            "organization": "蒸汽记忆",
-            "title": "创始人",
-            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-0/XieYang.jpeg"
+            "id": 7,
+            "name": "陈洋彬",
+            "GitHub": "imnemo",
+            "organization": "麦麦养老",
+            "title": "软件研发负责人",
+            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/Chen-YangBing.jpg"
         },
         {
             "id": 10,
@@ -79,6 +64,22 @@
             "organization": "ThoughtWorks",
             "title": "咨询师",
             "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-0/YuZeJiang.png"
+        },
+        {
+            "id": 9,
+            "name": "谢扬",
+            "GitHub": "leinue",
+            "organization": "蒸汽记忆",
+            "title": "创始人",
+            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-0/XieYang.jpeg"
+        },
+        {
+            "id": 6,
+            "name": "陈成",
+            "GitHub": "sorrycc",
+            "organization": "蚂蚁金服",
+            "title": "Web 前端技术专家",
+            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/Chen-Cheng.jpeg"
         },
         {
             "id": 11,
@@ -119,7 +120,7 @@
             "type": "lecture",
             "mentorId": 6,
             "date": "2019-11-16",
-            "time": ["09:10", "09:50"],
+            "time": ["09:30", "10:10"],
             "image": "https://github.com/ant-design.png"
         },
         {
@@ -127,7 +128,7 @@
             "type": "lecture",
             "mentorId": 7,
             "date": "2019-11-16",
-            "time": ["09:50", "10:30"],
+            "time": ["10:10", "10:50"],
             "image": "https://github.com/nodejs.png"
         },
         {
@@ -135,7 +136,7 @@
             "type": "lecture",
             "mentorId": 5,
             "date": "2019-11-16",
-            "time": ["10:30", "11:10"],
+            "time": ["10:50", "11:30"],
             "image": "https://github.com/aliyun.png"
         },
         {
@@ -143,7 +144,7 @@
             "type": "lecture",
             "mentorId": 3,
             "date": "2019-11-16",
-            "time": ["11:10", "11:50"],
+            "time": ["11:30", "12:10"],
             "image": "https://github.com/graphql.png"
         },
         {
@@ -183,7 +184,7 @@
             "type": "lecture",
             "mentorId": 11,
             "date": "2019-11-17",
-            "time": ["09:10", "09:50"],
+            "time": ["09:30", "10:10"],
             "image": "https://github.com/denoland.png"
         },
         {
@@ -191,7 +192,7 @@
             "type": "lecture",
             "mentorId": 10,
             "date": "2019-11-17",
-            "time": ["09:50", "10:30"],
+            "time": ["10:10", "10:50"],
             "image": "https://github.com/angular.png"
         },
         {
@@ -199,7 +200,7 @@
             "type": "lecture",
             "mentorId": 8,
             "date": "2019-11-17",
-            "time": ["10:30", "11:10"],
+            "time": ["10:50", "11:30"],
             "image": "https://github.com/serverless.png"
         },
         {
@@ -207,7 +208,7 @@
             "type": "lecture",
             "mentorId": 12,
             "date": "2019-11-17",
-            "time": ["11:10", "11:50"],
+            "time": ["11:30", "12:10"],
             "image": "https://github.com/WebAssembly.png"
         },
         {

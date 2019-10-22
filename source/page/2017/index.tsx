@@ -26,7 +26,7 @@ export function Page2017() {
                     <h2 className="mt-5 mb-4 text-center">
                         <span>SPEAKER</span> <span>分享嘉宾</span>
                     </h2>
-                    <div className="card-deck justify-content-center">
+                    <div className="card-columns justify-content-center">
                         {data.guests.map(({ avatar, name, description }) => (
                             <Card
                                 className={style.mentor}

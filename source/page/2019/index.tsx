@@ -17,16 +17,23 @@ export function Page2019() {
     return (
         <div>
             <NavBar title={data.title} theme="light" background="light" />
+
             <main className="container mt-5 pt-5">
                 <header className="jumbotron text-center">
                     <h1>{data.title}</h1>
 
                     <ul className="list-unstyled my-4">
                         <li>2019 年 11 月 16 ~ 17 日</li>
-                        <li>成都市高新区天府五街菁蓉国际广场 7 号楼主会场</li>
+                        <li>{data.address}</li>
                     </ul>
 
                     <CountDown endTime="2019-11-16 09:00:00" />
+                    <a
+                        className="btn btn-danger btn-lg mt-5"
+                        href="http://fcc-chengdu.mikecrm.com/7pG2aOh"
+                    >
+                        即刻报名
+                    </a>
                 </header>
 
                 <h2 className="text-center">大会议程</h2>
@@ -80,6 +87,7 @@ export function Page2019() {
                 <hr className="m-5" />
 
                 <h2 className="text-center">会场交通</h2>
+                <p className="lead text-center mt-4 mb-5">{data.address}</p>
                 <iframe
                     className={style.map}
                     frameborder="0"
@@ -88,6 +96,12 @@ export function Page2019() {
                     loading="lazy"
                     src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.06309,30.538734&name=${data.title}`}
                 ></iframe>
+                <a
+                    className="btn btn-danger btn-lg d-block w-25 my-5 mx-auto"
+                    href="http://fcc-chengdu.mikecrm.com/7pG2aOh"
+                >
+                    即刻报名
+                </a>
             </main>
         </div>
     );

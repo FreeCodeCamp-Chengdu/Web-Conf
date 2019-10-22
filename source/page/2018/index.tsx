@@ -2,6 +2,7 @@ import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
 import { Table } from 'boot-cell/source/Table';
 import { Card } from 'boot-cell/source/Card';
+import marked from 'marked';
 
 import { LogoList } from './LogoList';
 import style from './index.less';
@@ -57,8 +58,8 @@ export function Page2018() {
                     </div>
                 </div>
             </section>
-            <section id="Lecturer" className={style.sparked}>
-                <h2 className="text-center mb-5">与会嘉宾</h2>
+            <section id="Lecturer" className={`text-center ${style.sparked}`}>
+                <h2 className="mb-5">与会嘉宾</h2>
                 <div className="container">
                     <div className="row lecture-list">
                         {data.lecturer.map(({ englishName, name, detail }) => (
@@ -67,10 +68,13 @@ export function Page2018() {
                                     <img
                                         src={lecturerImg[englishName]}
                                         className={style.avatar}
-                                        alt="guest name"
+                                        alt={name}
                                     />
                                     <p className="lecture-name">{name}</p>
-                                    <p className="lecture-intro">{detail}</p>
+                                    <p
+                                        className="lecture-intro text-left"
+                                        innerHTML={marked(detail)}
+                                    ></p>
                                 </div>
                             </div>
                         ))}
@@ -99,7 +103,7 @@ export function Page2018() {
                                 </div>
                                 <div>
                                     <h5>{title}</h5>
-                                    <p>{detail}</p>
+                                    <p innerHTML={marked(detail)}></p>
                                 </div>
                             </li>
                         ))}

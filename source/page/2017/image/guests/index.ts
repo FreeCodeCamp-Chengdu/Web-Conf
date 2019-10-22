@@ -7,13 +7,4 @@ import guest5 from './guest5.jpeg';
 import guest6 from './guest6.jpeg';
 import guest7 from './guest7.jpeg';
 
-export default {
-    guest0,
-    guest1,
-    guest2,
-    guest3,
-    guest4,
-    guest5,
-    guest6,
-    guest7
-};
+export default [guest0, guest1, guest2, guest3, guest4, guest5, guest6, guest7];

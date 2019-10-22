@@ -42,7 +42,7 @@ export function PageEntry() {
                             const passed = new Date(date) < new Date();
 
                             return (
-                                <div className="col-md-4">
+                                <div className="col-md-4 mb-3">
                                     <Card title={title} image={banner}>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">

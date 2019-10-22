@@ -46,6 +46,7 @@
         "boot-cell": "^0.9.0",
         "cell-router": "^2.0.0-rc.1",
         "classnames": "^2.2.6",
+        "marked": "^0.7.0",
         "mobx": "^5.14.2",
         "mobx-web-cell": "^0.2.3",
         "web-cell": "^2.0.0-beta.6"
@@ -53,6 +54,7 @@
     "devDependencies": {
         "@babel/core": "^7.6.4",
         "@types/classnames": "^2.2.9",
+        "@types/marked": "^0.6.5",
         "@typescript-eslint/parser": "^2.5.0",
         "autoprefixer": "^9.6.5",
         "eslint": "^6.5.1",
