@@ -1,6 +1,6 @@
 import { component, createCell } from 'web-cell';
 import { observer } from 'mobx-web-cell';
-import { HTMLRouter } from 'cell-router/source';
+import { HTMLRouter, matchRoutes } from 'cell-router/source';
 
 import { history } from '../model';
 
@@ -16,21 +16,17 @@ import { Page2019 } from './2019';
 export class PageRouter extends HTMLRouter {
     protected history = history;
 
-    renderPage() {
-        switch (history.path) {
-            case '2018/':
-                return <Page2018 />;
-            case '2019/':
-                return <Page2019 />;
-            default:
-                return <PageEntry />;
-        }
-    }
-
     render() {
         return (
             <div>
-                {this.renderPage()}
+                {matchRoutes(
+                    [
+                        { paths: ['2018'], component: Page2018 },
+                        { paths: ['2019'], component: Page2019 },
+                        { paths: [''], component: PageEntry }
+                    ],
+                    history.path
+                )}
 
                 <footer className="text-muted">
                     <div className="container">
@@ -39,11 +35,17 @@ export class PageRouter extends HTMLRouter {
                         </p>
                         <p>
                             自豪地使用
-                            <a href="https://getbootstrap.com/">
+                            <a
+                                className="px-1"
+                                href="https://getbootstrap.com/"
+                            >
                                 BootStrap v4
-                            </a>{' '}
+                            </a>
                             &amp;
-                            <a href="https://web-cell.tk/">WebCell v2</a> 开发
+                            <a className="px-1" href="https://web-cell.tk/">
+                                WebCell v2
+                            </a>
+                            开发
                         </p>
                     </div>
                 </footer>

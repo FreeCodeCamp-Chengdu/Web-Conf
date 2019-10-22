@@ -1,42 +1,36 @@
 import { createCell } from 'web-cell';
+import { NavBar } from 'boot-cell/source/NavBar';
+import { Table } from 'boot-cell/source/Table';
+import { Card } from 'boot-cell/source/Card';
 
 import { LogoList } from './LogoList';
-// import './index.css';
+import style from './index.less';
 import data from './data';
-import { lecturer as lecturerImg, project, photos, undraw } from './image';
+import {
+    lecturer as lecturerImg,
+    project,
+    photos,
+    undraw,
+    poster
+} from './image';
+import WeChat_QRC from '../../image/FCC-CDG-WeChat.png';
 
 export function Page2018() {
     return (
-        <main>
-            <div className="poster">
-                <nav className="navbar navbar-expand-lg navbar-light top-nav">
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#top-nav"
-                        aria-controls="top-nav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="top-nav">
-                        <ul className="navbar-nav">
-                            {data.section.map(({ name, title }) => (
-                                <li className="nav-item">
-                                    <a className="nav-link" href={'#' + name}>
-                                        {title}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </nav>
-                <img src="image/poster.png" className="img-fluid" />
+        <main className={style.root}>
+            <div className={style.poster}>
+                <NavBar
+                    className="top-nav"
+                    title={data.title}
+                    expand="lg"
+                    theme="light"
+                    background="light"
+                    menu={data.section}
+                />
+                <img src={poster} className="img-fluid pt-5" />
             </div>
             <section id="Introduction">
-                <h2>大会介绍</h2>
+                <h2 className="text-center mb-5">大会介绍</h2>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-7">
@@ -47,7 +41,7 @@ export function Page2018() {
                                 全栈开发领域的程序员、架构师、研发团队管理者和技术爱好者。我们在借鉴同类行业大会技术分享宝贵经验的同时，也创新地增加了优秀企业现场招聘、开源项目/社团宣传展位，为互联网、软件开发技术从业者提供从学习、求职到合作洽谈的一站式资讯平台，全力打造西南一流的
                                 IT 行业盛会。
                             </p>
-                            <div className="padded text-center">
+                            <div className="p-4 text-center">
                                 <a
                                     className="btn btn-primary btn-lg btn-cia"
                                     href="http://fccchengdu.mikecrm.com/tFM8Rk8"
@@ -63,16 +57,16 @@ export function Page2018() {
                     </div>
                 </div>
             </section>
-            <section id="Lecturer" className="sparked">
-                <h2>与会嘉宾</h2>
+            <section id="Lecturer" className={style.sparked}>
+                <h2 className="text-center mb-5">与会嘉宾</h2>
                 <div className="container">
                     <div className="row lecture-list">
                         {data.lecturer.map(({ englishName, name, detail }) => (
-                            <div className="col-md-3">
-                                <div className="lecture">
+                            <div className="col-md-3 p-2 overflow-hidden">
+                                <div className={style.lecture}>
                                     <img
                                         src={lecturerImg[englishName]}
-                                        className="avatar"
+                                        className={style.avatar}
                                         alt="guest name"
                                     />
                                     <p className="lecture-name">{name}</p>
@@ -84,19 +78,17 @@ export function Page2018() {
                 </div>
             </section>
             <section id="Topic">
-                <h2>议题</h2>
+                <h2 className="text-center mb-5">议题</h2>
                 <div className="container">
-                    <ol className="subjects">
+                    <ol
+                        className={`${style.subjects} overflow-hidden list-unstyled position-relative`}
+                    >
                         {data.topic.map(({ lecturer, title, detail }) => (
                             <li>
                                 <div className="text-center">
-                                    <p>
-                                        <strong>
-                                            {data.lecturer[lecturer].name}
-                                        </strong>
-                                    </p>
+                                    <h6>{data.lecturer[lecturer].name}</h6>
                                     <img
-                                        className="avatar-sm"
+                                        className={style['avatar-sm']}
                                         src={
                                             lecturerImg[
                                                 data.lecturer[lecturer]
@@ -114,14 +106,27 @@ export function Page2018() {
                     </ol>
                 </div>
             </section>
-            <section className="sparked">
+            <section className={style.sparked}>
                 <div className="container">
-                    <div id="Bazaar" className="bazaar">
-                        <h2>开源市集</h2>
+                    <div id="Bazaar" className="mb-4">
+                        <h2 className="text-center mb-5">开源市集</h2>
                         <div className="card-columns">
                             {data.project.map(
                                 ({ type, name, URL, title, detail }) => (
-                                    <div className="card overflow-hidden">
+                                    <Card
+                                        className="overflow-hidden"
+                                        title={
+                                            <a
+                                                className="text-primary"
+                                                target="_blank"
+                                                href={URL}
+                                            >
+                                                {title}
+                                            </a>
+                                        }
+                                        text={detail}
+                                        image={project[name]}
+                                    >
                                         <div
                                             className={`cr cr-top cr-right  cr-${
                                                 type ? 'red' : 'blue'
@@ -129,41 +134,26 @@ export function Page2018() {
                                         >
                                             {type ? '社团' : '项目'}
                                         </div>
-                                        <img
-                                            className="card-img-top"
-                                            src={project[name]}
-                                            title={name}
-                                        />
-                                        <div className="card-body">
-                                            <h5 className="card-title">
-                                                <a
-                                                    className="text-primary"
-                                                    target="_blank"
-                                                    href={URL}
-                                                >
-                                                    {title}
-                                                </a>
-                                            </h5>
-                                            <p className="card-text">
-                                                {detail}
-                                            </p>
-                                        </div>
-                                    </div>
+                                    </Card>
                                 )
                             )}
                         </div>
                     </div>
                     <div id="Enterprise" className="text-center">
-                        <h2>参会企业</h2>
+                        <h2 className="text-center mb-5">参会企业</h2>
                         <p className="text-muted">
                             部分企业开放现场招聘位，欢迎优秀人才携简历前来~
                         </p>
                         <p className="text-muted">（排名不分先后）</p>
                         <div className="row">
                             <div className="col-md-7">
-                                <ul className="companies">
+                                <ul
+                                    className={`${style.companies} list-inline`}
+                                >
                                     {data.company.map(name => (
-                                        <li>{name}</li>
+                                        <li className="list-inline-item py-1 px-3 m-1 bg-white">
+                                            {name}
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
@@ -178,9 +168,9 @@ export function Page2018() {
                 </div>
             </section>
             <section id="Schedule">
-                <h2>日程</h2>
+                <h2 className="text-center mb-5">日程</h2>
                 <div className="container">
-                    <table className="table table-striped table-responsive-sm">
+                    <Table striped>
                         <thead>
                             <tr>
                                 <th scope="col" className="d-none d-md-block">
@@ -202,13 +192,13 @@ export function Page2018() {
                                 </tr>
                             ))}
                         </tbody>
-                    </table>
+                    </Table>
                 </div>
             </section>
-            <section id="Review" className="sparked">
-                <h2>往期精彩回顾</h2>
+            <section id="Review" className={style.sparked}>
+                <h2 className="text-center mb-5">往期精彩回顾</h2>
                 <div className="container">
-                    <div className="row">
+                    <div className={`row ${style.photos}`}>
                         {data.review.map(({ title }, index) => (
                             <div className="col-md-4">
                                 <img
@@ -223,7 +213,7 @@ export function Page2018() {
             </section>
 
             <section id="Address" className="text-center">
-                <h2>地址</h2>
+                <h2 className="text-center mb-5">地址</h2>
                 <div className="container">
                     <p className="text-muted">
                         天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
@@ -231,38 +221,40 @@ export function Page2018() {
                     <iframe
                         frameborder="0"
                         scrolling="no"
-                        data-src="//uri.amap.com/marker?src=fcc-cdc&amp;callnative=1&amp;position=104.065789,30.582013&amp;name=2018 成都 Web 前端大会"
+                        lazyload="1"
+                        loading="lazy"
+                        src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${data.title}`}
                     ></iframe>
                 </div>
             </section>
-            <section id="Contributor">
+            <section id="Contributor" className="text-center">
                 <h2>共创伙伴</h2>
                 <div className="container">
                     {data.host.map(({ title, member }) => (
-                        <div className="contributor-group">
-                            <h5>{title}办方</h5>
+                        <div className={`${style.contributorGroup} my-4`}>
+                            <h5 className="py-3">{title}办方</h5>
                             <LogoList member={member} />
                         </div>
                     ))}
                 </div>
                 <div className="container">
-                    <div className="contributor-group">
+                    <div className={`${style.contributorGroup} my-4`}>
                         {data.sponsor.map(({ title, member }) => (
                             <section>
-                                <h5>{title}赞助</h5>
+                                <h5 className="py-3">{title}赞助</h5>
                                 <LogoList member={member} />
                             </section>
                         ))}
                     </div>
                 </div>
                 <div className="container">
-                    <div className="contributor-group">
-                        <h5>合作伙伴</h5>
+                    <div className={`${style.contributorGroup} my-4`}>
+                        <h5 className="py-3">合作伙伴</h5>
                         <LogoList member={data.partner} />
                     </div>
                 </div>
             </section>
-            <section id="CallInAction" className="sparked">
+            <section id="CallInAction" className={style.sparked}>
                 <div className="container text-center">
                     <a
                         className="btn btn-primary btn-lg btn-cia"
@@ -273,24 +265,21 @@ export function Page2018() {
                     </a>
                 </div>
             </section>
-            <footer>
+            <footer className="pt-4 pb-3 clearfix">
                 <div className="container">
                     <div className="d-none d-md-block">
                         <ul className="nav">
-                            {data.section.map(({ name, title }) => (
+                            {data.section.map(({ href, title }) => (
                                 <li className="nav-item">
-                                    <a className="nav-link" href={'#' + name}>
+                                    <a className="nav-link" href={href}>
                                         {title}
                                     </a>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <div className="qrcode align-middle">
-                        <img
-                            className="img-fluid"
-                            src="../common/FCC-CDG-WeChat.png"
-                        />
+                    <div className="qrcode text-center">
+                        <img className="img-fluid" src={WeChat_QRC} />
                         <div>微信扫一扫关注我们</div>
                     </div>
                 </div>

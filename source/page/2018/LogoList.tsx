@@ -8,10 +8,15 @@ interface Logo {
 
 export function LogoList({ member }: { member: Logo[] }) {
     return (
-        <div className="logos" data-view="member">
+        <div className="d-flex justify-content-around align-content-center flex-wrap">
             {member.map(({ URL, name, path }) => (
                 <a target="_blank" href={URL}>
-                    <img title={name} src={path} />
+                    <img
+                        className="py-3 px-1 flex-grow-0 flex-shrink-0"
+                        title={name}
+                        src={path}
+                        style={{ width: '210px' }}
+                    />
                 </a>
             ))}
         </div>

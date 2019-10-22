@@ -1,3 +1,4 @@
+import poster from './poster.png';
 import lecturer from './lecturer';
 import logo from './logo';
 import project from './project';
@@ -14,4 +15,4 @@ const undraw = {
     undraw_04
 };
 
-export { lecturer, logo, project, photos, undraw };
+export { poster, lecturer, logo, project, photos, undraw };

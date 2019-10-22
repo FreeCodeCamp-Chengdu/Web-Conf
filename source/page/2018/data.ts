@@ -1,42 +1,43 @@
 import { logo } from './image';
 
 export default {
+    title: '2018 成都 Web 前端大会',
     section: [
         {
             title: '大会介绍',
-            name: 'Introduction'
+            href: '#Introduction'
         },
         {
             title: '与会嘉宾',
-            name: 'Lecturer'
+            href: '#Lecturer'
         },
         {
             title: '议题',
-            name: 'Topic'
+            href: '#Topic'
         },
         {
             title: '开源市集',
-            name: 'Bazaar'
+            href: '#Bazaar'
         },
         {
             title: '参会企业',
-            name: 'Enterprise'
+            href: '#Enterprise'
         },
         {
             title: '日程',
-            name: 'Schedule'
+            href: '#Schedule'
         },
         {
             title: '地址',
-            name: 'Address'
+            href: '#Address'
         },
         {
             title: '往期精彩回顾',
-            name: 'Review'
+            href: '#Review'
         },
         {
             title: '赞助商',
-            name: 'Sponsor'
+            href: '#Sponsor'
         }
     ],
     lecturer: [

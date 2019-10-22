@@ -6,6 +6,7 @@ import style from './TopicGroup.less';
 interface Mentor {
     id: number;
     name: string;
+    GitHub: string;
 }
 
 export interface Topic {
@@ -43,7 +44,7 @@ export function TopicGroup({
                             image={image}
                             text={
                                 mentor && (
-                                    <a href={'mentor/' + mentor.id}>
+                                    <a href={'#' + mentor.GitHub}>
                                         {mentor.name}
                                     </a>
                                 )

@@ -46,6 +46,7 @@ export function Page2019() {
                     {data.mentors.map(
                         ({ name, avatar, organization, title, GitHub }) => (
                             <Card
+                                id={GitHub}
                                 className={style.mentor}
                                 title={name}
                                 image={avatar}
