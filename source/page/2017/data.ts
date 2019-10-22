@@ -1,59 +1,62 @@
+import guests from './image/guests';
+import logos from './image/logos';
+
 export default {
     title: '2017 成都 Web 前端大会',
     activeNames: ['1'],
     guests: [
         {
             name: '叶小钗',
-            avatar: 'guest0.jpeg',
+            avatar: guests.guest0,
             content: '叶小钗嘉宾开场演讲',
             description:
                 '原医联研发副总监，现为企鹅医生技术总监，研发负责人。先后任职于携程百度等公司，擅长前端开发，混合开发，对大型前端项目开发有一些认识，平时喜欢霹雳布袋戏。'
         },
         {
             name: '陈洋彬',
-            avatar: 'guest7.jpeg',
+            avatar: guests.guest7,
             content: '一个 Node 模块的自我修养',
             description:
                 '麦麦养老软件研发负责人，持续创业者。在研发团队搭建、管理与技术体系渐进增强方面有一定心得。多年 Web 前端、服务端研发及架构设计经验，关注技术的原理与融会贯通，主张编码与工程的专业、规范、极简。'
         },
         {
             name: '水歌',
-            avatar: 'guest4.jpeg',
+            avatar: guests.guest4,
             content: '轻量级 Web MVVM 引擎的实现',
             description:
                 '东方天呈 Web 前端工程师，JavaScript 全栈开发者、开源软件作者、freeCodeCamp 中文社区技术布道师、四川大学飞扬俱乐部·研发部 创始团队成员、jQuery贡献者。'
         },
         {
             name: '廖伟',
-            avatar: 'guest2.jpeg',
+            avatar: guests.guest2,
             content: 'HTML 5 跨平台解决方案实践',
             description:
                 '乐车邦前端开发负责人。曾就职于携程移动端框架技术部，负责构建代码的打包平台，维护共用组件，目前在乐车邦主要负责整个前端（浏览器，微信，小程序，app），致力于解决一套代码多端运行的方案，主要擅长 SPA 应用的开发，具有丰富的SPA开发经验。'
         },
         {
             name: '胡敏',
-            avatar: 'guest5.jpeg',
+            avatar: guests.guest5,
             content: 'Vue 开发那些事',
             description:
                 '新蛋高级软件工程师。目前主要负责 Web 模块化开发平台建设与开发工作，擅长功能设计与实现。对前后端开发有较多实践经验。'
         },
         {
             name: '董涛',
-            avatar: 'guest6.jpeg',
+            avatar: guests.guest6,
             content: '大数据可视化之美',
             description:
                 '5年前端经验，热爱钻研各种技术，喜欢写代码，工作之余著有 MTUI、H5DS 两个开源项目。现 BBD 前端部部门经理，对 Web 交互，以及数据可视化有丰富经验。'
         },
         {
             name: '卢林',
-            avatar: 'guest3.jpeg',
+            avatar: guests.guest3,
             content: 'React 组件化通用模式',
             description:
                 '国双科技高级软件工程师，曾供职于奇虎 360 奇舞团、麦客 CRM。目前专注于端技术体系，喜欢思考软件开发的通用模式。'
         },
         {
             name: '余泽江',
-            avatar: 'guest1.jpeg',
+            avatar: guests.guest1,
             content: 'Angular：挣脱舒适区的枷锁',
             description:
                 'ThoughtWorks 咨询师，有着丰富的前后端项目开发经验，目前专注于前端领域的技术实践。Angular 项目活跃的 Community Contributor，广泛涉猎于国内的 Angular 技术布道工作。'
@@ -153,11 +156,11 @@ export default {
             title: '主办单位',
             childrens: [
                 {
-                    img: 'lib/logos/QRGJ.png',
+                    img: logos['QRGJ'],
                     url: 'http://www.cdht.gov.cn/cycjcyyq/50449.jhtml'
                 },
                 {
-                    img: 'lib/logos/FCC-CDG.jpg',
+                    img: logos['FCC-CDG'],
                     url: 'https://www.freecodecamp.cn'
                 }
             ]
@@ -166,7 +169,7 @@ export default {
             title: '冠名赞助',
             childrens: [
                 {
-                    img: 'lib/logos/BBD.png',
+                    img: logos['BBD'],
                     url: 'https://www.bbdservice.com'
                 }
             ]
@@ -175,11 +178,11 @@ export default {
             title: '协办单位',
             childrens: [
                 {
-                    img: 'lib/logos/HCXY.png',
+                    img: logos['HCXY'],
                     url: 'hhttp://www.hechuangxinye.com/'
                 },
                 {
-                    img: 'lib/logos/3W.png',
+                    img: logos['3W'],
                     url: 'http://www.3wcoffee.com/'
                 }
             ]
@@ -188,23 +191,23 @@ export default {
             title: '赞助单位',
             childrens: [
                 {
-                    img: 'lib/logos/DevEco.jpg',
+                    img: logos['DevEco'],
                     url: 'https://www.freecodecamp.cn'
                 },
                 {
-                    img: 'lib/logos/BW.png',
+                    img: logos['BW'],
                     url: 'http://www.broadview.com.cn/'
                 },
                 {
-                    img: 'lib/logos/GT.png',
+                    img: logos['GT'],
                     url: 'http://www.getui.com/cn/index.html'
                 },
                 {
-                    img: 'lib/logos/SYL.png',
+                    img: logos['SYL'],
                     url: 'https://www.shiyanlou.com/'
                 },
                 {
-                    img: 'lib/logos/QE.png',
+                    img: logos['QE'],
                     url: 'https://www.doctorwork.com/'
                 }
             ]
@@ -213,39 +216,39 @@ export default {
             title: '合作社区',
             childrens: [
                 {
-                    img: 'lib/logos/JJ.png',
+                    img: logos['JJ'],
                     url: 'https://juejin.im/'
                 },
                 {
-                    img: 'lib/logos/OS.png',
+                    img: logos['OS'],
                     url: 'https://www.oschina.net/'
                 },
                 {
-                    img: 'lib/logos/SF.png',
+                    img: logos['SF'],
                     url: 'https://segmentfault.com/'
                 },
                 {
-                    img: 'lib/logos/ZDK.png',
+                    img: logos['ZDK'],
                     url: 'http://www.zaoduke.net/'
                 },
                 {
-                    img: 'lib/logos/MZ.png',
+                    img: logos['MZ'],
                     url: 'http://www.maiziedu.com/'
                 },
                 {
-                    img: 'lib/logos/GDG.png',
+                    img: logos['GDG'],
                     url: 'https://developers.google.com/groups'
                 },
                 {
-                    img: 'lib/logos/TW.png',
+                    img: logos['TW'],
                     url: 'https://www.thoughtworks.com/cn/'
                 },
                 {
-                    img: 'lib/logos/TH.png',
+                    img: logos['TH'],
                     url: 'http://www.tianhukeji.com/'
                 },
                 {
-                    img: 'lib/logos/WORK.png',
+                    img: logos['WORK'],
                     url: 'http://workjia.cn/'
                 }
             ]
@@ -254,7 +257,7 @@ export default {
             title: '合作媒体',
             childrens: [
                 {
-                    img: 'lib/logos/DKS.png',
+                    img: logos['DKS'],
                     url: 'http://www.itdks.com/'
                 }
             ]
