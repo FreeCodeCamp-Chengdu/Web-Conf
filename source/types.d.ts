@@ -20,3 +20,9 @@ declare module '*.jpeg' {
 
     export default path;
 }
+
+declare module '*.csv' {
+    const content: string;
+
+    export default content;
+}

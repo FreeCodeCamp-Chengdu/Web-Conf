@@ -1,7 +1,8 @@
 import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
+import { Button } from 'boot-cell/source/Form';
 import { Table } from 'boot-cell/source/Table';
-import { Card } from 'boot-cell/source/Card';
+import { Card } from 'boot-cell/source/Content';
 import marked from 'marked';
 
 import { LogoList } from './LogoList';
@@ -43,13 +44,13 @@ export function Page2018() {
                                 IT 行业盛会。
                             </p>
                             <div className="p-4 text-center">
-                                <a
-                                    className="btn btn-primary btn-lg btn-cia"
-                                    href="http://fccchengdu.mikecrm.com/tFM8Rk8"
+                                <Button
+                                    size="lg"
                                     target="_blank"
+                                    href="http://fcc-chengdu.mikecrm.com/tFM8Rk8"
                                 >
                                     立即报名参加
-                                </a>
+                                </Button>
                             </div>
                         </div>
                         <div className="col-md-5">
@@ -260,13 +261,13 @@ export function Page2018() {
             </section>
             <section id="CallInAction" className={style.sparked}>
                 <div className="container text-center">
-                    <a
-                        className="btn btn-primary btn-lg btn-cia"
+                    <Button
+                        size="lg"
                         target="_blank"
-                        href="http://fccchengdu.mikecrm.com/tFM8Rk8"
+                        href="http://fcc-chengdu.mikecrm.com/tFM8Rk8"
                     >
                         立即报名参加
-                    </a>
+                    </Button>
                 </div>
             </section>
             <footer className="pt-4 pb-3 clearfix">

@@ -1,5 +1,5 @@
 import { createCell } from 'web-cell';
-import { Card } from 'boot-cell/source/Card';
+import { Card } from 'boot-cell/source/Content';
 
 import style from './TopicGroup.less';
 

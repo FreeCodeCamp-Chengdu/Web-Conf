@@ -1,6 +1,5 @@
 import { createCell } from 'web-cell';
-import { Card } from 'boot-cell/source/Card';
-import { AccordionList } from 'boot-cell/source/Accordion';
+import { Card, AccordionList } from 'boot-cell/source/Content';
 
 import style from './index.less';
 import data from './data';

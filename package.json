@@ -1,6 +1,6 @@
 {
     "name": "web-conf",
-    "version": "3.0.0-beta",
+    "version": "3.0.0",
     "description": "Web Developer Conference in Chengdu, China",
     "keywords": [
         "Web",
@@ -43,7 +43,7 @@
         }
     },
     "dependencies": {
-        "boot-cell": "^0.9.0",
+        "boot-cell": "^0.10.2",
         "cell-router": "^2.0.0-rc.1",
         "classnames": "^2.2.6",
         "marked": "^0.7.0",
@@ -64,6 +64,7 @@
         "less": "^3.10.3",
         "lint-staged": "^9.4.2",
         "parcel-bundler": "^1.12.4",
+        "parcel-plugin-text": "^0.9.5",
         "postcss-modules": "^1.4.1",
         "prettier": "^1.18.2",
         "typescript": "^3.6.4"
@@ -78,5 +79,10 @@
                 "grid": true
             }
         }
+    },
+    "parcel-plugin-text": {
+        "extensions": [
+            "csv"
+        ]
     }
 }

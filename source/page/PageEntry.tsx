@@ -1,6 +1,7 @@
 import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
-import { Card } from 'boot-cell/source/Card';
+import { Button } from 'boot-cell/source/Form';
+import { Card } from 'boot-cell/source/Content';
 
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import conf_list from './data';
@@ -17,20 +18,21 @@ export function PageEntry() {
                         中国西南地区 Web、JavaScript 全栈开发者的年度盛会
                     </p>
                     <p>
-                        <a
-                            className="btn btn-primary m-2"
+                        <Button
+                            className="m-2"
                             href={conf_list[0].URL}
                             title={conf_list[0].title}
                         >
                             报名最新大会
-                        </a>
-                        <a
-                            className="btn btn-secondary m-2"
+                        </Button>
+                        <Button
+                            kind="secondary"
+                            className="m-2"
                             href={conf_list[1].URL}
                             title={conf_list[1].title}
                         >
                             回顾上次大会
-                        </a>
+                        </Button>
                     </p>
                 </div>
             </section>

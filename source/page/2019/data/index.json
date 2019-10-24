@@ -6,9 +6,10 @@
             "id": 4,
             "name": "贺师俊",
             "GitHub": "hax",
-            "organization": "奇虎 360",
-            "title": "技术委员会 Web 前端 TC 委员",
-            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/He-ShiJun.png"
+            "organization": "360 技术委员会",
+            "title": "Web 前端 TC 委员",
+            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/He-ShiJun.png",
+            "introduction": "ECMA TC39 代表，W3C Chinese Web IG 成员"
         },
         {
             "id": 5,
@@ -111,7 +112,7 @@
             "GitHub": "Jack-Works",
             "organization": "Dimension",
             "title": "现代前端魔法使",
-            "avatar": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/Jack-Works.jpeg"
+            "avatar": "https://github.com/Jack-Works.png"
         }
     ],
     "topics": [
@@ -236,7 +237,7 @@
             "image": ""
         },
         {
-            "title": "（待定）",
+            "title": "（题目待定）",
             "type": "lecture",
             "mentorId": 4,
             "date": "2019-11-17",
