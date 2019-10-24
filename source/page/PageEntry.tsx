@@ -1,7 +1,7 @@
 import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
-import { Button } from 'boot-cell/source/Form';
-import { Card } from 'boot-cell/source/Content';
+import { Button } from 'boot-cell/source/Form/Button';
+import { Card } from 'boot-cell/source/Content/Card';
 
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import conf_list from './data';

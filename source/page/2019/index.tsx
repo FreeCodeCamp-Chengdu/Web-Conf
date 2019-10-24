@@ -1,6 +1,6 @@
 import { createCell } from 'web-cell';
-import { Button } from 'boot-cell/source/Form';
-import { Card } from 'boot-cell/source/Content';
+import { Button } from 'boot-cell/source/Form/Button';
+import { Card } from 'boot-cell/source/Content/Card';
 import { CountDown } from 'boot-cell/source/CountDown';
 
 import { PageFrame } from './PageFrame';

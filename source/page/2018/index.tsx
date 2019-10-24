@@ -1,8 +1,8 @@
 import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/NavBar';
-import { Button } from 'boot-cell/source/Form';
+import { Button } from 'boot-cell/source/Form/Button';
 import { Table } from 'boot-cell/source/Table';
-import { Card } from 'boot-cell/source/Content';
+import { Card } from 'boot-cell/source/Content/Card';
 import marked from 'marked';
 
 import { LogoList } from './LogoList';

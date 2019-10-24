@@ -43,7 +43,7 @@
         }
     },
     "dependencies": {
-        "boot-cell": "^0.10.2",
+        "boot-cell": "^0.10.3",
         "cell-router": "^2.0.0-rc.1",
         "classnames": "^2.2.6",
         "marked": "^0.7.0",
