@@ -43,9 +43,10 @@
         }
     },
     "dependencies": {
-        "boot-cell": "^0.10.3",
+        "boot-cell": "^0.12.1",
         "cell-router": "^2.0.0-rc.1",
         "classnames": "^2.2.6",
+        "lodash.groupby": "^4.6.0",
         "marked": "^0.7.0",
         "mobx": "^5.14.2",
         "mobx-web-cell": "^0.2.3",
@@ -54,11 +55,12 @@
     "devDependencies": {
         "@babel/core": "^7.6.4",
         "@types/classnames": "^2.2.9",
+        "@types/lodash.groupby": "^4.6.6",
         "@types/marked": "^0.6.5",
         "@typescript-eslint/parser": "^2.5.0",
         "autoprefixer": "^9.6.5",
-        "eslint": "^6.5.1",
-        "eslint-config-prettier": "^6.4.0",
+        "eslint": "^6.6.0",
+        "eslint-config-prettier": "^6.5.0",
         "eslint-plugin-prettier": "^3.1.1",
         "husky": "^3.0.9",
         "less": "^3.10.3",

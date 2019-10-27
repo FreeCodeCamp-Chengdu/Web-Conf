@@ -28,33 +28,27 @@ export function TopicGroup({
     topics.sort((A, B) => A.time[0].localeCompare(B.time[0]));
 
     return (
-        <section>
-            <h3 className="text-center mt-4">{topics[0].date}</h3>
+        <div className="card-deck justify-content-center">
+            {topics.map(({ title, image, mentorId, time }) => {
+                const mentor =
+                    mentorId && mentors.find(({ id }) => id === mentorId)!;
 
-            <div className="card-deck justify-content-center">
-                {topics.map(({ title, image, mentorId, time }) => {
-                    const mentor =
-                        mentorId && mentors.find(({ id }) => id === mentorId)!;
-
-                    return (
-                        <Card
-                            className={style.topic}
-                            direction="horizontal"
-                            title={title}
-                            image={image}
-                            text={
-                                mentor && (
-                                    <a href={'#' + mentor.GitHub}>
-                                        {mentor.name}
-                                    </a>
-                                )
-                            }
-                        >
-                            <time>{time.join(' ~ ')}</time>
-                        </Card>
-                    );
-                })}
-            </div>
-        </section>
+                return (
+                    <Card
+                        className={style.topic}
+                        direction="horizontal"
+                        title={title}
+                        image={image}
+                        text={
+                            mentor && (
+                                <a href={'#' + mentor.GitHub}>{mentor.name}</a>
+                            )
+                        }
+                    >
+                        <time>{time.join(' ~ ')}</time>
+                    </Card>
+                );
+            })}
+        </div>
     );
 }

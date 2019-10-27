@@ -1,5 +1,5 @@
 import { createCell } from 'web-cell';
-import { NavBar } from 'boot-cell/source/NavBar';
+import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 
 import data from './data/index.json';
 

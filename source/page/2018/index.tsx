@@ -1,5 +1,5 @@
 import { createCell } from 'web-cell';
-import { NavBar } from 'boot-cell/source/NavBar';
+import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Table } from 'boot-cell/source/Table';
 import { Card } from 'boot-cell/source/Content/Card';
@@ -156,7 +156,7 @@ export function Page2018() {
                                     className={`${style.companies} list-inline`}
                                 >
                                     {data.company.map(name => (
-                                        <li className="list-inline-item py-1 px-3 m-1 bg-white">
+                                        <li className="list-inline-item py-1 px-3 m-1 bg-white rounded">
                                             {name}
                                         </li>
                                     ))}

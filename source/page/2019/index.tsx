@@ -1,22 +1,25 @@
+import groupBy from 'lodash.groupby';
 import { createCell } from 'web-cell';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Card } from 'boot-cell/source/Content/Card';
 import { CountDown } from 'boot-cell/source/CountDown';
+import { TabList } from 'boot-cell/source/Content/TabList';
 
 import { PageFrame } from './PageFrame';
 import { TopicGroup, Topic } from './TopicGroup';
+import { PartnerGroup } from './PartnerGroup';
 import style from './index.less';
 
 import data from './data/index.json';
 import BuyCode from './data/BuyCode.png';
 
+const topicGroups = Object.entries(
+    groupBy(data.topics, ({ date, place }) => `${date} ${place}`)
+).sort(([A], [B]) => A.localeCompare(B));
+
+const partnerGroups = Object.entries(groupBy(data.partners, 'title'));
+
 export function Page2019() {
-    const splitByDay = data.topics.reduce((date, item) => {
-        (date[item.date] = date[item.date] || []).push(item);
-
-        return date;
-    }, {});
-
     return (
         <PageFrame>
             <header className="jumbotron text-center">
@@ -38,11 +41,21 @@ export function Page2019() {
                 </Button>
             </header>
 
-            <h2 className="text-center">大会议程</h2>
-
-            {Object.values(splitByDay).map(list => (
-                <TopicGroup topics={list as Topic[]} mentors={data.mentors} />
-            ))}
+            <h2 className="text-center my-4">大会议程</h2>
+            <TabList
+                mode="pills"
+                tabAlign="center"
+                list={topicGroups.map(([title, list], index) => ({
+                    active: !index,
+                    title,
+                    content: (
+                        <TopicGroup
+                            topics={list as Topic[]}
+                            mentors={data.mentors}
+                        />
+                    )
+                }))}
+            />
             <hr className="m-5" />
 
             <h2 className="text-center">大咖讲师</h2>
@@ -75,12 +88,10 @@ export function Page2019() {
             <hr className="m-5" />
 
             <h2 className="text-center">共创伙伴</h2>
+
             <section className="text-center">
-                {data.partners.map(({ title, name, logo }) => (
-                    <div>
-                        <h3 className="mt-4 mb-3">{title}</h3>
-                        {logo ? <img src={logo} alt={name} /> : name}
-                    </div>
+                {partnerGroups.map(([title, list]) => (
+                    <PartnerGroup title={title} list={list} />
                 ))}
             </section>
             <hr className="m-5" />

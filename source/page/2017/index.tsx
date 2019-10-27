@@ -93,7 +93,7 @@ export function Page2017() {
                     </div>
                 </div>
             </div>
-            <footer>
+            <footer className={style.footer}>
                 <img className={style.qrcode} src={qrcode} />
                 <p className="mt-0">
                     特别鸣谢

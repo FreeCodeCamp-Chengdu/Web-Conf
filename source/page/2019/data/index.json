@@ -122,6 +122,7 @@
             "mentorId": 6,
             "date": "2019-11-16",
             "time": ["09:30", "10:10"],
+            "place": "主会场",
             "image": "https://github.com/ant-design.png"
         },
         {
@@ -130,6 +131,7 @@
             "mentorId": 7,
             "date": "2019-11-16",
             "time": ["10:10", "10:50"],
+            "place": "主会场",
             "image": "https://github.com/nodejs.png"
         },
         {
@@ -138,6 +140,7 @@
             "mentorId": 5,
             "date": "2019-11-16",
             "time": ["10:50", "11:30"],
+            "place": "主会场",
             "image": "https://github.com/aliyun.png"
         },
         {
@@ -146,6 +149,7 @@
             "mentorId": 3,
             "date": "2019-11-16",
             "time": ["11:30", "12:10"],
+            "place": "主会场",
             "image": "https://github.com/graphql.png"
         },
         {
@@ -154,6 +158,7 @@
             "mentorId": 9,
             "date": "2019-11-16",
             "time": ["14:00", "14:40"],
+            "place": "主会场",
             "image": "https://github.com/solid.png"
         },
         {
@@ -162,6 +167,7 @@
             "mentorId": null,
             "date": "2019-11-16",
             "time": ["14:40", "15:20"],
+            "place": "主会场",
             "image": ""
         },
         {
@@ -170,6 +176,7 @@
             "mentorId": 2,
             "date": "2019-11-16",
             "time": ["15:40", "16:20"],
+            "place": "主会场",
             "image": "https://github.com/webcomponents.png"
         },
         {
@@ -178,6 +185,7 @@
             "mentorId": 1,
             "date": "2019-11-16",
             "time": ["16:20", "17:00"],
+            "place": "主会场",
             "image": "https://github.com/nodejs.png"
         },
         {
@@ -186,6 +194,7 @@
             "mentorId": 11,
             "date": "2019-11-17",
             "time": ["09:30", "10:10"],
+            "place": "主会场",
             "image": "https://github.com/denoland.png"
         },
         {
@@ -194,6 +203,7 @@
             "mentorId": 10,
             "date": "2019-11-17",
             "time": ["10:10", "10:50"],
+            "place": "主会场",
             "image": "https://github.com/angular.png"
         },
         {
@@ -202,6 +212,7 @@
             "mentorId": 8,
             "date": "2019-11-17",
             "time": ["10:50", "11:30"],
+            "place": "主会场",
             "image": "https://github.com/serverless.png"
         },
         {
@@ -210,6 +221,7 @@
             "mentorId": 12,
             "date": "2019-11-17",
             "time": ["11:30", "12:10"],
+            "place": "主会场",
             "image": "https://github.com/WebAssembly.png"
         },
         {
@@ -218,6 +230,7 @@
             "mentorId": 13,
             "date": "2019-11-17",
             "time": ["14:00", "14:40"],
+            "place": "主会场",
             "image": "https://github.com/rust-lang.png"
         },
         {
@@ -226,6 +239,7 @@
             "mentorId": 14,
             "date": "2019-11-17",
             "time": ["14:40", "15:20"],
+            "place": "主会场",
             "image": "https://github.com/GoogleChrome.png"
         },
         {
@@ -234,6 +248,7 @@
             "mentorId": null,
             "date": "2019-11-17",
             "time": ["15:40", "16:20"],
+            "place": "主会场",
             "image": ""
         },
         {
@@ -242,7 +257,17 @@
             "mentorId": 4,
             "date": "2019-11-17",
             "time": ["16:20", "17:00"],
+            "place": "主会场",
             "image": "https://github.com/tc39.png"
+        },
+        {
+            "title": "Serverless 应用开发",
+            "type": "workshop",
+            "mentorId": 8,
+            "date": "2019-11-17",
+            "time": ["14:00", "16:00"],
+            "place": "分会场",
+            "image": "https://github.com/serverless.png"
         }
     ],
     "partners": [
@@ -251,17 +276,16 @@
             "name": "阿里云计算",
             "logo": "https://img.alicdn.com/tfs/TB1Ly5oS3HqK1RjSZFPXXcwapXa-238-54.png"
         },
-
         {
             "title": "金牌赞助",
             "name": "（虚位以待）"
         },
-
         {
             "title": "银牌赞助",
             "name": "（虚位以待）"
         },
         {
+            "title": "铜牌赞助",
             "name": "亚马逊 AWS",
             "logo": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/AWS.png"
         },
@@ -274,6 +298,21 @@
             "title": "协办",
             "name": "四川捷云信通",
             "logo": "https://tvax3.sinaimg.cn/crop.4.0.237.237.180/00729vHHly8fp6nb4mncdj308a07raa2.jpg?KID=imgbed,tva&Expires=1571330231&ssig=Fs1dNMHnlm"
+        },
+        {
+            "title": "媒体伙伴",
+            "name": "掘金",
+            "logo": "https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg"
+        },
+        {
+            "title": "媒体伙伴",
+            "name": "开源中国",
+            "logo": "https://static.oschina.net/new-osc/img/logo_osc_new.svg"
+        },
+        {
+            "title": "媒体伙伴",
+            "name": "开源工场",
+            "logo": "https://openingsource.org/wp-content/uploads/2018/02/test_logo.png"
         }
     ]
 }
