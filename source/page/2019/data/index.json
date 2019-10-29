@@ -113,6 +113,28 @@
             "organization": "Dimension",
             "title": "现代前端魔法使",
             "avatar": "https://github.com/Jack-Works.png"
+        },
+        {
+            "id": 15,
+            "name": "谢彬彬",
+            "GitHub": "xiebinbin",
+            "title": "全栈工程师",
+            "avatar": "https://github.com/xiebinbin.png"
+        },
+        {
+            "id": 16,
+            "name": "董涛",
+            "GitHub": "mtsee",
+            "title": "Web 前端工程师",
+            "avatar": "https://github.com/mtsee.png"
+        },
+        {
+            "id": 17,
+            "name": "叶师傅",
+            "GitHub": "Tealeafpei",
+            "organization": "AALab 算法艺术实验室",
+            "title": "算法工程师",
+            "avatar": "https://github.com/Tealeafpei.png"
         }
     ],
     "topics": [
@@ -162,13 +184,13 @@
             "image": "https://github.com/solid.png"
         },
         {
-            "title": "（待定）",
+            "title": "用 Python Flask 打造小型视频点播站",
             "type": "lecture",
-            "mentorId": null,
+            "mentorId": 15,
             "date": "2019-11-16",
             "time": ["14:40", "15:20"],
             "place": "主会场",
-            "image": ""
+            "image": "https://github.com/FFmpeg.png"
         },
         {
             "title": "DevCloud Web Components 实践",
@@ -189,13 +211,13 @@
             "image": "https://github.com/nodejs.png"
         },
         {
-            "title": "Thoughts In Deno",
+            "title": "无服务器计算架构",
             "type": "lecture",
-            "mentorId": 11,
+            "mentorId": 8,
             "date": "2019-11-17",
             "time": ["09:30", "10:10"],
             "place": "主会场",
-            "image": "https://github.com/denoland.png"
+            "image": "https://github.com/serverless.png"
         },
         {
             "title": "从 Angular Ivy 认识前端框架",
@@ -207,13 +229,13 @@
             "image": "https://github.com/angular.png"
         },
         {
-            "title": "无服务器计算架构",
+            "title": "Thoughts In Deno",
             "type": "lecture",
-            "mentorId": 8,
+            "mentorId": 11,
             "date": "2019-11-17",
             "time": ["10:50", "11:30"],
             "place": "主会场",
-            "image": "https://github.com/serverless.png"
+            "image": "https://github.com/denoland.png"
         },
         {
             "title": "Brand New Things in WebAssembly Post-MVP Standard",
@@ -243,13 +265,12 @@
             "image": "https://github.com/GoogleChrome.png"
         },
         {
-            "title": "（待定）",
+            "title": "从数据可视化看前端未来",
             "type": "lecture",
-            "mentorId": null,
+            "mentorId": 16,
             "date": "2019-11-17",
             "time": ["15:40", "16:20"],
-            "place": "主会场",
-            "image": ""
+            "place": "主会场"
         },
         {
             "title": "（题目待定）",
@@ -261,13 +282,30 @@
             "image": "https://github.com/tc39.png"
         },
         {
+            "title": "即影即有 —— 异形投影与着色器语言",
+            "type": "workshop",
+            "mentorId": 17,
+            "date": "2019-11-16",
+            "time": ["14:00", "17:00"],
+            "place": "分会场",
+            "image": "https://github.com/Unity-Technologies.png"
+        },
+        {
             "title": "Serverless 应用开发",
             "type": "workshop",
             "mentorId": 8,
             "date": "2019-11-17",
-            "time": ["14:00", "16:00"],
+            "time": ["10:20", "11:20"],
             "place": "分会场",
             "image": "https://github.com/serverless.png"
+        },
+        {
+            "title": "敏捷 TDD（测试驱动开发）",
+            "type": "workshop",
+            "mentorId": null,
+            "date": "2019-11-17",
+            "time": ["14:00", "17:00"],
+            "place": "分会场"
         }
     ],
     "partners": [
@@ -313,6 +351,11 @@
             "title": "媒体伙伴",
             "name": "开源工场",
             "logo": "https://openingsource.org/wp-content/uploads/2018/02/test_logo.png"
+        },
+        {
+            "title": "媒体伙伴",
+            "name": "Linux 中国",
+            "logo": "https://img.linux.net.cn/static/image/common/linuxcn_logo_2017.png"
         }
     ]
 }

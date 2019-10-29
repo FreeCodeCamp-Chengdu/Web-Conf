@@ -15,7 +15,11 @@ import BuyCode from './data/BuyCode.png';
 
 const topicGroups = Object.entries(
     groupBy(data.topics, ({ date, place }) => `${date} ${place}`)
-).sort(([A], [B]) => A.localeCompare(B));
+).sort(
+    (A, B) =>
+        A[1][0].date.localeCompare(B[1][0].date) ||
+        B[1][0].place.localeCompare(A[1][0].place)
+);
 
 const partnerGroups = Object.entries(groupBy(data.partners, 'title'));
 

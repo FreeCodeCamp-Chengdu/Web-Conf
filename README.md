@@ -6,7 +6,7 @@
 
 ## 官网地址
 
-https://web-conf.tk/
+https://web-conf.dev/
 
 ## 开发者
 

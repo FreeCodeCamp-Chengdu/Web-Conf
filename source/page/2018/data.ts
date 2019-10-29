@@ -190,7 +190,7 @@ export default {
             title: 'WebCell',
             name: 'WebCell',
             type: 0,
-            URL: 'https://web-cell.tk/',
+            URL: 'https://web-cell.dev/',
             detail:
                 '轻量级 Web 组件化引擎，基于 Web components（HTML 5.3、DOM 4.1）、ECMAScript 2018 和 装饰器提案 提供 MVVM 模型，并有官方封装的 BootStrap v4、Material Design 组件库。'
         },

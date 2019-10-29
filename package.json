@@ -11,7 +11,7 @@
     ],
     "author": "freeCodeCamp Chengdu community",
     "license": "AGPL-3.0",
-    "homepage": "https://web-conf.tk/",
+    "homepage": "https://web-conf.dev/",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/FreeCodeCamp-Chengdu/Web-Conf.git"
@@ -57,7 +57,7 @@
         "@types/classnames": "^2.2.9",
         "@types/lodash.groupby": "^4.6.6",
         "@types/marked": "^0.6.5",
-        "@typescript-eslint/parser": "^2.5.0",
+        "@typescript-eslint/parser": "^2.6.0",
         "autoprefixer": "^9.6.5",
         "eslint": "^6.6.0",
         "eslint-config-prettier": "^6.5.0",
