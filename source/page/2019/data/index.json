@@ -1,6 +1,24 @@
 {
     "title": "2019 成都 Web 全栈大会",
     "address": "成都市高新区天府五街菁蓉国际广场 7 号楼主会场",
+    "menu": [
+        {
+            "title": "大会议题",
+            "href": "#Topic"
+        },
+        {
+            "title": "大咖讲师",
+            "href": "#Mentor"
+        },
+        {
+            "title": "共创伙伴",
+            "href": "#Contributor"
+        },
+        {
+            "title": "会场交通",
+            "href": "#Address"
+        }
+    ],
     "mentors": [
         {
             "id": 4,
@@ -310,6 +328,16 @@
     ],
     "partners": [
         {
+            "title": "主办",
+            "name": "freeCodeCamp 成都社区",
+            "logo": "https://fcc-cd.tk/images/FCC-CDC-v1-1.png"
+        },
+        {
+            "title": "协办",
+            "name": "四川捷云信通",
+            "logo": "https://tvax3.sinaimg.cn/crop.4.0.237.237.180/00729vHHly8fp6nb4mncdj308a07raa2.jpg?KID=imgbed,tva&Expires=1571330231&ssig=Fs1dNMHnlm"
+        },
+        {
             "title": "钻石赞助",
             "name": "阿里云计算",
             "logo": "https://img.alicdn.com/tfs/TB1Ly5oS3HqK1RjSZFPXXcwapXa-238-54.png"
@@ -328,34 +356,29 @@
             "logo": "https://fcc-cd.tk/activity/conference/web-conf-2019-1/AWS.png"
         },
         {
-            "title": "主办",
-            "name": "freeCodeCamp 成都社区",
-            "logo": "https://fcc-cd.tk/images/FCC-CDC-v1-1.png"
+            "title": "合作伙伴",
+            "name": "图灵",
+            "logo": "http://tp1.sinaimg.cn/1752543513/180/1.jpg"
         },
         {
-            "title": "协办",
-            "name": "四川捷云信通",
-            "logo": "https://tvax3.sinaimg.cn/crop.4.0.237.237.180/00729vHHly8fp6nb4mncdj308a07raa2.jpg?KID=imgbed,tva&Expires=1571330231&ssig=Fs1dNMHnlm"
-        },
-        {
-            "title": "媒体伙伴",
+            "title": "合作伙伴",
             "name": "掘金",
             "logo": "https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg"
         },
         {
-            "title": "媒体伙伴",
+            "title": "合作伙伴",
             "name": "开源中国",
             "logo": "https://static.oschina.net/new-osc/img/logo_osc_new.svg"
         },
         {
-            "title": "媒体伙伴",
-            "name": "开源工场",
-            "logo": "https://openingsource.org/wp-content/uploads/2018/02/test_logo.png"
-        },
-        {
-            "title": "媒体伙伴",
+            "title": "合作伙伴",
             "name": "Linux 中国",
             "logo": "https://img.linux.net.cn/static/image/common/linuxcn_logo_2017.png"
+        },
+        {
+            "title": "合作伙伴",
+            "name": "开源工场",
+            "logo": "https://openingsource.org/wp-content/uploads/2018/02/test_logo.png"
         }
     ]
 }

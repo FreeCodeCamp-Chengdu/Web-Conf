@@ -19,7 +19,7 @@ export function PartnerGroup({
 
             <ul className="list-unstyled d-flex flex-wrap justify-content-around align-items-center">
                 {list.map(({ name, logo }) => (
-                    <li>
+                    <li className="m-3">
                         {logo ? (
                             <img className="img-fluid" src={logo} alt={name} />
                         ) : (

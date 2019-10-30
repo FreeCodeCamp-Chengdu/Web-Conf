@@ -5,120 +5,30 @@
     margin-top: 1.5rem;
 }
 
-body {
-    padding: 0px;
-    margin: 0px auto;
-    max-width: 1600px;
-    width: 100%;
-    color: #666;
-    line-height: 26px;
-    overflow-x: hidden;
-}
-
 .web-content {
     margin: auto;
     margin-top: 48px;
     width: 80%;
 }
 
-.title span {
-    display: block;
-    text-align: center;
-    margin-bottom: 15px;
-    color: #006400;
-}
-
-#logo {
-    width: 100%;
-    overflow-x: hidden;
-    background-position: center;
-}
-
-#logo img {
-    width: 100%;
-}
-
-#introduce {
+.introduce {
     /* min-height: 200px; */
     height: auto;
     width: 80%;
     margin: auto;
 }
 
-/* 嘉宾 */
-.guest {
-    margin: 15px;
-    text-align: center;
-}
-.guest .guest-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: solid 2px #ddd;
-    box-shadow: 0px 5px 15px #aaa;
-    margin: auto;
-    background-position: center;
-    background-size: cover;
-}
-.guest .guest-name {
-    font-size: 20px;
-}
-.guest p {
-    font-size: 12px;
-    text-align: left;
-}
-
-/* 流程 */
-.flow-time {
-    width: 62px;
-    display: inline-flex;
-}
-.flowtheme {
-    color: #409eff;
-}
-
 /* 地图 */
-body > footer > iframe {
+.map {
     width: 100%;
     height: 90vh;
 }
-/* 报名链接 */
-.btn {
-    width: 100%;
-    display: block;
-    background: #409eff;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 0px;
-    margin: 40px auto;
-}
 
 /* 主办方、赞助方、合作社区 */
-.logos {
-    text-align: center;
-}
 .logos a {
-    display: inline-flex;
     width: 210px;
     height: 70px;
-    line-height: 70px;
-    box-shadow: 0px 4px 15px #999;
-    justify-content: center;
-    align-items: center;
     padding: 0.2em 0.8em;
-}
-.logos ul,
-.logos ul li {
-    list-style: none;
-    padding-left: 0px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 10px;
-}
-.logos img {
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .footer {
@@ -141,33 +51,16 @@ body > footer > iframe {
 }
 
 @media (max-width: 768px) {
-    #logo img {
+    .logo img {
         width: 140%;
         margin-left: -20%;
     }
-    #introduce {
+    .introduce {
         padding: 0px 0px 20px 0px;
     }
-    #introduce p {
+    .introduce p {
         font-size: 12px;
         line-height: 18px;
-    }
-    .guest .guest-avatar {
-        width: 80px;
-        height: 80px;
-    }
-    .guest .guest-name {
-        font-size: 16px;
-    }
-    .guest p {
-        line-height: 18px;
-    }
-    .title {
-        margin: 20px auto 20px;
-        font-size: 18px;
-    }
-    .title span {
-        margin-bottom: 5px;
     }
     .logos ul,
     .logos ul li {

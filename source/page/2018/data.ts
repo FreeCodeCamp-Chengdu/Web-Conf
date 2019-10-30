@@ -36,8 +36,8 @@ export default {
             href: '#Review'
         },
         {
-            title: '赞助商',
-            href: '#Sponsor'
+            title: '共创伙伴',
+            href: '#Contributor'
         }
     ],
     lecturer: [

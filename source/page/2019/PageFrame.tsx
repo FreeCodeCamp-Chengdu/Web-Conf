@@ -6,8 +6,12 @@ import data from './data/index.json';
 export function PageFrame({ children }: { children?: any[] }) {
     return (
         <div>
-            <NavBar title={data.title} theme="light" background="light" />
-
+            <NavBar
+                title={data.title}
+                theme="light"
+                background="light"
+                menu={data.menu}
+            />
             <main className="container mt-5 pt-5">{children}</main>
         </div>
     );

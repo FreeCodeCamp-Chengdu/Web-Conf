@@ -1,12 +1,14 @@
 import banner_2017 from './2017/image/wechatLogo.jpeg';
 import banner_2018 from './2018/image/poster.png';
 import banner_2018_React from './2018-React/React-ChengDu.jpg';
+import banner_2019 from './2019/data/banner.jpg';
 
 export default [
     {
         title: '2019 成都 Web 全栈大会',
         date: '2019-11-16',
-        URL: '2019/'
+        URL: '2019/',
+        banner: banner_2019
     },
     {
         title: '2018 成都 Web 前端大会',

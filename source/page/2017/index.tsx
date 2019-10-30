@@ -1,6 +1,7 @@
 import { createCell } from 'web-cell';
 import { Card } from 'boot-cell/source/Content/Card';
 import { AccordionList } from 'boot-cell/source/Content/Accordion';
+import { Button } from 'boot-cell/source/Form/Button';
 
 import style from './index.less';
 import data from './data';
@@ -11,7 +12,7 @@ export function Page2017() {
         <main>
             <div className="container">
                 <header id={style.logo}>
-                    <img src={banner} />
+                    <img className="w-100" src={banner} />
                 </header>
                 <div id={style.introduce}>
                     <h2 className="mt-5 mb-4 text-center">
@@ -27,14 +28,17 @@ export function Page2017() {
                         <span>SPEAKER</span> <span>分享嘉宾</span>
                     </h2>
                     <div className="card-columns justify-content-center">
-                        {data.guests.map(({ avatar, name, description }) => (
-                            <Card
-                                className={style.mentor}
-                                image={avatar}
-                                title={name}
-                                text={description}
-                            />
-                        ))}
+                        {data.guests.map(
+                            ({ avatar, name, description }, index) => (
+                                <Card
+                                    id={'guest_' + index}
+                                    className={style.mentor}
+                                    image={avatar}
+                                    title={name}
+                                    text={description}
+                                />
+                            )
+                        )}
                     </div>
                 </div>
                 <div className={style['web-content']}>
@@ -43,39 +47,56 @@ export function Page2017() {
                     </h2>
                     <AccordionList
                         list={data.flows.map(
-                            ({ time, guest, content, description }) => ({
+                            ({ time, content, guest, description }) => ({
                                 title: `${time}【${content}】`,
-                                content: description
+                                content:
+                                    guest != null ? (
+                                        <ul>
+                                            <li>
+                                                讲师：
+                                                <a href={'#guest_' + guest}>
+                                                    {data.guests[guest].name}
+                                                </a>
+                                            </li>
+                                            <li>简介：{description}</li>
+                                        </ul>
+                                    ) : (
+                                        description
+                                    )
                             })
                         )}
                     />
                 </div>
-                <div className={style['web-content']}>
+                <div className={`${style['web-content']} text-center`}>
                     <div>
-                        <h2 className="mt-5 mb-4 text-center">
+                        <h2 className="mt-5 mb-4">
                             <span>时间地址</span>
                         </h2>
-                        <p className="text-center">
-                            时间：2017 年 11 月 19 日 09 ：00 - 17 ：30
-                        </p>
-                        <p className="text-center">
+                        <p>时间：2017 年 11 月 19 日 09 ：00 - 17 ：30</p>
+                        <p>
                             地点：成都市高新区天府五街 200 号菁蓉国际广场 7 栋 1
                             楼 主会场
                         </p>
                     </div>
                 </div>
                 <div className={style['web-content']}>
-                    <div className={style.logos}>
+                    <div className={`${style.logos} text-center`}>
                         {data.logos.map(({ title, childrens }) => (
                             <section>
-                                <h2 className="mt-5 mb-4 text-center">
+                                <h2 className="mt-5 mb-4">
                                     <span>{title}</span>
                                 </h2>
-                                <ul>
+                                <ul className="list-inline">
                                     {childrens.map(({ url, img }) => (
-                                        <li>
-                                            <a href={url}>
-                                                <img src={img} />
+                                        <li className="list-inline-item m-2">
+                                            <a
+                                                className="d-inline-flex justify-content-center align-items-center shadow"
+                                                href={url}
+                                            >
+                                                <img
+                                                    className="mw-100 mh-100"
+                                                    src={img}
+                                                />
                                             </a>
                                         </li>
                                     ))}
@@ -83,14 +104,15 @@ export function Page2017() {
                             </section>
                         ))}
                     </div>
-                    <div>
-                        <a
-                            href="http://cn.mikecrm.com/rdVltvT"
-                            className={style.btn}
-                        >
-                            我 要 报 名
-                        </a>
-                    </div>
+                    <Button
+                        className="my-5"
+                        block
+                        size="lg"
+                        target="_blank"
+                        href="http://cn.mikecrm.com/rdVltvT"
+                    >
+                        我 要 报 名
+                    </Button>
                 </div>
             </div>
             <footer className={style.footer}>
@@ -103,6 +125,7 @@ export function Page2017() {
                     提供 海报、Logo 设计
                 </p>
                 <iframe
+                    className={style.map}
                     frameborder="0"
                     scrolling="no"
                     lazyload="1"

@@ -45,12 +45,13 @@ export function Page2019() {
                 </Button>
             </header>
 
-            <h2 className="text-center my-4">大会议程</h2>
+            <h2 className="text-center my-4" id="Topic">
+                大会议程
+            </h2>
             <TabList
                 mode="pills"
                 tabAlign="center"
-                list={topicGroups.map(([title, list], index) => ({
-                    active: !index,
+                list={topicGroups.map(([title, list]) => ({
                     title,
                     content: (
                         <TopicGroup
@@ -62,7 +63,9 @@ export function Page2019() {
             />
             <hr className="m-5" />
 
-            <h2 className="text-center">大咖讲师</h2>
+            <h2 className="text-center" id="Mentor">
+                大咖讲师
+            </h2>
             <p className="lead text-center">（排名不分先后）</p>
 
             <section className="card-columns">
@@ -91,8 +94,9 @@ export function Page2019() {
             </section>
             <hr className="m-5" />
 
-            <h2 className="text-center">共创伙伴</h2>
-
+            <h2 className="text-center" id="Contributor">
+                共创伙伴
+            </h2>
             <section className="text-center">
                 {partnerGroups.map(([title, list]) => (
                     <PartnerGroup title={title} list={list} />
@@ -100,7 +104,9 @@ export function Page2019() {
             </section>
             <hr className="m-5" />
 
-            <h2 className="text-center">会场交通</h2>
+            <h2 className="text-center" id="Address">
+                会场交通
+            </h2>
             <p className="lead text-center mt-4 mb-5">{data.address}</p>
             <iframe
                 className={style.map}
