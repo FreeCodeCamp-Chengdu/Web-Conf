@@ -23,7 +23,8 @@
         "test": "lint-staged",
         "clean": "rm -rf dist/ .cache/",
         "start": "npm run clean  &&  parcel source/index.html",
-        "build": "npm run clean  &&  parcel build source/index.html --public-url ."
+        "pack-sw": "rm -f dist/sw.js.map  &&  workbox generateSW",
+        "build": "npm run clean  &&  parcel build source/index.html --public-url .  &&  npm run pack-sw"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
@@ -69,7 +70,8 @@
         "parcel-plugin-text": "^0.9.5",
         "postcss-modules": "^1.4.1",
         "prettier": "^1.18.2",
-        "typescript": "^3.6.4"
+        "typescript": "^3.6.4",
+        "workbox-cli": "^4.3.1"
     },
     "prettier": {
         "singleQuote": true
