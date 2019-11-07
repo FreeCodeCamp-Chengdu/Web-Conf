@@ -1,6 +1,6 @@
 {
     "name": "成都 Web 开发者大会",
-    "short_name": "WebConf 成都",
+    "short_name": "Web Conf",
     "start_url": "https://web-conf.dev/",
     "description": "成都 Web 开发者大会 官方网站",
     "scope": "/",
@@ -12,9 +12,9 @@
     "background_color": "transparent",
     "icons": [
         {
-            "src": "page/2018/image/logo/host/fcccd.png",
+            "src": "image/FCC-CDC-v1-1.png",
             "type": "image/png",
-            "sizes": "280x100"
+            "sizes": "180x180"
         }
     ]
 }

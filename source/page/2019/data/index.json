@@ -384,6 +384,11 @@
             "title": "合作伙伴",
             "name": "开源工场",
             "logo": "https://openingsource.org/wp-content/uploads/2018/02/test_logo.png"
+        },
+        {
+            "title": "合作伙伴",
+            "name": "GDG 成都",
+            "logo": "https://fcc-cd.tk/partner/gdg-cd/logo.webp"
         }
     ]
 }

@@ -1,4 +1,4 @@
-import { createCell } from 'web-cell';
+import { createCell, Fragment } from 'web-cell';
 import { Card } from 'boot-cell/source/Content/Card';
 import { AccordionList } from 'boot-cell/source/Content/Accordion';
 import { Button } from 'boot-cell/source/Form/Button';
@@ -9,7 +9,7 @@ import { banner, qrcode } from './image';
 
 export function Page2017() {
     return (
-        <main>
+        <Fragment>
             <div className="container">
                 <header id={style.logo}>
                     <img className="w-100" src={banner} />
@@ -132,13 +132,7 @@ export function Page2017() {
                     loading="lazy"
                     src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${data.title}`}
                 ></iframe>
-                <p style={{ color: '#ddd', fontSize: '12px' }}>
-                    © 2017
-                    <a target="_blank" href="https://chengdu.freecodecamp.cn/">
-                        freeCodeCamp 成都社区
-                    </a>
-                </p>
             </footer>
-        </main>
+        </Fragment>
     );
 }

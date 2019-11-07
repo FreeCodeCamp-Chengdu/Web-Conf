@@ -25,7 +25,7 @@ export default [
     {
         title: '新耀杯 Code for City 黑客马拉松',
         date: '2018-01-20',
-        URL: 'http://chengdu.freecodecamp.cn/',
+        URL: 'https://git-dev.tk/',
         banner: 'https://git-dev.leanapp.cn/page/Code4City/image/banner/0.png'
     },
     {

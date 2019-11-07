@@ -159,7 +159,7 @@ export default {
                 },
                 {
                     img: logos['FCC-CDG'],
-                    url: 'https://www.freecodecamp.cn'
+                    url: 'https://fcc-cd.tk/'
                 }
             ]
         },
@@ -190,7 +190,7 @@ export default {
             childrens: [
                 {
                     img: logos['DevEco'],
-                    url: 'https://www.freecodecamp.cn'
+                    url: 'http://www.deveco.io/'
                 },
                 {
                     img: logos['BW'],

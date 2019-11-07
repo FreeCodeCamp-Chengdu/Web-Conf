@@ -1,4 +1,4 @@
-import { createCell } from 'web-cell';
+import { createCell, Fragment } from 'web-cell';
 import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Card } from 'boot-cell/source/Content/Card';
@@ -8,7 +8,7 @@ import conf_list from './data';
 
 export function PageEntry() {
     return (
-        <main>
+        <Fragment>
             <NavBar title="成都 Web 开发者大会" />
 
             <section className="jumbotron text-center py-5 mt-5">
@@ -71,6 +71,6 @@ export function PageEntry() {
                     })}
                 </div>
             </section>
-        </main>
+        </Fragment>
     );
 }

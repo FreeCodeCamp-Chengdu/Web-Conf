@@ -46,8 +46,13 @@ export class PageRouter extends HTMLRouter {
                                     多个城市。我们正在帮助全球数百万人学习编程，希望让世界上每个人都有机会获得免费的优质的编程教育资源，成为开发者或者运用编程去解决问题。
                                 </p>
                                 <p className="text-muted">
-                                    freeCodeCamp 成都社区成立于 2016
-                                    年，是中国大陆最早一批 FCC
+                                    <a
+                                        target="_blank"
+                                        href="https://fcc-cd.tk/"
+                                    >
+                                        freeCodeCamp 成都社区
+                                    </a>
+                                    成立于 2016 年，是中国大陆最早一批 FCC
                                     城市线下社区，目前会员千余人，也是最大的 FCC
                                     城市社区。在核心团队 20
                                     余人两年的努力下，FCC 成都已覆盖
