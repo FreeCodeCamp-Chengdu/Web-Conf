@@ -44,7 +44,7 @@
         }
     },
     "dependencies": {
-        "boot-cell": "^0.13.1",
+        "boot-cell": "^0.14.0",
         "cell-router": "^2.0.0-rc.1",
         "classnames": "^2.2.6",
         "lodash.groupby": "^4.6.0",

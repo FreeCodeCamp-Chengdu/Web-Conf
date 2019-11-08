@@ -1,6 +1,7 @@
 import banner_2017 from './2017/image/wechatLogo.jpeg';
-import banner_2018 from './2018/image/poster.png';
+import gallery_Code4City from './2018-Code4City/image/gallery';
 import banner_2018_React from './2018-React/React-ChengDu.jpg';
+import banner_2018 from './2018/image/poster.png';
 import banner_2019 from './2019/data/banner.jpg';
 
 export default [
@@ -25,8 +26,8 @@ export default [
     {
         title: '新耀杯 Code for City 黑客马拉松',
         date: '2018-01-20',
-        URL: 'https://git-dev.tk/',
-        banner: 'https://git-dev.leanapp.cn/page/Code4City/image/banner/0.png'
+        URL: '2018/Code4City/',
+        banner: gallery_Code4City[0]
     },
     {
         title: '2017 成都 Web 前端大会',

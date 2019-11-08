@@ -1,6 +1,6 @@
 module.exports = {
     globDirectory: 'dist/',
-    globPatterns: ['**/*.{jpg,png,jpeg,ico,html,css,js}'],
+    globPatterns: ['**/*.{html,css,js,ico,png}'],
     swDest: 'dist/sw.js',
     importWorkboxFrom: 'disabled',
     importScripts: [
