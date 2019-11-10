@@ -1,43 +1,24 @@
-import _3W from './3W.png';
-import BBD from './BBD.png';
-import BW from './BW.png';
-import DevEco from './DevEco.jpg';
-import DKS from './DKS.png';
-import FCC_CDG from './FCC-CDG.jpg';
-import GDG from './GDG.png';
-import GT from './GT.png';
-import HCXY from './HCXY.png';
-import JJ from './JJ.png';
-import MZ from './MZ.png';
-import OS from './OS.png';
-import QE from './QE.png';
-import QRGJ from './QRGJ.png';
-import SF from './SF.png';
-import SYL from './SYL.png';
-import TH from './TH.png';
-import TW from './TW.png';
-import WORK from './WORK.png';
-import ZDK from './ZDK.png';
+export { default as _3W } from './3W.png';
+export { default as BBD } from './BBD.png';
+export { default as BW } from './BW.png';
+export { default as DevEco } from './DevEco.jpg';
+export { default as DKS } from './DKS.png';
+export { default as FCC_CDG } from './FCC-CDG.png';
+export { default as GDG } from './GDG.png';
+export { default as GT } from './GT.png';
+export { default as HCXY } from './HCXY.png';
+export { default as MZ } from './MZ.png';
+export { default as OS } from './OS.png';
+export { default as QE } from './QE.png';
+export { default as QRGJ } from './QRGJ.png';
+export { default as SF } from './SF.png';
+export { default as SYL } from './SYL.png';
+export { default as TH } from './TH.png';
+export { default as TW } from './TW.png';
+export { default as WORK } from './WORK.png';
+export { default as ZDK } from './ZDK.png';
 
-export default {
-    '3W': _3W,
-    'FCC-CDG': FCC_CDG,
-    BBD,
-    BW,
-    DevEco,
-    DKS,
-    GDG,
-    GT,
-    HCXY,
-    JJ,
-    MZ,
-    OS,
-    QE,
-    QRGJ,
-    SF,
-    SYL,
-    TH,
-    TW,
-    WORK,
-    ZDK
-};
+export const JueJin =
+    'https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg';
+export const OSChina =
+    'https://static.oschina.net/new-osc/img/logo_osc_new.svg';

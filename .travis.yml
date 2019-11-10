@@ -13,11 +13,11 @@ install:
     - npm install
 script:
     - npm run ${SCRIPT}
-    - cd ${FOLDER}
-    - echo ${DOMAIN} > CNAME
-    - git init
-    - git config user.name ${UID}
-    - git config user.email ${EMAIL}
-    - git add .
-    - git commit -m "${MESSAGE}"
-    - git push --force --quiet https://${TOKEN}@${GIT_URI}.git master:gh-pages
+deploy:
+    provider: pages
+    on:
+        branch: v2
+    skip_cleanup: true
+    local_dir: ${FOLDER}
+    fqdn: ${DOMAIN}
+    github_token: ${TOKEN}

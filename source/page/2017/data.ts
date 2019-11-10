@@ -1,5 +1,26 @@
 import guests from './image/guests';
-import logos from './image/logos';
+import {
+    QRGJ,
+    FCC_CDG,
+    BBD,
+    HCXY,
+    _3W,
+    DevEco,
+    BW,
+    GT,
+    SYL,
+    QE,
+    JueJin,
+    OSChina,
+    SF,
+    ZDK,
+    MZ,
+    GDG,
+    TW,
+    TH,
+    WORK,
+    DKS
+} from './image/logos';
 
 export default {
     title: '2017 成都 Web 前端大会',
@@ -154,11 +175,11 @@ export default {
             title: '主办单位',
             childrens: [
                 {
-                    img: logos['QRGJ'],
+                    img: QRGJ,
                     url: 'http://www.cdht.gov.cn/cycjcyyq/50449.jhtml'
                 },
                 {
-                    img: logos['FCC-CDG'],
+                    img: FCC_CDG,
                     url: 'https://fcc-cd.tk/'
                 }
             ]
@@ -167,7 +188,7 @@ export default {
             title: '冠名赞助',
             childrens: [
                 {
-                    img: logos['BBD'],
+                    img: BBD,
                     url: 'https://www.bbdservice.com'
                 }
             ]
@@ -176,11 +197,11 @@ export default {
             title: '协办单位',
             childrens: [
                 {
-                    img: logos['HCXY'],
+                    img: HCXY,
                     url: 'hhttp://www.hechuangxinye.com/'
                 },
                 {
-                    img: logos['3W'],
+                    img: _3W,
                     url: 'http://www.3wcoffee.com/'
                 }
             ]
@@ -189,23 +210,23 @@ export default {
             title: '赞助单位',
             childrens: [
                 {
-                    img: logos['DevEco'],
+                    img: DevEco,
                     url: 'http://www.deveco.io/'
                 },
                 {
-                    img: logos['BW'],
+                    img: BW,
                     url: 'http://www.broadview.com.cn/'
                 },
                 {
-                    img: logos['GT'],
+                    img: GT,
                     url: 'http://www.getui.com/cn/index.html'
                 },
                 {
-                    img: logos['SYL'],
+                    img: SYL,
                     url: 'https://www.shiyanlou.com/'
                 },
                 {
-                    img: logos['QE'],
+                    img: QE,
                     url: 'https://www.doctorwork.com/'
                 }
             ]
@@ -214,39 +235,39 @@ export default {
             title: '合作社区',
             childrens: [
                 {
-                    img: logos['JJ'],
+                    img: JueJin,
                     url: 'https://juejin.im/'
                 },
                 {
-                    img: logos['OS'],
+                    img: OSChina,
                     url: 'https://www.oschina.net/'
                 },
                 {
-                    img: logos['SF'],
+                    img: SF,
                     url: 'https://segmentfault.com/'
                 },
                 {
-                    img: logos['ZDK'],
+                    img: ZDK,
                     url: 'http://www.zaoduke.net/'
                 },
                 {
-                    img: logos['MZ'],
+                    img: MZ,
                     url: 'http://www.maiziedu.com/'
                 },
                 {
-                    img: logos['GDG'],
+                    img: GDG,
                     url: 'https://developers.google.com/groups'
                 },
                 {
-                    img: logos['TW'],
+                    img: TW,
                     url: 'https://www.thoughtworks.com/cn/'
                 },
                 {
-                    img: logos['TH'],
+                    img: TH,
                     url: 'http://www.tianhukeji.com/'
                 },
                 {
-                    img: logos['WORK'],
+                    img: WORK,
                     url: 'http://workjia.cn/'
                 }
             ]
@@ -255,7 +276,7 @@ export default {
             title: '合作媒体',
             childrens: [
                 {
-                    img: logos['DKS'],
+                    img: DKS,
                     url: 'http://www.itdks.com/'
                 }
             ]

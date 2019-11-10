@@ -11,6 +11,44 @@ import {
     liangtongming,
     lvyan
 } from './image/avatar';
+import {
+    cdht,
+    cdkfx,
+    XinYaoHang,
+    JRsquare,
+    Monstarlab,
+    github,
+    Microsoft,
+    tap4fun,
+    jhspace,
+    SegmentFault,
+    ThoughtWorks,
+    tedxChengDu,
+    mikecrm,
+    first,
+    jintai,
+    lvs,
+    yunpian,
+    sctv,
+    cdtv,
+    cdhttv,
+    sinasc,
+    scdaily,
+    fm940,
+    kct
+} from './image/logo';
+import {
+    FCC_CDG,
+    BBD,
+    GDG,
+    DevEco,
+    GT,
+    SYL,
+    HCXY,
+    JueJin,
+    OSChina,
+    DKS
+} from '../2017/image/logos';
 
 export default {
     awards: [
@@ -119,15 +157,15 @@ export default {
             list: [
                 {
                     title: '高新区创新创业服务中心',
-                    imageURL: 'cdht.png'
+                    imageURL: cdht
                 },
                 {
                     title: '成都科技企业孵化器协会',
-                    imageURL: 'cdkfx.png'
+                    imageURL: cdkfx
                 },
                 {
                     title: 'FCC成都社区',
-                    imageURL: 'FCC.png'
+                    imageURL: FCC_CDG
                 }
             ]
         },
@@ -136,7 +174,7 @@ export default {
             list: [
                 {
                     title: '成都新耀行房产营销策划',
-                    imageURL: 'XinYaoHang.png'
+                    imageURL: XinYaoHang
                 }
             ]
         },
@@ -145,11 +183,11 @@ export default {
             list: [
                 {
                     title: '合创新业',
-                    imageURL: 'hcxy.png'
+                    imageURL: HCXY
                 },
                 {
                     title: '菁蓉国际广场',
-                    imageURL: 'JRsquare.png'
+                    imageURL: JRsquare
                 }
             ]
         },
@@ -158,7 +196,7 @@ export default {
             list: [
                 {
                     title: '梦思特科技(成都)',
-                    imageURL: 'Monstarlab.png'
+                    imageURL: Monstarlab
                 }
             ]
         },
@@ -167,79 +205,79 @@ export default {
             list: [
                 {
                     title: 'Github',
-                    imageURL: 'github.png'
+                    imageURL: github
                 },
                 {
                     title: '微软',
-                    imageURL: 'Microsoft-logo_rgb_wht.png'
+                    imageURL: Microsoft
                 },
                 {
                     title: 'BBD',
-                    imageURL: 'BBD.png'
+                    imageURL: BBD
                 },
                 {
                     title: '尼毕鲁',
-                    imageURL: 'tap4fun.png'
+                    imageURL: tap4fun
                 },
                 {
                     title: '交换空间',
-                    imageURL: 'jhspace.jpeg'
+                    imageURL: jhspace
                 },
                 {
                     title: '掘金',
-                    imageURL: 'juejin.png'
+                    imageURL: JueJin
                 },
                 {
                     title: '开源中国',
-                    imageURL: 'oschina.png'
+                    imageURL: OSChina
                 },
                 {
                     title: 'SegmentFault',
-                    imageURL: 'segmentfault.png'
+                    imageURL: SegmentFault
                 },
                 {
                     title: 'ThoughtWorks',
-                    imageURL: 'ThoughtWorks.png'
+                    imageURL: ThoughtWorks
                 },
                 {
                     title: 'GDG',
-                    imageURL: 'GDG.png'
+                    imageURL: GDG
                 },
                 {
                     title: 'TEDxChengDu',
-                    imageURL: 'tedx-logo.png'
+                    imageURL: tedxChengDu
                 },
                 {
                     title: '猿生态',
-                    imageURL: 'DevEco.png'
+                    imageURL: DevEco
                 },
                 {
                     title: '个推',
-                    imageURL: 'getui.png'
+                    imageURL: GT
                 },
                 {
                     title: '麦客',
-                    imageURL: 'mikecrm.png'
+                    imageURL: mikecrm
                 },
                 {
                     title: '实验楼',
-                    imageURL: 'shiyanlou.png'
+                    imageURL: SYL
                 },
                 {
                     title: '菲斯特地产',
-                    imageURL: 'first.png'
+                    imageURL: first
                 },
                 {
                     title: '锦泰地产',
-                    imageURL: 'jintai.png'
+                    imageURL: jintai
                 },
                 {
                     title: 'LiveVideoStack',
-                    imageURL: 'lvs.png'
+                    imageURL: lvs
                 },
                 {
                     title: 'yunpian',
-                    imageURL: 'yunpian.png'
+                    imageURL: yunpian
                 }
             ]
         },
@@ -248,35 +286,35 @@ export default {
             list: [
                 {
                     title: '四川省电视台',
-                    imageURL: 'sctv.png'
+                    imageURL: sctv
                 },
                 {
                     title: '成都电视台',
-                    imageURL: 'cdtv.png'
+                    imageURL: cdtv
                 },
                 {
                     title: '成都高新区电视台',
-                    imageURL: 'cdhttv.png'
+                    imageURL: cdhttv
                 },
                 {
                     title: '新浪四川',
-                    imageURL: 'sinasc.png'
+                    imageURL: sinasc
                 },
                 {
                     title: '四川日报',
-                    imageURL: 'scdaily.png'
+                    imageURL: scdaily
                 },
                 {
                     title: '四川财富广播',
-                    imageURL: 'fm940.png'
+                    imageURL: fm940
                 },
                 {
                     title: '科创通',
-                    imageURL: 'kct.png'
+                    imageURL: kct
                 },
                 {
                     title: 'IT大咖说',
-                    imageURL: 'ITdks.png'
+                    imageURL: DKS
                 }
             ]
         }

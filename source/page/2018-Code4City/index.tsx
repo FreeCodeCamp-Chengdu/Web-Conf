@@ -244,7 +244,7 @@ export function Code4City() {
                                             width: '12rem',
                                             maxHeight: '4rem'
                                         }}
-                                        src={`image/logo/${imageURL}`}
+                                        src={imageURL}
                                         alt={title}
                                     />
                                 </li>
