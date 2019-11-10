@@ -44,14 +44,16 @@
         }
     },
     "dependencies": {
-        "boot-cell": "^0.14.0",
-        "cell-router": "^2.0.0-rc.1",
+        "boot-cell": "^0.14.1",
+        "bootstrap": "^4.3.1",
+        "cell-router": "^2.0.0-rc.2",
         "classnames": "^2.2.6",
+        "html-to-image": "^0.1.1",
         "lodash.groupby": "^4.6.0",
         "marked": "^0.7.0",
-        "mobx": "^5.14.2",
+        "mobx": "^5.15.0",
         "mobx-web-cell": "^0.2.3",
-        "web-cell": "^2.0.0-beta.8"
+        "web-cell": "^2.0.0-rc.1"
     },
     "devDependencies": {
         "@babel/core": "^7.7.2",
@@ -69,7 +71,7 @@
         "parcel-bundler": "^1.12.4",
         "parcel-plugin-text": "^0.9.5",
         "postcss-modules": "^1.4.1",
-        "prettier": "^1.18.2",
+        "prettier": "^1.19.1",
         "typescript": "^3.7.2",
         "workbox-cli": "^4.3.1"
     },

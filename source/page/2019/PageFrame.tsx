@@ -3,7 +3,7 @@ import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 
 import data from './data/index.json';
 
-export function PageFrame({ children }: { children?: any[] }) {
+export function PageFrame({ defaultSlot }: { defaultSlot?: any[] }) {
     return (
         <Fragment>
             <NavBar
@@ -12,7 +12,7 @@ export function PageFrame({ children }: { children?: any[] }) {
                 background="light"
                 menu={data.menu}
             />
-            <main className="container mt-5 pt-5">{children}</main>
+            <main className="container mt-5 pt-5">{defaultSlot}</main>
         </Fragment>
     );
 }

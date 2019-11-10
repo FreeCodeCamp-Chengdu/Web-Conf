@@ -12,6 +12,7 @@ import { Code4City } from './2018-Code4City';
 import { Page2018 } from './2018';
 import { Page2019 } from './2019';
 import { PageAccount } from './2019/PageAccount';
+import { InvitationCard } from './2019/InvitationCard';
 
 @observer
 @component({
@@ -29,6 +30,10 @@ export class PageRouter extends HTMLRouter {
                         { paths: ['2017'], component: Page2017 },
                         { paths: ['2018/Code4City'], component: Code4City },
                         { paths: ['2018'], component: Page2018 },
+                        {
+                            paths: ['2019/invitation'],
+                            component: InvitationCard
+                        },
                         { paths: ['2019/accounts'], component: PageAccount },
                         { paths: ['2019'], component: Page2019 },
                         { paths: [''], component: PageEntry }
@@ -40,7 +45,7 @@ export class PageRouter extends HTMLRouter {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-8 col-md-7 py-4">
-                                <h4 className="text-white">关于我们</h4>
+                                <h4>关于我们</h4>
                                 <p className="text-muted">
                                     非营利组织 freeCodeCamp.org 自 2014
                                     年成立以来，以“帮助人们免费学习编程”为使命，创建了大量免费的编程教程，包括交互式课程、视频课程、文章等。线下开发者社区遍布

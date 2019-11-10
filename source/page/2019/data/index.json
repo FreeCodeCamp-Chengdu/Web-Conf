@@ -17,6 +17,10 @@
         {
             "title": "会场交通",
             "href": "#Address"
+        },
+        {
+            "title": "我的邀请函",
+            "href": "2019/invitation/"
         }
     ],
     "mentors": [
