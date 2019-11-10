@@ -1,4 +1,26 @@
 import { logo } from './image';
+import {
+    Quincy_Larson,
+    Xiong_Jie,
+    Huang_Yi,
+    Si_Yue,
+    Yu_Che,
+    Guo_LinShuo,
+    Guo_DaFeng
+} from './image/lecturer';
+import {
+    Deepin,
+    WebCell,
+    H5DS,
+    Fun_loading,
+    UKylin,
+    Covariant_Script,
+    PI6,
+    React_Admin,
+    KaiYuanShe,
+    Vena_Network,
+    CD_LUG
+} from './image/project';
 
 export default {
     title: '2018 成都 Web 前端大会',
@@ -43,43 +65,43 @@ export default {
     lecturer: [
         {
             name: '昆西·拉尔森',
-            englishName: 'Quincy Larson',
+            avatar: Quincy_Larson,
             detail:
                 'Quincy Larson 是 https://freeCodeCamp.org/ 社区创始人，致力于帮助数百万人们免费学习编程。他曾在美国一所高校执教，并在中国分校任职校长。\n\nQuincy 在 31 岁时开始学习编程，希望通过程序使学校的各项事务处理更高效。在接触编程之后，他意识到这是一项人人都应该掌握的技能，可以帮助众多组织提升效率。'
         },
         {
             name: '熊节',
-            englishName: 'Xiong Jie',
+            avatar: Xiong_Jie,
             detail:
                 '宝尊电商成都研发中心总经理，拥有超过十七年 IT 行业的从业经验，在金融、政府、电信、物流等行业的信息化建设方面有着丰富经验。熊节曾翻译了《重构》、《最后期限》、《与熊共舞》、《软件工艺》等行业重要著作，参与了 Selenium、RubyWorks、OpenLMIS 等开源软件社区，并在各种媒体发表过数十篇文章，获得利物浦大学 MBA 学位。'
         },
         {
             name: '黄轶',
-            englishName: 'Huang Yi',
+            avatar: Huang_Yi,
             detail:
                 '北京科技大学毕业，计算机专业硕士。曾任职百度、滴滴，现任 Zoom 前端架构师、专家工程师；擅长前端自动化、工程化，前端架构方向。开源项目 better-scroll、cube-ui 作者，《Vue.js 权威指南》作者，乐于技术分享，追求极致，慕课网精英讲师。'
         },
         {
             name: '死月',
-            englishName: 'Si Yue',
+            avatar: Si_Yue,
             detail:
                 '蚂蚁金服体验技术部研发工程师，Node.JS 核心贡献者（Node.JS Core Collaborator）之一，CNode 社区版主之一，杭州 Node Party 组织者之一，曾任大搜车无线架构组 Node.JS 团队负责人；浙江大学软件工程硕士，退役 OI、ACM 选手，《Node.JS 来一打 C++ 扩展》作者。'
         },
         {
             name: '余澈',
-            englishName: 'Yu Che',
+            avatar: Yu_Che,
             detail:
                 '京东凹凸实验室前端工程师，主要负责基础设施建设和前端性能优化。热爱开源事业，先后作为主要开发者参与了 Vue.js 第一个大型 UI 库 vue-strap、高性能类 React 框架 Nerv、多端统一开发框架 Taro 的开源和维护。在技术之外，他喜欢玩 Dota2 和游泳。'
         },
         {
             name: '郭林烁',
-            englishName: 'Guo LinShuo',
+            avatar: Guo_LinShuo,
             detail:
                 '腾讯 AlloyTeam 前端工程师，参与过腾讯文档、互动直播等大型 Web 项目开发与优化，专注于前端性能优化、前端可用性及开发效率提升，乐于分享。'
         },
         {
             name: '郭达峰',
-            englishName: 'Guo DaFeng',
+            avatar: Guo_DaFeng,
             detail:
                 '郭达峰，Strikingly CTO。毕业于香港中文大学，于 2010 年开发了三款 Facebook 平台的应用，获取了超过 2 千万的用户。2012 年创立了市面上最简易的建站平台 Strikingly，成为第一家进入 YC 孵化器的华人团队。'
         }
@@ -184,7 +206,8 @@ export default {
             name: 'Deepin',
             type: 0,
             URL: 'https://www.deepin.org',
-            detail: '有全球影响力的中国 Linux 发行版'
+            detail: '有全球影响力的中国 Linux 发行版',
+            logo: Deepin
         },
         {
             title: 'WebCell',
@@ -192,7 +215,8 @@ export default {
             type: 0,
             URL: 'https://web-cell.dev/',
             detail:
-                '轻量级 Web 组件化引擎，基于 Web components（HTML 5.3、DOM 4.1）、ECMAScript 2018 和 装饰器提案 提供 MVVM 模型，并有官方封装的 BootStrap v4、Material Design 组件库。'
+                '轻量级 Web 组件化引擎，基于 Web components（HTML 5.3、DOM 4.1）、ECMAScript 2018 和 装饰器提案 提供 MVVM 模型，并有官方封装的 BootStrap v4、Material Design 组件库。',
+            logo: WebCell
         },
         {
             title: 'HTML 5 design software',
@@ -200,14 +224,16 @@ export default {
             type: 0,
             URL: 'http://www.h5ds.com',
             detail:
-                'H5DS (HTML 5 design software) 是一款 B/S 的 H5 代码生成工具，通过可视化操作让不会代码的人也能轻松制作 H5 页面'
+                'H5DS (HTML 5 design software) 是一款 B/S 的 H5 代码生成工具，通过可视化操作让不会代码的人也能轻松制作 H5 页面',
+            logo: H5DS
         },
         {
             title: 'Fun loading',
             name: 'Fun loading',
             type: 0,
             URL: 'https://fanerge.github.io/fun-loading/dist/',
-            detail: '基于 React 的 loading 组件库'
+            detail: '基于 React 的 loading 组件库',
+            logo: Fun_loading
         },
         {
             title: 'Ubuntu Kylin',
@@ -215,7 +241,8 @@ export default {
             type: 0,
             URL: 'http://www.ubuntukylin.com',
             detail:
-                '优麒麟（Ubuntu Kylin）是由中国 CCN（由 CSIP、Canonical、NUDT 三方联合组建）开源创新联合实验室与天津麒麟信息技术有限公司主导开发的全球开源项目，其宗旨是通过研发用户友好的桌面环境以及特定需求的应用软件，为全球 Linux 桌面用户带来非凡的全新体验！\n\n优麒麟操作系统是 Ubuntu 官方衍生版，得到来自 Debian、Ubuntu、Mate、LUPA 等国际社区及众多国内外社区爱好者的广泛参与和热情支持！'
+                '优麒麟（Ubuntu Kylin）是由中国 CCN（由 CSIP、Canonical、NUDT 三方联合组建）开源创新联合实验室与天津麒麟信息技术有限公司主导开发的全球开源项目，其宗旨是通过研发用户友好的桌面环境以及特定需求的应用软件，为全球 Linux 桌面用户带来非凡的全新体验！\n\n优麒麟操作系统是 Ubuntu 官方衍生版，得到来自 Debian、Ubuntu、Mate、LUPA 等国际社区及众多国内外社区爱好者的广泛参与和热情支持！',
+            logo: UKylin
         },
         {
             title: 'Covariant Script',
@@ -223,7 +250,8 @@ export default {
             type: 0,
             URL: 'http://covscript.org',
             detail:
-                'Covariant Script 编程语言是一个新兴的开源编程语言，发展前景广阔'
+                'Covariant Script 编程语言是一个新兴的开源编程语言，发展前景广阔',
+            logo: Covariant_Script
         },
         {
             title: 'PI6',
@@ -231,7 +259,8 @@ export default {
             type: 0,
             URL: 'http://github.com/visi-pivi-sivi/PI6',
             detail:
-                'PI6 is a bash shell based framework, allow author to add comments in the script, and provides a good interactive experience for user, who needs to know what will be done in the next, while running the script in step by step mode.'
+                'PI6 is a bash shell based framework, allow author to add comments in the script, and provides a good interactive experience for user, who needs to know what will be done in the next, while running the script in step by step mode.',
+            logo: PI6
         },
         {
             title: 'React Admin',
@@ -239,7 +268,8 @@ export default {
             type: 0,
             URL: 'https://github.com/yezihaohao/react-admin',
             detail:
-                '一套基于 React、Ant design 和 create-react-app 的后台管理系统解决方案。完整的代码目录结构设计、权限管理、自定义主题、路由配置以及 Redux 的基本用法等，一个完整且简单的 demo 让你快速上手 React 和后台系统。'
+                '一套基于 React、Ant design 和 create-react-app 的后台管理系统解决方案。完整的代码目录结构设计、权限管理、自定义主题、路由配置以及 Redux 的基本用法等，一个完整且简单的 demo 让你快速上手 React 和后台系统。',
+            logo: React_Admin
         },
         {
             title: '开源社',
@@ -247,14 +277,16 @@ export default {
             type: 1,
             URL: 'http://www.kaiyuanshe.cn/',
             detail:
-                '开源社是由中国支持开源的企业，社区及个人所组织的一个开源联盟，旨在推广开源，各成员按照“共治、共识、贡献”的原则自发设立。'
+                '开源社是由中国支持开源的企业，社区及个人所组织的一个开源联盟，旨在推广开源，各成员按照“共治、共识、贡献”的原则自发设立。',
+            logo: KaiYuanShe
         },
         {
             title: '洛书协议',
             name: 'Vena Network',
             type: 0,
             URL: 'https://github.com/venanetwork',
-            detail: '洛书协议 —— 资产融通代币化的开放协议'
+            detail: '洛书协议 —— 资产融通代币化的开放协议',
+            logo: Vena_Network
         },
         {
             title: '成都 Linux 用户组',
@@ -262,7 +294,8 @@ export default {
             type: 1,
             URL: 'https://cdlug.org/',
             detail:
-                '成都 GNU/Linux 自组建以来，已经集聚了一批 Linux 爱好者、开发者、创业者。'
+                '成都 GNU/Linux 自组建以来，已经集聚了一批 Linux 爱好者、开发者、创业者。',
+            logo: CD_LUG
         }
     ],
     review: [

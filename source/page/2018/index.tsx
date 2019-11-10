@@ -8,14 +8,7 @@ import marked from 'marked';
 import { LogoList } from './LogoList';
 import style from './index.less';
 import data from './data';
-import {
-    lecturer as lecturerImg,
-    project,
-    photos,
-    undraw,
-    poster
-} from './image';
-import WeChat_QRC from '../../image/FCC-CDG-WeChat.png';
+import { photos, undraw, poster } from './image';
 
 export function Page2018() {
     return (
@@ -63,11 +56,11 @@ export function Page2018() {
                 <h2 className="mb-5">与会嘉宾</h2>
                 <div className="container">
                     <div className="row lecture-list">
-                        {data.lecturer.map(({ englishName, name, detail }) => (
+                        {data.lecturer.map(({ avatar, name, detail }) => (
                             <div className="col-md-3 p-2 overflow-hidden">
                                 <div className={style.lecture}>
                                     <img
-                                        src={lecturerImg[englishName]}
+                                        src={avatar}
                                         className={style.avatar}
                                         alt={name}
                                     />
@@ -94,12 +87,7 @@ export function Page2018() {
                                     <h6>{data.lecturer[lecturer].name}</h6>
                                     <img
                                         className={style['avatar-sm']}
-                                        src={
-                                            lecturerImg[
-                                                data.lecturer[lecturer]
-                                                    .englishName
-                                            ]
-                                        }
+                                        src={data.lecturer[lecturer].avatar}
                                     />
                                 </div>
                                 <div>
@@ -117,7 +105,7 @@ export function Page2018() {
                         <h2 className="text-center mb-5">开源市集</h2>
                         <div className="card-columns">
                             {data.project.map(
-                                ({ type, name, URL, title, detail }) => (
+                                ({ type, name, URL, title, detail, logo }) => (
                                     <Card
                                         className="overflow-hidden"
                                         title={
@@ -130,7 +118,7 @@ export function Page2018() {
                                             </a>
                                         }
                                         text={detail}
-                                        image={project[name]}
+                                        image={logo}
                                     >
                                         <div
                                             className={`cr cr-top cr-right  cr-${
@@ -192,7 +180,11 @@ export function Page2018() {
                                     <td className="text-nowrap">{time}</td>
                                     <td>
                                         {title ||
-                                            `《${data.topic[topic!].title}》 ${data.lecturer[data.topic[topic!].lecturer].name}`}
+                                            `《${data.topic[topic!].title}》 ${
+                                                data.lecturer[
+                                                    data.topic[topic!].lecturer
+                                                ].name
+                                            }`}
                                     </td>
                                 </tr>
                             ))}
@@ -282,10 +274,6 @@ export function Page2018() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                    <div className="qrcode text-center">
-                        <img className="img-fluid" src={WeChat_QRC} />
-                        <div>微信扫一扫关注我们</div>
                     </div>
                 </div>
             </footer>

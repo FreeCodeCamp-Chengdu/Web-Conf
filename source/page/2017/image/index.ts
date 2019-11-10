@@ -4,6 +4,5 @@ import groupManager from './groupManager.jpeg';
 import qrcode from './qrcode.jpeg';
 import wechatLogo from './wechatLogo.jpeg';
 import guests from './guests';
-import logos from './logos';
 
-export { guests, logos, address, banner, groupManager, qrcode, wechatLogo };
+export { guests, address, banner, groupManager, qrcode, wechatLogo };

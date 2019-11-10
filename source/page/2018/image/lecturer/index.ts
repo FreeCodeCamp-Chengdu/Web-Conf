@@ -1,19 +1,8 @@
-import GuoDaFeng from './Guo DaFeng.png';
-import GuoLinShuo from './Guo LinShuo.png';
-import HuangYi from './Huang Yi.png';
-import OpenSource from './OpenSource.png';
-import QuincyLarson from './Quincy Larson.png';
-import SiYue from './Si Yue.png';
-import XiongJie from './Xiong Jie.png';
-import YuChe from './Yu Che.png';
-
-export default {
-    OpenSource,
-    'Guo DaFeng': GuoDaFeng,
-    'Guo LinShuo': GuoLinShuo,
-    'Huang Yi': HuangYi,
-    'Quincy Larson': QuincyLarson,
-    'Si Yue': SiYue,
-    'Xiong Jie': XiongJie,
-    'Yu Che': YuChe
-};
+export { default as Guo_DaFeng } from './Guo DaFeng.png';
+export { default as Guo_LinShuo } from './Guo LinShuo.png';
+export { default as Huang_Yi } from './Huang Yi.png';
+export { default as OpenSource } from './OpenSource.png';
+export { default as Quincy_Larson } from './Quincy Larson.png';
+export { default as Si_Yue } from './Si Yue.png';
+export { default as Xiong_Jie } from './Xiong Jie.png';
+export { default as Yu_Che } from './Yu Che.png';

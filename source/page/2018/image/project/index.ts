@@ -1,25 +1,11 @@
-import CD_LUG from './CD-LUG.png';
-import CovariantScript from './Covariant Script.png';
-import Deepin from './Deepin.png';
-import Funloading from './Fun loading.png';
-import H5DS from './H5DS.png';
-import KaiYuanShe from './KaiYuanShe.png';
-import PI6 from './PI6.png';
-import ReactAdmin from './React Admin.png';
-import UKylin from './UKylin.png';
-import VenaNetwork from './Vena Network.png';
-import WebCell from './WebCell.png';
-
-export default {
-    H5DS,
-    KaiYuanShe,
-    PI6,
-    UKylin,
-    WebCell,
-    'CD-LUG': CD_LUG,
-    'Covariant Script': CovariantScript,
-    Deepin: Deepin,
-    'Fun loading': Funloading,
-    'React Admin': ReactAdmin,
-    'Vena Network': VenaNetwork
-};
+export { default as CD_LUG } from './CD-LUG.png';
+export { default as Covariant_Script } from './Covariant Script.png';
+export { default as Deepin } from './Deepin.png';
+export { default as Fun_loading } from './Fun loading.png';
+export { default as H5DS } from './H5DS.png';
+export { default as KaiYuanShe } from './KaiYuanShe.png';
+export { default as PI6 } from './PI6.png';
+export { default as React_Admin } from './React Admin.png';
+export { default as UKylin } from './UKylin.png';
+export { default as Vena_Network } from './Vena Network.png';
+export { default as WebCell } from './WebCell.png';

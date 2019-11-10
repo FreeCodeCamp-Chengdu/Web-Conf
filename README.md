@@ -22,12 +22,20 @@ https://github.com/FreeCodeCamp-Chengdu/Web-Conf/graphs/contributors
 
 ## 本地开发
 
+### 安装工程
+
 ```shell
 git clone https://github.com/FreeCodeCamp-Chengdu/Web-Conf.git
 
 npm install
 
 npm start
+```
+
+### 导入素材
+
+```shell
+node toolkit/import-assets path/to/media/folder
 ```
 
 [1]: https://david-dm.org/FreeCodeCamp-Chengdu/Web-Conf
