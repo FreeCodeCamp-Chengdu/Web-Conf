@@ -176,7 +176,7 @@ export function Code4City() {
                                                     style['guest-avatar']
                                                 }
                                                 style={{
-                                                    backgroundImage: `url('image/avatar/${avatar}')`
+                                                    backgroundImage: `url('${avatar}')`
                                                 }}
                                             ></div>
                                             <div

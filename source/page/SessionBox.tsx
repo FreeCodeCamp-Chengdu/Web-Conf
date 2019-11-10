@@ -1,4 +1,4 @@
-import { component, mixin, createCell } from 'web-cell';
+import { component, mixin, watch, createCell } from 'web-cell';
 import { observer } from 'mobx-web-cell';
 import { Button } from 'boot-cell/source/Form/Button';
 
@@ -10,6 +10,9 @@ import { app } from '../model';
     renderTarget: 'children'
 })
 export class SessionBox extends mixin() {
+    @watch
+    countDown = 0;
+
     connectedCallback() {
         super.connectedCallback!();
 
@@ -17,7 +20,13 @@ export class SessionBox extends mixin() {
     }
 
     handleSMSCode = () => {
-        const { elements } = this.firstElementChild as HTMLFormElement;
+        this.countDown = 60;
+
+        const timer = setInterval(
+                () => --this.countDown! || clearInterval(timer),
+                1000
+            ),
+            { elements } = this.firstElementChild as HTMLFormElement;
 
         return app.sendSMSCode(
             (elements.namedItem('phone') as HTMLInputElement).value
@@ -36,6 +45,8 @@ export class SessionBox extends mixin() {
     };
 
     render() {
+        const { countDown } = this;
+
         return app.user ? (
             <div>{this.defaultSlot}</div>
         ) : (
@@ -50,6 +61,8 @@ export class SessionBox extends mixin() {
                         type="tel"
                         className="form-control"
                         name="phone"
+                        maxLength="11"
+                        required
                         placeholder="手机号"
                     />
                 </div>
@@ -58,6 +71,7 @@ export class SessionBox extends mixin() {
                     <input
                         className="form-control"
                         name="code"
+                        required
                         placeholder="短信验证码"
                     />
                     <div className="input-group-append">
@@ -65,8 +79,9 @@ export class SessionBox extends mixin() {
                             type="button"
                             className="btn btn-outline-secondary"
                             onClick={this.handleSMSCode}
+                            disabled={!!countDown}
                         >
-                            获取
+                            {countDown ? countDown + 's' : '获取'}
                         </button>
                     </div>
                 </div>

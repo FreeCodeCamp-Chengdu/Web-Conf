@@ -1,0 +1,10 @@
+export { default as fanxiaobin } from './fanxiaobin.jpg';
+export { default as hushenquan } from './hushenquan.jpg';
+export { default as liangtongming } from './liangtongming.png';
+export { default as liwanpeng } from './liwanpeng.png';
+export { default as lvyan } from './lvyan.png';
+export { default as maoyufeng } from './maoyufeng.png';
+export { default as qinglinbo } from './qinglinbo.png';
+export { default as shenchangkun } from './shenchangkun.png';
+export { default as wenqixiang } from './wenqixiang.jpg';
+export { default as zhangwei } from './zhangwei.png';

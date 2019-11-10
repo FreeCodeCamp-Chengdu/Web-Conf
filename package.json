@@ -46,6 +46,7 @@
     "dependencies": {
         "boot-cell": "^0.14.1",
         "bootstrap": "^4.3.1",
+        "browser-unhandled-rejection": "^1.0.2",
         "cell-router": "^2.0.0-rc.2",
         "classnames": "^2.2.6",
         "html-to-image": "^0.1.1",
