@@ -1,7 +1,7 @@
-import banner_2017 from './2017/image/wechatLogo.jpeg';
+import { wechatLogo as banner_2017 } from './2017/image';
 import gallery_Code4City from './2018-Code4City/image/gallery';
 import banner_2018_React from './2018-React/React-ChengDu.jpg';
-import banner_2018 from './2018/image/poster.png';
+import { poster as banner_2018 } from './2018/image';
 import banner_2019 from './2019/data/banner.jpg';
 
 export default [

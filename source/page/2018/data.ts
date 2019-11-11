@@ -1,15 +1,11 @@
-import { juejin } from './image/logo/cohost';
-import { fcccd } from './image/logo/host';
+import { FCC_CDC } from './image';
+import { JueJin, BW, SYL, OSChina, SF } from '../2017/image/logos';
 import {
-    broadview,
     epubit,
     fezaoduke,
-    mikecrm,
-    oschina,
-    sf,
-    shiyanlou,
     turing,
-    young
+    young,
+    mikecrm
 } from './image/logo/partner';
 import { BaiCiZhan, baozun, cocoet, sxl } from './image/logo/sponsor';
 import {
@@ -346,7 +342,7 @@ export default {
             member: [
                 {
                     name: 'FCC 成都',
-                    path: fcccd,
+                    path: FCC_CDC,
                     URL: 'https://freecodecamp-chengdu.github.io/'
                 }
             ]
@@ -356,7 +352,7 @@ export default {
             member: [
                 {
                     name: ' 掘金',
-                    path: juejin,
+                    path: JueJin,
                     URL: 'https://juejin.im/'
                 }
             ]
@@ -402,12 +398,12 @@ export default {
     partner: [
         {
             name: '博文视点',
-            path: broadview,
+            path: BW,
             URL: 'http://www.broadview.com.cn/'
         },
         {
             name: '开源中国',
-            path: oschina,
+            path: OSChina,
             URL: 'https://www.oschina.net/'
         },
         {
@@ -422,7 +418,7 @@ export default {
         },
         {
             name: '实验楼',
-            path: shiyanlou,
+            path: SYL,
             URL: 'https://www.shiyanlou.com/'
         },
         {
@@ -437,7 +433,7 @@ export default {
         },
         {
             name: 'SegmentFault',
-            path: sf,
+            path: SF,
             URL: 'https://segmentfault.com/'
         },
         {

@@ -8,7 +8,8 @@ import marked from 'marked';
 import { LogoList } from './LogoList';
 import style from './index.less';
 import data from './data';
-import { photos, undraw, poster } from './image';
+import { poster, undraw_01, undraw_04 } from './image';
+import photos from './image/photos';
 
 export function Page2018() {
     return (
@@ -47,7 +48,7 @@ export function Page2018() {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            <img src={undraw.undraw_01} className="img-fluid" />
+                            <img className="img-fluid" src={undraw_01} />
                         </div>
                     </div>
                 </div>
@@ -151,10 +152,7 @@ export function Page2018() {
                                 </ul>
                             </div>
                             <div className="col-md-5">
-                                <img
-                                    src={undraw.undraw_04}
-                                    className="img-fluid"
-                                />
+                                <img className="img-fluid" src={undraw_04} />
                             </div>
                         </div>
                     </div>
@@ -201,7 +199,7 @@ export function Page2018() {
                                 <img
                                     className="img-fluid"
                                     title={title}
-                                    src={photos[index + 1]}
+                                    src={photos[index]}
                                 />
                             </div>
                         ))}

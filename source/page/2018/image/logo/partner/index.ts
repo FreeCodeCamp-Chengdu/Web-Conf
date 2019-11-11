@@ -1,9 +1,6 @@
-export { default as broadview } from './broadview.png';
 export { default as epubit } from './epubit.png';
 export { default as fezaoduke } from './fezaoduke.png';
 export { default as mikecrm } from './mikecrm.png';
-export { default as oschina } from './oschina.png';
-export { default as sf } from './sf.png';
-export { default as shiyanlou } from './shiyanlou.jpeg';
-export { default as turing } from './turing.jpeg';
 export { default as young } from './young.png';
+
+export const turing = 'http://tp1.sinaimg.cn/1752543513/180/1.jpg';
