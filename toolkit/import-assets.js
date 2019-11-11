@@ -14,7 +14,7 @@ const folder = process.argv[2] || '.';
         .map(file => {
             const name = basename(file, extname(file))
                 .replace(/\W+/g, '_')
-                .replace(/^\d/, '_$0');
+                .replace(/^\d/, '_$&');
 
             return `export { default as ${name} } from './${file}'`;
         })

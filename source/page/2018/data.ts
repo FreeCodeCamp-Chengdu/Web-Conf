@@ -1,4 +1,17 @@
-import { logo } from './image';
+import { juejin } from './image/logo/cohost';
+import { fcccd } from './image/logo/host';
+import {
+    broadview,
+    epubit,
+    fezaoduke,
+    mikecrm,
+    oschina,
+    sf,
+    shiyanlou,
+    turing,
+    young
+} from './image/logo/partner';
+import { BaiCiZhan, baozun, cocoet, sxl } from './image/logo/sponsor';
 import {
     Quincy_Larson,
     Xiong_Jie,
@@ -333,7 +346,7 @@ export default {
             member: [
                 {
                     name: 'FCC 成都',
-                    path: logo.host.fcccd,
+                    path: fcccd,
                     URL: 'https://freecodecamp-chengdu.github.io/'
                 }
             ]
@@ -343,7 +356,7 @@ export default {
             member: [
                 {
                     name: ' 掘金',
-                    path: logo.cohost.juejin,
+                    path: juejin,
                     URL: 'https://juejin.im/'
                 }
             ]
@@ -355,7 +368,7 @@ export default {
             member: [
                 {
                     name: '上线了',
-                    path: logo.sponsor.sxl,
+                    path: sxl,
                     URL: 'https://www.sxl.cn/'
                 }
             ]
@@ -365,7 +378,7 @@ export default {
             member: [
                 {
                     name: '宝尊电商',
-                    path: logo.sponsor.baozun,
+                    path: baozun,
                     URL: 'https://www.baozun.com/cn/'
                 }
             ]
@@ -375,12 +388,12 @@ export default {
             member: [
                 {
                     name: '可好玩乐',
-                    path: logo.sponsor.cocoet,
+                    path: cocoet,
                     URL: 'https://cocoet.cn/'
                 },
                 {
                     name: '百词斩',
-                    path: logo.sponsor.BaiCiZhan,
+                    path: BaiCiZhan,
                     URL: 'http://www.baicizhan.com/'
                 }
             ]
@@ -389,47 +402,47 @@ export default {
     partner: [
         {
             name: '博文视点',
-            path: logo.partner.broadview,
+            path: broadview,
             URL: 'http://www.broadview.com.cn/'
         },
         {
             name: '开源中国',
-            path: logo.partner.oschina,
+            path: oschina,
             URL: 'https://www.oschina.net/'
         },
         {
             name: '麦克',
-            path: logo.partner.mikecrm,
+            path: mikecrm,
             URL: 'https://www.mikecrm.com/'
         },
         {
             name: '前端早读课',
-            path: logo.partner.fezaoduke,
+            path: fezaoduke,
             URL: 'https://zdk.f2er.net/'
         },
         {
             name: '实验楼',
-            path: logo.partner.shiyanlou,
+            path: shiyanlou,
             URL: 'https://www.shiyanlou.com/'
         },
         {
             name: '图灵社区',
-            path: logo.partner.turing,
+            path: turing,
             URL: 'http://www.ituring.com.cn/'
         },
         {
             name: '异步社区',
-            path: logo.partner.epubit,
+            path: epubit,
             URL: 'https://www.epubit.com/'
         },
         {
             name: 'SegmentFault',
-            path: logo.partner.sf,
+            path: sf,
             URL: 'https://segmentfault.com/'
         },
         {
             name: '小样青年社区',
-            path: logo.partner.young,
+            path: young,
             URL: 'http://www.xypark.com/'
         }
     ],
