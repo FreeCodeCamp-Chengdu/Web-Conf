@@ -1,5 +1,1 @@
-import juejin from './juejin.png';
-
-export default {
-    juejin
-};
+export { default as juejin } from './juejin.png';

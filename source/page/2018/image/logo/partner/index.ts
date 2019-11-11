@@ -1,21 +1,9 @@
-import broadview from './broadview.png';
-import epubit from './epubit.png';
-import fezaoduke from './fezaoduke.png';
-import mikecrm from './mikecrm.png';
-import oschina from './oschina.png';
-import sf from './sf.png';
-import shiyanlou from './shiyanlou.jpeg';
-import turing from './turing.jpeg';
-import young from './young.png';
-
-export default {
-    broadview,
-    epubit,
-    fezaoduke,
-    mikecrm,
-    oschina,
-    sf,
-    shiyanlou,
-    turing,
-    young
-};
+export { default as broadview } from './broadview.png';
+export { default as epubit } from './epubit.png';
+export { default as fezaoduke } from './fezaoduke.png';
+export { default as mikecrm } from './mikecrm.png';
+export { default as oschina } from './oschina.png';
+export { default as sf } from './sf.png';
+export { default as shiyanlou } from './shiyanlou.jpeg';
+export { default as turing } from './turing.jpeg';
+export { default as young } from './young.png';
