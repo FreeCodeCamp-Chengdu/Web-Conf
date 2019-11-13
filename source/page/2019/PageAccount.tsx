@@ -16,6 +16,18 @@ interface Account {
 
 const list = parseTextTable(data, true) as Account[];
 
+const expenditure = list.reduce(
+    (sum, { price, count, date }) =>
+        price < 0 && date ? sum + price * count : sum,
+    0
+);
+
+const revenue = list.reduce(
+    (sum, { price, count, date }) =>
+        price > 0 && date ? sum + price * count : sum,
+    0
+);
+
 export function PageAccount() {
     return (
         <PageFrame>
@@ -26,7 +38,7 @@ export function PageAccount() {
                     <tr>
                         <th>#</th>
                         <th>事项</th>
-                        <th>单价</th>
+                        <th>单价（人民币￥）</th>
                         <th>数量</th>
                         <th>经办</th>
                         <th>日期</th>
@@ -62,6 +74,16 @@ export function PageAccount() {
                         )
                     )}
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <th>总支出（人民币￥）</th>
+                        <td>{expenditure}</td>
+                        <th>总收入（人民币￥）</th>
+                        <td>{revenue}</td>
+                        <th>总结余（人民币￥）</th>
+                        <td>{(revenue + expenditure).toFixed(2)}</td>
+                    </tr>
+                </tfoot>
             </Table>
         </PageFrame>
     );

@@ -157,6 +157,14 @@
             "organization": "AALab 算法艺术实验室",
             "title": "算法工程师",
             "avatar": "https://github.com/Tealeafpei.png"
+        },
+        {
+            "id": 18,
+            "name": "唐睿",
+            "GitHub": "tangrui",
+            "organization": "阿里云",
+            "title": "产品经理",
+            "avatar": "https://github.com/tangrui.png"
         }
     ],
     "topics": [
@@ -206,13 +214,13 @@
             "image": "https://github.com/solid.png"
         },
         {
-            "title": "用 Python Flask 打造小型视频点播站",
+            "title": "从 Infrastructure as Code 到 Open Application Model —— 填补开发到运维的鸿沟",
             "type": "lecture",
-            "mentorId": 15,
+            "mentorId": 18,
             "date": "2019-11-16",
             "time": ["14:40", "15:20"],
             "place": "主会场",
-            "image": "https://github.com/FFmpeg.png"
+            "image": "https://github.com/oam-dev.png"
         },
         {
             "title": "DevCloud Web Components 实践",
@@ -224,11 +232,20 @@
             "image": "https://github.com/webcomponents.png"
         },
         {
+            "title": "用 Python Flask 打造小型视频点播站",
+            "type": "lecture",
+            "mentorId": 15,
+            "date": "2019-11-16",
+            "time": ["16:20", "17:00"],
+            "place": "主会场",
+            "image": "https://github.com/FFmpeg.png"
+        },
+        {
             "title": "聊聊 Node.js 构建部署时我们要关心的数据",
             "type": "lecture",
             "mentorId": 1,
             "date": "2019-11-16",
-            "time": ["16:20", "17:00"],
+            "time": ["17:00", "17:40"],
             "place": "主会场",
             "image": "https://github.com/nodejs.png"
         },
@@ -381,18 +398,28 @@
         },
         {
             "title": "合作伙伴",
-            "name": "Linux 中国",
-            "logo": "https://img.linux.net.cn/static/image/common/linuxcn_logo_2017.png"
-        },
-        {
-            "title": "合作伙伴",
             "name": "开源工场",
             "logo": "https://openingsource.org/wp-content/uploads/2018/02/test_logo.png"
         },
         {
             "title": "合作伙伴",
+            "name": "Linux 中国",
+            "logo": "https://img.linux.net.cn/static/image/common/linuxcn_logo_2017.png"
+        },
+        {
+            "title": "合作伙伴",
+            "name": "开源社",
+            "logo": "https://kaiyuanshe.cn/image/KaiYuanShe-logo.png"
+        },
+        {
+            "title": "合作伙伴",
             "name": "GDG 成都",
             "logo": "https://fcc-cd.tk/partner/gdg-cd/logo.webp"
+        },
+        {
+            "title": "合作伙伴",
+            "name": "中生代技术",
+            "logo": "http://zhongshengdai.com/wp-content/uploads/2019/06/中生代技术logo竖大图-300x300.png"
         }
     ]
 }

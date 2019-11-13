@@ -32,6 +32,10 @@ npm install
 npm start
 ```
 
+### 后端服务
+
+部分页面需要一些后端接口，详见 https://github.com/FreeCodeCamp-Chengdu/OWS_BE
+
 ### 导入素材
 
 ```shell

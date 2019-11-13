@@ -73,6 +73,7 @@ export class SessionBox extends mixin() {
                         name="code"
                         required
                         placeholder="短信验证码"
+                        autocomplete="off"
                     />
                     <div className="input-group-append">
                         <button

@@ -1,9 +1,7 @@
-.svn/
 node_modules/
 package-lock.json
 dist/
 .cache/
 .idea/
 .vscode/
-.leancloud/
 .DS_Store

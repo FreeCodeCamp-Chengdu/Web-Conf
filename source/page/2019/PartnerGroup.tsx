@@ -23,7 +23,10 @@ export function PartnerGroup({
                         {logo ? (
                             <img
                                 className="img-fluid"
-                                style={{ maxWidth: '20em' }}
+                                style={{
+                                    maxWidth: '15rem',
+                                    maxHeight: '10rem'
+                                }}
                                 src={logo}
                                 alt={name}
                             />
