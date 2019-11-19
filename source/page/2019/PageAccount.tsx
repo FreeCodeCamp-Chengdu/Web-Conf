@@ -77,9 +77,9 @@ export function PageAccount() {
                 <tfoot>
                     <tr>
                         <th>总支出（人民币￥）</th>
-                        <td>{expenditure}</td>
+                        <td>{expenditure.toFixed(2)}</td>
                         <th>总收入（人民币￥）</th>
-                        <td>{revenue}</td>
+                        <td>{revenue.toFixed(2)}</td>
                         <th>总结余（人民币￥）</th>
                         <td>{(revenue + expenditure).toFixed(2)}</td>
                     </tr>

@@ -165,6 +165,22 @@
             "organization": "阿里云",
             "title": "产品经理",
             "avatar": "https://github.com/tangrui.png"
+        },
+        {
+            "id": 19,
+            "name": "呂靖",
+            "GitHub": "JimmyLv",
+            "organization": "中国极限编程实践者社群",
+            "title": "Web 前端工程师",
+            "avatar": "https://github.com/JimmyLv.png"
+        },
+        {
+            "id": 20,
+            "name": "孙华",
+            "GitHub": "bnusunny",
+            "organization": "亚马逊 AWS",
+            "title": "工程师",
+            "avatar": "https://github.com/bnusunny.png"
         }
     ],
     "topics": [
@@ -175,7 +191,8 @@
             "date": "2019-11-16",
             "time": ["09:30", "10:10"],
             "place": "主会场",
-            "image": "https://github.com/ant-design.png"
+            "image": "https://github.com/ant-design.png",
+            "slideshow": "https://docs.qq.com/slide/DTllLRUx6b0N3bnZi"
         },
         {
             "title": "基于 Node.js 打造研发团队的瑞士军刀",
@@ -184,7 +201,8 @@
             "date": "2019-11-16",
             "time": ["10:10", "10:50"],
             "place": "主会场",
-            "image": "https://github.com/nodejs.png"
+            "image": "https://github.com/nodejs.png",
+            "slideshow": "https://docs.qq.com/slide/DTmJISEVjc09EaXha"
         },
         {
             "title": "城市大脑地图可视化技术实践",
@@ -193,7 +211,8 @@
             "date": "2019-11-16",
             "time": ["10:50", "11:30"],
             "place": "主会场",
-            "image": "https://github.com/aliyun.png"
+            "image": "https://github.com/aliyun.png",
+            "slideshow": "https://docs.qq.com/slide/DTmV3QmhFbVh6Q3F3"
         },
         {
             "title": "基于 GraphQL 的业务中台实践",
@@ -202,7 +221,8 @@
             "date": "2019-11-16",
             "time": ["11:30", "12:10"],
             "place": "主会场",
-            "image": "https://github.com/graphql.png"
+            "image": "https://github.com/graphql.png",
+            "slideshow": "https://docs.qq.com/slide/DTmtldVpQUkl5S0ZD"
         },
         {
             "title": "SoLiD 社交互联数据 —— 万维网之父的数据主权革命",
@@ -211,7 +231,8 @@
             "date": "2019-11-16",
             "time": ["14:00", "14:40"],
             "place": "主会场",
-            "image": "https://github.com/solid.png"
+            "image": "https://github.com/solid.png",
+            "slideshow": "https://leinue.github.io/webfullstack-2019/index.html"
         },
         {
             "title": "从 Infrastructure as Code 到 Open Application Model —— 填补开发到运维的鸿沟",
@@ -220,25 +241,28 @@
             "date": "2019-11-16",
             "time": ["14:40", "15:20"],
             "place": "主会场",
-            "image": "https://github.com/oam-dev.png"
-        },
-        {
-            "title": "DevCloud Web Components 实践",
-            "type": "lecture",
-            "mentorId": 2,
-            "date": "2019-11-16",
-            "time": ["15:40", "16:20"],
-            "place": "主会场",
-            "image": "https://github.com/webcomponents.png"
+            "image": "https://github.com/oam-dev.png",
+            "slideshow": "https://docs.qq.com/slide/DTnVmRlRkcHhKQXhs"
         },
         {
             "title": "用 Python Flask 打造小型视频点播站",
             "type": "lecture",
             "mentorId": 15,
             "date": "2019-11-16",
+            "time": ["15:40", "16:20"],
+            "place": "主会场",
+            "image": "https://github.com/FFmpeg.png",
+            "slideshow": "https://docs.qq.com/slide/DTkJFVHZ2RUhvVWto"
+        },
+        {
+            "title": "DevCloud Web Components 实践",
+            "type": "lecture",
+            "mentorId": 2,
+            "date": "2019-11-16",
             "time": ["16:20", "17:00"],
             "place": "主会场",
-            "image": "https://github.com/FFmpeg.png"
+            "image": "https://github.com/webcomponents.png",
+            "slideshow": "https://docs.qq.com/slide/DTnlwYmFham56YkFI"
         },
         {
             "title": "聊聊 Node.js 构建部署时我们要关心的数据",
@@ -247,7 +271,8 @@
             "date": "2019-11-16",
             "time": ["17:00", "17:40"],
             "place": "主会场",
-            "image": "https://github.com/nodejs.png"
+            "image": "https://github.com/nodejs.png",
+            "slideshow": "https://docs.qq.com/slide/DTmt3VllvaGhtRFdk"
         },
         {
             "title": "无服务器计算架构",
@@ -256,7 +281,8 @@
             "date": "2019-11-17",
             "time": ["09:30", "10:10"],
             "place": "主会场",
-            "image": "https://github.com/serverless.png"
+            "image": "https://github.com/serverless.png",
+            "slideshow": "https://docs.qq.com/pdf/DTlJFSE5pVk16WHJV"
         },
         {
             "title": "从 Angular Ivy 认识前端框架",
@@ -265,7 +291,8 @@
             "date": "2019-11-17",
             "time": ["10:10", "10:50"],
             "place": "主会场",
-            "image": "https://github.com/angular.png"
+            "image": "https://github.com/angular.png",
+            "slideshow": "https://docs.qq.com/slide/DTk1ITEZNbnRtZXlO"
         },
         {
             "title": "Thoughts In Deno",
@@ -274,7 +301,8 @@
             "date": "2019-11-17",
             "time": ["10:50", "11:30"],
             "place": "主会场",
-            "image": "https://github.com/denoland.png"
+            "image": "https://github.com/denoland.png",
+            "slideshow": "https://ppt.baomitu.com/d/9ffcac5c"
         },
         {
             "title": "Brand New Things in WebAssembly Post-MVP Standard",
@@ -283,7 +311,8 @@
             "date": "2019-11-17",
             "time": ["11:30", "12:10"],
             "place": "主会场",
-            "image": "https://github.com/WebAssembly.png"
+            "image": "https://github.com/WebAssembly.png",
+            "slideshow": "https://docs.qq.com/slide/DTnhJYUN2dUhtWFRQ"
         },
         {
             "title": "Rust 语言全栈开发",
@@ -292,7 +321,8 @@
             "date": "2019-11-17",
             "time": ["14:00", "14:40"],
             "place": "主会场",
-            "image": "https://github.com/rust-lang.png"
+            "image": "https://github.com/rust-lang.png",
+            "slideshow": "https://docs.qq.com/slide/DTlNuTkZtUmJ1RUV2"
         },
         {
             "title": "Enhanced Privacy with Decentralized Identity",
@@ -301,7 +331,8 @@
             "date": "2019-11-17",
             "time": ["14:40", "15:20"],
             "place": "主会场",
-            "image": "https://github.com/GoogleChrome.png"
+            "image": "https://github.com/GoogleChrome.png",
+            "slideshow": "https://docs.qq.com/slide/DTkdHVXJScEJZZHFt"
         },
         {
             "title": "从数据可视化看前端未来",
@@ -309,16 +340,18 @@
             "mentorId": 16,
             "date": "2019-11-17",
             "time": ["15:40", "16:20"],
-            "place": "主会场"
+            "place": "主会场",
+            "slideshow": "https://docs.qq.com/slide/DTkJWVkVQRVhKR1Vi"
         },
         {
-            "title": "（题目待定）",
+            "title": "this in JS",
             "type": "lecture",
             "mentorId": 4,
             "date": "2019-11-17",
             "time": ["16:20", "17:00"],
             "place": "主会场",
-            "image": "https://github.com/tc39.png"
+            "image": "https://github.com/tc39.png",
+            "slideshow": "https://johnhax.net/2019/js-this/slide"
         },
         {
             "title": "即影即有 —— 异形投影与着色器语言",
@@ -332,19 +365,22 @@
         {
             "title": "Serverless 应用开发",
             "type": "workshop",
-            "mentorId": 8,
+            "mentorId": 20,
             "date": "2019-11-17",
             "time": ["10:20", "11:20"],
             "place": "分会场",
-            "image": "https://github.com/serverless.png"
+            "image": "https://github.com/serverless.png",
+            "slideshow": "https://docs.qq.com/pdf/DTkdTcm5vemZ0dlJG"
         },
         {
             "title": "敏捷 TDD（测试驱动开发）",
             "type": "workshop",
-            "mentorId": null,
+            "mentorId": 19,
             "date": "2019-11-17",
             "time": ["14:00", "17:00"],
-            "place": "分会场"
+            "place": "分会场",
+            "image": "http://extremeprogramming.cn/images/extreme_programming_white.png",
+            "slideshow": "https://jimmylv.gitee.io/slides/tdd-dojo"
         }
     ],
     "partners": [
@@ -418,8 +454,18 @@
         },
         {
             "title": "合作伙伴",
+            "name": "Copell 高配",
+            "logo": "https://www.copell.cn/copellPC/static/footer-logo.98e6f1cc.png"
+        },
+        {
+            "title": "合作伙伴",
             "name": "中生代技术",
             "logo": "http://zhongshengdai.com/wp-content/uploads/2019/06/中生代技术logo竖大图-300x300.png"
+        },
+        {
+            "title": "合作伙伴",
+            "name": "回眸刻",
+            "logo": "http://sucimg.itc.cn/avatarimg/3313d107e2194ea1a469f4d984fa0050_1510107027722"
         }
     ]
 }

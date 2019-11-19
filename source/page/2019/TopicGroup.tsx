@@ -16,6 +16,7 @@ export interface Topic {
     time: string[];
     image: string;
     mentorId?: number;
+    slideshow?: string;
 }
 
 export function TopicGroup({
@@ -29,7 +30,7 @@ export function TopicGroup({
 
     return (
         <div className="card-deck justify-content-center">
-            {topics.map(({ title, image, mentorId, time }) => {
+            {topics.map(({ title, image, mentorId, slideshow, time }) => {
                 const mentor =
                     mentorId && mentors.find(({ id }) => id === mentorId)!;
 
@@ -45,7 +46,14 @@ export function TopicGroup({
                             )
                         }
                     >
-                        <time>{time.join(' ~ ')}</time>
+                        <div className="d-flex justify-content-between">
+                            <time>{time.join(' ~ ')}</time>
+                            {slideshow && (
+                                <a target="_blank" href={slideshow}>
+                                    演示文稿
+                                </a>
+                            )}
+                        </div>
                     </Card>
                 );
             })}
