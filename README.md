@@ -46,7 +46,7 @@ node toolkit/import-assets path/to/media/folder
 [2]: https://travis-ci.com/FreeCodeCamp-Chengdu/Web-Conf
 [3]: https://github.com/hax/chinese-tech-conf-schedule
 [4]: https://typescriptlang.org
-[5]: https://github.com/EasyWebApp/WebCell/tree/v2
-[6]: https://web-cell.dev/BootCell
+[5]: https://web-cell.dev/
+[6]: https://web-cell.dev/BootCell/
 [7]: https://mobx.js.org
 [8]: https://parceljs.org

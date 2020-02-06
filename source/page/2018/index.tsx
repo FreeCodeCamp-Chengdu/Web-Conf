@@ -1,7 +1,7 @@
 import { createCell } from 'web-cell';
 import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 import { Button } from 'boot-cell/source/Form/Button';
-import { Table } from 'boot-cell/source/Table';
+import { Table } from 'boot-cell/source/Content/Table';
 import { Card } from 'boot-cell/source/Content/Card';
 import marked from 'marked';
 
@@ -58,7 +58,7 @@ export function Page2018() {
                 <div className="container">
                     <div className="row lecture-list">
                         {data.lecturer.map(({ avatar, name, detail }) => (
-                            <div className="col-md-3 p-2 overflow-hidden">
+                            <div className="col-md-3 p-2">
                                 <div className={style.lecture}>
                                     <img
                                         src={avatar}

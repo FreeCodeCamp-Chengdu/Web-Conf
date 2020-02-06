@@ -20,4 +20,4 @@ deploy:
     skip_cleanup: true
     local_dir: ${FOLDER}
     fqdn: ${DOMAIN}
-    github_token: ${TOKEN}
+    token: ${TOKEN}

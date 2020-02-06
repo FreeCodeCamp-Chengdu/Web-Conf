@@ -1,6 +1,6 @@
 import { createCell } from 'web-cell';
 import { parseTextTable } from 'boot-cell/source/utility';
-import { Table } from 'boot-cell/source/Table';
+import { Table } from 'boot-cell/source/Content/Table';
 
 import { PageFrame } from './PageFrame';
 import data from './data/account.csv';

@@ -4,7 +4,7 @@
         "strict": true,
         "noImplicitReturns": true,
         "noImplicitAny": false,
-        "module": "es2015",
+        "module": "ESNext",
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
@@ -13,7 +13,8 @@
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "jsx": "react",
-        "jsxFactory": "createCell"
+        "jsxFactory": "createCell",
+        "lib": ["ES2019", "DOM"]
     },
     "include": ["./source/**/*"]
 }

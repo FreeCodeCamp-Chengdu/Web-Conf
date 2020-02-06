@@ -3,13 +3,14 @@ import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Card } from 'boot-cell/source/Content/Card';
 
+import { i18nTextOf } from '../i18n';
 import style from './PageEntry.less';
 import conf_list from './data';
 
 export function PageEntry() {
     return (
         <Fragment>
-            <NavBar title="成都 Web 开发者大会" />
+            <NavBar brand="成都 Web 开发者大会" />
 
             <section className="jumbotron text-center py-5 mt-5">
                 <div className="container">
@@ -61,7 +62,9 @@ export function PageEntry() {
                                             href={URL}
                                             title={title}
                                         >
-                                            {passed ? '回顾' : '报名'}
+                                            {i18nTextOf(
+                                                passed ? 'review' : 'register'
+                                            )}
                                         </a>
                                     </div>
                                     <small className="text-muted">{date}</small>

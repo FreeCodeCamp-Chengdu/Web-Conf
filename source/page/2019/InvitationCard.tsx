@@ -1,4 +1,4 @@
-import { createCell, component, mixin, watch } from 'web-cell';
+import { createCell, component, mixin } from 'web-cell';
 import { observer } from 'mobx-web-cell';
 import { toPng } from 'html-to-image';
 
@@ -9,21 +9,24 @@ import style from './InvitationCard.less';
 import banner from './data/banner.jpg';
 import BuyCode from './data/BuyCode.png';
 
+interface InvitationCardState {
+    imageURI: string;
+}
+
 @observer
 @component({
     tagName: 'invitation-card',
     renderTarget: 'children'
 })
-export class InvitationCard extends mixin() {
-    @watch
-    imageURI = '';
+export class InvitationCard extends mixin<{}, InvitationCardState>() {
+    state = { imageURI: '' };
 
     showImage = async () => {
-        if (this.imageURI) return;
+        if (this.state.imageURI) return;
 
         const box = this.querySelector<HTMLElement>('main');
 
-        if (box) this.imageURI = await toPng(box);
+        if (box) this.setState({ imageURI: await toPng(box) });
     };
 
     renderCard() {
@@ -59,15 +62,15 @@ export class InvitationCard extends mixin() {
         );
     }
 
-    render() {
+    render(_, { imageURI }: InvitationCardState) {
         return (
             <SessionBox className="position-relative" onClick={this.showImage}>
                 {this.renderCard()}
 
                 <img
                     className={`position-absolute vw-100 vh-100 ${style.cover}`}
-                    hidden={!this.imageURI}
-                    src={this.imageURI}
+                    hidden={!imageURI}
+                    src={imageURI}
                 />
             </SessionBox>
         );

@@ -1,5 +1,14 @@
 import { observable } from 'mobx';
-import { request } from './service';
+import { HTTPClient } from 'koajax';
+
+export const client = new HTTPClient({
+    baseURI:
+        window.location.hostname === 'localhost'
+            ? 'http://localhost:3000'
+            : 'https://web-conf.leanapp.cn',
+    responseType: 'json',
+    withCredentials: true
+});
 
 export class App {
     @observable
@@ -7,21 +16,21 @@ export class App {
 
     async getProfile() {
         try {
-            const response = await request('/session/');
+            const { body } = await client.get('/session/');
 
-            return (this.user = await response.json());
+            return (this.user = body);
         } catch (error) {
             if (error.status !== 401) throw error;
         }
     }
 
     sendSMSCode(phone: string) {
-        return request('/session/smsCode', 'POST', { phone });
+        return client.post('/session/smsCode', { phone });
     }
 
     async signIn(phone: string, code: string) {
-        const response = await request('/session/', 'POST', { phone, code });
+        const { body } = await client.post('/session/', { phone, code });
 
-        return (this.user = await response.json());
+        return (this.user = body);
     }
 }

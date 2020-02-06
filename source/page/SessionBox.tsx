@@ -48,7 +48,7 @@ export class SessionBox extends mixin() {
         const { countDown } = this;
 
         return app.user ? (
-            <div>{this.defaultSlot}</div>
+            this.defaultSlot
         ) : (
             <form
                 className="m-3 p-3 border rounded"

@@ -1,6 +1,6 @@
-import { component, createCell } from 'web-cell';
+import { component, createCell, Fragment } from 'web-cell';
 import { observer } from 'mobx-web-cell';
-import { HTMLRouter, matchRoutes } from 'cell-router/source';
+import { HTMLRouter } from 'cell-router/source';
 
 import { history } from '../model';
 
@@ -21,25 +21,23 @@ import { InvitationCard } from './2019/InvitationCard';
 })
 export class PageRouter extends HTMLRouter {
     protected history = history;
+    protected routes = [
+        { paths: ['2017'], component: Page2017 },
+        { paths: ['2018/Code4City'], component: Code4City },
+        { paths: ['2018'], component: Page2018 },
+        {
+            paths: ['2019/invitation'],
+            component: InvitationCard
+        },
+        { paths: ['2019/accounts'], component: PageAccount },
+        { paths: ['2019'], component: Page2019 },
+        { paths: [''], component: PageEntry }
+    ];
 
     render() {
         return (
-            <div>
-                {matchRoutes(
-                    [
-                        { paths: ['2017'], component: Page2017 },
-                        { paths: ['2018/Code4City'], component: Code4City },
-                        { paths: ['2018'], component: Page2018 },
-                        {
-                            paths: ['2019/invitation'],
-                            component: InvitationCard
-                        },
-                        { paths: ['2019/accounts'], component: PageAccount },
-                        { paths: ['2019'], component: Page2019 },
-                        { paths: [''], component: PageEntry }
-                    ],
-                    history.path
-                )}
+            <Fragment>
+                {super.render()}
 
                 <footer className="text-muted bg-light overflow-hidden mt-4">
                     <section className="container d-flex justify-content-between my-4">
@@ -106,7 +104,7 @@ export class PageRouter extends HTMLRouter {
                         <a href="#top">返回页顶</a>
                     </section>
                 </footer>
-            </div>
+            </Fragment>
         );
     }
 }
