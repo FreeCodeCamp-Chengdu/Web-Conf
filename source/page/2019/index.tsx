@@ -5,6 +5,7 @@ import { Card } from 'boot-cell/source/Content/Card';
 import { CountDown } from 'boot-cell/source/CountDown';
 import { TabList } from 'boot-cell/source/Content/TabList';
 
+import { IFrame } from '../../component';
 import { PageFrame } from './PageFrame';
 import { TopicGroup, Topic } from './TopicGroup';
 import { PartnerGroup } from './PartnerGroup';
@@ -108,14 +109,10 @@ export function Page2019() {
                 会场交通
             </h2>
             <p className="lead text-center mt-4 mb-5">{data.address}</p>
-            <iframe
+            <IFrame
                 className={style.map}
-                frameborder="0"
-                scrolling="no"
-                lazyload="1"
-                loading="lazy"
                 src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.06309,30.538734&name=${data.title}`}
-            ></iframe>
+            />
             <hr className="m-5" />
 
             <h2 className="text-center">报名通道</h2>

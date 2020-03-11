@@ -1,5 +1,5 @@
 import { createCell } from 'web-cell';
-import { parseTextTable } from 'boot-cell/source/utility';
+import { parseTextTable } from 'web-utility/source/data';
 import { Table } from 'boot-cell/source/Content/Table';
 
 import { PageFrame } from './PageFrame';

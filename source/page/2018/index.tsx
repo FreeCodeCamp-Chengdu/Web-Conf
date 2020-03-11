@@ -5,6 +5,7 @@ import { Table } from 'boot-cell/source/Content/Table';
 import { Card } from 'boot-cell/source/Content/Card';
 import marked from 'marked';
 
+import { IFrame } from '../../component';
 import { LogoList } from './LogoList';
 import style from './index.less';
 import data from './data';
@@ -213,13 +214,9 @@ export function Page2018() {
                     <p className="text-muted">
                         天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
                     </p>
-                    <iframe
-                        frameborder="0"
-                        scrolling="no"
-                        lazyload="1"
-                        loading="lazy"
+                    <IFrame
                         src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${data.title}`}
-                    ></iframe>
+                    />
                 </div>
             </section>
             <section id="Contributor" className="text-center">

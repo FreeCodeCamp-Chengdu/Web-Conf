@@ -10,7 +10,7 @@ import conf_list from './data';
 export function PageEntry() {
     return (
         <Fragment>
-            <NavBar brand="成都 Web 开发者大会" />
+            <NavBar key="main-header" brand="成都 Web 开发者大会" />
 
             <section className="jumbotron text-center py-5 mt-5">
                 <div className="container">

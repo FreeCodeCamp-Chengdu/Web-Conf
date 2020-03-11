@@ -3,6 +3,7 @@ import { Card } from 'boot-cell/source/Content/Card';
 import { AccordionList } from 'boot-cell/source/Content/Accordion';
 import { Button } from 'boot-cell/source/Form/Button';
 
+import { IFrame } from '../../component';
 import style from './index.less';
 import data from './data';
 import { banner, qrcode } from './image';
@@ -124,14 +125,10 @@ export function Page2017() {
                     </a>
                     提供 海报、Logo 设计
                 </p>
-                <iframe
+                <IFrame
                     className={style.map}
-                    frameborder="0"
-                    scrolling="no"
-                    lazyload="1"
-                    loading="lazy"
                     src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${data.title}`}
-                ></iframe>
+                />
             </footer>
         </Fragment>
     );
