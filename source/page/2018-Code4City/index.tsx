@@ -50,69 +50,53 @@ export function Code4City() {
                             />
                         </div>
 
-                        <div
-                            className={`card-group my-5 w-100 position-relative`}
-                        >
-                            <div
-                                className={`card-title col-md-2 ${style['title-left']}`}
+                        <div className="d-md-flex w-100 align-items-start my-5">
+                            <h4
+                                className={`${style['card-title']} ${style['line-center']} mr-md-3`}
                             >
-                                <h4
-                                    className={`title ${style['line-right']} text-white`}
-                                >
-                                    大赛宗旨
-                                </h4>
-                            </div>
-                            <div
-                                className={`card-content ${style['card-content']} col-md-10 col-md-offset-1`}
+                                大赛宗旨
+                            </h4>
+                            <ul
+                                className={`list-unstyled ${style['card-content']} flex-fill`}
                             >
-                                <ul className="list-unstyled">
-                                    <li>
-                                        关注城市生活：以“Code For
-                                        City”为主题，旨在用实际编程行动改变城市生活，让城市更美好
-                                    </li>
-                                    <li>
-                                        鼓励技术创新：创意与实践相互结合，想象与行动二者并重，是本次大赛的重要评判标准之一
-                                    </li>
-                                    <li>
-                                        提升行业氛围：创造有价值的产品，挖掘有潜力的团队，加强高新区对人才、企业资本的吸引力
-                                    </li>
-                                    <li>
-                                        展现成都风采：打造一个广泛聚焦的舞台，一展成都程序员风采，彰显成都IT新一线的城市风貌
-                                    </li>
-                                </ul>
-                            </div>
+                                <li>
+                                    关注城市生活：以“Code For
+                                    City”为主题，旨在用实际编程行动改变城市生活，让城市更美好
+                                </li>
+                                <li>
+                                    鼓励技术创新：创意与实践相互结合，想象与行动二者并重，是本次大赛的重要评判标准之一
+                                </li>
+                                <li>
+                                    提升行业氛围：创造有价值的产品，挖掘有潜力的团队，加强高新区对人才、企业资本的吸引力
+                                </li>
+                                <li>
+                                    展现成都风采：打造一个广泛聚焦的舞台，一展成都程序员风采，彰显成都IT新一线的城市风貌
+                                </li>
+                            </ul>
                         </div>
-                        <div className="card-group my-5 w-100 position-relative">
-                            <div
-                                className={`card-title col-md-2 ${style['title-right']}`}
+                        <div className="d-md-flex w-100 align-items-start my-5 flex-row-reverse">
+                            <h4
+                                className={`${style['card-title']} ${style['line-center']} ml-md-3`}
                             >
-                                <h4
-                                    className={`title ${style['line-left']} text-white`}
-                                >
-                                    品牌理念
-                                </h4>
-                            </div>
-                            <div
-                                className={`card-content ${style['card-content']} col-md-10 col-md-offset-1`}
-                            >
+                                品牌理念
+                            </h4>
+                            <p className={style['card-content']}>
                                 Code for City 是 freeCodeCamp China
                                 的品牌活动，通过联合企业、高校、技术社区、公益组织等机构，以编程工作坊或黑客松等形式，赋能青年人为社会问题设计解决方案，旨在推动编程的普及，用技术影响世界。
-                            </div>
+                            </p>
                         </div>
-                        <div
-                            className={`col-md-12 col-xs-12 ${style['award-list']}`}
-                        >
+                        <div className="col-md-12 col-xs-12 mt-md-5 text-center">
                             <h3
                                 className={`${style.title} ${style['line-center']} text-white"`}
                             >
                                 大赛奖项
                             </h3>
-                            <div className="col-md-12 col-xs-12 my-4">
+                            <div className="my-4">
                                 {data.awards.map(({ title, detail }) => (
-                                    <div className="col-md-3 col-xs-6 ">
+                                    <Fragment>
                                         <h4 className="text-white">{title}</h4>
                                         <p>{detail}</p>
-                                    </div>
+                                    </Fragment>
                                 ))}
                             </div>
                             <div className="col-md-12 my-4">
@@ -133,11 +117,10 @@ export function Code4City() {
                         >
                             大赛参赛队伍规模及规则
                         </h4>
-                        <span className="p-3 center-block">
-                            <small>
-                                海选期：不限&nbsp;&nbsp;&nbsp;&nbsp;决赛日：6支
-                            </small>
-                        </span>
+                        <small className="p-3">
+                            <span className="pr-4">海选期：不限</span>
+                            决赛日：6支
+                        </small>
                         <ol className={style['rule-list']}>
                             <li>参赛队长通过官方链接或者官方微信群报名</li>
                             <li>
@@ -214,11 +197,10 @@ export function Code4City() {
                         </div>
                     </section>
                     <section className={style.Sponsor}>
-                        <div className="Background-Image">
+                        <div className="p-5">
                             <h4 className={`${style['line-left']} text-white"`}>
                                 合作单位
                             </h4>
-
                             <div className="row">
                                 {data.sponsors.map(({ title, list }) => (
                                     <div className="col-md-2 col-sm-6 col-xs-6">
@@ -234,16 +216,13 @@ export function Code4City() {
                             </div>
                         </div>
                     </section>
-                    <ul className="list-unstyled d-flex flex-wrap hidden-xs text-center">
+                    <ul className="list-unstyled d-flex flex-wrap justify-content-around align-items-center">
                         {data.sponsors.map(({ list }) =>
                             list.map(({ imageURL, title }) => (
                                 <li>
                                     <img
-                                        className="img-fluid center-block"
-                                        style={{
-                                            width: '12rem',
-                                            maxHeight: '4rem'
-                                        }}
+                                        className="img-fluid m-3"
+                                        style={{ width: '12rem' }}
                                         src={imageURL}
                                         alt={title}
                                     />

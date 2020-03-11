@@ -7,14 +7,9 @@
 }
 
 .Introduce {
-    background: url('image/BG.png') no-repeat;
-    background-size: 100% 100%;
+    .Background-Image;
+    background-image: url('image/BG.png');
     color: rgba(255, 255, 255, 0.8);
-
-    .Background-Image {
-        height: 25rem;
-        box-shadow: 0 2px 1.25rem 0 rgba(170, 170, 170, 0.5);
-    }
 }
 .Detail {
     background: linear-gradient(to bottom, #000b19, #04101e);
@@ -40,64 +35,32 @@
     );
 }
 
-.line-center::after,
-.line-left::after,
-.line-right::after {
+.line-center::after {
     content: '';
-    width: 2rem;
-    height: 2px;
     display: block;
-    background: #5583f6;
+    width: 2rem;
+    border: 1px solid #5583f6;
     margin: auto;
     margin-top: 2rem;
 }
-.line-left::after {
-    margin: 2rem 0px 0px;
-}
-.line-right::after {
-    position: absolute;
-    right: 15px;
-}
 
 .card-title {
-    border-style: solid;
-    border-width: 2px;
-    border-color: #2557c8;
-    position: absolute;
-    background-color: #000000;
-    height: 13rem;
-    padding-top: 3.5rem;
-    z-index: 99;
-}
-.title-left {
-    .card-title;
-    top: -3rem;
-    left: 0rem;
-    text-align: right;
-}
-.title-right {
-    .card-title;
-    top: -3rem;
-    right: 0rem;
-    text-align: left;
+    border: 2px solid #2557c8;
+    background-color: black;
+    color: white;
+    padding: 3.5rem;
+    white-space: nowrap;
+    text-align: center;
 }
 .card-content {
-    border-style: solid;
-    border-color: #182536;
+    border: 1px solid #182536;
     padding: 3rem 9%;
-    min-height: 13rem;
     line-height: 2.5rem;
-}
-
-.award-list {
-    text-align: center;
-    margin-top: 13rem;
-    margin-bottom: -5rem;
 }
 
 .rule-list {
     text-align: left;
-    padding: 7rem 4rem;
+    padding: 2rem 4rem;
     background: linear-gradient(to right, #275bf3, #577ede);
     width: 80%;
     margin: 2rem auto;
@@ -156,7 +119,8 @@
     top: 0.5rem;
     border: 1px solid rgb(27, 67, 154);
     padding: 0 !important;
-    & > .Background-Image {
+    & > * {
+        .Background-Image;
         background-image: url('image/sponsor-bg.png');
         border: 1px solid rgb(20, 30, 43);
         padding: 5%;
@@ -241,37 +205,17 @@
         }
     }
 
-    .line-center::after,
-    .line-left::after,
-    .line-right::after {
+    .line-center::after {
         margin-top: 0.8rem;
     }
 
     ul li {
         line-height: 1.8rem;
-        font-size: 12px;
     }
 
     /* 奖项 */
-    .award-list {
-        margin-top: 1rem;
-
-        .title {
-            font-size: 18px;
-        }
-        h4 {
-            font-size: 1.4rem;
-        }
-        p {
-            font-size: 1rem;
-        }
-    }
     .Sponsor {
         margin-bottom: 3rem;
-
-        .Flow-Box {
-            text-align: center;
-        }
         ul {
             margin-top: 0;
             margin-bottom: 2rem;

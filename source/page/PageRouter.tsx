@@ -40,8 +40,8 @@ export class PageRouter extends HTMLRouter {
                 {super.render()}
 
                 <footer className="text-muted bg-light overflow-hidden mt-4">
-                    <section className="container d-flex justify-content-between my-4">
-                        <div className="col-sm-8 col-md-7">
+                    <section className="container d-md-flex justify-content-between my-4">
+                        <div>
                             <h4>关于我们</h4>
                             <p className="text-muted">
                                 非营利组织 freeCodeCamp.org 自 2014
@@ -60,7 +60,7 @@ export class PageRouter extends HTMLRouter {
                                 编程教育、技术招聘、行业大会等程序员全职业生涯的公益服务。
                             </p>
                         </div>
-                        <div className="col-sm-4">
+                        <div>
                             <h4>联系我们</h4>
                             <ul className="list-unstyled">
                                 <li>
@@ -83,7 +83,7 @@ export class PageRouter extends HTMLRouter {
                             </ul>
                         </div>
                     </section>
-                    <section className="container d-flex justify-content-around my-4">
+                    <section className="container d-flex flex-column flex-md-row align-items-center justify-content-around my-4">
                         <span>
                             自豪地使用
                             <a
