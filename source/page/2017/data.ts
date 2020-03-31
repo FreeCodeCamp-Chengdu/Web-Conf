@@ -180,7 +180,7 @@ export default {
                 },
                 {
                     img: FCC_CDG,
-                    url: 'https://fcc-cd.tk/'
+                    url: 'https://fcc-cd.dev/'
                 }
             ]
         },

@@ -50,7 +50,7 @@ export class PageRouter extends HTMLRouter {
                                 多个城市。我们正在帮助全球数百万人学习编程，希望让世界上每个人都有机会获得免费的优质的编程教育资源，成为开发者或者运用编程去解决问题。
                             </p>
                             <p className="text-muted">
-                                <a target="_blank" href="https://fcc-cd.tk/">
+                                <a target="_blank" href="https://fcc-cd.dev/">
                                     freeCodeCamp 成都社区
                                 </a>
                                 成立于 2016 年，是中国大陆最早一批 FCC
