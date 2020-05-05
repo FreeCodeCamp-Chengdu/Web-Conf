@@ -31,7 +31,7 @@ const revenue = list.reduce(
 export function PageAccount() {
     return (
         <PageFrame>
-            <h2 className="text-center">收支账目</h2>
+            <h2 className="py-5 text-center">收支账目</h2>
 
             <Table striped hover>
                 <thead>

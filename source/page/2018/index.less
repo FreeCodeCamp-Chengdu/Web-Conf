@@ -96,6 +96,7 @@
 }
 
 .sparked {
+    text-align: center;
     background: #fff url(./image/bg.png) repeat top left;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -126,56 +127,60 @@
 @media screen and (max-width: 767.98px) {
     .subjects {
         padding-left: 0;
-    }
-    .subjects > li {
-        padding: 15px;
-        border-bottom: 1px dotted #eee;
-    }
-    .subjects > li > div:first-child {
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    .subjects > li > div > h5 {
-        text-align: center;
-        margin: 15px 0;
+        & > li {
+            padding: 15px;
+            border-bottom: 1px dotted #eee;
+            & > div {
+                &:first-child {
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                & > h5 {
+                    text-align: center;
+                    margin: 15px 0;
+                }
+            }
+        }
     }
 }
 @media screen and (min-width: 767.98px) {
-    .subjects::after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        background: #fff url('image/undraw_02.png') no-repeat right center;
-        opacity: 0.3;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: -200px;
+    .subjects {
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            background: #fff url('image/undraw_02.png') no-repeat right center;
+            opacity: 0.3;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: -200px;
+        }
+        & > li {
+            padding: 25px 0;
+            display: flex;
+            justify-content: flex-start;
+            & > div:first-child {
+                padding: 0 15px;
+                margin-right: 15px;
+                border-right: 1px solid #eee;
+            }
+        }
     }
-    .subjects > li {
-        padding: 25px 0;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .subjects > li > div:first-child {
-        padding: 0 15px;
+}
+.subjects > li {
+    & > .avatar {
+        flex-grow: 0;
+        flex-shrink: 0;
         margin-right: 15px;
-        border-right: 1px solid #eee;
+    }
+    p {
+        font-size: 14px;
+        h6 {
+            margin: 0.5rem 0;
+        }
     }
 }
-.subjects > li > .avatar {
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-right: 15px;
-}
-.subjects > li p {
-    font-size: 14px;
-}
-.subjects > li p h6 {
-    margin: 0.5rem 0;
-}
-
 @media screen and (min-width: 767.98px) {
     .photos:not(:last-child) {
         margin-bottom: 25px;
@@ -265,9 +270,9 @@
 }
 .companies > li {
     border: 1px dashed #ddd;
-}
-.companies > li:hover {
-    background: #fafafa;
+    &:hover {
+        background: #fafafa;
+    }
 }
 .contributorGroup {
     h5 {

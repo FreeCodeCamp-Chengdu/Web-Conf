@@ -3,12 +3,24 @@ import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Table } from 'boot-cell/source/Content/Table';
 import { Card } from 'boot-cell/source/Content/Card';
+import { IFrame } from 'boot-cell/source/Content/IFrame';
 import marked from 'marked';
 
-import { IFrame } from '../../component';
 import { LogoList } from './LogoList';
 import style from './index.less';
-import data from './data';
+import {
+    title,
+    sections,
+    lecturers,
+    schedule,
+    projects,
+    topics,
+    review,
+    hosts,
+    sponsors,
+    partners,
+    companies
+} from './data';
 import { poster, undraw_01, undraw_04 } from './image';
 import photos from './image/photos';
 
@@ -18,13 +30,13 @@ export function Page2018() {
             <div className={style.poster}>
                 <NavBar
                     className="top-nav"
-                    title={data.title}
+                    title={title}
                     expand="lg"
                     theme="light"
                     background="light"
-                    menu={data.section}
+                    menu={sections}
                 />
-                <img src={poster} className="img-fluid pt-5" />
+                <img src={poster} className="img-fluid" />
             </div>
             <section id="Introduction">
                 <h2 className="text-center mb-5">大会介绍</h2>
@@ -54,11 +66,11 @@ export function Page2018() {
                     </div>
                 </div>
             </section>
-            <section id="Lecturer" className={`text-center ${style.sparked}`}>
+            <section id="Lecturer" className={style.sparked}>
                 <h2 className="mb-5">与会嘉宾</h2>
                 <div className="container">
                     <div className="row lecture-list">
-                        {data.lecturer.map(({ avatar, name, detail }) => (
+                        {lecturers.map(({ avatar, name, detail }) => (
                             <div className="col-md-3 p-2">
                                 <div className={style.lecture}>
                                     <img
@@ -70,7 +82,7 @@ export function Page2018() {
                                     <p
                                         className="lecture-intro text-left"
                                         innerHTML={marked(detail)}
-                                    ></p>
+                                    />
                                 </div>
                             </div>
                         ))}
@@ -83,18 +95,18 @@ export function Page2018() {
                     <ol
                         className={`${style.subjects} overflow-hidden list-unstyled position-relative`}
                     >
-                        {data.topic.map(({ lecturer, title, detail }) => (
+                        {topics.map(({ lecturer, title, detail }) => (
                             <li>
                                 <div className="text-center">
-                                    <h6>{data.lecturer[lecturer].name}</h6>
+                                    <h6>{lecturer.name}</h6>
                                     <img
                                         className={style['avatar-sm']}
-                                        src={data.lecturer[lecturer].avatar}
+                                        src={lecturer.avatar}
                                     />
                                 </div>
                                 <div>
                                     <h5>{title}</h5>
-                                    <p innerHTML={marked(detail)}></p>
+                                    <p innerHTML={marked(detail)} />
                                 </div>
                             </li>
                         ))}
@@ -106,8 +118,8 @@ export function Page2018() {
                     <div id="Bazaar" className="mb-4">
                         <h2 className="text-center mb-5">开源市集</h2>
                         <div className="card-columns">
-                            {data.project.map(
-                                ({ type, name, URL, title, detail, logo }) => (
+                            {projects.map(
+                                ({ type, URL, title, detail, logo }) => (
                                     <Card
                                         className="overflow-hidden"
                                         title={
@@ -145,7 +157,7 @@ export function Page2018() {
                                 <ul
                                     className={`${style.companies} list-inline`}
                                 >
-                                    {data.company.map(name => (
+                                    {companies.map(name => (
                                         <li className="list-inline-item py-1 px-3 m-1 bg-white rounded">
                                             {name}
                                         </li>
@@ -173,17 +185,13 @@ export function Page2018() {
                             </tr>
                         </thead>
                         <tbody>
-                            {data.schedule.map(({ time, title, topic }) => (
+                            {schedule.map(({ time, title, topic }) => (
                                 <tr>
-                                    <td className="d-none d-md-block"></td>
+                                    <td className="d-none d-md-block" />
                                     <td className="text-nowrap">{time}</td>
                                     <td>
                                         {title ||
-                                            `《${data.topic[topic!].title}》 ${
-                                                data.lecturer[
-                                                    data.topic[topic!].lecturer
-                                                ].name
-                                            }`}
+                                            `《${topic?.title}》 ${topic?.lecturer.name}`}
                                     </td>
                                 </tr>
                             ))}
@@ -195,7 +203,7 @@ export function Page2018() {
                 <h2 className="text-center mb-5">往期精彩回顾</h2>
                 <div className="container">
                     <div className={`row ${style.photos}`}>
-                        {data.review.map(({ title }, index) => (
+                        {review.map(({ title }, index) => (
                             <div className="col-md-4">
                                 <img
                                     className="img-fluid"
@@ -215,14 +223,14 @@ export function Page2018() {
                         天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
                     </p>
                     <IFrame
-                        src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${data.title}`}
+                        src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${title}`}
                     />
                 </div>
             </section>
             <section id="Contributor" className="text-center">
                 <h2>共创伙伴</h2>
                 <div className="container">
-                    {data.host.map(({ title, member }) => (
+                    {hosts.map(({ title, member }) => (
                         <div className={`${style.contributorGroup} my-4`}>
                             <h5 className="py-3">{title}办方</h5>
                             <LogoList member={member} />
@@ -231,7 +239,7 @@ export function Page2018() {
                 </div>
                 <div className="container">
                     <div className={`${style.contributorGroup} my-4`}>
-                        {data.sponsor.map(({ title, member }) => (
+                        {sponsors.map(({ title, member }) => (
                             <section>
                                 <h5 className="py-3">{title}赞助</h5>
                                 <LogoList member={member} />
@@ -242,7 +250,7 @@ export function Page2018() {
                 <div className="container">
                     <div className={`${style.contributorGroup} my-4`}>
                         <h5 className="py-3">合作伙伴</h5>
-                        <LogoList member={data.partner} />
+                        <LogoList member={partners} />
                     </div>
                 </div>
             </section>
@@ -261,7 +269,7 @@ export function Page2018() {
                 <div className="container">
                     <div className="d-none d-md-block">
                         <ul className="nav">
-                            {data.section.map(({ href, title }) => (
+                            {sections.map(({ href, title }) => (
                                 <li className="nav-item">
                                     <a className="nav-link" href={href}>
                                         {title}

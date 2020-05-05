@@ -2,10 +2,11 @@ import { createCell, Fragment } from 'web-cell';
 import { Card } from 'boot-cell/source/Content/Card';
 import { AccordionList } from 'boot-cell/source/Content/Accordion';
 import { Button } from 'boot-cell/source/Form/Button';
+import { IFrame } from 'boot-cell/source/Content/IFrame';
 
-import { IFrame } from '../../component';
+import { LogoList } from './LogoList';
 import style from './index.less';
-import data from './data';
+import { guests, flows, logos, title } from './data';
 import { banner, qrcode } from './image';
 
 export function Page2017() {
@@ -29,17 +30,15 @@ export function Page2017() {
                         <span>SPEAKER</span> <span>分享嘉宾</span>
                     </h2>
                     <div className="card-columns justify-content-center">
-                        {data.guests.map(
-                            ({ avatar, name, description }, index) => (
-                                <Card
-                                    id={'guest_' + index}
-                                    className={style.mentor}
-                                    image={avatar}
-                                    title={name}
-                                    text={description}
-                                />
-                            )
-                        )}
+                        {guests.map(({ avatar, name, description }, index) => (
+                            <Card
+                                id={'guest_' + index}
+                                className={style.mentor}
+                                image={avatar}
+                                title={name}
+                                text={description}
+                            />
+                        ))}
                     </div>
                 </div>
                 <div className={style['web-content']}>
@@ -47,23 +46,22 @@ export function Page2017() {
                         <span>SCHEDULE</span> <span>活动流程</span>
                     </h2>
                     <AccordionList
-                        list={data.flows.map(
+                        list={flows.map(
                             ({ time, content, guest, description }) => ({
                                 title: `${time}【${content}】`,
-                                content:
-                                    guest != null ? (
-                                        <ul>
-                                            <li>
-                                                讲师：
-                                                <a href={'#guest_' + guest}>
-                                                    {data.guests[guest].name}
-                                                </a>
-                                            </li>
-                                            <li>简介：{description}</li>
-                                        </ul>
-                                    ) : (
-                                        description
-                                    )
+                                content: guest ? (
+                                    <ul>
+                                        <li>
+                                            讲师：
+                                            <a href={'#guest_' + guest}>
+                                                {guest.name}
+                                            </a>
+                                        </li>
+                                        <li>简介：{description}</li>
+                                    </ul>
+                                ) : (
+                                    description
+                                )
                             })
                         )}
                     />
@@ -82,28 +80,7 @@ export function Page2017() {
                 </div>
                 <div className={style['web-content']}>
                     <div className={`${style.logos} text-center`}>
-                        {data.logos.map(({ title, childrens }) => (
-                            <section>
-                                <h2 className="mt-5 mb-4">
-                                    <span>{title}</span>
-                                </h2>
-                                <ul className="list-inline">
-                                    {childrens.map(({ url, img }) => (
-                                        <li className="list-inline-item m-2">
-                                            <a
-                                                className="d-inline-flex justify-content-center align-items-center shadow"
-                                                href={url}
-                                            >
-                                                <img
-                                                    className="mw-100 mh-100"
-                                                    src={img}
-                                                />
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </section>
-                        ))}
+                        {logos.map(LogoList)}
                     </div>
                     <Button
                         className="my-5"
@@ -127,7 +104,7 @@ export function Page2017() {
                 </p>
                 <IFrame
                     className={style.map}
-                    src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${data.title}`}
+                    src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${title}`}
                 />
             </footer>
         </Fragment>

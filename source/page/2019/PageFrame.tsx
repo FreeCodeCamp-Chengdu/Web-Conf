@@ -1,18 +1,18 @@
 import { createCell, Fragment } from 'web-cell';
 import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 
-import data from './data/index.json';
+import { title, menu } from './data/index.json';
 
 export function PageFrame({ defaultSlot }: { defaultSlot?: any[] }) {
     return (
         <Fragment>
             <NavBar
-                title={data.title}
+                title={title}
                 theme="light"
                 background="light"
-                menu={data.menu}
+                menu={menu}
             />
-            <main className="container mt-5 pt-5">{defaultSlot}</main>
+            <main className="container">{defaultSlot}</main>
         </Fragment>
     );
 }

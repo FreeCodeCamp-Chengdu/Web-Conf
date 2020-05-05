@@ -2,8 +2,9 @@ import { createCell, Fragment } from 'web-cell';
 import { Button } from 'boot-cell/source/Form/Button';
 import { CarouselView } from 'boot-cell/source/Content/Carousel';
 
+import { GuestCard } from './GuestCard';
 import style from './index.less';
-import data from './data';
+import { review, awards, vips, sponsors } from './data';
 
 export function Code4City() {
     return (
@@ -22,18 +23,20 @@ export function Code4City() {
                                 target="_blank"
                                 href="https://fcc.hackerearth.com/zh/"
                             >
-                                参赛通道
-                                <span className="fa fa-arrow-right"></span>
+                                参赛通道 →
                             </Button>
 
                             <ul className="list-unstyled">
                                 <li>
-                                    线上预赛：2018年1月12日 20:00 --
-                                    2018年1月14日 20:00
+                                    线上预赛：2018 年 1 月 12 日 20:00 ~ 2018 年
+                                    1 月 14 日 20:00
                                 </li>
-                                <li>决赛日期：2018年1月20日 9:00 -- 19:00</li>
                                 <li>
-                                    决赛地址：高新天府五街200号菁蓉国际广场7栋1号菁蓉汇主会场
+                                    决赛日期：2018 年 1 月 20 日 9:00 ~ 19:00
+                                </li>
+                                <li>
+                                    决赛地址：高新天府五街 200 号菁蓉国际广场 7
+                                    栋 1 号菁蓉汇主会场
                                 </li>
                             </ul>
                         </div>
@@ -41,15 +44,12 @@ export function Code4City() {
                         <div className="col-xs-12 col-md-6">
                             <CarouselView
                                 interval={3}
-                                list={data.gallery.map(
-                                    ({ imageURL, title }) => ({
-                                        image: imageURL,
-                                        title
-                                    })
-                                )}
+                                list={review.map(({ imageURL, title }) => ({
+                                    image: imageURL,
+                                    title
+                                }))}
                             />
                         </div>
-
                         <div className="d-md-flex w-100 align-items-start my-5">
                             <h4
                                 className={`${style['card-title']} ${style['line-center']} mr-md-3`}
@@ -92,7 +92,7 @@ export function Code4City() {
                                 大赛奖项
                             </h3>
                             <div className="my-4">
-                                {data.awards.map(({ title, detail }) => (
+                                {awards.map(({ title, detail }) => (
                                     <Fragment>
                                         <h4 className="text-white">{title}</h4>
                                         <p>{detail}</p>
@@ -144,56 +144,7 @@ export function Code4City() {
                         <small style={{ color: '#697078' }}>按首字母排序</small>
 
                         <div className="d-flex flex-wrap">
-                            {data.vips.map(
-                                ({
-                                    avatar,
-                                    name,
-                                    role,
-                                    identity,
-                                    describe
-                                }) => (
-                                    <div className="col-md-6 col-xs-12">
-                                        <div className={style['guest']}>
-                                            <div
-                                                className={
-                                                    style['guest-avatar']
-                                                }
-                                                style={{
-                                                    backgroundImage: `url('${avatar}')`
-                                                }}
-                                            ></div>
-                                            <div
-                                                className={style['guest-title']}
-                                            >
-                                                <h5 className="guest-name text-white">
-                                                    {name}
-                                                </h5>
-                                                <span
-                                                    className={
-                                                        style['guest-role']
-                                                    }
-                                                >
-                                                    {role}
-                                                </span>
-                                                <div
-                                                    className={
-                                                        style['guest-identity']
-                                                    }
-                                                >
-                                                    {identity}
-                                                </div>
-                                            </div>
-                                            <div
-                                                className={
-                                                    style['guest-describe']
-                                                }
-                                            >
-                                                {describe}
-                                            </div>
-                                        </div>
-                                    </div>
-                                )
-                            )}
+                            {vips.map(GuestCard)}
                         </div>
                     </section>
                     <section className={style.Sponsor}>
@@ -202,7 +153,7 @@ export function Code4City() {
                                 合作单位
                             </h4>
                             <div className="row">
-                                {data.sponsors.map(({ title, list }) => (
+                                {sponsors.map(({ title, list }) => (
                                     <div className="col-md-2 col-sm-6 col-xs-6">
                                         <h5 className="text-white">{title}</h5>
 
@@ -217,7 +168,7 @@ export function Code4City() {
                         </div>
                     </section>
                     <ul className="list-unstyled d-flex flex-wrap justify-content-around align-items-center">
-                        {data.sponsors.map(({ list }) =>
+                        {sponsors.map(({ list }) =>
                             list.map(({ imageURL, title }) => (
                                 <li>
                                     <img

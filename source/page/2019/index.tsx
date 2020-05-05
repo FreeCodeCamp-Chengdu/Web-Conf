@@ -1,11 +1,12 @@
 import groupBy from 'lodash.groupby';
 import { createCell } from 'web-cell';
+import { Jumbotron } from 'boot-cell/source/Content/Jumbotron';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Card } from 'boot-cell/source/Content/Card';
-import { CountDown } from 'boot-cell/source/CountDown';
+import { CountDown } from 'boot-cell/source/Extra/CountDown';
 import { TabList } from 'boot-cell/source/Content/TabList';
+import { IFrame } from 'boot-cell/source/Content/IFrame';
 
-import { IFrame } from '../../component';
 import { PageFrame } from './PageFrame';
 import { TopicGroup, Topic } from './TopicGroup';
 import { PartnerGroup } from './PartnerGroup';
@@ -27,14 +28,16 @@ const partnerGroups = Object.entries(groupBy(data.partners, 'title'));
 export function Page2019() {
     return (
         <PageFrame>
-            <header className="jumbotron text-center">
-                <h1>{data.title}</h1>
-
-                <ul className="list-unstyled my-4">
-                    <li>2019 年 11 月 16 ~ 17 日</li>
-                    <li>{data.address}</li>
-                </ul>
-
+            <Jumbotron
+                className="text-center"
+                title={data.title}
+                description={
+                    <ul className="list-unstyled my-4">
+                        <li>2019 年 11 月 16 ~ 17 日</li>
+                        <li>{data.address}</li>
+                    </ul>
+                }
+            >
                 <CountDown endTime="2019-11-16 09:00:00" />
                 <Button
                     kind="danger"
@@ -44,7 +47,7 @@ export function Page2019() {
                 >
                     即刻报名
                 </Button>
-            </header>
+            </Jumbotron>
 
             <h2 className="text-center my-4" id="Topic">
                 大会议程
