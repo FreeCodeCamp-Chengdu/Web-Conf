@@ -2,8 +2,8 @@ import { createCell, component, mixin } from 'web-cell';
 import { observer } from 'mobx-web-cell';
 import { toPng } from 'html-to-image';
 
-import { app } from '../../model';
-import { SessionBox } from '../SessionBox';
+import { session } from '../../model';
+import { SessionBox } from '../../component';
 
 import style from './InvitationCard.less';
 import banner from './data/banner.jpg';
@@ -30,9 +30,7 @@ export class InvitationCard extends mixin<{}, InvitationCardState>() {
     };
 
     renderCard() {
-        if (!app.user) return;
-
-        const { username, gender } = app.user;
+        const { username, gender } = session.user!;
 
         return (
             <main
@@ -65,8 +63,7 @@ export class InvitationCard extends mixin<{}, InvitationCardState>() {
     render(_, { imageURI }: InvitationCardState) {
         return (
             <SessionBox className="position-relative" onClick={this.showImage}>
-                {this.renderCard()}
-
+                {session.user && this.renderCard()}
                 <img
                     className={`position-absolute vw-100 vh-100 ${style.cover}`}
                     hidden={!imageURI}

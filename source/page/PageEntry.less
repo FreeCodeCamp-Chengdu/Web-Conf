@@ -1,25 +1,21 @@
 .card {
     min-width: 20rem;
     max-width: 20rem;
+    @media (max-width: 991px) {
+        min-width: 100%;
+        max-width: 100%;
+    }
     transition: 0.25s;
     &:hover {
         transform: scale(1.1);
     }
-}
-.banner {
-    height: 15rem;
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-    .banner {
-        height: 12rem;
-    }
-}
-@media (max-width: 991px) {
-    .card {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .banner {
-        height: auto;
+    img {
+        height: 15rem;
+        @media (min-width: 992px) and (max-width: 1200px) {
+            height: 12rem;
+        }
+        @media (max-width: 991px) {
+            height: auto;
+        }
     }
 }

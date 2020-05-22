@@ -1,11 +1,11 @@
 import { createCell } from 'web-cell';
-import { NavBar } from 'boot-cell/source/Navigator/NavBar';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Table } from 'boot-cell/source/Content/Table';
 import { Card } from 'boot-cell/source/Content/Card';
 import { IFrame } from 'boot-cell/source/Content/IFrame';
 import marked from 'marked';
 
+import { TopNavBar } from '../../component';
 import { LogoList } from './LogoList';
 import style from './index.less';
 import {
@@ -28,9 +28,8 @@ export function Page2018() {
     return (
         <main className={style.root}>
             <div className={style.poster}>
-                <NavBar
-                    className="top-nav"
-                    title={title}
+                <TopNavBar
+                    brand={title}
                     expand="lg"
                     theme="light"
                     background="light"
@@ -124,7 +123,7 @@ export function Page2018() {
                                         className="overflow-hidden"
                                         title={
                                             <a
-                                                className="text-primary"
+                                                className="stretched-link text-primary"
                                                 target="_blank"
                                                 href={URL}
                                             >

@@ -1,22 +1,20 @@
 import { observable } from 'mobx';
-import { HTTPClient } from 'koajax';
 
-export const client = new HTTPClient({
-    baseURI:
-        window.location.hostname === 'localhost'
-            ? 'http://localhost:3000'
-            : 'https://web-conf.leanapp.cn',
-    responseType: 'json',
-    withCredentials: true
-});
+import { DataItem, client } from './service';
 
-export class App {
+export interface User extends DataItem {
+    username: string;
+    mobilePhoneNumber?: string;
+    gender: string;
+}
+
+export class Session {
     @observable
-    user: any;
+    user?: User;
 
     async getProfile() {
         try {
-            const { body } = await client.get('/session/');
+            const { body } = await client.get<User>('/session/');
 
             return (this.user = body);
         } catch (error) {
@@ -29,7 +27,7 @@ export class App {
     }
 
     async signIn(phone: string, code: string) {
-        const { body } = await client.post('/session/', { phone, code });
+        const { body } = await client.post<User>('/session/', { phone, code });
 
         return (this.user = body);
     }

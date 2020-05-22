@@ -16,7 +16,7 @@ https://github.com/FreeCodeCamp-Chengdu/Web-Conf/graphs/contributors
 
 -   逻辑语言: [TypeScript v3][4]
 -   组件引擎: [WebCell v2][5]
--   组件库: [BootCell][6]
+-   组件库: [BootCell v1][6]
 -   状态管理: [MobX v5][7]
 -   打包工具: [Parcel v1][8]
 
@@ -47,6 +47,6 @@ node toolkit/import-assets path/to/media/folder
 [3]: https://github.com/hax/chinese-tech-conf-schedule
 [4]: https://typescriptlang.org
 [5]: https://web-cell.dev/
-[6]: https://web-cell.dev/BootCell/
+[6]: https://bootstrap.web-cell.dev/
 [7]: https://mobx.js.org
 [8]: https://parceljs.org

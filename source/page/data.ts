@@ -4,7 +4,9 @@ import banner_2018_React from './2018-React/React-ChengDu.jpg';
 import { poster as banner_2018 } from './2018/image';
 import banner_2019 from './2019/data/banner.jpg';
 
-export default [
+export const common_menu = [{ title: '全国 IT 活动', href: 'activity' }];
+
+export const conf_list = [
     {
         title: '2019 成都 Web 全栈大会',
         date: '2019-11-16',

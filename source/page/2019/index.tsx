@@ -87,6 +87,7 @@ export function Page2019() {
                             }
                         >
                             <a
+                                className="stretched-link"
                                 target="_blank"
                                 href={'https://github.com/' + GitHub}
                             >

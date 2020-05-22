@@ -1,5 +1,7 @@
 import { History } from 'cell-router/source';
-import { App } from './App';
+import { Session } from './App';
+import { ActivityModel } from './Activity';
 
 export const history = new History();
-export const app = new App();
+export const session = new Session();
+export const activity = new ActivityModel();

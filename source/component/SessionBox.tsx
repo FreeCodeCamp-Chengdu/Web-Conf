@@ -2,7 +2,7 @@ import { component, mixin, watch, createCell } from 'web-cell';
 import { observer } from 'mobx-web-cell';
 import { Button } from 'boot-cell/source/Form/Button';
 
-import { app } from '../model';
+import { session } from '../model';
 
 @observer
 @component({
@@ -14,9 +14,9 @@ export class SessionBox extends mixin() {
     countDown = 0;
 
     connectedCallback() {
-        super.connectedCallback!();
+        session.getProfile();
 
-        return app.getProfile();
+        super.connectedCallback!();
     }
 
     handleSMSCode = () => {
@@ -28,7 +28,7 @@ export class SessionBox extends mixin() {
             ),
             { elements } = this.firstElementChild as HTMLFormElement;
 
-        return app.sendSMSCode(
+        return session.sendSMSCode(
             (elements.namedItem('phone') as HTMLInputElement).value
         );
     };
@@ -38,7 +38,7 @@ export class SessionBox extends mixin() {
 
         const form = new FormData(event.target as HTMLFormElement);
 
-        return app.signIn(
+        return session.signIn(
             form.get('phone') as string,
             form.get('code') as string
         );
@@ -47,7 +47,7 @@ export class SessionBox extends mixin() {
     render() {
         const { countDown } = this;
 
-        return app.user ? (
+        return session.user ? (
             this.defaultSlot
         ) : (
             <form

@@ -13,6 +13,7 @@ import { Page2018 } from './2018';
 import { Page2019 } from './2019';
 import { PageAccount } from './2019/PageAccount';
 import { InvitationCard } from './2019/InvitationCard';
+import { ActivityPage } from './Activity';
 
 @observer
 @component({
@@ -22,16 +23,17 @@ import { InvitationCard } from './2019/InvitationCard';
 export class PageRouter extends HTMLRouter {
     protected history = history;
     protected routes = [
+        { paths: [''], component: PageEntry },
         { paths: ['2017'], component: Page2017 },
         { paths: ['2018/Code4City'], component: Code4City },
         { paths: ['2018'], component: Page2018 },
+        { paths: ['2019'], component: Page2019 },
         {
             paths: ['2019/invitation'],
             component: InvitationCard
         },
         { paths: ['2019/accounts'], component: PageAccount },
-        { paths: ['2019'], component: Page2019 },
-        { paths: [''], component: PageEntry }
+        { paths: ['activity'], component: ActivityPage }
     ];
 
     render() {
