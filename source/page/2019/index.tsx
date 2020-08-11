@@ -3,9 +3,9 @@ import { createCell } from 'web-cell';
 import { Jumbotron } from 'boot-cell/source/Content/Jumbotron';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Card } from 'boot-cell/source/Content/Card';
-import { CountDown } from 'boot-cell/source/Extra/CountDown';
+import { CountDown } from 'boot-cell/source/Calendar/CountDown';
 import { TabList } from 'boot-cell/source/Content/TabList';
-import { IFrame } from 'boot-cell/source/Content/IFrame';
+import { Embed } from 'boot-cell/source/Media/Embed';
 
 import { PageFrame } from './PageFrame';
 import { TopicGroup, Topic } from './TopicGroup';
@@ -113,7 +113,8 @@ export function Page2019() {
                 会场交通
             </h2>
             <p className="lead text-center mt-4 mb-5">{data.address}</p>
-            <IFrame
+            <Embed
+                is="iframe"
                 className={style.map}
                 src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.06309,30.538734&name=${data.title}`}
             />

@@ -2,7 +2,7 @@ import { createCell, Fragment } from 'web-cell';
 import { Card } from 'boot-cell/source/Content/Card';
 import { AccordionList } from 'boot-cell/source/Content/Accordion';
 import { Button } from 'boot-cell/source/Form/Button';
-import { IFrame } from 'boot-cell/source/Content/IFrame';
+import { Embed } from 'boot-cell/source/Media/Embed';
 
 import { LogoList } from './LogoList';
 import style from './index.less';
@@ -102,7 +102,8 @@ export function Page2017() {
                     </a>
                     提供 海报、Logo 设计
                 </p>
-                <IFrame
+                <Embed
+                    is="iframe"
                     className={style.map}
                     src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${title}`}
                 />

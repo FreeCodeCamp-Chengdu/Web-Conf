@@ -1,15 +1,18 @@
 import { createCell, Fragment } from 'web-cell';
+import { Image } from 'boot-cell/source/Media/Image';
 import { Button } from 'boot-cell/source/Form/Button';
-import { CarouselView } from 'boot-cell/source/Content/Carousel';
+import { CarouselView } from 'boot-cell/source/Media/Carousel';
 
 import { GuestCard } from './GuestCard';
 import style from './index.less';
+import BG_mountain from './image/BG-mountain.png';
+import BG_points from './image/BG-points.png';
 import { review, awards, vips, sponsors } from './data';
 
 export function Code4City() {
     return (
         <Fragment>
-            <div className={style.Introduce}>
+            <Image background className="text-light" src={BG_mountain}>
                 <div className="container px-3 py-5">
                     <div className="row">
                         <div className={`col-xs-12 col-md-6`}>
@@ -107,7 +110,7 @@ export function Code4City() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Image>
 
             <div className={style.Detail}>
                 <div className="container px-3 py-5">
@@ -147,8 +150,8 @@ export function Code4City() {
                             {vips.map(GuestCard)}
                         </div>
                     </section>
-                    <section className={style.Sponsor}>
-                        <div className="p-5">
+                    <Image background className={style.Sponsor} src={BG_points}>
+                        <section className="p-5">
                             <h4 className={`${style['line-left']} text-white"`}>
                                 合作单位
                             </h4>
@@ -165,8 +168,8 @@ export function Code4City() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    </Image>
                     <ul className="list-unstyled d-flex flex-wrap justify-content-around align-items-center">
                         {sponsors.map(({ list }) =>
                             list.map(({ imageURL, title }) => (

@@ -6,9 +6,12 @@ import {
     createCell,
     Fragment
 } from 'web-cell';
+import { observer } from 'mobx-web-cell';
 import classNames from 'classnames';
 import { formatDate } from 'web-utility/source/date';
-import { CalendarView } from 'boot-cell/source/Extra/Calendar';
+
+import { MonthCalendar } from 'boot-cell/source/Calendar/MonthCalendar';
+import { SpinnerBox } from 'boot-cell/source/Prompt/Spinner';
 import { Card } from 'boot-cell/source/Content/Card';
 
 import { TopNavBar } from '../component';
@@ -20,6 +23,7 @@ interface ActivityPageProps {
     date?: string;
 }
 
+@observer
 @component({
     tagName: 'activity-page',
     renderTarget: 'children'
@@ -38,11 +42,13 @@ export class ActivityPage extends mixin<ActivityPageProps>() {
     }
 
     render({ date }: ActivityPageProps) {
+        const { loading, list } = activity;
+
         return (
             <Fragment>
                 <TopNavBar menu={common_menu} />
 
-                <CalendarView
+                <MonthCalendar
                     className="d-block container"
                     date={date}
                     renderCell={(time: Date) => {
@@ -62,8 +68,11 @@ export class ActivityPage extends mixin<ActivityPageProps>() {
                         );
                     }}
                 />
-                <div className="container card-deck mx-auto flex-wrap justify-content-center">
-                    {activity.list.map(
+                <SpinnerBox
+                    className="container card-deck mx-auto flex-wrap justify-content-center"
+                    cover={loading}
+                >
+                    {list.map(
                         ({ banner, link, title, start, end, address }) => (
                             <Card
                                 className={`${style.card} shadow mb-4`}
@@ -86,7 +95,7 @@ export class ActivityPage extends mixin<ActivityPageProps>() {
                             </Card>
                         )
                     )}
-                </div>
+                </SpinnerBox>
             </Fragment>
         );
     }

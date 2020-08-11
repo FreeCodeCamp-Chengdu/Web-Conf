@@ -15,9 +15,14 @@ export interface Activity extends DataItem {
 
 export class ActivityModel {
     @observable
+    loading = false;
+
+    @observable
     list: Activity[] = [];
 
     async getDayList(date: Date) {
+        this.loading = true;
+
         const { body } = await client.get<Activity[]>(
             `activity?${buildURLData({
                 from: formatDate(date, 'YYYY-MM-DD'),
@@ -25,6 +30,8 @@ export class ActivityModel {
                 rows: 1000
             })}`
         );
+        this.loading = false;
+
         return (this.list = body!);
     }
 }

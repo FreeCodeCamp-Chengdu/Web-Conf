@@ -2,7 +2,7 @@ import { createCell } from 'web-cell';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Table } from 'boot-cell/source/Content/Table';
 import { Card } from 'boot-cell/source/Content/Card';
-import { IFrame } from 'boot-cell/source/Content/IFrame';
+import { Embed } from 'boot-cell/source/Media/Embed';
 import marked from 'marked';
 
 import { TopNavBar } from '../../component';
@@ -221,7 +221,8 @@ export function Page2018() {
                     <p className="text-muted">
                         天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
                     </p>
-                    <IFrame
+                    <Embed
+                        is="iframe"
                         src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${title}`}
                     />
                 </div>

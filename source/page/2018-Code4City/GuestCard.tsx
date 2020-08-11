@@ -1,4 +1,5 @@
 import { createCell } from 'web-cell';
+import { Image } from 'boot-cell/source/Media/Image';
 
 import style from './index.less';
 import { vips } from './data';
@@ -13,11 +14,10 @@ export function GuestCard({
     return (
         <div className="col-md-6 col-xs-12">
             <div className={style.guest}>
-                <div
+                <Image
+                    background
                     className={style['guest-avatar']}
-                    style={{
-                        backgroundImage: `url('${avatar}')`
-                    }}
+                    src={avatar}
                 />
                 <div className={style['guest-title']}>
                     <h5 className="guest-name text-white">{name}</h5>
