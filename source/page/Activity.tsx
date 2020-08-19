@@ -18,6 +18,7 @@ import { TopNavBar } from '../component';
 import style from './PageEntry.less';
 import { common_menu } from './data';
 import { activity } from '../model';
+import { Activity } from '../model/Activity';
 
 interface ActivityPageProps {
     date?: string;
@@ -39,6 +40,26 @@ export class ActivityPage extends mixin<ActivityPageProps>() {
         if (!this.date) this.date = formatDate(new Date(), 'YYYY-MM-DD');
 
         super.connectedCallback!();
+    }
+
+    renderCards(list: Activity[]) {
+        return list.map(({ banner, link, title, start, end, address }) => (
+            <Card
+                className={`${style.card} shadow mb-4`}
+                image={banner}
+                title={
+                    <a className="stretched-link" target="_blank" href={link}>
+                        {title}
+                    </a>
+                }
+            >
+                <ul className="list-unstyled">
+                    <li>开始：{formatDate(start)}</li>
+                    <li>结束：{formatDate(end)}</li>
+                    <li>地点：{address}</li>
+                </ul>
+            </Card>
+        ));
     }
 
     render({ date }: ActivityPageProps) {
@@ -72,29 +93,9 @@ export class ActivityPage extends mixin<ActivityPageProps>() {
                     className="container card-deck mx-auto flex-wrap justify-content-center"
                     cover={loading}
                 >
-                    {list.map(
-                        ({ banner, link, title, start, end, address }) => (
-                            <Card
-                                className={`${style.card} shadow mb-4`}
-                                image={banner}
-                                title={
-                                    <a
-                                        className="stretched-link"
-                                        target="_blank"
-                                        href={link}
-                                    >
-                                        {title}
-                                    </a>
-                                }
-                            >
-                                <ul className="list-unstyled">
-                                    <li>开始：{formatDate(start)}</li>
-                                    <li>结束：{formatDate(end)}</li>
-                                    <li>地点：{address}</li>
-                                </ul>
-                            </Card>
-                        )
-                    )}
+                    {list[0]
+                        ? this.renderCards(list)
+                        : `${formatDate(date, 'YYYY 年 M 月 D 日')}没有活动`}
                 </SpinnerBox>
             </Fragment>
         );

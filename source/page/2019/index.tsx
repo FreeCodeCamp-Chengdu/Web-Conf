@@ -1,10 +1,11 @@
 import groupBy from 'lodash.groupby';
-import { createCell } from 'web-cell';
+import { createCell, Fragment } from 'web-cell';
 import { Jumbotron } from 'boot-cell/source/Content/Jumbotron';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Card } from 'boot-cell/source/Content/Card';
 import { CountDown } from 'boot-cell/source/Calendar/CountDown';
-import { TabList } from 'boot-cell/source/Content/TabList';
+import { TabView, TabPanel } from 'boot-cell/source/Content/TabView';
+import { NavLink } from 'boot-cell/source/Navigator/Nav';
 import { Embed } from 'boot-cell/source/Media/Embed';
 
 import { PageFrame } from './PageFrame';
@@ -52,19 +53,19 @@ export function Page2019() {
             <h2 className="text-center my-4" id="Topic">
                 大会议程
             </h2>
-            <TabList
-                mode="pills"
-                tabAlign="center"
-                list={topicGroups.map(([title, list]) => ({
-                    title,
-                    content: (
-                        <TopicGroup
-                            topics={list as Topic[]}
-                            mentors={data.mentors}
-                        />
-                    )
-                }))}
-            />
+            <TabView mode="pills" tabAlign="center">
+                {topicGroups.map(([title, list]) => (
+                    <Fragment>
+                        <NavLink>{title}</NavLink>
+                        <TabPanel>
+                            <TopicGroup
+                                topics={list as Topic[]}
+                                mentors={data.mentors}
+                            />
+                        </TabPanel>
+                    </Fragment>
+                ))}
+            </TabView>
             <hr className="m-5" />
 
             <h2 className="text-center" id="Mentor">

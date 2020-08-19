@@ -1,7 +1,7 @@
 import { createCell, Fragment } from 'web-cell';
 import { Image } from 'boot-cell/source/Media/Image';
 import { Button } from 'boot-cell/source/Form/Button';
-import { CarouselView } from 'boot-cell/source/Media/Carousel';
+import { CarouselView, CarouselItem } from 'boot-cell/source/Media/Carousel';
 
 import { GuestCard } from './GuestCard';
 import style from './index.less';
@@ -45,13 +45,14 @@ export function Code4City() {
                         </div>
 
                         <div className="col-xs-12 col-md-6">
-                            <CarouselView
-                                interval={3}
-                                list={review.map(({ imageURL, title }) => ({
-                                    image: imageURL,
-                                    title
-                                }))}
-                            />
+                            <CarouselView interval={3}>
+                                {review.map(({ imageURL, title }) => (
+                                    <CarouselItem
+                                        image={imageURL}
+                                        title={title}
+                                    />
+                                ))}
+                            </CarouselView>
                         </div>
                         <div className="d-md-flex w-100 align-items-start my-5">
                             <h4
