@@ -14,7 +14,7 @@ export function PartnerGroup({
     list: Partner[];
 }) {
     return (
-        <Fragment>
+        <>
             <h3 className="mt-4 mb-3">{title}</h3>
 
             <ul className="list-unstyled d-flex flex-wrap justify-content-around align-items-center">
@@ -36,6 +36,6 @@ export function PartnerGroup({
                     </li>
                 ))}
             </ul>
-        </Fragment>
+        </>
     );
 }

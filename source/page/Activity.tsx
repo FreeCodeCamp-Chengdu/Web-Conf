@@ -66,7 +66,7 @@ export class ActivityPage extends mixin<ActivityPageProps>() {
         const { loading, list } = activity;
 
         return (
-            <Fragment>
+            <>
                 <TopNavBar menu={common_menu} />
 
                 <MonthCalendar
@@ -97,7 +97,7 @@ export class ActivityPage extends mixin<ActivityPageProps>() {
                         ? this.renderCards(list)
                         : `${formatDate(date, 'YYYY 年 M 月 D 日')}没有活动`}
                 </SpinnerBox>
-            </Fragment>
+            </>
         );
     }
 }

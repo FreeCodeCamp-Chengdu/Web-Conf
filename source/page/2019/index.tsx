@@ -41,7 +41,7 @@ export function Page2019() {
             >
                 <CountDown endTime="2019-11-16 09:00:00" />
                 <Button
-                    kind="danger"
+                    color="danger"
                     size="lg"
                     className="mt-5"
                     href="http://fcc-chengdu.mikecrm.com/7pG2aOh"
@@ -55,7 +55,7 @@ export function Page2019() {
             </h2>
             <TabView mode="pills" tabAlign="center">
                 {topicGroups.map(([title, list]) => (
-                    <Fragment>
+                    <>
                         <NavLink>{title}</NavLink>
                         <TabPanel>
                             <TopicGroup
@@ -63,7 +63,7 @@ export function Page2019() {
                                 mentors={data.mentors}
                             />
                         </TabPanel>
-                    </Fragment>
+                    </>
                 ))}
             </TabView>
             <hr className="m-5" />

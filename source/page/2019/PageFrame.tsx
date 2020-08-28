@@ -5,7 +5,7 @@ import { title, menu } from './data/index.json';
 
 export function PageFrame({ defaultSlot }: WebCellProps) {
     return (
-        <Fragment>
+        <>
             <TopNavBar
                 brand={title}
                 theme="light"
@@ -13,6 +13,6 @@ export function PageFrame({ defaultSlot }: WebCellProps) {
                 menu={menu}
             />
             <main className="container">{defaultSlot}</main>
-        </Fragment>
+        </>
     );
 }

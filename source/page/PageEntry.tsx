@@ -10,7 +10,7 @@ import { common_menu, conf_list } from './data';
 
 export function PageEntry() {
     return (
-        <Fragment>
+        <>
             <TopNavBar menu={common_menu} />
 
             <Jumbotron
@@ -27,7 +27,7 @@ export function PageEntry() {
                     报名最新大会
                 </Button>
                 <Button
-                    kind="secondary"
+                    color="secondary"
                     className="m-2"
                     href={conf_list[1].URL}
                     title={conf_list[1].title}
@@ -49,7 +49,7 @@ export function PageEntry() {
                             >
                                 <div className="d-flex justify-content-between align-items-center">
                                     <Button
-                                        kind={passed ? 'secondary' : 'primary'}
+                                        color={passed ? 'secondary' : 'primary'}
                                         size="sm"
                                         className="stretched-link"
                                         href={URL}
@@ -67,6 +67,6 @@ export function PageEntry() {
                     })}
                 </div>
             </section>
-        </Fragment>
+        </>
     );
 }

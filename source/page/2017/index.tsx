@@ -1,6 +1,6 @@
 import { createCell, Fragment } from 'web-cell';
 import { Card } from 'boot-cell/source/Content/Card';
-import { AccordionList } from 'boot-cell/source/Content/Accordion';
+import { Accordion, AccordionPanel } from 'boot-cell/source/Content/Accordion';
 import { Button } from 'boot-cell/source/Form/Button';
 import { Embed } from 'boot-cell/source/Media/Embed';
 
@@ -11,7 +11,7 @@ import { banner, qrcode } from './image';
 
 export function Page2017() {
     return (
-        <Fragment>
+        <>
             <div className="container">
                 <header id={style.logo}>
                     <img className="w-100" src={banner} />
@@ -45,15 +45,14 @@ export function Page2017() {
                     <h2 className="mt-5 mb-4 text-center">
                         <span>SCHEDULE</span> <span>活动流程</span>
                     </h2>
-                    <AccordionList
-                        list={flows.map(
-                            ({ time, content, guest, description }) => ({
-                                title: `${time}【${content}】`,
-                                content: guest ? (
+                    <Accordion>
+                        {flows.map(({ time, content, guest, description }) => (
+                            <AccordionPanel title={`${time}【${content}】`}>
+                                {guest ? (
                                     <ul>
                                         <li>
                                             讲师：
-                                            <a href={'#guest_' + guest}>
+                                            <a href={'#guest_' + guest.name}>
                                                 {guest.name}
                                             </a>
                                         </li>
@@ -61,10 +60,10 @@ export function Page2017() {
                                     </ul>
                                 ) : (
                                     description
-                                )
-                            })
-                        )}
-                    />
+                                )}
+                            </AccordionPanel>
+                        ))}
+                    </Accordion>
                 </div>
                 <div className={`${style['web-content']} text-center`}>
                     <div>
@@ -108,6 +107,6 @@ export function Page2017() {
                     src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${title}`}
                 />
             </footer>
-        </Fragment>
+        </>
     );
 }

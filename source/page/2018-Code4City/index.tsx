@@ -11,7 +11,7 @@ import { review, awards, vips, sponsors } from './data';
 
 export function Code4City() {
     return (
-        <Fragment>
+        <>
             <Image background className="text-light" src={BG_mountain}>
                 <div className="container px-3 py-5">
                     <div className="row">
@@ -97,10 +97,10 @@ export function Code4City() {
                             </h3>
                             <div className="my-4">
                                 {awards.map(({ title, detail }) => (
-                                    <Fragment>
+                                    <>
                                         <h4 className="text-white">{title}</h4>
                                         <p>{detail}</p>
-                                    </Fragment>
+                                    </>
                                 ))}
                             </div>
                             <div className="col-md-12 my-4">
@@ -187,6 +187,6 @@ export function Code4City() {
                     </ul>
                 </div>
             </div>
-        </Fragment>
+        </>
     );
 }

@@ -37,7 +37,7 @@ export function TopicGroup({
                 return (
                     <Card
                         className={style.topic}
-                        direction="horizontal"
+                        direction="row"
                         title={title}
                         image={image}
                         text={

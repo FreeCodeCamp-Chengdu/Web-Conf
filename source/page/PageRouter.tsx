@@ -38,7 +38,7 @@ export class PageRouter extends HTMLRouter {
 
     render() {
         return (
-            <Fragment>
+            <>
                 {super.render()}
 
                 <footer className="text-muted bg-light overflow-hidden mt-4">
@@ -106,7 +106,7 @@ export class PageRouter extends HTMLRouter {
                         <a href="#top">返回页顶</a>
                     </section>
                 </footer>
-            </Fragment>
+            </>
         );
     }
 }
