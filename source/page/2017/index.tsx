@@ -30,9 +30,9 @@ export function Page2017() {
                         <span>SPEAKER</span> <span>分享嘉宾</span>
                     </h2>
                     <div className="card-columns justify-content-center">
-                        {guests.map(({ avatar, name, description }, index) => (
+                        {guests.map(({ avatar, name, description }) => (
                             <Card
-                                id={'guest_' + index}
+                                id={'guest_' + name}
                                 className={style.mentor}
                                 image={avatar}
                                 title={name}
