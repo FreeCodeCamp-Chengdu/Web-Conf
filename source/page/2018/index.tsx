@@ -1,6 +1,6 @@
 import { createCell } from 'web-cell';
 import { Button } from 'boot-cell/source/Form/Button';
-import { Table } from 'boot-cell/source/Content/Table';
+import { Table, TableRow } from 'boot-cell/source/Content/Table';
 import { Card } from 'boot-cell/source/Content/Card';
 import { Embed } from 'boot-cell/source/Media/Embed';
 import marked from 'marked';
@@ -173,28 +173,24 @@ export function Page2018() {
             <section id="Schedule">
                 <h2 className="text-center mb-5">日程</h2>
                 <div className="container">
-                    <Table striped>
-                        <thead>
-                            <tr>
-                                <th scope="col" className="d-none d-md-block">
-                                    #
-                                </th>
-                                <th scope="col">时间</th>
-                                <th scope="col">活动</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {schedule.map(({ time, title, topic }) => (
-                                <tr>
-                                    <td className="d-none d-md-block" />
-                                    <td className="text-nowrap">{time}</td>
-                                    <td>
-                                        {title ||
-                                            `《${topic?.title}》 ${topic?.lecturer.name}`}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
+                    <Table center striped hover>
+                        <TableRow type="head">
+                            <th scope="col" className="d-none d-md-block">
+                                #
+                            </th>
+                            <th scope="col">时间</th>
+                            <th scope="col">活动</th>
+                            <th scope="col">主咖</th>
+                        </TableRow>
+
+                        {schedule.map(({ time, title, topic }) => (
+                            <TableRow>
+                                <td className="d-none d-md-block" />
+                                <td className="text-nowrap">{time}</td>
+                                <td>{title || `《${topic?.title}》`}</td>
+                                <td>{topic?.lecturer.name}</td>
+                            </TableRow>
+                        ))}
                     </Table>
                 </div>
             </section>
