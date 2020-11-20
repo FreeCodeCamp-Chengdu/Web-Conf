@@ -15,7 +15,7 @@ import { SpinnerBox } from 'boot-cell/source/Prompt/Spinner';
 import { Card } from 'boot-cell/source/Content/Card';
 
 import { TopNavBar } from '../component';
-import style from './PageEntry.less';
+import style from './Home.less';
 import { common_menu } from './data';
 import { activity } from '../model';
 import { Activity } from '../model/Activity';

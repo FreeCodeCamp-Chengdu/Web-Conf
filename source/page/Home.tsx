@@ -5,10 +5,10 @@ import { Card } from 'boot-cell/source/Content/Card';
 
 import { TopNavBar } from '../component';
 import { i18nTextOf } from '../i18n';
-import style from './PageEntry.less';
-import { common_menu, conf_list } from './data';
+import style from './Home.less';
+import { common_menu, summits } from './data';
 
-export function PageEntry() {
+export function HomePage() {
     return (
         <>
             <TopNavBar menu={common_menu} />
@@ -21,16 +21,16 @@ export function PageEntry() {
             >
                 <Button
                     className="m-2"
-                    href={conf_list[0].URL}
-                    title={conf_list[0].title}
+                    href={summits[0].URL}
+                    title={summits[0].title}
                 >
                     报名最新大会
                 </Button>
                 <Button
                     color="secondary"
                     className="m-2"
-                    href={conf_list[1].URL}
-                    title={conf_list[1].title}
+                    href={summits[1].URL}
+                    title={summits[1].title}
                 >
                     回顾上次大会
                 </Button>
@@ -38,7 +38,7 @@ export function PageEntry() {
 
             <section className="container py-5">
                 <div className="card-deck flex-wrap justify-content-center">
-                    {conf_list.map(({ title, banner, date, URL }) => {
+                    {summits.map(({ title, banner, date, URL }) => {
                         const passed = new Date(date) < new Date();
 
                         return (

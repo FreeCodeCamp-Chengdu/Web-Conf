@@ -3,7 +3,7 @@ import { serviceWorkerUpdate } from 'web-utility/source/event';
 import { render, createCell, documentReady } from 'web-cell';
 
 import { loaded } from './i18n';
-import { PageRouter } from './page/PageRouter';
+import { PageRouter } from './page';
 
 auto();
 

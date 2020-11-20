@@ -11,7 +11,6 @@ import { Embed } from 'boot-cell/source/Media/Embed';
 import { PageFrame } from './PageFrame';
 import { TopicGroup, Topic } from './TopicGroup';
 import { PartnerGroup } from './PartnerGroup';
-import style from './index.less';
 
 import data from './data/index.json';
 import BuyCode from './data/BuyCode.png';
@@ -77,8 +76,8 @@ export function Page2019() {
                 {data.mentors.map(
                     ({ name, avatar, organization, title, GitHub }) => (
                         <Card
+                            className="mt-2 shadow-sm"
                             id={GitHub}
-                            className={style.mentor}
                             title={name}
                             image={avatar}
                             text={
@@ -116,7 +115,6 @@ export function Page2019() {
             <p className="lead text-center mt-4 mb-5">{data.address}</p>
             <Embed
                 is="iframe"
-                className={style.map}
                 src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.06309,30.538734&name=${data.title}`}
             />
             <hr className="m-5" />

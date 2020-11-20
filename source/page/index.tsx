@@ -5,13 +5,14 @@ import { history } from '../model';
 
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 
-import { PageEntry } from './PageEntry';
+import { HomePage } from './Home';
 import { Page2017 } from './2017';
 import { Code4City } from './2018-Code4City';
 import { Page2018 } from './2018';
 import { Page2019 } from './2019';
 import { PageAccount } from './2019/PageAccount';
 import { InvitationCard } from './2019/InvitationCard';
+import { CommunityPage } from './Community';
 import { ActivityPage } from './Activity';
 
 export function PageRouter() {
@@ -20,7 +21,8 @@ export function PageRouter() {
             <CellRouter
                 history={history}
                 routes={[
-                    { paths: [''], component: PageEntry },
+                    { paths: [''], component: HomePage },
+                    { paths: ['community'], component: CommunityPage },
                     { paths: ['2017'], component: Page2017 },
                     { paths: ['2018/Code4City'], component: Code4City },
                     { paths: ['2018'], component: Page2018 },
