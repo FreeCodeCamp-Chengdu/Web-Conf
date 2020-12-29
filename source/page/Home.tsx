@@ -21,14 +21,15 @@ export function HomePage() {
             >
                 <Button
                     className="m-2"
+                    color="primary"
                     href={summits[0].URL}
                     title={summits[0].title}
                 >
                     报名最新大会
                 </Button>
                 <Button
-                    color="secondary"
                     className="m-2"
+                    color="secondary"
                     href={summits[1].URL}
                     title={summits[1].title}
                 >

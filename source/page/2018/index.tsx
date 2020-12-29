@@ -51,6 +51,7 @@ export function Page2018() {
                             </p>
                             <div className="p-4 text-center">
                                 <Button
+                                    color="primary"
                                     size="lg"
                                     target="_blank"
                                     href="http://fcc-chengdu.mikecrm.com/tFM8Rk8"
@@ -253,6 +254,7 @@ export function Page2018() {
             <section id="CallInAction" className={style.sparked}>
                 <div className="container text-center">
                     <Button
+                        color="primary"
                         size="lg"
                         target="_blank"
                         href="http://fcc-chengdu.mikecrm.com/tFM8Rk8"

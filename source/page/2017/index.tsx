@@ -84,6 +84,7 @@ export function Page2017() {
                     <Button
                         className="my-5"
                         block
+                        color="primary"
                         size="lg"
                         target="_blank"
                         href="http://cn.mikecrm.com/rdVltvT"

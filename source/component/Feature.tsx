@@ -1,4 +1,4 @@
-import { VNodeChildElement, createCell } from 'web-cell';
+import { WebCellElement, createCell } from 'web-cell';
 import classNames from 'classnames';
 import { Image } from 'boot-cell/source/Media/Image';
 
@@ -6,8 +6,8 @@ import style from './Feature.less';
 
 export interface FeatureProps {
     reverse?: boolean;
-    title: string | VNodeChildElement;
-    summary: string | VNodeChildElement;
+    title: WebCellElement;
+    summary: WebCellElement;
     logo: string;
 }
 

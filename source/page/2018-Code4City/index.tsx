@@ -23,6 +23,7 @@ export function Code4City() {
 
                             <Button
                                 className={style.register}
+                                color="primary"
                                 target="_blank"
                                 href="https://fcc.hackerearth.com/zh/"
                             >
