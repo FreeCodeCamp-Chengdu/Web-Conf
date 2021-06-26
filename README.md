@@ -1,7 +1,7 @@
 # 成都 Web 开发者大会
 
 [![NPM Dependency](https://david-dm.org/FreeCodeCamp-Chengdu/Web-Conf.svg)][1]
-[![Build Status](https://travis-ci.com/FreeCodeCamp-Chengdu/Web-Conf.svg?branch=master)][2]
+[![CI & CD](https://github.com/FreeCodeCamp-Chengdu/Web-Conf/workflows/CI%20&%20CD/badge.svg)][2]
 [![TechConf](https://img.shields.io/badge/TechConf-Chinese-red)][3]
 
 ## 官网地址
@@ -14,7 +14,7 @@ https://github.com/FreeCodeCamp-Chengdu/Web-Conf/graphs/contributors
 
 ## 技术栈
 
--   逻辑语言: [TypeScript v3][4]
+-   逻辑语言: [TypeScript v4][4]
 -   组件引擎: [WebCell v2][5]
 -   组件库: [BootCell v1][6]
 -   状态管理: [MobX v5][7]
@@ -43,7 +43,7 @@ node toolkit/import-assets path/to/media/folder
 ```
 
 [1]: https://david-dm.org/FreeCodeCamp-Chengdu/Web-Conf
-[2]: https://travis-ci.com/FreeCodeCamp-Chengdu/Web-Conf
+[2]: https://github.com/FreeCodeCamp-Chengdu/Web-Conf/actions
 [3]: https://github.com/hax/chinese-tech-conf-schedule
 [4]: https://typescriptlang.org
 [5]: https://web-cell.dev/

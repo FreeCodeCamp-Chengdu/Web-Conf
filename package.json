@@ -20,8 +20,9 @@
         "url": "https://github.com/FreeCodeCamp-Chengdu/Web-Conf/issues"
     },
     "scripts": {
+        "prepare": "husky install",
         "test": "lint-staged",
-        "start": "workbox generateSW  &&  parcel source/index.html --open",
+        "start": "parcel source/index.html --open",
         "pack-sw": "rm -f dist/sw.js.map  &&  workbox generateSW",
         "build": "rm -rf dist/ .cache/  &&  parcel build source/index.html --public-url .  &&  npm run pack-sw"
     },
@@ -30,49 +31,41 @@
             "prettier --write",
             "eslint --fix"
         ],
-        "*.{html,md,css,less,js,ts,tsx,json}": [
-            "prettier --write"
-        ]
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm test",
-            "pre-push": "npm run build"
-        }
+        "*.{html,md,css,less,js,ts,tsx,json}": "prettier --write"
     },
     "dependencies": {
-        "boot-cell": "^1.9.1",
+        "boot-cell": "^1.9.5",
         "browser-unhandled-rejection": "^1.0.2",
-        "cell-router": "^2.0.3",
-        "classnames": "^2.2.6",
-        "html-to-image": "^1.3.20",
-        "koajax": "^0.6.4",
+        "cell-router": "^2.0.4",
+        "classnames": "^2.3.1",
+        "html-to-image": "^1.6.2",
+        "koajax": "^0.6.5",
         "lodash.groupby": "^4.6.0",
-        "marked": "^1.2.7",
+        "marked": "^2.1.3",
         "mobx": "^5.15.7",
         "mobx-web-cell": "^0.3.4",
-        "web-cell": "^2.3.0-beta.4",
-        "web-utility": "^2.2.2"
+        "web-cell": "^2.3.0",
+        "web-utility": "^2.4.4"
     },
     "devDependencies": {
-        "@babel/core": "^7.12.10",
-        "@types/classnames": "^2.2.11",
+        "@babel/core": "^7.14.6",
+        "@types/classnames": "^2.3.1",
         "@types/lodash.groupby": "^4.6.6",
-        "@types/marked": "^1.2.1",
-        "@typescript-eslint/parser": "^4.11.1",
+        "@types/marked": "^2.0.3",
+        "@typescript-eslint/parser": "^4.28.0",
         "autoprefixer": "^9.8.6",
-        "eslint": "^7.16.0",
-        "eslint-config-prettier": "^6.15.0",
-        "eslint-plugin-prettier": "^3.3.0",
-        "husky": "^4.3.6",
-        "less": "^4.0.0",
-        "lint-staged": "^10.5.3",
-        "parcel-bundler": "^1.12.4",
+        "eslint": "^7.29.0",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^6.0.0",
+        "less": "^4.1.1",
+        "lint-staged": "^11.0.0",
+        "parcel-bundler": "^1.12.5",
         "parcel-plugin-text": "^0.9.7",
         "postcss-modules": "^3.2.2",
-        "prettier": "^2.2.1",
-        "typescript": "^4.1.3",
-        "workbox-cli": "^6.0.2"
+        "prettier": "^2.3.2",
+        "typescript": "^4.3.4",
+        "workbox-cli": "^6.1.5"
     },
     "prettier": {
         "singleQuote": true,

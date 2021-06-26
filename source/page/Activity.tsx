@@ -1,4 +1,5 @@
 import {
+    WebCellProps,
     component,
     mixin,
     attribute,
@@ -17,10 +18,9 @@ import { Card } from 'boot-cell/source/Content/Card';
 import { TopNavBar } from '../component';
 import style from './Home.less';
 import { common_menu } from './data';
-import { activity } from '../model';
-import { Activity } from '../model/Activity';
+import { activity, Activity } from '../model';
 
-interface ActivityPageProps {
+export interface ActivityPageProps extends WebCellProps {
     date?: string;
 }
 

@@ -5,7 +5,7 @@ module.exports = {
     ],
     swDest: 'dist/sw.js',
     importScripts: [
-        'https://cdn.jsdelivr.net/npm/workbox-sw@6.0.2/build/workbox-sw.min.js'
+        'https://cdn.jsdelivr.net/npm/workbox-sw@6.1.5/build/workbox-sw.min.js'
     ],
     clientsClaim: true,
     cleanupOutdatedCaches: true

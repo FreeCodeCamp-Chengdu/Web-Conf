@@ -12,6 +12,9 @@ export function TopNavBar({ menu, ...rest }: TopNavBarProps) {
     return (
         <NavBar
             key={history.path.split('/')[0]}
+            expand="md"
+            theme="dark"
+            background="dark"
             brand="成都 Web 开发者大会"
             {...rest}
         >

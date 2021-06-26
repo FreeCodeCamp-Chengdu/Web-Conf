@@ -15,8 +15,7 @@ export const summits = [
         title: 'COSCon’20（中国开源年会）成都分会场',
         date: '2020-10-24',
         URL: 'https://fcc-cd.dev/activity/conference/coscon-2020-chengdu/',
-        banner:
-            'https://ows.blob.core.chinacloudapi.cn/files/assets/COS_Con_20_abaa9e2a66.png'
+        banner: 'https://ows.blob.core.chinacloudapi.cn/files/assets/COS_Con_20_abaa9e2a66.png'
     },
     {
         title: '2019 成都 Web 全栈大会',
@@ -29,6 +28,12 @@ export const summits = [
         date: '2018-11-10',
         URL: '2018/',
         banner: banner_2018
+    },
+    {
+        title: '2018 重庆 Web 前端大会',
+        date: '2018-08-18',
+        URL: 'https://fcc-cd.dev/activity/conference/web-fe-conf-chongqing-2018/',
+        banner: 'http://wimg.huodongxing.com/logo/201807/9450206156400/123133704540930_v2.jpg@!wmlogo'
     },
     {
         title: '2018 成都 React 技术大会',

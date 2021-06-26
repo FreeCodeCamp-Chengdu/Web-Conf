@@ -62,7 +62,7 @@ export class SessionBox extends mixin() {
                     <Field
                         type="tel"
                         name="phone"
-                        maxLength="11"
+                        maxLength={11}
                         required
                         placeholder="手机号"
                     />
