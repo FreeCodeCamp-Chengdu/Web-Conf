@@ -5,17 +5,15 @@
         "noImplicitReturns": true,
         "noImplicitAny": false,
         "module": "ESNext",
-        "moduleResolution": "node",
+        "moduleResolution": "Node",
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
-        "target": "es5",
+        "target": "ES6",
         "allowJs": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "jsx": "react",
-        "jsxFactory": "createCell",
-        "jsxFragmentFactory": "Fragment",
-        "lib": ["ES2019", "DOM"]
+        "useDefineForClassFields": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "dom-renderer",
+        "lib": ["ES2023", "DOM"]
     },
     "include": ["./source/**/*"]
 }
