@@ -2,6 +2,8 @@ import { createRouter } from 'cell-router';
 
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import { HomePage } from './Home';
+import { CommunityPage } from './Community';
+import { ActivityPage } from './Activity';
 
 const { Route } = createRouter();
 
@@ -9,14 +11,14 @@ export const PageRouter = () => (
     <div className="d-flex flex-column" style={{ height: '300vh' }}>
         <div className="flex-fill overflow-auto scrollbar-none">
             <Route path="" component={HomePage} />
-            {/* { paths: ['community'], component: CommunityPage },
-                { paths: ['2017'], component: Page2017 },
+            <Route path="community" component={CommunityPage} />
+            {/* { paths: ['2017'], component: Page2017 },
                 { paths: ['2018/Code4City'], component: Code4City },
                 { paths: ['2018'], component: Page2018 },
                 { paths: ['2019'], component: Page2019 },
                 { paths: ['2019/invitation'], component: InvitationCard },
-                { paths: ['2019/accounts'], component: PageAccount },
-                { paths: ['activity'], component: ActivityPage } */}
+                { paths: ['2019/accounts'], component: PageAccount }, */}
+            <Route path="activity" component={ActivityPage} />
         </div>
 
         <footer className="text-muted bg-light overflow-hidden mt-4">

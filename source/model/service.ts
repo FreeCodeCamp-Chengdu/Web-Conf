@@ -9,8 +9,4 @@ export const client = new HTTPClient({
     withCredentials: true
 });
 
-export interface DataItem {
-    objectId: string;
-    createdAt: string;
-    updatedAt: string;
-}
+export type DataItem = Record<'objectId' | 'createdAt' | 'updatedAt', string>;

@@ -1,24 +1,17 @@
 import { observable } from 'mobx';
-import { buildURLData } from 'web-utility/source/URL';
-import { Day, formatDate } from 'web-utility/source/date';
+import { buildURLData, Day, formatDate } from 'web-utility';
 
 import { DataItem, client } from './service';
 
-export interface Activity extends DataItem {
-    title: string;
-    start: string;
-    end: string;
-    address: string;
-    banner: string;
-    link: string;
-}
+export type Activity = DataItem &
+    Record<'title' | 'start' | 'end' | 'address' | 'banner' | 'link', string>;
 
 export class ActivityModel {
     @observable
-    loading = false;
+    accessor loading = false;
 
     @observable
-    list: Activity[] = [];
+    accessor list: Activity[] = [];
 
     async getDayList(date: Date) {
         this.loading = true;

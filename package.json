@@ -32,7 +32,7 @@
         "*.{html,md,css,less,js,ts,tsx,json}": "prettier --write"
     },
     "dependencies": {
-        "boot-cell": "^2.0.0-beta.7",
+        "boot-cell": "^2.0.0-beta.8",
         "browser-unhandled-rejection": "^1.0.2",
         "cell-router": "^3.0.0-rc.5",
         "classnames": "^2.5.1",
