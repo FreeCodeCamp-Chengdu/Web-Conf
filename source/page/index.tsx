@@ -4,6 +4,8 @@ import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import { HomePage } from './Home';
 import { CommunityPage } from './Community';
 import { ActivityPage } from './Activity';
+import { Page2017 } from './2017';
+import { Page2018 } from './2018';
 
 const { Route } = createRouter();
 
@@ -12,10 +14,10 @@ export const PageRouter = () => (
         <div className="flex-fill overflow-auto scrollbar-none">
             <Route path="" component={HomePage} />
             <Route path="community" component={CommunityPage} />
-            {/* { paths: ['2017'], component: Page2017 },
-                { paths: ['2018/Code4City'], component: Code4City },
-                { paths: ['2018'], component: Page2018 },
-                { paths: ['2019'], component: Page2019 },
+            <Route path="2017/" component={Page2017} />
+            {/* { paths: ['2018/Code4City'], component: Code4City }, */}
+            <Route path="2018/" component={Page2018} />
+            {/* { paths: ['2019'], component: Page2019 },
                 { paths: ['2019/invitation'], component: InvitationCard },
                 { paths: ['2019/accounts'], component: PageAccount }, */}
             <Route path="activity" component={ActivityPage} />

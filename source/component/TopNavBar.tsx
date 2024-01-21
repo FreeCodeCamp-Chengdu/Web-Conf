@@ -10,6 +10,8 @@ export interface TopNavBarProps extends OffcanvasNavbarProps {
     menu?: NavLinkProps[];
 }
 
+const OriginalURLPattern = /^(https?|#)/;
+
 export const TopNavBar: FC<TopNavBarProps> = ({ menu, ...rest }) => (
     <OffcanvasNavbar
         variant="dark"
@@ -26,7 +28,7 @@ export const TopNavBar: FC<TopNavBarProps> = ({ menu, ...rest }) => (
             <NavLink
                 className="m-3 my-md-0 mx-md-3"
                 {...rest}
-                href={`#${href}`}
+                href={OriginalURLPattern.test(href) ? href : `#${href}`}
                 active={globalThis.location?.hash
                     .slice(1)
                     .startsWith(href + '')}
