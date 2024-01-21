@@ -1,16 +1,15 @@
+import { HTTPError } from 'koajax';
 import { observable } from 'mobx';
 
 import { DataItem, client } from './service';
 
-export interface User extends DataItem {
-    username: string;
+export interface User extends DataItem, Record<'username' | 'gender', string> {
     mobilePhoneNumber?: string;
-    gender: string;
 }
 
 export class Session {
     @observable
-    user?: User;
+    accessor user: User | undefined;
 
     async getProfile() {
         try {
@@ -18,7 +17,7 @@ export class Session {
 
             return (this.user = body);
         } catch (error) {
-            if (error.status !== 401) throw error;
+            if ((error as HTTPError).status !== 401) throw error;
         }
     }
 

@@ -1,8 +1,9 @@
 node_modules/
 package-lock.json
+yarn.lock
 dist/
-.cache/
-.husky/_/
+.parcel-cache/
+.husky/
 .idea/
 .vscode/
 .DS_Store

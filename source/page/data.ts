@@ -82,7 +82,7 @@ export const features = [
         title: '中文技术社区友军众多',
         summary:
             '开源社、开源工场、微软 MVP 社区、成都 Google 开发者社区、阿里云 ACE 成都同城会、成都 Linux 用户组、重庆前端社区……',
-        logo: 'https://opensource.org/files/osi_keyhole_300X300_90ppi_0.png'
+        logo: 'https://i0.wp.com/opensource.org/wp-content/uploads/2009/06/osi_symbol.png?w=628&ssl=1'
     },
     {
         title: '更多精彩，期待你的参与……',

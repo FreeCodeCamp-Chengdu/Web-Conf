@@ -1,11 +1,13 @@
-import { createI18nScope } from 'web-utility/source/i18n';
+import { TranslationModel } from 'mobx-i18n';
 
-import type { I18nMap } from './en-US';
+import zhCN from './zh-CN';
 
-export const { loaded, i18nTextOf } = createI18nScope<I18nMap>(
-    {
-        'en-US': async () => (await import('./en-US')).en_US,
-        'zh-CN': async () => (await import('./zh-CN')).zh_CN
-    },
-    'en-US'
-);
+export const i18n = new TranslationModel({
+    'zh-CN': zhCN,
+    'en-US': () => import('./en-US')
+});
+
+export const LanguageName: Record<(typeof i18n)['currentLanguage'], string> = {
+    'zh-CN': '简体中文',
+    'en-US': 'English'
+};

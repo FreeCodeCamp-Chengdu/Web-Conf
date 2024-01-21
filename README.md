@@ -1,7 +1,6 @@
 # 成都 Web 开发者大会
 
-[![NPM Dependency](https://david-dm.org/FreeCodeCamp-Chengdu/Web-Conf.svg)][1]
-[![CI & CD](https://github.com/FreeCodeCamp-Chengdu/Web-Conf/workflows/CI%20&%20CD/badge.svg)][2]
+[![CI & CD](https://github.com/FreeCodeCamp-Chengdu/Web-Conf/actions/workflows/main.yml/badge.svg)][2]
 [![TechConf](https://img.shields.io/badge/TechConf-Chinese-red)][3]
 
 ## 官网地址
@@ -14,11 +13,11 @@ https://github.com/FreeCodeCamp-Chengdu/Web-Conf/graphs/contributors
 
 ## 技术栈
 
--   逻辑语言: [TypeScript v4][4]
--   组件引擎: [WebCell v2][5]
--   组件库: [BootCell v1][6]
--   状态管理: [MobX v5][7]
--   打包工具: [Parcel v1][8]
+-   逻辑语言: [TypeScript v5][4]
+-   组件引擎: [WebCell v3][5]
+-   组件库: [BootCell v2][6]
+-   状态管理: [MobX v6][7]
+-   打包工具: [Parcel v2][8]
 
 ## 本地开发
 
@@ -26,9 +25,10 @@ https://github.com/FreeCodeCamp-Chengdu/Web-Conf/graphs/contributors
 
 ```shell
 git clone https://github.com/FreeCodeCamp-Chengdu/Web-Conf.git
+cd Web-Conf
 
-npm install
-
+npm i pnpm -g
+pnpm i
 npm start
 ```
 
@@ -42,9 +42,8 @@ npm start
 node toolkit/import-assets path/to/media/folder
 ```
 
-[1]: https://david-dm.org/FreeCodeCamp-Chengdu/Web-Conf
-[2]: https://github.com/FreeCodeCamp-Chengdu/Web-Conf/actions
-[3]: https://github.com/hax/chinese-tech-conf-schedule
+[2]: https://github.com/FreeCodeCamp-Chengdu/Web-Conf/actions/workflows/main.yml
+[3]: https://github.com/b-conf/chinese-tech-conf-schedule
 [4]: https://typescriptlang.org
 [5]: https://web-cell.dev/
 [6]: https://bootstrap.web-cell.dev/
