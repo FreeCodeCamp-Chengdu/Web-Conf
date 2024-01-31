@@ -69,7 +69,7 @@ export class ActivityPage extends HTMLElement implements WebCell {
                     onChange={({ detail }) => (this.date = detail)}
                 />
                 <SpinnerBox
-                    className="container card-deck mx-auto flex-wrap justify-content-center"
+                    className="container d-flex mx-auto flex-wrap justify-content-center"
                     cover={loading}
                 >
                     {list[0]

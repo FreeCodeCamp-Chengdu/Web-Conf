@@ -1,32 +1,26 @@
-import { createCell, component, mixin } from 'web-cell';
-import { observer } from 'mobx-web-cell';
+import { component, observer } from 'web-cell';
+import { observable } from 'mobx';
 import { toPng } from 'html-to-image';
 
 import { session } from '../../model';
 import { SessionBox } from '../../component';
 
-import style from './InvitationCard.less';
+import * as style from './InvitationCard.module.less';
 import banner from './data/banner.jpg';
 import BuyCode from './data/BuyCode.png';
 
-interface InvitationCardState {
-    imageURI: string;
-}
-
+@component({ tagName: 'invitation-card' })
 @observer
-@component({
-    tagName: 'invitation-card',
-    renderTarget: 'children'
-})
-export class InvitationCard extends mixin<{}, InvitationCardState>() {
-    state = { imageURI: '' };
+export class InvitationCard extends HTMLElement {
+    @observable
+    accessor imageURI = '';
 
     showImage = async () => {
-        if (this.state.imageURI) return;
+        if (this.imageURI) return;
 
         const box = this.querySelector<HTMLElement>('main');
 
-        if (box) this.setState({ imageURI: await toPng(box) });
+        if (box) this.imageURI = await toPng(box);
     };
 
     renderCard() {
@@ -60,7 +54,9 @@ export class InvitationCard extends mixin<{}, InvitationCardState>() {
         );
     }
 
-    render(_, { imageURI }: InvitationCardState) {
+    render() {
+        const { imageURI } = this;
+
         return (
             <SessionBox className="position-relative" onClick={this.showImage}>
                 {session.user && this.renderCard()}

@@ -1,15 +1,17 @@
-import { attribute, component, observer } from 'web-cell';
+import { WebCell, attribute, component, observer } from 'web-cell';
 import { observable } from 'mobx';
 import { InputGroup, FormControl, Button } from 'boot-cell';
 
 import { session } from '../model';
+
+export interface SessionBox extends WebCell {}
 
 @component({
     tagName: 'session-box',
     mode: 'open'
 })
 @observer
-export class SessionBox extends HTMLElement {
+export class SessionBox extends HTMLElement implements WebCell {
     @attribute
     @observable
     accessor countDown = 0;

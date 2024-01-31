@@ -1,18 +1,12 @@
-import { WebCellProps, createCell, Fragment } from 'web-cell';
+import { FC, PropsWithChildren } from 'web-cell';
 
 import { TopNavBar } from '../../component';
 import { title, menu } from './data/index.json';
 
-export function PageFrame({ defaultSlot }: WebCellProps) {
-    return (
-        <>
-            <TopNavBar
-                brand={title}
-                theme="light"
-                background="light"
-                menu={menu}
-            />
-            <main className="container">{defaultSlot}</main>
-        </>
-    );
-}
+export const PageFrame: FC<PropsWithChildren> = ({ children }) => (
+    <>
+        <TopNavBar brand={title} variant="light" menu={menu} />
+
+        <main className="container">{children}</main>
+    </>
+);
