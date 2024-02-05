@@ -6,6 +6,7 @@ import { CommunityPage } from './Community';
 import { ActivityPage } from './Activity';
 import { Page2017 } from './2017';
 import { Page2018 } from './2018';
+import { Code4City } from './2018-Code4City';
 
 const { Route } = createRouter();
 
@@ -15,7 +16,7 @@ export const PageRouter = () => (
             <Route path="" component={HomePage} />
             <Route path="community" component={CommunityPage} />
             <Route path="2017/" component={Page2017} />
-            {/* { paths: ['2018/Code4City'], component: Code4City }, */}
+            <Route path="2018/Code4City/" component={Code4City} />
             <Route path="2018/" component={Page2018} />
             {/* { paths: ['2019'], component: Page2019 },
                 { paths: ['2019/invitation'], component: InvitationCard },

@@ -1,6 +1,12 @@
 import { FC } from 'web-cell';
-import { Image, Button } from 'boot-cell';
-import { CarouselCaption, CarouselItem } from '../../component/Carousel';
+import { PageProps } from 'cell-router';
+import {
+    Image,
+    Button,
+    Carousel,
+    CarouselCaption,
+    CarouselItem
+} from 'boot-cell';
 
 import { GuestCard } from './GuestCard';
 import * as style from './index.module.less';
@@ -8,8 +14,8 @@ import BG_mountain from './image/BG-mountain.png';
 import BG_points from './image/BG-points.png';
 import { review, awards, vips, sponsors } from './data';
 
-export const Code4City: FC = () => (
-    <>
+export const Code4City: FC<PageProps> = props => (
+    <main {...props}>
         <div
             className="text-light"
             style={{ backgroundImage: `url(${BG_mountain})` }}
@@ -45,7 +51,7 @@ export const Code4City: FC = () => (
                     </div>
 
                     <div className="col-xs-12 col-md-6">
-                        <CarouselView interval={3}>
+                        <Carousel interval={3000}>
                             {review.map(({ imageURL, title }) => (
                                 <CarouselItem key={imageURL}>
                                     <Image
@@ -57,7 +63,7 @@ export const Code4City: FC = () => (
                                     </CarouselCaption>
                                 </CarouselItem>
                             ))}
-                        </CarouselView>
+                        </Carousel>
                     </div>
                     <div className="d-md-flex w-100 align-items-start my-5">
                         <h4
@@ -161,9 +167,7 @@ export const Code4City: FC = () => (
                     style={{ backgroundImage: `url(${BG_points})` }}
                 >
                     <section className="p-5">
-                        <h4 className={`${style['line-left']} text-white"`}>
-                            合作单位
-                        </h4>
+                        <h4 className="text-white">合作单位</h4>
                         <div className="row">
                             {sponsors.map(({ title, list }) => (
                                 <div className="col-md-2 col-sm-6 col-xs-6">
@@ -195,5 +199,5 @@ export const Code4City: FC = () => (
                 </ul>
             </div>
         </div>
-    </>
+    </main>
 );
