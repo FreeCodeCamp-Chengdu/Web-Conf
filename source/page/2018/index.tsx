@@ -221,7 +221,7 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                 <p className="text-muted">
                     天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
                 </p>
-                <Ratio>
+                <Ratio aspectRatio="21x9">
                     <iframe
                         loading="lazy"
                         src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${title}`}

@@ -7,6 +7,9 @@ import { ActivityPage } from './Activity';
 import { Page2017 } from './2017';
 import { Page2018 } from './2018';
 import { Code4City } from './2018-Code4City';
+import { Page2019 } from './2019';
+import { InvitationCard } from './2019/InvitationCard';
+import { AccountPage } from './2019/PageAccount';
 
 const { Route } = createRouter();
 
@@ -18,9 +21,9 @@ export const PageRouter = () => (
             <Route path="2017/" component={Page2017} />
             <Route path="2018/Code4City/" component={Code4City} />
             <Route path="2018/" component={Page2018} />
-            {/* { paths: ['2019'], component: Page2019 },
-                { paths: ['2019/invitation'], component: InvitationCard },
-                { paths: ['2019/accounts'], component: PageAccount }, */}
+            <Route path="2019/" component={Page2019} />
+            <Route path="2019/invitation/" component={InvitationCard} />
+            <Route path="2019/accounts/" component={AccountPage} />
             <Route path="activity" component={ActivityPage} />
         </div>
 

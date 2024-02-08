@@ -1,5 +1,6 @@
 import groupBy from 'lodash.groupby';
 import { FC } from 'web-cell';
+import { PageProps } from 'cell-router';
 import {
     Jumbotron,
     Button,
@@ -7,8 +8,10 @@ import {
     CardBody,
     CardImg,
     CardTitle,
-    NavLink,
-    Ratio
+    Tab,
+    Tabs,
+    Ratio,
+    CountDown
 } from 'boot-cell';
 
 import { PageFrame } from './PageFrame';
@@ -27,8 +30,8 @@ const topicGroups = Object.entries(
 );
 const partnerGroups = Object.entries(groupBy(data.partners, 'title'));
 
-export const Page2019: FC = () => (
-    <PageFrame>
+export const Page2019: FC<PageProps> = props => (
+    <PageFrame {...props}>
         <Jumbotron
             className="text-center"
             title={data.title}
@@ -53,19 +56,18 @@ export const Page2019: FC = () => (
         <h2 className="text-center my-4" id="Topic">
             大会议程
         </h2>
-        <TabView mode="pills" tabAlign="center">
+        <Tabs
+        // mode="pills" tabAlign="center"
+        >
             {topicGroups.map(([title, list]) => (
-                <>
-                    <NavLink>{title}</NavLink>
-                    <TabPanel>
-                        <TopicGroup
-                            topics={list as Topic[]}
-                            mentors={data.mentors}
-                        />
-                    </TabPanel>
-                </>
+                <Tab caption={title}>
+                    <TopicGroup
+                        topics={list as Topic[]}
+                        mentors={data.mentors}
+                    />
+                </Tab>
             ))}
-        </TabView>
+        </Tabs>
         <hr className="m-5" />
 
         <h2 className="text-center" id="Mentor">
@@ -73,25 +75,27 @@ export const Page2019: FC = () => (
         </h2>
         <p className="lead text-center">（排名不分先后）</p>
 
-        <section className="card-columns">
+        <section className="row cols-1 row-cols-sm-2 row-cols-md-4 g-3">
             {data.mentors.map(
                 ({ name, avatar, organization, title, GitHub }) => (
-                    <Card className="mt-2 shadow-sm" id={GitHub}>
-                        <CardImg src={avatar} />
-                        <CardBody>
-                            <CardTitle>{name}</CardTitle>
-                            {organization
-                                ? `${organization} - ${title}`
-                                : title}
-                            <a
-                                className="stretched-link"
-                                target="_blank"
-                                href={'https://github.com/' + GitHub}
-                            >
-                                @{GitHub}
-                            </a>
-                        </CardBody>
-                    </Card>
+                    <div key={name} className="col">
+                        <Card className="shadow-sm" id={GitHub}>
+                            <CardImg src={avatar} />
+                            <CardBody>
+                                <CardTitle>{name}</CardTitle>
+                                {organization
+                                    ? `${organization} - ${title}`
+                                    : title}
+                                <a
+                                    className="stretched-link"
+                                    target="_blank"
+                                    href={'https://github.com/' + GitHub}
+                                >
+                                    @{GitHub}
+                                </a>
+                            </CardBody>
+                        </Card>
+                    </div>
                 )
             )}
         </section>
@@ -111,7 +115,7 @@ export const Page2019: FC = () => (
             会场交通
         </h2>
         <p className="lead text-center mt-4 mb-5">{data.address}</p>
-        <Ratio>
+        <Ratio aspectRatio="21x9">
             <iframe
                 loading="lazy"
                 src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.06309,30.538734&name=${data.title}`}

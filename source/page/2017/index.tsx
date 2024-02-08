@@ -111,7 +111,7 @@ export const Page2017: FC<PageProps> = props => (
                 </a>
                 提供 海报、Logo 设计
             </p>
-            <Ratio>
+            <Ratio aspectRatio="21x9">
                 <iframe
                     loading="lazy"
                     src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${title}`}

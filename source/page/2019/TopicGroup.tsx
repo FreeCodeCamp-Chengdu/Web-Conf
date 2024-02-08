@@ -20,7 +20,7 @@ export interface TopicGroupProps {
 }
 
 export const TopicGroup: FC<TopicGroupProps> = ({ topics, mentors }) => (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex flex-wrap justify-content-center">
         {[...topics]
             .sort((A, B) => A.time[0].localeCompare(B.time[0]))
             .map(({ title, image, mentorId, slideshow, time }) => {

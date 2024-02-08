@@ -1,5 +1,5 @@
-import { component, observer } from 'web-cell';
-import { CustomElement, parseTextTable } from 'web-utility';
+import { WebCell, component, observer } from 'web-cell';
+import { parseTextTable } from 'web-utility';
 import { Table } from 'boot-cell';
 import { computed, observable } from 'mobx';
 
@@ -8,9 +8,11 @@ import { PageFrame } from './PageFrame';
 type Account = Record<'item' | 'manager' | 'date' | 'remark', string> &
     Record<'price' | 'count', number>;
 
+export interface AccountPage extends WebCell {}
+
 @component({ tagName: 'account-page' })
 @observer
-export class AccountPage extends HTMLElement implements CustomElement {
+export class AccountPage extends HTMLElement implements WebCell {
     @observable
     accessor list: Account[] = [];
 
@@ -32,7 +34,7 @@ export class AccountPage extends HTMLElement implements CustomElement {
         );
     }
 
-    async connectedCallback() {
+    async mountedCallback() {
         const data = await (
             await fetch(new URL('./data/account.csv', import.meta.url))
         ).text();
