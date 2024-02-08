@@ -3,7 +3,6 @@ package-lock.json
 yarn.lock
 dist/
 .parcel-cache/
-.husky/
 .idea/
 .vscode/
 .DS_Store
