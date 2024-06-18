@@ -1,32 +1,24 @@
-import { WebCell, component, attribute, reaction, observer } from 'web-cell';
+import { component, attribute, reaction, observer } from 'web-cell';
 import { observable } from 'mobx';
-import { formatDate } from 'web-utility';
-import {
-    MonthCalendar,
-    SpinnerBox,
-    Card,
-    CardBody,
-    CardImg,
-    CardTitle
-} from 'boot-cell';
+import { CustomElement, formatDate } from 'web-utility';
+import { MonthCalendar, SpinnerBox } from 'boot-cell';
+import { Card, CardBody, CardImg, CardTitle } from 'boot-cell';
 
-import { TopNavBar } from '../component';
-import * as style from './Home.module.less';
+import { TopNavBar } from '../component/TopNavBar';
+import * as style from '../component/SummitCard.module.less';
 import { common_menu } from './data';
 import { activity, Activity } from '../model';
 
-export interface ActivityPage extends WebCell {}
-
 @component({ tagName: 'activity-page' })
 @observer
-export class ActivityPage extends HTMLElement implements WebCell {
+export default class ActivityPage extends HTMLElement implements CustomElement {
     @attribute
     @observable
     accessor date = new Date();
 
     @reaction(({ date }) => date)
-    handleDate(date: Date) {
-        activity.getDayList(date);
+    connectedCallback() {
+        activity.getDayList(this.date);
     }
 
     renderCards(list: Activity[]) {
@@ -55,7 +47,7 @@ export class ActivityPage extends HTMLElement implements WebCell {
 
     render() {
         const { date } = this,
-            { loading, list } = activity;
+            { downloading, list } = activity;
 
         return (
             <>
@@ -70,7 +62,7 @@ export class ActivityPage extends HTMLElement implements WebCell {
                 />
                 <SpinnerBox
                     className="container d-flex mx-auto flex-wrap justify-content-center"
-                    cover={loading}
+                    cover={downloading > 0}
                 >
                     {list[0]
                         ? this.renderCards(list)

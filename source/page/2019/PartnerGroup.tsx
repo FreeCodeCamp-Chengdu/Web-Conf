@@ -15,14 +15,10 @@ export const PartnerGroup: FC<PartnerGroupProps> = ({ title, list }) => (
 
         <ul className="list-unstyled d-flex flex-wrap justify-content-around align-items-center">
             {list.map(({ name, logo }) => (
-                <li className="m-3">
+                <li key={name} className="m-3">
                     {logo ? (
                         <img
-                            className="img-fluid"
-                            style={{
-                                maxWidth: '15rem',
-                                maxHeight: '10rem'
-                            }}
+                            style={{ maxWidth: '15rem', maxHeight: '10rem' }}
                             src={logo}
                             alt={name}
                         />

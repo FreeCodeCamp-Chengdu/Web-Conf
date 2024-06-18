@@ -12,7 +12,25 @@ export const common_menu = [
 
 export const summits = [
     {
-        title: 'COSCon’20（中国开源年会）成都分会场',
+        title: "COSCon'23（中国开源年会）主会场",
+        date: '2023-10-28',
+        URL: 'https://kaiyuanshe.cn/activity/coscon-2023',
+        banner: 'https://ows.blob.core.chinacloudapi.cn/$web/file/coscon23kv.png'
+    },
+    {
+        title: "COSCon'22（中国开源年会）成都分会场",
+        date: '2022-10-29',
+        URL: 'https://mp.weixin.qq.com/s/rOoK4Gs_RLR3IvRcd4a2rQ',
+        banner: 'https://ows.blob.core.chinacloudapi.cn/$web/file/coscon22_cover.jpg'
+    },
+    {
+        title: "COSCon'21（中国开源年会）主会场",
+        date: '2021-10-30',
+        URL: 'https://mp.weixin.qq.com/s/Ylm5mp-t4B7NL6n4WiqYOw',
+        banner: 'https://ows.blob.core.chinacloudapi.cn/$web/file/COSCon-2021-banner.jpg'
+    },
+    {
+        title: "COSCon'20（中国开源年会）成都分会场",
         date: '2020-10-24',
         URL: 'https://fcc-cd.dev/activity/conference/coscon-2020-chengdu/',
         banner: 'https://ows.blob.core.chinacloudapi.cn/files/assets/COS_Con_20_abaa9e2a66.png'
@@ -38,7 +56,7 @@ export const summits = [
     {
         title: '2018 成都 React 技术大会',
         date: '2018-03-31',
-        URL: 'https://ppt.baomitu.com/conference/60',
+        URL: 'https://juejin.cn/post/6844903694845100040',
         banner: banner_2018_React
     },
     {

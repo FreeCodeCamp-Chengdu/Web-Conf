@@ -50,7 +50,6 @@ export class SessionBox extends HTMLElement implements WebCell {
 
         return (
             <form
-                // @ts-ignore
                 className="m-3 p-3 border rounded"
                 onSubmit={this.handleSignIn}
             >
@@ -75,7 +74,6 @@ export class SessionBox extends HTMLElement implements WebCell {
                     />
                     <Button
                         variant="outline-secondary"
-                        // @ts-ignore
                         onClick={this.handleSMSCode}
                         disabled={!!countDown}
                     >
@@ -100,7 +98,7 @@ export class SessionBox extends HTMLElement implements WebCell {
             <>
                 <link
                     rel="stylesheet"
-                    href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+                    href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
                 />
                 {session.user ? <slot /> : this.renderForm()}
             </>

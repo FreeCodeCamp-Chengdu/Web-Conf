@@ -1,5 +1,3 @@
-import { FC } from 'web-cell';
-import { PageProps } from 'cell-router';
 import { Card, CardBody, CardImg, CardTitle, Button, Ratio } from 'boot-cell';
 import {
     Accordion,
@@ -13,9 +11,9 @@ import * as style from './index.module.less';
 import { guests, flows, logos, title } from './data';
 import { banner, qrcode } from './image';
 
-export const Page2017: FC<PageProps> = props => (
-    <main {...props}>
-        <div className="container">
+export default () => (
+    <>
+        <main className="container">
             <header id={style.logo}>
                 <img className="w-100" src={banner} />
             </header>
@@ -34,7 +32,7 @@ export const Page2017: FC<PageProps> = props => (
                 </h2>
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
                     {guests.map(({ avatar, name, description }) => (
-                        <div className="col">
+                        <div className="col" key={name}>
                             <Card id={'guest_' + name}>
                                 <CardImg src={avatar} />
                                 <CardBody>
@@ -89,7 +87,9 @@ export const Page2017: FC<PageProps> = props => (
             </div>
             <div className={style['web-content']}>
                 <div className={`${style.logos} text-center`}>
-                    {logos.map(LogoList)}
+                    {logos.map(logo => (
+                        <LogoList key={logo.title} {...logo} />
+                    ))}
                 </div>
                 <Button
                     className="my-5 d-block"
@@ -101,7 +101,7 @@ export const Page2017: FC<PageProps> = props => (
                     我 要 报 名
                 </Button>
             </div>
-        </div>
+        </main>
         <footer className={style.footer}>
             <img className={style.qrcode} src={qrcode} />
             <p className="mt-0">
@@ -118,5 +118,5 @@ export const Page2017: FC<PageProps> = props => (
                 />
             </Ratio>
         </footer>
-    </main>
+    </>
 );

@@ -1,31 +1,31 @@
 import { createRouter } from 'cell-router';
+import { lazy } from 'web-cell';
 
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import { HomePage } from './Home';
-import { CommunityPage } from './Community';
-import { ActivityPage } from './Activity';
-import { Page2017 } from './2017';
-import { Page2018 } from './2018';
-import { Code4City } from './2018-Code4City';
-import { Page2019 } from './2019';
-import { InvitationCard } from './2019/InvitationCard';
-import { AccountPage } from './2019/PageAccount';
+
+const CommunityPage = lazy(() => import('./Community')),
+    ActivityPage = lazy(() => import('./Activity')),
+    Page2017 = lazy(() => import('./2017')),
+    Page2018 = lazy(() => import('./2018')),
+    Code4City = lazy(() => import('./2018-Code4City')),
+    Page2019 = lazy(() => import('./2019')),
+    InvitationCard = lazy(() => import('./2019/InvitationCard')),
+    AccountPage = lazy(() => import('./2019/PageAccount'));
 
 const { Route } = createRouter();
 
 export const PageRouter = () => (
-    <div className="d-flex flex-column" style={{ height: '300vh' }}>
-        <div className="flex-fill overflow-auto scrollbar-none">
-            <Route path="" component={HomePage} />
-            <Route path="community" component={CommunityPage} />
-            <Route path="2017/" component={Page2017} />
-            <Route path="2018/Code4City/" component={Code4City} />
-            <Route path="2018/" component={Page2018} />
-            <Route path="2019/" component={Page2019} />
-            <Route path="2019/invitation/" component={InvitationCard} />
-            <Route path="2019/accounts/" component={AccountPage} />
-            <Route path="activity" component={ActivityPage} />
-        </div>
+    <>
+        <Route path="" component={HomePage} />
+        <Route path="community" component={CommunityPage} />
+        <Route path="2017/" component={Page2017} />
+        <Route path="2018/Code4City/" component={Code4City} />
+        <Route path="2018/" component={Page2018} />
+        <Route path="2019/" component={Page2019} />
+        <Route path="2019/invitation/" component={InvitationCard} />
+        <Route path="2019/accounts/" component={AccountPage} />
+        <Route path="activity" component={ActivityPage} />
 
         <footer className="text-muted bg-light overflow-hidden mt-4">
             <section className="container d-md-flex justify-content-between my-4">
@@ -88,5 +88,5 @@ export const PageRouter = () => (
                 <a href="#top">返回页顶</a>
             </section>
         </footer>
-    </div>
+    </>
 );

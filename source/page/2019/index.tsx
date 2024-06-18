@@ -1,18 +1,6 @@
 import groupBy from 'lodash.groupby';
-import { FC } from 'web-cell';
-import { PageProps } from 'cell-router';
-import {
-    Jumbotron,
-    Button,
-    Card,
-    CardBody,
-    CardImg,
-    CardTitle,
-    Tab,
-    Tabs,
-    Ratio,
-    CountDown
-} from 'boot-cell';
+import { Jumbotron, Button, Tab, Tabs, Ratio, CountDown } from 'boot-cell';
+import { Card, CardBody, CardImg, CardTitle } from 'boot-cell';
 
 import { PageFrame } from './PageFrame';
 import { TopicGroup, Topic } from './TopicGroup';
@@ -30,8 +18,8 @@ const topicGroups = Object.entries(
 );
 const partnerGroups = Object.entries(groupBy(data.partners, 'title'));
 
-export const Page2019: FC<PageProps> = props => (
-    <PageFrame {...props}>
+export default () => (
+    <PageFrame>
         <Jumbotron
             className="text-center"
             title={data.title}
@@ -126,8 +114,9 @@ export const Page2019: FC<PageProps> = props => (
         <h2 className="text-center">报名通道</h2>
         <img
             className="d-block mx-auto my-5"
-            src={BuyCode}
             style={{ width: '20rem' }}
+            src={BuyCode}
         />
     </PageFrame>
 );
+//

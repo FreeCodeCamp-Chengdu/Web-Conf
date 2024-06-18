@@ -1,9 +1,10 @@
 import { component, observer } from 'web-cell';
 import { observable } from 'mobx';
+import { Image } from 'boot-cell';
 import { toPng } from 'html-to-image';
 
 import { session } from '../../model';
-import { SessionBox } from '../../component';
+import { SessionBox } from '../../component/SessionBox';
 
 import * as style from './InvitationCard.module.less';
 import banner from './data/banner.jpg';
@@ -11,7 +12,7 @@ import BuyCode from './data/BuyCode.png';
 
 @component({ tagName: 'invitation-card' })
 @observer
-export class InvitationCard extends HTMLElement {
+export default class InvitationCard extends HTMLElement {
     @observable
     accessor imageURI = '';
 
@@ -30,7 +31,7 @@ export class InvitationCard extends HTMLElement {
             <main
                 className={`vw-100 vh-100 text-white d-flex flex-column ${style.box}`}
             >
-                <img className="img-fluid" src={banner} />
+                <Image fluid src={banner} />
 
                 <div className="flex-grow-1 d-flex flex-column align-items-center justify-content-around text-center">
                     <header>
@@ -46,7 +47,7 @@ export class InvitationCard extends HTMLElement {
                     </header>
 
                     <section className="w-50 px-3 pt-3 bg-white">
-                        <img className="img-fluid" src={BuyCode} />
+                        <Image fluid src={BuyCode} />
                         <div className="lead text-dark">和我一起去</div>
                     </section>
                 </div>
