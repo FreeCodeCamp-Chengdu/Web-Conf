@@ -1,10 +1,9 @@
-import { FC } from 'web-cell';
-import { Button, Table, Ratio } from 'boot-cell';
+import { Container, Ratio, Table } from 'boot-cell';
+import { Button, Image, Nav, NavLink } from 'boot-cell';
 import { Card, CardImg, CardBody, CardTitle } from 'boot-cell';
-import { PageProps } from 'cell-router';
 import { marked } from 'marked';
 
-import { TopNavBar } from '../../component';
+import { TopNavBar } from '../../component/TopNavBar';
 import { LogoList } from './LogoList';
 import * as style from './index.module.less';
 import {
@@ -23,20 +22,15 @@ import {
 import { poster, undraw_01, undraw_04 } from './image';
 import photos from './image/photos';
 
-export const Page2018: FC<PageProps> = ({ className, ...props }) => (
-    <main className={`${style.root} ${className}`} {...props}>
+export default () => (
+    <main className={style.root}>
+        <TopNavBar brand={title} expand="lg" variant="light" menu={sections} />
         <div className={style.poster}>
-            <TopNavBar
-                brand={<>{title}</>}
-                expand="lg"
-                variant="light"
-                menu={sections}
-            />
-            <img src={poster} className="img-fluid" />
+            <Image src={poster} fluid />
         </div>
         <section id="Introduction">
             <h2 className="text-center mb-5">大会介绍</h2>
-            <div className="container">
+            <Container>
                 <div className="row">
                     <div className="col-md-7">
                         <p>
@@ -58,14 +52,14 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                         </div>
                     </div>
                     <div className="col-md-5">
-                        <img className="img-fluid" src={undraw_01} />
+                        <Image fluid src={undraw_01} />
                     </div>
                 </div>
-            </div>
+            </Container>
         </section>
         <section id="Lecturer" className={style.sparked}>
             <h2 className="mb-5">与会嘉宾</h2>
-            <div className="container">
+            <Container>
                 <div className="row lecture-list">
                     {lecturers.map(({ avatar, name, detail }) => (
                         <div key={name} className="col-md-3 p-2">
@@ -84,11 +78,11 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                         </div>
                     ))}
                 </div>
-            </div>
+            </Container>
         </section>
         <section id="Topic">
             <h2 className="text-center mb-5">议题</h2>
-            <div className="container">
+            <Container>
                 <ol
                     className={`${style.subjects} overflow-hidden list-unstyled position-relative`}
                 >
@@ -108,10 +102,10 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                         </li>
                     ))}
                 </ol>
-            </div>
+            </Container>
         </section>
         <section className={style.sparked}>
-            <div className="container">
+            <Container>
                 <div id="Bazaar" className="mb-4">
                     <h2 className="text-center mb-5">开源市集</h2>
 
@@ -165,15 +159,15 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                             </ul>
                         </div>
                         <div className="col-md-5">
-                            <img className="img-fluid" src={undraw_04} />
+                            <Image fluid src={undraw_04} />
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </section>
         <section id="Schedule">
             <h2 className="text-center mb-5">日程</h2>
-            <div className="container">
+            <Container>
                 <Table className="text-center" striped hover>
                     <thead>
                         <tr>
@@ -196,28 +190,24 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                         ))}
                     </tbody>
                 </Table>
-            </div>
+            </Container>
         </section>
         <section id="Review" className={style.sparked}>
             <h2 className="text-center mb-5">往期精彩回顾</h2>
-            <div className="container">
+            <Container>
                 <div className={`row ${style.photos}`}>
                     {review.map(({ title }, index) => (
                         <div key={title} className="col-md-4">
-                            <img
-                                className="img-fluid"
-                                title={title}
-                                src={photos[index]}
-                            />
+                            <Image fluid title={title} src={photos[index]} />
                         </div>
                     ))}
                 </div>
-            </div>
+            </Container>
         </section>
 
         <section id="Address" className="text-center">
             <h2 className="text-center mb-5">地址</h2>
-            <div className="container">
+            <Container>
                 <p className="text-muted">
                     天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
                 </p>
@@ -227,11 +217,11 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                         src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${title}`}
                     />
                 </Ratio>
-            </div>
+            </Container>
         </section>
         <section id="Contributor" className="text-center">
             <h2>共创伙伴</h2>
-            <div className="container">
+            <Container>
                 {hosts.map(({ title, member }) => (
                     <div
                         key={title}
@@ -241,8 +231,8 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                         <LogoList member={member} />
                     </div>
                 ))}
-            </div>
-            <div className="container">
+            </Container>
+            <Container>
                 <div className={`${style.contributorGroup} my-4`}>
                     {sponsors.map(({ title, member }) => (
                         <section key={title}>
@@ -251,16 +241,16 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                         </section>
                     ))}
                 </div>
-            </div>
-            <div className="container">
+            </Container>
+            <Container>
                 <div className={`${style.contributorGroup} my-4`}>
                     <h5 className="py-3">合作伙伴</h5>
                     <LogoList member={partners} />
                 </div>
-            </div>
+            </Container>
         </section>
         <section id="CallInAction" className={style.sparked}>
-            <div className="container text-center">
+            <Container className="text-center">
                 <Button
                     variant="primary"
                     size="lg"
@@ -269,22 +259,20 @@ export const Page2018: FC<PageProps> = ({ className, ...props }) => (
                 >
                     立即报名参加
                 </Button>
-            </div>
+            </Container>
         </section>
         <footer className="pt-4 pb-3 clearfix">
-            <div className="container">
+            <Container>
                 <div className="d-none d-md-block">
-                    <ul className="nav">
+                    <Nav>
                         {sections.map(({ href, title }) => (
-                            <li key={title} className="nav-item">
-                                <a className="nav-link" href={href}>
-                                    {title}
-                                </a>
-                            </li>
+                            <NavLink key={title} href={href}>
+                                {title}
+                            </NavLink>
                         ))}
-                    </ul>
+                    </Nav>
                 </div>
-            </div>
+            </Container>
         </footer>
     </main>
 );

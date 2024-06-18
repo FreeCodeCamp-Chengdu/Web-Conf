@@ -1,13 +1,12 @@
-import { FC } from 'web-cell';
 import { Image } from 'boot-cell';
-import { PageProps } from 'cell-router';
 
-import { TopNavBar, Feature } from '../component';
+import { TopNavBar } from '../component/TopNavBar';
+import { Feature } from '../component/Feature';
 import { common_menu, features } from './data';
 import { FCC_CDC } from './2018/image';
 
-export const CommunityPage: FC<PageProps> = props => (
-    <div {...props}>
+export default () => (
+    <>
         <TopNavBar menu={common_menu} />
         <header
             className="d-flex flex-column justify-content-center align-items-center"
@@ -26,5 +25,5 @@ export const CommunityPage: FC<PageProps> = props => (
                 </>
             ))}
         </main>
-    </div>
+    </>
 );

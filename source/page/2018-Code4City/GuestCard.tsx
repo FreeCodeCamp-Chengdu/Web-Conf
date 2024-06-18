@@ -1,17 +1,22 @@
-import { FC } from 'web-cell';
+import { FC, WebCellProps } from 'web-cell';
 import { Image } from 'boot-cell';
 
 import * as style from './index.module.less';
 import { vips } from './data';
 
-export const GuestCard: FC<(typeof vips)[0]> = ({
+export type GuestCardProps = (typeof vips)[0] & WebCellProps<HTMLDivElement>;
+
+export const GuestCard: FC<GuestCardProps> = ({
+    className = 'col-md-6 col-xs-12',
     avatar,
     name,
     role,
     identity,
-    describe
+    describe,
+    children,
+    ...props
 }) => (
-    <div className="col-md-6 col-xs-12">
+    <div className={className} {...props}>
         <div className={style.guest}>
             <Image className={style['guest-avatar']} src={avatar} />
 

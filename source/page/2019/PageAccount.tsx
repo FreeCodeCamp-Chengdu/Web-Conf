@@ -8,11 +8,11 @@ import { PageFrame } from './PageFrame';
 type Account = Record<'item' | 'manager' | 'date' | 'remark', string> &
     Record<'price' | 'count', number>;
 
-export interface AccountPage extends WebCell {}
+export default interface AccountPage extends WebCell {}
 
 @component({ tagName: 'account-page' })
 @observer
-export class AccountPage extends HTMLElement implements WebCell {
+export default class AccountPage extends HTMLElement implements WebCell {
     @observable
     accessor list: Account[] = [];
 

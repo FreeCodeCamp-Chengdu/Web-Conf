@@ -1,12 +1,5 @@
-import { FC } from 'web-cell';
-import { PageProps } from 'cell-router';
-import {
-    Image,
-    Button,
-    Carousel,
-    CarouselCaption,
-    CarouselItem
-} from 'boot-cell';
+import { Container, Button, Image } from 'boot-cell';
+import { Carousel, CarouselCaption, CarouselItem } from 'boot-cell';
 
 import { GuestCard } from './GuestCard';
 import * as style from './index.module.less';
@@ -14,15 +7,15 @@ import BG_mountain from './image/BG-mountain.png';
 import BG_points from './image/BG-points.png';
 import { review, awards, vips, sponsors } from './data';
 
-export const Code4City: FC<PageProps> = props => (
-    <main {...props}>
+export default () => (
+    <main>
         <div
             className="text-light"
             style={{ backgroundImage: `url(${BG_mountain})` }}
         >
-            <div className="container px-3 py-5">
+            <Container className="px-3 py-5">
                 <div className="row">
-                    <div className={`col-xs-12 col-md-6`}>
+                    <div className="col-xs-12 col-md-6">
                         <h1 className={`${style['main-title']} text-white`}>
                             2018 黑客松大赛
                         </h1>
@@ -67,7 +60,7 @@ export const Code4City: FC<PageProps> = props => (
                     </div>
                     <div className="d-md-flex w-100 align-items-start my-5">
                         <h4
-                            className={`${style['card-title']} ${style['line-center']} mr-md-3`}
+                            className={`${style['card-title']} ${style['line-center']} me-md-3`}
                         >
                             大赛宗旨
                         </h4>
@@ -121,11 +114,11 @@ export const Code4City: FC<PageProps> = props => (
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
 
         <div className={style.Detail}>
-            <div className="container px-3 py-5">
+            <Container className="px-3 py-5">
                 <section className="text-center my-5">
                     <h4
                         className={`${style.title} ${style['line-center']} text-white text-center"`}
@@ -133,7 +126,7 @@ export const Code4City: FC<PageProps> = props => (
                         大赛参赛队伍规模及规则
                     </h4>
                     <small className="p-3">
-                        <span className="pr-4">海选期：不限</span>
+                        <span className="pe-4">海选期：不限</span>
                         决赛日：6支
                     </small>
                     <ol className={style['rule-list']}>
@@ -159,7 +152,9 @@ export const Code4City: FC<PageProps> = props => (
                     <small style={{ color: '#697078' }}>按首字母排序</small>
 
                     <div className="d-flex flex-wrap">
-                        {vips.map(GuestCard)}
+                        {vips.map(VIP => (
+                            <GuestCard key={VIP.name} {...VIP} />
+                        ))}
                     </div>
                 </section>
                 <div
@@ -170,12 +165,15 @@ export const Code4City: FC<PageProps> = props => (
                         <h4 className="text-white">合作单位</h4>
                         <div className="row">
                             {sponsors.map(({ title, list }) => (
-                                <div className="col-md-2 col-sm-6 col-xs-6">
+                                <div
+                                    key={title}
+                                    className="col-md-2 col-sm-6 col-xs-6"
+                                >
                                     <h5 className="text-white">{title}</h5>
 
                                     <ul className="list-unstyled">
                                         {list.map(({ title }) => (
-                                            <li>{title}</li>
+                                            <li key={title}>{title}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -186,9 +184,10 @@ export const Code4City: FC<PageProps> = props => (
                 <ul className="list-unstyled d-flex flex-wrap justify-content-around align-items-center">
                     {sponsors.map(({ list }) =>
                         list.map(({ imageURL, title }) => (
-                            <li>
-                                <img
-                                    className="img-fluid m-3"
+                            <li key={title}>
+                                <Image
+                                    fluid
+                                    className="m-3"
                                     style={{ width: '12rem' }}
                                     src={imageURL}
                                     alt={title}
@@ -197,7 +196,7 @@ export const Code4City: FC<PageProps> = props => (
                         ))
                     )}
                 </ul>
-            </div>
+            </Container>
         </div>
     </main>
 );

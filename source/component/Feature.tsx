@@ -22,7 +22,7 @@ export const Feature: FC<FeatureProps> = ({
             <p className="lead">{summary}</p>
         </div>
         <div className={classNames('col-md-4', reverse && 'order-md-1')}>
-            <Image fluid className="w-100" src={logo} />
+            <Image className="w-100" src={logo} />
         </div>
     </div>
 );
