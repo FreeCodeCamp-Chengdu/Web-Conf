@@ -32,7 +32,11 @@ export const PageRouter = () => (
                 <div>
                     <h4>关于我们</h4>
                     <p className="text-muted">
-                        非营利组织 freeCodeCamp.org 自 2014
+                        非营利组织
+                        <a target="_blank" href="https://www.freecodecamp.org/">
+                            freeCodeCamp
+                        </a>{' '}
+                        自 2014
                         年成立以来，以“帮助人们免费学习编程”为使命，创建了大量免费的编程教程，包括交互式课程、视频课程、文章等。线下开发者社区遍布
                         160 多个国家、2000
                         多个城市。我们正在帮助全球数百万人学习编程，希望让世界上每个人都有机会获得免费的优质的编程教育资源，成为开发者或者运用编程去解决问题。
@@ -85,7 +89,7 @@ export const PageRouter = () => (
                     </a>
                     开发
                 </span>
-                <a href="#top">返回页顶</a>
+                <a href="#top">返回页首</a>
             </section>
         </footer>
     </>
