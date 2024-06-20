@@ -17,7 +17,6 @@ const { Route } = createRouter();
 
 export const PageRouter = () => (
     <>
-        <div id="top"></div>
         <Route path="" component={HomePage} />
         <Route path="community" component={CommunityPage} />
         <Route path="2017/" component={Page2017} />

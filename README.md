@@ -29,7 +29,7 @@ cd Web-Conf
 
 npm i pnpm -g
 pnpm i
-pnpm start
+npm start
 ```
 
 ### 后端服务
