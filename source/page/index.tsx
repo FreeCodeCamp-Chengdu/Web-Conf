@@ -4,6 +4,10 @@ import { lazy } from 'web-cell';
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import { HomePage } from './Home';
 
+import { i18n, LanguageName } from '../i18n';
+
+const { t } = i18n;
+
 const CommunityPage = lazy(() => import('./Community')),
     ActivityPage = lazy(() => import('./Activity')),
     Page2017 = lazy(() => import('./2017')),
@@ -30,7 +34,7 @@ export const PageRouter = () => (
         <footer className="text-muted bg-light overflow-hidden mt-4">
             <section className="container d-md-flex justify-content-between my-4">
                 <div>
-                    <h4>关于我们</h4>
+                    <h4>{t('aboutus')}</h4>
                     <p className="text-muted">
                         非营利组织
                         <a target="_blank" href="https://www.freecodecamp.org/">
@@ -52,7 +56,7 @@ export const PageRouter = () => (
                     </p>
                 </div>
                 <div>
-                    <h4>联系我们</h4>
+                    <h4>{t('contactus')}</h4>
                     <ul className="list-unstyled">
                         <li>
                             <a href="https://www.weibo.com/u/6165665516">

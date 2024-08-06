@@ -1,4 +1,6 @@
 export default {
     review: 'review',
-    register: 'register'
+    register: 'register',
+    aboutus: 'About us',
+    contactus: 'Contact us'
 } as const;

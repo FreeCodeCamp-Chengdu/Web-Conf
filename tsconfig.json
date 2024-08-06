@@ -10,7 +10,8 @@
         "useDefineForClassFields": true,
         "jsx": "react-jsx",
         "jsxImportSource": "dom-renderer",
-        "lib": ["ES2023", "DOM"]
+        "lib": ["ES2023", "DOM"],
+        "experimentalDecorators": false
     },
     "include": ["./source/**/*"]
 }

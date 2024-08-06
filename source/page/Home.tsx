@@ -6,6 +6,10 @@ import { SummitCard } from '../component/SummitCard';
 import { TopNavBar } from '../component/TopNavBar';
 import { common_menu, summits } from './data';
 
+import { i18n } from '../i18n';
+
+const { t } = i18n;
+
 export const HomePage: FC<PageProps> = observer(props => (
     <div {...props}>
         <TopNavBar menu={common_menu} />
