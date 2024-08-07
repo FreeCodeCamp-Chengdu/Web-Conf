@@ -12,6 +12,10 @@ export interface TopNavBarProps extends OffcanvasNavbarProps {
 
 const OriginalURLPattern = /^(https?|#)/;
 
+import { i18n } from '../i18n';
+
+const { t } = i18n;
+
 export const TopNavBar: FC<TopNavBarProps> = ({ menu, ...rest }) => (
     <OffcanvasNavbar
         variant="dark"
@@ -19,7 +23,7 @@ export const TopNavBar: FC<TopNavBarProps> = ({ menu, ...rest }) => (
         sticky="top"
         brand={
             <a className="text-light text-decoration-none" href="#">
-                成都 Web 开发者大会
+                {t('homePagetitle')}
             </a>
         }
         {...rest}

@@ -5,14 +5,18 @@ import banner_2018_React from './2018-React/React-ChengDu.jpg';
 import { FCC_CDC, poster as banner_2018 } from './2018/image';
 import banner_2019 from './2019/data/banner.jpg';
 
+import { i18n } from '../i18n';
+
+const { t } = i18n;
+
 export const common_menu = [
-    { title: '主办方简介', href: 'community' },
-    { title: '全国 IT 活动', href: 'activity' }
+    { title: t('organizer_introduction'), href: 'community' },
+    { title: t('national_it_events'), href: 'activity' }
 ];
 
 export const summits = [
     {
-        title: "COSCon'23（中国开源年会）主会场",
+        title: t('coscon_23_main_venue'),
         date: '2023-10-28',
         URL: 'https://kaiyuanshe.cn/activity/coscon-2023',
         banner: 'https://ows.blob.core.chinacloudapi.cn/$web/file/coscon23kv.png'
@@ -36,7 +40,7 @@ export const summits = [
         banner: 'https://ows.blob.core.chinacloudapi.cn/files/assets/COS_Con_20_abaa9e2a66.png'
     },
     {
-        title: '2019 成都 Web 全栈大会',
+        title: t('chengdu_web_full_stack_conference_2019'),
         date: '2019-11-16',
         URL: '2019/',
         banner: banner_2019

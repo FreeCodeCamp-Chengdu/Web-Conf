@@ -36,23 +36,18 @@ export const PageRouter = () => (
                 <div>
                     <h4>{t('aboutus')}</h4>
                     <p className="text-muted">
-                        非营利组织
+                        {t('nonprofitOrganization')} &nbsp;
                         <a target="_blank" href="https://www.freecodecamp.org/">
                             freeCodeCamp
                         </a>{' '}
-                        自 2014
-                        年成立以来，以“帮助人们免费学习编程”为使命，创建了大量免费的编程教程，包括交互式课程、视频课程、文章等。线下开发者社区遍布
-                        160 多个国家、2000
-                        多个城市。我们正在帮助全球数百万人学习编程，希望让世界上每个人都有机会获得免费的优质的编程教育资源，成为开发者或者运用编程去解决问题。
+                        &nbsp;
+                        {t('since2014')}
                     </p>
                     <p className="text-muted">
                         <a target="_blank" href="https://fcc-cd.dev/">
-                            freeCodeCamp 成都社区
+                            freeCodeCamp {t('community_name')} &nbsp;
                         </a>
-                        成立于 2016 年，是中国大陆最早一批 FCC
-                        城市线下社区，目前会员千余人，也是最大的 FCC
-                        城市社区。在核心团队 20 余人两年的努力下，FCC 成都已覆盖
-                        编程教育、技术招聘、行业大会等程序员全职业生涯的公益服务。
+                        {t('community_description')}
                     </p>
                 </div>
                 <div>
@@ -60,7 +55,7 @@ export const PageRouter = () => (
                     <ul className="list-unstyled">
                         <li>
                             <a href="https://www.weibo.com/u/6165665516">
-                                新浪微博
+                                {t('sina_weibo')}
                             </a>
                         </li>
                         <li>
@@ -72,7 +67,7 @@ export const PageRouter = () => (
                             <img
                                 className="img-thumbnail w-75"
                                 src={WeChat_QRC}
-                                title="微信公众号"
+                                title={t('wechat')}
                             />
                         </li>
                     </ul>
@@ -80,7 +75,7 @@ export const PageRouter = () => (
             </section>
             <section className="container d-flex flex-column flex-md-row align-items-center justify-content-around my-4">
                 <span>
-                    自豪地使用
+                    {t('proudlyDevelopedWith')}
                     <a
                         className="px-1"
                         href="https://github.com/EasyWebApp/WebCell/tree/v2"
@@ -91,9 +86,9 @@ export const PageRouter = () => (
                     <a className="px-1" href="https://web-cell.dev/BootCell">
                         BootCell v2
                     </a>
-                    开发
+                    {t('development')}
                 </span>
-                <a href="#top">返回页首</a>
+                <a href="#top">{t('backToTop')}</a>
             </section>
         </footer>
     </>
