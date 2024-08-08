@@ -34,9 +34,9 @@ export const PageRouter = () => (
         <footer className="text-muted bg-light overflow-hidden mt-4">
             <section className="container d-md-flex justify-content-between my-4">
                 <div>
-                    <h4>{t('aboutus')}</h4>
+                    <h4>{t('about_us')}</h4>
                     <p className="text-muted">
-                        {t('nonprofitOrganization')} &nbsp;
+                        {t('nonprofit_Organization')} &nbsp;
                         <a target="_blank" href="https://www.freecodecamp.org/">
                             freeCodeCamp
                         </a>{' '}
@@ -45,8 +45,9 @@ export const PageRouter = () => (
                     </p>
                     <p className="text-muted">
                         <a target="_blank" href="https://fcc-cd.dev/">
-                            freeCodeCamp {t('community_name')} &nbsp;
-                        </a>
+                            freeCodeCamp {t('chengdu_community')}
+                        </a>{' '}
+                        &nbsp;
                         {t('community_description')}
                     </p>
                 </div>
@@ -75,7 +76,7 @@ export const PageRouter = () => (
             </section>
             <section className="container d-flex flex-column flex-md-row align-items-center justify-content-around my-4">
                 <span>
-                    {t('proudlyDevelopedWith')}
+                    {t('proudly_Developed_With')}
                     <a
                         className="px-1"
                         href="https://github.com/EasyWebApp/WebCell/tree/v2"

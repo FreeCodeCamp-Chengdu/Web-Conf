@@ -51,7 +51,7 @@ export default class ActivityPage extends HTMLElement implements CustomElement {
 
         return (
             <>
-                <TopNavBar menu={common_menu} />
+                <TopNavBar menu={common_menu()} />
 
                 <h1 className="text-center my-5">全国 IT 活动</h1>
 

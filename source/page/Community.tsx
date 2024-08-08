@@ -11,17 +11,17 @@ const { t } = i18n;
 
 export default () => (
     <>
-        <TopNavBar menu={common_menu} />
+        <TopNavBar menu={common_menu()} />
         <header
             className="d-flex flex-column justify-content-center align-items-center"
             style={{ height: '80vh' }}
         >
             <Image fluid style={{ maxWidth: '20rem' }} src={FCC_CDC} />
-            <h1 className="display-4 mt-3">{t('community_name')}</h1>
+            <h1 className="display-4 mt-3">{t('chengdu_community')}</h1>
         </header>
 
         <main className="container">
-            {features.map((item, index) => (
+            {features().map((item, index) => (
                 <>
                     <Feature reverse={!!(index % 2)} {...item} />
 

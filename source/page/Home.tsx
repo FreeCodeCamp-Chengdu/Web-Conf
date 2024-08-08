@@ -12,12 +12,12 @@ const { t } = i18n;
 
 export const HomePage: FC<PageProps> = observer(props => (
     <div {...props}>
-        <TopNavBar menu={common_menu} />
+        <TopNavBar menu={common_menu()} />
 
         <Jumbotron
             fluid
             className="p-5 text-center"
-            title={t('homePagetitle')}
+            title={t('chengdu_web_developer_summit')}
             description={t('homePagedescription')}
         >
             <Button
@@ -40,7 +40,7 @@ export const HomePage: FC<PageProps> = observer(props => (
 
         <section className="container py-5">
             <div className="d-flex flex-wrap justify-content-center gap-4">
-                {summits.map(summit => (
+                {summits().map(summit => (
                     <SummitCard key={summit.title} {...summit} />
                 ))}
             </div>
