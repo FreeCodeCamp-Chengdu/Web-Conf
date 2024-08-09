@@ -36,7 +36,7 @@ export const PageRouter = () => (
                 <div>
                     <h4>{t('about_us')}</h4>
                     <p className="text-muted">
-                        {t('nonprofit_Organization')} &nbsp;
+                        {t('nonprofit_organization')} &nbsp;
                         <a target="_blank" href="https://www.freecodecamp.org/">
                             freeCodeCamp
                         </a>{' '}
@@ -52,7 +52,7 @@ export const PageRouter = () => (
                     </p>
                 </div>
                 <div>
-                    <h4>{t('contactus')}</h4>
+                    <h4>{t('contact_us')}</h4>
                     <ul className="list-unstyled">
                         <li>
                             <a href="https://www.weibo.com/u/6165665516">
@@ -68,7 +68,7 @@ export const PageRouter = () => (
                             <img
                                 className="img-thumbnail w-75"
                                 src={WeChat_QRC}
-                                title={t('wechat')}
+                                title={t('wechat_public_account')}
                             />
                         </li>
                     </ul>
@@ -76,7 +76,7 @@ export const PageRouter = () => (
             </section>
             <section className="container d-flex flex-column flex-md-row align-items-center justify-content-around my-4">
                 <span>
-                    {t('proudly_Developed_With')}
+                    {t('proudly_developed_with')}
                     <a
                         className="px-1"
                         href="https://github.com/EasyWebApp/WebCell/tree/v2"
@@ -89,7 +89,7 @@ export const PageRouter = () => (
                     </a>
                     {t('development')}
                 </span>
-                <a href="#top">{t('backToTop')}</a>
+                <a href="#top">{t('back_to_top')}</a>
             </section>
         </footer>
     </>

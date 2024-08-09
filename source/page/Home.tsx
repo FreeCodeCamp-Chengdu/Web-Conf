@@ -18,7 +18,7 @@ export const HomePage: FC<PageProps> = observer(props => (
             fluid
             className="p-5 text-center"
             title={t('chengdu_web_developer_summit')}
-            description={t('homePagedescription')}
+            description={t('homepage_description')}
         >
             <Button
                 className="m-2"
@@ -26,7 +26,7 @@ export const HomePage: FC<PageProps> = observer(props => (
                 href={summits[0].URL}
                 title={summits[0].title}
             >
-                {t('homePageregisterLatest')}
+                {t('homepage_register_latest')}
             </Button>
             <Button
                 className="m-2"
@@ -34,7 +34,7 @@ export const HomePage: FC<PageProps> = observer(props => (
                 href={summits[1].URL}
                 title={summits[1].title}
             >
-                {t('homePagereviewPrevious')}
+                {t('homepage_review_previous')}
             </Button>
         </Jumbotron>
 
