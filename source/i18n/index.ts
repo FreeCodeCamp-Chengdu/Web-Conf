@@ -12,6 +12,6 @@ export const i18n = new TranslationModel({
 export const LanguageName: Record<(typeof i18n)['currentLanguage'], string> = {
     'zh-CN': '简体中文',
     'zh-TW': '繁體中文',
-    'zh-HK': '繁體中文',
+    'zh-HK': '正體中文',
     'en-US': 'English'
 };

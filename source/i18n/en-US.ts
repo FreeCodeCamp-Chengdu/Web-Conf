@@ -59,11 +59,16 @@ export default {
     more_exciting_awaits_your_participation:
         'More exciting awaits your participation...',
     years_continue_to_undertake: ({
-        a,
-        b,
-        c
-    }: Record<'a' | 'b' | 'c', string>) =>
-        textJoin(a, 'years continue to undertake', b, c),
+        which_year,
+        number_of_times,
+        long_sentence
+    }: Record<'which_year' | 'number_of_times' | 'long_sentence', string>) =>
+        textJoin(
+            which_year,
+            'years continue to undertake',
+            number_of_times,
+            long_sentence
+        ),
     tech_conferences:
         'tech conferences, co-organized events, small and medium-sized sharing sessions, hands-on workshops, and online live streams and so on countless.'
 } as const;

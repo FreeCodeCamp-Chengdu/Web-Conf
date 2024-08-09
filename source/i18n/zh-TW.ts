@@ -49,10 +49,11 @@ export default {
         '開源社、開源工場、微軟 MVP 社區、成都 Google 開發者社區、阿里雲 ACE 成都同城會、成都 Linux 用戶組、重慶前端社區……',
     more_exciting_awaits_your_participation: '更多精彩，期待你的參與……',
     years_continue_to_undertake: ({
-        a,
-        b,
-        c
-    }: Record<'a' | 'b' | 'c', string>) => textJoin(a, ' 年連辦 ', b, c),
+        which_year,
+        number_of_times,
+        long_sentence
+    }: Record<'which_year' | 'number_of_times' | 'long_sentence', string>) =>
+        textJoin(which_year, '年連辦', number_of_times, long_sentence),
     tech_conferences:
-        ' 場技術幹貨大會，合辦活動、中小分享會、動手訓練營、線上直播不計其數'
+        '場技術幹貨大會，合辦活動、中小分享會、動手訓練營、線上直播不計其數'
 } as const;

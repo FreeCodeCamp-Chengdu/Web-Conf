@@ -6,9 +6,8 @@ import { FCC_CDC, poster as banner_2018 } from './2018/image';
 import banner_2019 from './2019/data/banner.jpg';
 
 import { i18n } from '../i18n';
-import { textJoin } from 'mobx-i18n';
 
-const { t, currentLanguage } = i18n;
+const { t } = i18n;
 
 export const common_menu = () => [
     { title: t('organizer_introduction'), href: 'community' },
@@ -98,9 +97,9 @@ export const features = () => [
     {
         title: t('chengdu_most_active_programmer_community'),
         summary: t('years_continue_to_undertake', {
-            a: years,
-            b: summits.length,
-            c: textJoin(t('tech_conferences'))
+            which_year: years,
+            number_of_times: summits.length,
+            long_sentence: t('tech_conferences')
         }),
         logo: FCC_CDC
     },
