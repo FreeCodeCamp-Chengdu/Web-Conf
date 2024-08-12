@@ -66,7 +66,7 @@ export default {
         textJoin(
             which_year,
             'years continue to undertake',
-            number_of_times, // Ensure it's a string for textJoin
+            number_of_times,
             long_sentence
         ),
 
