@@ -12,13 +12,7 @@ configure({ enforceActions: 'never' });
 self.addEventListener('unhandledrejection', event => {
     const { message } = event.reason;
 
-    if (!message) return;
-
     if (message) window.alert(message);
-
-    // event.preventDefault();
-
-    // self.alert(message);
 });
 
 const { serviceWorker } = window.navigator;
