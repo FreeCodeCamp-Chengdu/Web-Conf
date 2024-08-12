@@ -23,16 +23,16 @@ export const HomePage: FC<PageProps> = observer(props => (
             <Button
                 className="m-2"
                 variant="primary"
-                href={summits[0].URL}
-                title={summits[0].title}
+                href={summits()[0].URL}
+                title={summits()[0].title}
             >
                 {t('homepage_register_latest')}
             </Button>
             <Button
                 className="m-2"
                 variant="secondary"
-                href={summits[1].URL}
-                title={summits[1].title}
+                href={summits()[1].URL}
+                title={summits()[1].title}
             >
                 {t('homepage_review_previous')}
             </Button>

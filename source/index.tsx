@@ -14,7 +14,7 @@ self.addEventListener('unhandledrejection', event => {
 
     if (!message) return;
 
-    event.preventDefault();
+    // event.preventDefault();
 
     self.alert(message);
 });

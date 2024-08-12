@@ -66,9 +66,10 @@ export default {
         textJoin(
             which_year,
             'years continue to undertake',
-            number_of_times,
+            number_of_times, // Ensure it's a string for textJoin
             long_sentence
         ),
+
     tech_conferences:
         'tech conferences, co-organized events, small and medium-sized sharing sessions, hands-on workshops, and online live streams and so on countless.'
 } as const;

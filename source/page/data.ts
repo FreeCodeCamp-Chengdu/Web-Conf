@@ -97,8 +97,8 @@ export const features = () => [
     {
         title: t('chengdu_most_active_programmer_community'),
         summary: t('years_continue_to_undertake', {
-            which_year: years,
-            number_of_times: summits.length,
+            which_year: years.toString + ' ',
+            number_of_times: summits().length.toString + ' ',
             long_sentence: t('tech_conferences')
         }),
         logo: FCC_CDC

@@ -25,7 +25,7 @@ export default () => (
                 <>
                     <Feature reverse={!!(index % 2)} {...item} />
 
-                    {index + 1 < features.length && <hr className="my-5" />}
+                    {index + 1 < features().length && <hr className="my-5" />}
                 </>
             ))}
         </main>
