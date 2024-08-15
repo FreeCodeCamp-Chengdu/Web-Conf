@@ -4,7 +4,7 @@ import { lazy } from 'web-cell';
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import { HomePage } from './Home';
 
-import { i18n, LanguageName } from '../i18n';
+import { i18n } from '../i18n';
 
 const { t } = i18n;
 

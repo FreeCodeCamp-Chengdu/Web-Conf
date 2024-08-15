@@ -3,7 +3,8 @@ import { FC, WebCellProps } from 'web-cell';
 
 import { logos } from './data';
 
-export type LogoListProps = (typeof logos)[0] & WebCellProps<HTMLDivElement>;
+export type LogoListProps = ReturnType<typeof logos>[0] &
+    WebCellProps<HTMLDivElement>;
 
 export const LogoList: FC<LogoListProps> = ({ title, childrens, ...props }) => (
     <section {...props}>

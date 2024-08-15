@@ -11,6 +11,10 @@ import * as style from './index.module.less';
 import { guests, flows, logos, title } from './data';
 import { banner, qrcode } from './image';
 
+import { i18n } from '../../i18n';
+
+const { t } = i18n;
+
 export default () => (
     <>
         <main className="container">
@@ -19,19 +23,17 @@ export default () => (
             </header>
             <div id={style.introduce}>
                 <h2 className="mt-5 mb-4 text-center">
-                    <span>INTRODUCE</span> <span>活动介绍</span>
+                    <span>INTRODUCE</span>{' '}
+                    <span>{t('activity_introduction')}</span>
                 </h2>
-                <p style={{ textIndent: '2em' }}>
-                    freeCodeCamp
-                    成都社区一直以为成都技术爱好者以及用户提供一个开放的交流环境为目的，在过去的一年里，我们成功举办了30余次的社区活动，受到大家的一致好评和热烈响应。2017年已接近尾声，在组织部何青松的倡议下，我们特筹办freeCodeCamp【2017成都WEB前端交流大会】，为成都前端圈的技术工程师、爱好者提供一场前所未有的饕餮盛宴。在此，我们向您发出诚挚的邀请，此次盛会期待您的参与！
-                </p>
+                <p style={{ textIndent: '2em' }}>{t('freecodecamp_intro')}</p>
             </div>
             <div className={style['web-content']}>
                 <h2 className="mt-5 mb-4 text-center">
-                    <span>SPEAKER</span> <span>分享嘉宾</span>
+                    <span>SPEAKER</span> <span>{t('share_guest')}</span>
                 </h2>
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-                    {guests.map(({ avatar, name, description }) => (
+                    {guests().map(({ avatar, name, description }) => (
                         <div className="col" key={name}>
                             <Card id={'guest_' + name}>
                                 <CardImg src={avatar} />
@@ -46,7 +48,7 @@ export default () => (
             </div>
             <div className={style['web-content']}>
                 <h2 className="mt-5 mb-4 text-center">
-                    <span>SCHEDULE</span> <span>活动流程</span>
+                    <span>SCHEDULE</span> <span>{t('activity_schedule')}</span>
                 </h2>
                 <Accordion alwaysOpen>
                     {flows.map(({ time, content, guest, description }) => (
@@ -76,18 +78,15 @@ export default () => (
             <div className={`${style['web-content']} text-center`}>
                 <div>
                     <h2 className="mt-5 mb-4">
-                        <span>时间地址</span>
+                        <span>{t('time_and_location')}</span>
                     </h2>
-                    <p>时间：2017 年 11 月 19 日 09 ：00 - 17 ：30</p>
-                    <p>
-                        地点：成都市高新区天府五街 200 号菁蓉国际广场 7 栋 1 楼
-                        主会场
-                    </p>
+                    <p>{t('event_time')}</p>
+                    <p>{t('event_location')}</p>
                 </div>
             </div>
             <div className={style['web-content']}>
                 <div className={`${style.logos} text-center`}>
-                    {logos.map(logo => (
+                    {logos().map(logo => (
                         <LogoList key={logo.title} {...logo} />
                     ))}
                 </div>
@@ -98,18 +97,19 @@ export default () => (
                     target="_blank"
                     href="http://cn.mikecrm.com/rdVltvT"
                 >
-                    我 要 报 名
+                    {t('register_now')}
                 </Button>
             </div>
         </main>
         <footer className={style.footer}>
             <img className={style.qrcode} src={qrcode} />
             <p className="mt-0">
-                特别鸣谢
+                {t('special_thanks')}&nbsp;
                 <a target="_blank" href="http://918930.lofter.com">
-                    BBD - 王波
+                    BBD - {t('wang_bo')}
                 </a>
-                提供 海报、Logo 设计
+                &nbsp;
+                {t('provide_poster_logo_design')}
             </p>
             <Ratio aspectRatio="21x9">
                 <iframe
