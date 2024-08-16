@@ -5,18 +5,16 @@ import {
     AccordionHeader,
     AccordionItem
 } from 'boot-cell';
-
+import { i18n } from './i18n';
+import { observer } from 'web-cell';
 import { LogoList } from './LogoList';
 import * as style from './index.module.less';
 import { guests, flows, logos, title } from './data';
 import { banner, qrcode } from './image';
 
-import { i18n } from './i18n';
-import { observer } from 'web-cell';
-
 const { t } = i18n;
 
-export default () => (
+export default observer(() => (
     <>
         <main className="container">
             <header id={style.logo}>
@@ -123,4 +121,4 @@ export default () => (
             </Ratio>
         </footer>
     </>
-);
+));

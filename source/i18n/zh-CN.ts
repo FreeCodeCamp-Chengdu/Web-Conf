@@ -1,6 +1,7 @@
 import { textJoin } from 'mobx-i18n';
-
+import zhCN_2017 from '../page/2017/i18n/zh-CN';
 export default {
+    ...zhCN_2017,
     review: '回顾',
     register: '注册',
     about_us: '关于我们',

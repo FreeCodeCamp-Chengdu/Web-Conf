@@ -1,6 +1,7 @@
 import { textJoin } from 'mobx-i18n';
-
+import zhTW_2017 from '../page/2017/i18n/zh-TW';
 export default {
+    ...zhTW_2017,
     review: '回顧',
     register: '註冊',
     about_us: '關於我們',

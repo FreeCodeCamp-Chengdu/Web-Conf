@@ -1,6 +1,7 @@
 import { textJoin } from 'mobx-i18n';
-
+import enUS_2017 from '../page/2017/i18n/en-US';
 export default {
+    ...enUS_2017,
     review: 'review',
     register: 'register',
     about_us: 'About us',
