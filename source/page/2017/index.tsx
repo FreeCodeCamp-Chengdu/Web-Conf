@@ -11,7 +11,8 @@ import * as style from './index.module.less';
 import { guests, flows, logos, title } from './data';
 import { banner, qrcode } from './image';
 
-import { i18n } from '../../i18n';
+import { i18n } from './i18n';
+import { observer } from 'web-cell';
 
 const { t } = i18n;
 
@@ -51,7 +52,7 @@ export default () => (
                     <span>SCHEDULE</span> <span>{t('activity_schedule')}</span>
                 </h2>
                 <Accordion alwaysOpen>
-                    {flows.map(({ time, content, guest, description }) => (
+                    {flows().map(({ time, content, guest, description }) => (
                         <AccordionItem key={time}>
                             <AccordionHeader>
                                 {time}【{content}】
@@ -60,12 +61,15 @@ export default () => (
                                 {guest ? (
                                     <ul>
                                         <li>
-                                            讲师：
+                                            {t('instructor')}&nbsp;
                                             <a href={'#guest_' + guest.name}>
                                                 {guest.name}
                                             </a>
                                         </li>
-                                        <li>简介：{description}</li>
+                                        <li>
+                                            {t('description')}&nbsp;
+                                            {description}
+                                        </li>
                                     </ul>
                                 ) : (
                                     description
