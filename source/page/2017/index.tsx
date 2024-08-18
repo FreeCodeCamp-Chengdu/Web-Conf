@@ -6,7 +6,6 @@ import {
     AccordionItem
 } from 'boot-cell';
 import { i18n } from './i18n';
-import { observer } from 'web-cell';
 import { LogoList } from './LogoList';
 import * as style from './index.module.less';
 import { guests, flows, logos, title } from './data';
@@ -14,7 +13,7 @@ import { banner, qrcode } from './image';
 
 const { t } = i18n;
 
-export default observer(() => (
+export default () => (
     <>
         <main className="container">
             <header id={style.logo}>
@@ -121,4 +120,4 @@ export default observer(() => (
             </Ratio>
         </footer>
     </>
-));
+);

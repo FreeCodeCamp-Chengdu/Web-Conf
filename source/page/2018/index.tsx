@@ -22,24 +22,26 @@ import {
 import { poster, undraw_01, undraw_04 } from './image';
 import photos from './image/photos';
 
+import { i18n } from './i18n';
+const { t } = i18n;
+
 export default () => (
     <main className={style.root}>
-        <TopNavBar brand={title} expand="lg" variant="light" menu={sections} />
+        <TopNavBar
+            brand={title}
+            expand="lg"
+            variant="light"
+            menu={sections()}
+        />
         <div className={style.poster}>
             <Image src={poster} fluid />
         </div>
         <section id="Introduction">
-            <h2 className="text-center mb-5">大会介绍</h2>
+            <h2 className="text-center mb-5">{t('conference_introduction')}</h2>
             <Container>
                 <div className="row">
                     <div className="col-md-7">
-                        <p>
-                            成都 Web 前端大会是 freeCodeCamp
-                            成都社区一年一度举办的大型技术交流活动，主要面向西南地区
-                            Web 应用、JavaScript
-                            全栈开发领域的程序员、架构师、研发团队管理者和技术爱好者。我们在借鉴同类行业大会技术分享宝贵经验的同时，也创新地增加了优秀企业现场招聘、开源项目/社团宣传展位，为互联网、软件开发技术从业者提供从学习、求职到合作洽谈的一站式资讯平台，全力打造西南一流的
-                            IT 行业盛会。
-                        </p>
+                        <p>{t('conference_description')}</p>
                         <div className="p-4 text-center">
                             <Button
                                 variant="primary"
@@ -47,7 +49,7 @@ export default () => (
                                 target="_blank"
                                 href="http://fcc-chengdu.mikecrm.com/tFM8Rk8"
                             >
-                                立即报名参加
+                                {t('register_now')}
                             </Button>
                         </div>
                     </div>
@@ -58,7 +60,7 @@ export default () => (
             </Container>
         </section>
         <section id="Lecturer" className={style.sparked}>
-            <h2 className="mb-5">与会嘉宾</h2>
+            <h2 className="mb-5">{t('guest_lecturers')}</h2>
             <Container>
                 <div className="row lecture-list">
                     {lecturers.map(({ avatar, name, detail }) => (
@@ -81,7 +83,7 @@ export default () => (
             </Container>
         </section>
         <section id="Topic">
-            <h2 className="text-center mb-5">议题</h2>
+            <h2 className="text-center mb-5">{t('topics')}</h2>
             <Container>
                 <ol
                     className={`${style.subjects} overflow-hidden list-unstyled position-relative`}
@@ -107,7 +109,9 @@ export default () => (
         <section className={style.sparked}>
             <Container>
                 <div id="Bazaar" className="mb-4">
-                    <h2 className="text-center mb-5">开源市集</h2>
+                    <h2 className="text-center mb-5">
+                        {t('open_source_bazaar')}
+                    </h2>
 
                     <div className="row row-cols-1 row-cols-md-3 g-3">
                         {projects.map(({ type, URL, title, detail, logo }) => (
@@ -140,7 +144,9 @@ export default () => (
                     </div>
                 </div>
                 <div id="Enterprise" className="text-center">
-                    <h2 className="text-center mb-5">参会企业</h2>
+                    <h2 className="text-center mb-5">
+                        {t('participating_companies')}
+                    </h2>
                     <p className="text-muted">
                         部分企业开放现场招聘位，欢迎优秀人才携简历前来~
                     </p>
@@ -166,7 +172,7 @@ export default () => (
             </Container>
         </section>
         <section id="Schedule">
-            <h2 className="text-center mb-5">日程</h2>
+            <h2 className="text-center mb-5">{t('schedule')}</h2>
             <Container>
                 <Table className="text-center" striped hover>
                     <thead>
@@ -193,7 +199,7 @@ export default () => (
             </Container>
         </section>
         <section id="Review" className={style.sparked}>
-            <h2 className="text-center mb-5">往期精彩回顾</h2>
+            <h2 className="text-center mb-5">{t('past_highlights_review')}</h2>
             <Container>
                 <div className={`row ${style.photos}`}>
                     {review.map(({ title }, index) => (
@@ -206,7 +212,7 @@ export default () => (
         </section>
 
         <section id="Address" className="text-center">
-            <h2 className="text-center mb-5">地址</h2>
+            <h2 className="text-center mb-5">{t('address')}</h2>
             <Container>
                 <p className="text-muted">
                     天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
@@ -220,7 +226,7 @@ export default () => (
             </Container>
         </section>
         <section id="Contributor" className="text-center">
-            <h2>共创伙伴</h2>
+            <h2>{t('co_creation_partners')}</h2>
             <Container>
                 {hosts.map(({ title, member }) => (
                     <div
@@ -257,7 +263,7 @@ export default () => (
                     target="_blank"
                     href="http://fcc-chengdu.mikecrm.com/tFM8Rk8"
                 >
-                    立即报名参加
+                    {t('register_now')}
                 </Button>
             </Container>
         </section>
@@ -265,7 +271,7 @@ export default () => (
             <Container>
                 <div className="d-none d-md-block">
                     <Nav>
-                        {sections.map(({ href, title }) => (
+                        {sections().map(({ href, title }) => (
                             <NavLink key={title} href={href}>
                                 {title}
                             </NavLink>

@@ -30,48 +30,51 @@ import {
     Vena_Network,
     CD_LUG
 } from './image/project';
+import { i18n } from './i18n';
+
+const { t } = i18n;
 
 export const title = '2018 成都 Web 前端大会';
 
-export const sections = [
+export const sections = () => [
     {
-        title: '大会介绍',
+        title: t('conference_introduction'),
         href: '#Introduction'
     },
     {
-        title: '与会嘉宾',
+        title: t('guest_lecturers'),
         href: '#Lecturer'
     },
     {
-        title: '议题',
+        title: t('topics'),
         href: '#Topic'
     },
     {
-        title: '开源市集',
+        title: t('open_source_bazaar'),
         href: '#Bazaar'
     },
     {
-        title: '参会企业',
+        title: t('participating_companies'),
         href: '#Enterprise'
     },
     {
-        title: '日程',
+        title: t('schedule'),
         href: '#Schedule'
     },
     {
-        title: '地址',
+        title: t('address'),
         href: '#Address'
     },
     {
-        title: '往期精彩回顾',
+        title: t('past_highlights_review'),
         href: '#Review'
     },
     {
-        title: '照片直播',
+        title: t('photo_live'),
         href: 'http://www.pailixiang.com/album_ia172238913.html'
     },
     {
-        title: '共创伙伴',
+        title: t('co_creation_partners'),
         href: '#Contributor'
     }
 ];
