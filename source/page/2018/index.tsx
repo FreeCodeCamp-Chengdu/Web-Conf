@@ -28,7 +28,7 @@ const { t } = i18n;
 export default () => (
     <main className={style.root}>
         <TopNavBar
-            brand={title}
+            brand={title()}
             expand="lg"
             variant="light"
             menu={sections()}
@@ -63,7 +63,7 @@ export default () => (
             <h2 className="mb-5">{t('guest_lecturers')}</h2>
             <Container>
                 <div className="row lecture-list">
-                    {lecturers.map(({ avatar, name, detail }) => (
+                    {lecturers().map(({ avatar, name, detail }) => (
                         <div key={name} className="col-md-3 p-2">
                             <div className={style.lecture}>
                                 <img
@@ -88,7 +88,7 @@ export default () => (
                 <ol
                     className={`${style.subjects} overflow-hidden list-unstyled position-relative`}
                 >
-                    {topics.map(({ lecturer, title, detail }) => (
+                    {topics().map(({ lecturer, title, detail }) => (
                         <li key={title} className={title}>
                             <div className="text-center">
                                 <h6>{lecturer.name}</h6>
@@ -148,9 +148,11 @@ export default () => (
                         {t('participating_companies')}
                     </h2>
                     <p className="text-muted">
-                        部分企业开放现场招聘位，欢迎优秀人才携简历前来~
+                        {t(
+                            'enterprises_open_onsite_recruitment_welcome_talents'
+                        )}
                     </p>
-                    <p className="text-muted">（排名不分先后）</p>
+                    <p className="text-muted">{t('no_particular_order')}</p>
                     <div className="row">
                         <div className="col-md-7">
                             <ul className={`${style.companies} list-inline`}>
@@ -180,13 +182,13 @@ export default () => (
                             <th scope="col" className="d-none d-md-block">
                                 #
                             </th>
-                            <th scope="col">时间</th>
-                            <th scope="col">活动</th>
-                            <th scope="col">主咖</th>
+                            <th scope="col">{t('time')}</th>
+                            <th scope="col">{t('event')}</th>
+                            <th scope="col">{t('main_guest')}</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {schedule.map(({ time, title, topic }) => (
+                        {schedule().map(({ time, title, topic }) => (
                             <tr key={time}>
                                 <td className="d-none d-md-block" />
                                 <td className="text-nowrap">{time}</td>
@@ -215,12 +217,12 @@ export default () => (
             <h2 className="text-center mb-5">{t('address')}</h2>
             <Container>
                 <p className="text-muted">
-                    天府大道北段966号天府国际金融中心4号楼1楼1号会议厅
+                    {t('tianfu_ifc_building4_conference_room')}
                 </p>
                 <Ratio aspectRatio="21x9">
                     <iframe
                         loading="lazy"
-                        src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${title}`}
+                        src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.065789,30.582013&name=${title()}`}
                     />
                 </Ratio>
             </Container>
@@ -228,21 +230,27 @@ export default () => (
         <section id="Contributor" className="text-center">
             <h2>{t('co_creation_partners')}</h2>
             <Container>
-                {hosts.map(({ title, member }) => (
+                {hosts().map(({ title, member }) => (
                     <div
                         key={title}
                         className={`${style.contributorGroup} my-4`}
                     >
-                        <h5 className="py-3">{title}办方</h5>
+                        <h5 className="py-3">
+                            {title}
+                            {t('organizer')}
+                        </h5>
                         <LogoList member={member} />
                     </div>
                 ))}
             </Container>
             <Container>
                 <div className={`${style.contributorGroup} my-4`}>
-                    {sponsors.map(({ title, member }) => (
+                    {sponsors().map(({ title, member }) => (
                         <section key={title}>
-                            <h5 className="py-3">{title}赞助</h5>
+                            <h5 className="py-3">
+                                {title}
+                                {t('sponsor')}
+                            </h5>
                             <LogoList member={member} />
                         </section>
                     ))}
@@ -250,7 +258,7 @@ export default () => (
             </Container>
             <Container>
                 <div className={`${style.contributorGroup} my-4`}>
-                    <h5 className="py-3">合作伙伴</h5>
+                    <h5 className="py-3">{t('business_partner')}</h5>
                     <LogoList member={partners} />
                 </div>
             </Container>

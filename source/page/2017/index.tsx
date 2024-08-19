@@ -115,7 +115,7 @@ export default () => (
             <Ratio aspectRatio="21x9">
                 <iframe
                     loading="lazy"
-                    src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${title}`}
+                    src={`//uri.amap.com/marker?src=fcc-cdc&callnative=1&position=104.063519,30.539362&name=${title()}`}
                 />
             </Ratio>
         </footer>

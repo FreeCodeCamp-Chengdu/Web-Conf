@@ -22,11 +22,11 @@ import {
     DKS
 } from './image/logos';
 
-export const title = '2017 成都 Web 前端大会'; //用i18n的话，我发现有报错地方，所以暂时不用i18n。
-
 import { i18n } from './i18n';
 
 const { t } = i18n;
+
+export const title = () => t('chengdu_web_frontend_conference_2017');
 
 export const guests = () => [
     {
