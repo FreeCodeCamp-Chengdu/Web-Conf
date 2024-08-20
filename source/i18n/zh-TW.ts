@@ -1,7 +1,18 @@
 import { textJoin } from 'mobx-i18n';
+
 import zhTW_2017 from '../page/2017/i18n/zh-TW';
+
+import zhTW_2018 from '../page/2018/i18n/zh-TW';
+
+import zhTW_2018_Code4City from '../page/2018-Code4City/i18n/zh-TW';
+
+import zhTW_2019 from '../page/2019/i18n/zh-TW';
+
 export default {
     ...zhTW_2017,
+    ...zhTW_2018,
+    ...zhTW_2018_Code4City,
+    ...zhTW_2019,
     review: '回顧',
     register: '註冊',
     about_us: '關於我們',

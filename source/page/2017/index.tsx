@@ -5,7 +5,7 @@ import {
     AccordionHeader,
     AccordionItem
 } from 'boot-cell';
-import { i18n } from './i18n';
+import { i18n } from '../../i18n';
 import { LogoList } from './LogoList';
 import * as style from './index.module.less';
 import { guests, flows, logos, title } from './data';

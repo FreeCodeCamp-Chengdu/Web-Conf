@@ -40,5 +40,19 @@ export default {
     si_yue: 'Si Yue',
     yu_che: 'Yu Che',
     guo_lin_shuo: 'Guo Linshuo',
-    guo_da_feng: 'Guo Dafeng'
+    guo_da_feng: 'Guo Dafeng',
+    check_in_and_visit_bazaar: 'Check-in and Visit the Bazaar',
+    lunch_and_visit_bazaar: 'Lunch and Visit the Bazaar',
+    lucky_draw_session: 'Lucky Draw Session',
+    tea_break_visit_bazaar_fun_programming_contest:
+        "Tea Break & Visit the Bazaar & Fun Programming Contest 'Fun and Play'",
+    freecodecamp_from_0_to_290k_stars: 'freeCodeCamp: From 0 to 290,000 Stars',
+    empower_nodejs_with_cpp_wings: 'Empower Node.js with C++ Wings',
+    open_source_project_maintenance: 'Open Source Project Maintenance',
+    history_of_agile_in_china: 'The History of Agile in China',
+    efficient_h5_animation_development_method:
+        'Efficient H5 Animation Development Method',
+    highly_available_react_server_side_rendering:
+        'Highly Available React Server-Side Rendering',
+    building_vue_component_library: 'Building Vue Component Library'
 } as const;

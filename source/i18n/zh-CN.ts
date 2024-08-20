@@ -1,7 +1,18 @@
 import { textJoin } from 'mobx-i18n';
+
 import zhCN_2017 from '../page/2017/i18n/zh-CN';
+
+import zhCN_2018 from '../page/2018/i18n/zh-CN';
+
+import zhCN_2018_Code4City from '../page/2018-Code4City/i18n/zh-CN';
+
+import zhCN_2019 from '../page/2019/i18n/zh-CN';
+
 export default {
     ...zhCN_2017,
+    ...zhCN_2018,
+    ...zhCN_2018_Code4City,
+    ...zhCN_2019,
     review: '回顾',
     register: '注册',
     about_us: '关于我们',

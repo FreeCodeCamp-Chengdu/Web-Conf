@@ -22,7 +22,7 @@ import {
 import { poster, undraw_01, undraw_04 } from './image';
 import photos from './image/photos';
 
-import { i18n } from './i18n';
+import { i18n } from '../../i18n';
 const { t } = i18n;
 
 export default () => (

@@ -39,5 +39,17 @@ export default {
     si_yue: '死月',
     yu_che: '余澈',
     guo_lin_shuo: '郭林烁',
-    guo_da_feng: '郭达峰'
+    guo_da_feng: '郭达峰',
+    check_in_and_visit_bazaar: '签到与逛“市集”',
+    lunch_and_visit_bazaar: '午餐与逛“市集”',
+    lucky_draw_session: '抽奖环节',
+    tea_break_visit_bazaar_fun_programming_contest:
+        '茶歇 & 逛“市集” & “可好玩乐”趣味编程赛',
+    freecodecamp_from_0_to_290k_stars: 'freeCodeCamp 从 0 到 29 万 star',
+    empower_nodejs_with_cpp_wings: '给 Node.js 插上 C++ 的翅膀',
+    open_source_project_maintenance: '开源项目维护',
+    history_of_agile_in_china: '敏捷中国史',
+    efficient_h5_animation_development_method: '高效 H5 动画开发方式',
+    highly_available_react_server_side_rendering: '高可用 React 服务端渲染',
+    building_vue_component_library: '打造 Vue 组件库'
 } as const;

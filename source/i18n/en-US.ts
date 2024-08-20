@@ -1,7 +1,18 @@
 import { textJoin } from 'mobx-i18n';
+
 import enUS_2017 from '../page/2017/i18n/en-US';
+
+import enUS_2018 from '../page/2018/i18n/en-US';
+
+import enUS_2018_Code4City from '../page/2018-Code4City/i18n/en-US';
+
+import enUS_2019 from '../page/2019/i18n/en-US';
+
 export default {
     ...enUS_2017,
+    ...enUS_2018,
+    ...enUS_2018_Code4City,
+    ...enUS_2019,
     review: 'review',
     register: 'register',
     about_us: 'About us',

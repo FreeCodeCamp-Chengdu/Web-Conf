@@ -30,7 +30,7 @@ import {
     Vena_Network,
     CD_LUG
 } from './image/project';
-import { i18n } from './i18n';
+import { i18n } from '../../i18n';
 
 const { t } = i18n;
 
@@ -119,37 +119,37 @@ export const lecturers = () => [
 
 export const topics = () => [
     {
-        title: 'freeCodeCamp 从 0 到 29 万 star',
-        lecturer: lecturers()[0], //还是显示中文，不知道怎么办。
+        title: t('freecodecamp_from_0_to_290k_stars'),
+        lecturer: lecturers()[0],
         detail: 'Quincy Larson 完整讲述他的求学和职业生涯：\n 1. 为什么转行学编程？\n 2. 为什么创立 freeCodeCamp？\n 3. freeCodeCamp 是怎么逐渐流行起来的？中间遇到哪些困难和调整，是如何解决的？\n 4. freeCodeCamp 的技术架构变迁史、核心团队和代码贡献者介绍。'
     },
     {
-        title: '给 Node.js 插上 C++ 的翅膀',
+        title: t('empower_nodejs_with_cpp_wings'),
         lecturer: lecturers()[3],
         detail: '本主题围绕着何时、为何、如何在 Node.js 中使用 C++ 来赋予它更多的可能性（如提升性能、降低开发成本、做一些神奇的事情等）：\n 1. 对于一些重计算且输入输出数据简单的场景，用 C++ 的扩展来替代原本的 Pure JavaScript 写法，将会得到一些意想不到的效果\n 2. 对于一些本身就有成熟 C++ 库的场景来说，重新造一个 Node.js 的轮子无疑是一个开发成本比较高的做法\n 3. 还有一些 Node.js 无法涉及的底层，可以通过 C++ 扩展将那些接口暴露出来再在 Node.js 中封装\n 4. 有时候我们没必要去造一个 Electron 这样的结合 Node.js 的东西，但是我们可以利用 Node.js 的 C++ 扩展去封装一个已有的游戏引擎，打通它们各间独自管理的线程\n\n###### 听众收获\n 1. 会明白 Node.js 的一些内部机制\n 2. 对 Node.js 与 C++ 进行交互有一个初步的概念\n 3. 在自己的玩具项目中付诸实践，甚至在生产环境中用上这种姿势'
     },
     {
-        title: '开源项目维护',
+        title: t('open_source_project_maintenance'),
         lecturer: lecturers()[4],
         detail: '###### 如何做好一个开源项目？\n 1. 前期的宣传\n 2. 后期的维护\n 3. 工鞥的迭代\n 4. 失败案例 vue-strap\n 5. 成功案例 taro\n\n###### 做开源项目对个人的影响\n 1. 生活的影响\n 2. 对工作和职业的影响\n 3. 开源、工作、生活之间的平衡\n\n###### 在做开源项目中学到的东西'
     },
     {
-        title: '敏捷中国史',
+        title: t('history_of_agile_in_china'),
         lecturer: lecturers()[1],
         detail: '以2002年《程序员》杂志发表《极限编程》技术专题、人民邮电出版社引进《极限编程》丛书为标志，敏捷进入中国已经十六年了。\n\n十六年前，全中国相信敏捷的人屈指可数；十六年后，大银行的CIO站在大会上讲的关键词里就有敏捷二字。沧海桑田，令人唏嘘。\n\n今天敏捷成为最为广泛采纳的软件开发方法，背后折射出的是 IT 在国民经济生活中的地位提升、是技术人员从外包码农到企业核心竞争力的地位提升、更是中国经济在全球经济中的地位提升。\n\n这十六年里，敏捷是如何被引进、被推介、被传播、被漠视、被抗拒、被接纳、被推崇、被转变、被淡化，如何由涓滴潜流汇成时代大潮？变革的源流是如何传承？哪些人，在哪些时间节点上，起到了重要的推动作用？\n\n作为敏捷在中国十六年发展历程的见证者和参与者，我希望回头梳理这段历史，为这段历史和卷入其中的人们刻碑立传。'
     },
     {
-        title: '高效 H5 动画开发方式',
+        title: t('efficient_h5_animation_development_method'),
         lecturer: lecturers()[5],
         detail: '随着设备性能的不断提升，越来越多的需求希望以动画的形式去表达呈现。在 Web 开发中，动画的实现成本无疑是重头之一。如何选择合适的实现方式，如何提高动画的开发效率，值得大家一起探讨。\n\n本次分享将围绕“保质保量”高效动画开发方式的主题，分享团队的一些探索心得与成果。'
     },
     {
-        title: '高可用 React 服务端渲染',
+        title: t('highly_available_react_server_side_rendering'),
         lecturer: lecturers()[6],
         detail: '深入浅出地分享“高可用 React SSR（服务端渲染）”技术栈在企业中应用实践'
     },
     {
-        title: '打造 Vue 组件库',
+        title: t('building_vue_component_library'),
         lecturer: lecturers()[2],
         detail: ' 1. 为什么要做组件库？\n 2. 组件的设计\n 3. 模块设计\n 4. 生态建设\n 5. 最佳实践'
     }
@@ -157,7 +157,7 @@ export const topics = () => [
 
 export const schedule = () => [
     {
-        title: '签到与逛“市集”',
+        title: t('check_in_and_visit_bazaar'),
         time: '09:00 ~ 09:30'
     },
     {
@@ -173,11 +173,11 @@ export const schedule = () => [
         time: '11:10 ~ 12:00'
     },
     {
-        title: '午餐与逛“市集”',
+        title: t('lunch_and_visit_bazaar'),
         time: '12:00 ~ 13:55'
     },
     {
-        title: '抽奖环节',
+        title: t('lucky_draw_session'),
         time: '13:55 ~ 14:00'
     },
     {
@@ -189,7 +189,7 @@ export const schedule = () => [
         time: '14:50 ~ 15:40'
     },
     {
-        title: '茶歇 & 逛“市集” & “可好玩乐”趣味编程赛',
+        title: t('tea_break_visit_bazaar_fun_programming_contest'),
         time: '15:40 ~ 16:10'
     },
     {
@@ -201,7 +201,7 @@ export const schedule = () => [
         time: '17:00 ~ 17:50'
     },
     {
-        title: '抽奖环节',
+        title: t('lucky_draw_session'),
         time: '17:50 ~ 17:55'
     }
 ];
