@@ -7,6 +7,9 @@ import BG_mountain from './image/BG-mountain.png';
 import BG_points from './image/BG-points.png';
 import { review, awards, vips, sponsors } from './data';
 
+import { i18n } from '../../i18n';
+const { t } = i18n;
+
 export default () => (
     <main>
         <div
@@ -17,7 +20,7 @@ export default () => (
                 <div className="row">
                     <div className="col-xs-12 col-md-6">
                         <h1 className={`${style['main-title']} text-white`}>
-                            2018 黑客松大赛
+                            {t('hackathon_competition_2018')} //显示不了英文。
                         </h1>
                         <h2 className="theme text-white">Code for City</h2>
 
@@ -152,7 +155,7 @@ export default () => (
                     <small style={{ color: '#697078' }}>按首字母排序</small>
 
                     <div className="d-flex flex-wrap">
-                        {vips.map(VIP => (
+                        {vips().map(VIP => (
                             <GuestCard key={VIP.name} {...VIP} />
                         ))}
                     </div>

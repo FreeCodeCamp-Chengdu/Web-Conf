@@ -1,4 +1,5 @@
 import gallery from './image/gallery';
+import { i18n } from '../../i18n';
 import {
     hushenquan,
     fanxiaobin,
@@ -50,6 +51,8 @@ import {
     DKS
 } from '../2017/image/logos';
 
+const { t } = i18n;
+
 export const awards = [
     {
         title: '一等奖',
@@ -69,10 +72,10 @@ export const awards = [
     }
 ];
 
-export const vips = [
+export const vips = () => [
     {
         avatar: hushenquan,
-        name: '胡胜全',
+        name: t('hu_shenquan'), //http://localhost:1234打不开了，就搁置了，打算明天再看看。
         role: '专家评委',
         identity: '成都科技企业孵化器协会首席运营官',
         describe:

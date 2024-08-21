@@ -54,5 +54,19 @@ export default {
         'Efficient H5 Animation Development Method',
     highly_available_react_server_side_rendering:
         'Highly Available React Server-Side Rendering',
-    building_vue_component_library: 'Building Vue Component Library'
+    building_vue_component_library: 'Building Vue Component Library',
+    xiong_jie_introduce:
+        'General Manager of Chengdu R&D Center of Baozun E-commerce, with over seventeen years of experience in the IT industry, and extensive experience in information technology construction in industries such as finance, government, telecommunications, and logistics. Xiong Jie has translated important industry works such as "Refactoring," "The Deadline," "Dancing with Bears," and "The Art of Software Craftsmanship." He has participated in open-source software communities such as Selenium, RubyWorks, and OpenLMIS, and has published dozens of articles in various media. He holds an MBA degree from the University of Liverpool.',
+    huang_yi_introduce:
+        'Graduated from University of Science and Technology Beijing with a Master\'s degree in Computer Science. Formerly worked at Baidu and Didi, currently serving as Frontend Architect and Expert Engineer at Zoom. Skilled in frontend automation, engineering, and frontend architecture. Author of open-source projects better-scroll and cube-ui, as well as "The Definitive Guide to Vue.js." Enjoys sharing technical knowledge, pursues excellence, and is an elite instructor on iMOOC.',
+    si_yue_introduce:
+        'R&D Engineer at Ant Financial\'s Experience Technology Department, Node.JS Core Collaborator, Moderator of CNode Community, Organizer of Hangzhou Node Party, Former Leader of the Node.JS Team in the Wireless Architecture Group at Dasouche; Master of Software Engineering from Zhejiang University, Retired OI and ACM Competitor, Author of "Node.JS with a Dash of C++ Extensions."',
+    yu_che_introduce:
+        "Frontend Engineer at JD.com's Aotu Lab, primarily responsible for infrastructure development and frontend performance optimization. Passionate about open-source projects, he has been a key contributor to the development and maintenance of Vue.js's first large-scale UI library vue-strap, the high-performance React-like framework Nerv, and the multi-platform development framework Taro. Apart from technology, he enjoys playing Dota 2 and swimming.",
+    guo_linshuo_introduce:
+        "Frontend Engineer at Tencent's AlloyTeam, involved in the development and optimization of large-scale Web projects such as Tencent Docs and Interactive Live Streaming. Specializes in frontend performance optimization, frontend usability, and improving development efficiency. Enjoys sharing knowledge.",
+    guo_dafeng_introduce:
+        'Guo Dafeng, CTO of Strikingly. Graduated from the Chinese University of Hong Kong, he developed three Facebook platform applications in 2010, acquiring over 20 million users. In 2012, he founded Strikingly, the simplest website building platform on the market, and became the first Chinese team to enter the Y Combinator incubator.',
+    quincy_larson_career_journey:
+        "Quincy Larson tells the story of his academic and career journey:\n1. Why did he switch careers to learn programming?\n2. Why did he start freeCodeCamp?\n3. How did freeCodeCamp become popular? What difficulties and adjustments did he encounter, and how were they resolved?\n4. The evolution of freeCodeCamp's technical architecture, introduction to the core team, and code contributors."
 } as const;

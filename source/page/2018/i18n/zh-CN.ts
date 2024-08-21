@@ -51,5 +51,19 @@ export default {
     history_of_agile_in_china: '敏捷中国史',
     efficient_h5_animation_development_method: '高效 H5 动画开发方式',
     highly_available_react_server_side_rendering: '高可用 React 服务端渲染',
-    building_vue_component_library: '打造 Vue 组件库'
+    building_vue_component_library: '打造 Vue 组件库',
+    xiong_jie_introduce:
+        '宝尊电商成都研发中心总经理，拥有超过十七年 IT 行业的从业经验，在金融、政府、电信、物流等行业的信息化建设方面有着丰富经验。熊节曾翻译了《重构》、《最后期限》、《与熊共舞》、《软件工艺》等行业重要著作，参与了 Selenium、RubyWorks、OpenLMIS 等开源软件社区，并在各种媒体发表过数十篇文章，获得利物浦大学 MBA 学位。',
+    huang_yi_introduce:
+        '北京科技大学毕业，计算机专业硕士。曾任职百度、滴滴，现任 Zoom 前端架构师、专家工程师；擅长前端自动化、工程化，前端架构方向。开源项目 better-scroll、cube-ui 作者，《Vue.js 权威指南》作者，乐于技术分享，追求极致，慕课网精英讲师。',
+    si_yue_introduce:
+        '蚂蚁金服体验技术部研发工程师，Node.JS 核心贡献者（Node.JS Core Collaborator）之一，CNode 社区版主之一，杭州 Node Party 组织者之一，曾任大搜车无线架构组 Node.JS 团队负责人；浙江大学软件工程硕士，退役 OI、ACM 选手，《Node.JS 来一打 C++ 扩展》作者。',
+    yu_che_introduce:
+        '京东凹凸实验室前端工程师，主要负责基础设施建设和前端性能优化。热爱开源事业，先后作为主要开发者参与了 Vue.js 第一个大型 UI 库 vue-strap、高性能类 React 框架 Nerv、多端统一开发框架 Taro 的开源和维护。在技术之外，他喜欢玩 Dota2 和游泳。',
+    guo_linshuo_introduce:
+        '腾讯 AlloyTeam 前端工程师，参与过腾讯文档、互动直播等大型 Web 项目开发与优化，专注于前端性能优化、前端可用性及开发效率提升，乐于分享。',
+    guo_dafeng_introduce:
+        '郭达峰，Strikingly CTO。毕业于香港中文大学，于 2010 年开发了三款 Facebook 平台的应用，获取了超过 2 千万的用户。2012 年创立了市面上最简易的建站平台 Strikingly，成为第一家进入 YC 孵化器的华人团队。',
+    quincy_larson_career_journey:
+        'Quincy Larson 完整讲述他的求学和职业生涯：\n 1. 为什么转行学编程？\n 2. 为什么创立 freeCodeCamp？\n 3. freeCodeCamp 是怎么逐渐流行起来的？中间遇到哪些困难和调整，是如何解决的？\n 4. freeCodeCamp 的技术架构变迁史、核心团队和代码贡献者介绍。'
 } as const;
