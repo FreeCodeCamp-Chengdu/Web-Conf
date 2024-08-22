@@ -1,4 +1,20 @@
 export default {
     hackathon_competition_2018: '2018 黑客松大赛',
-    hu_shenquan: '胡胜全'
+    entry_channel: '参赛通道 →',
+    hu_shenquan: '胡胜全',
+    fan_xiaobin: '樊晓兵',
+    shen_changkun: '沈长锟',
+    mao_yufeng: '毛玉峰',
+    wen_qixiang: '闻其详',
+    li_wanpeng: '李万鹏',
+    qing_linbo: '卿粼波',
+    zhang_wei: '张伟',
+    liang_tongming: '梁桐铭',
+    lv_yan: '吕彦',
+    cooperative_units: '合作单位',
+    host_unit: '主办单位',
+    organizer1: '承办单位',
+    title_sponsor: '冠名单位',
+    platform_provider: '平台提供',
+    media_partners: '媒体伙伴'
 } as const;

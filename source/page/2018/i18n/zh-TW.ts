@@ -1,5 +1,3 @@
-import { textJoin } from 'mobx-i18n';
-
 export default {
     chengdu_web_frontend_conference_2018: '2018 成都 Web 前端大會',
     conference_introduction: '大會介紹',
@@ -65,5 +63,38 @@ export default {
     guo_dafeng_introduce:
         '郭達峰，Strikingly CTO。畢業於香港中文大學，於 2010 年開發了三款 Facebook 平台的應用，獲取了超過 2 千萬的用戶。2012 年創立了市面上最簡易的建站平台 Strikingly，成為第一家進入 YC 孵化器的華人團隊。',
     quincy_larson_career_journey:
-        'Quincy Larson 完整講述他的求學和職業生涯：\n 1. 為什麼轉行學編程？\n 2. 為什麼創立 freeCodeCamp？\n 3. freeCodeCamp 是怎麼逐漸流行起來的？中間遇到哪些困難和調整，是如何解決的？\n 4. freeCodeCamp 的技術架構變遷史、核心團隊和代碼貢獻者介紹。'
+        'Quincy Larson 完整講述他的求學和職業生涯：\n 1. 為什麼轉行學編程？\n 2. 為什麼創立 freeCodeCamp？\n 3. freeCodeCamp 是怎麼逐漸流行起來的？中間遇到哪些困難和調整，是如何解決的？\n 4. freeCodeCamp 的技術架構變遷史、核心團隊和代碼貢獻者介紹。',
+    nodejs_cpp_usage_topic:
+        '本主題圍繞著何時、為何、如何在 Node.js 中使用 C++ 來賦予它更多的可能性（如提升性能、降低開發成本、做一些神奇的事情等）：\n1. 對於一些重計算且輸入輸出數據簡單的場景，用 C++ 的擴展來替代原本的 Pure JavaScript 寫法，將會得到一些意想不到的效果\n2. 對於一些本身就有成熟 C++ 庫的場景來說，重新造一個 Node.js 的輪子無疑是一個開發成本比較高的做法\n3. 還有一些 Node.js 無法涉及的底層，可以通過 C++ 擴展將那些接口暴露出來再在 Node.js 中封裝\n4. 有時候我們沒必要去造一個 Electron 這樣的結合 Node.js 的東西，但是我們可以利用 Node.js 的 C++ 擴展去封裝一個已有的遊戲引擎，打通它們各間獨自管理的線程\n聽眾收穫\n1. 會明白 Node.js 的一些內部機制\n2. 對 Node.js 與 C++ 進行交互有一個初步的概念\n3. 在自己的玩具項目中付諸實踐，甚至在生產環境中用上這種姿勢',
+    open_source_guide:
+        '###### 如何做好一個開源專案？<br>1. 前期宣傳<br>2. 後期維護<br>3. 工鞥的迭代<br>4. 失敗案例 vue-strap<br>5. 成功案例 taro<br>###### 做開源專案對個人的影響<br>1. 生活的影響<br>2. 對工作和職業的影響<br>3. 開源、工作、生活之間的平衡<br>###### 在做開源專案中學到的東西<br>',
+    history_of_agile_in_china_detail:
+        '以2002年《程序員》雜誌發表《極限編程》技術專題、人民郵電出版社引進《極限編程》叢書為標誌，敏捷進入中國已經十六年了。\n\n十六年前，全中國相信敏捷的人屈指可數；十六年後，大銀行的CIO站在大會上講的關鍵詞裡就有敏捷二字。滄海桑田，令人唏噓。\n\n今天敏捷成為最為廣泛採納的軟件開發方法，背後折射出的是 IT 在國民經濟生活中的地位提升、是技術人員從外包碼農到企業核心競爭力的地位提升、更是中國經濟在全球經濟中的地位提升。\n\n這十六年裡，敏捷是如何被引進、被推介、被傳播、被漠視、被抗拒、被接納、被推崇、被轉變、被淡化，如何由潺潺細流匯成時代大潮？變革的源流是如何傳承？哪些人，在哪些時間節點上，起到了重要的推動作用？\n\n作為敏捷在中國十六年發展歷程的見證者和參與者，我希望回頭梳理這段歷史，為這段歷史和捲入其中的人們刻碑立傳。',
+    efficient_h5_animation_development_method_detail:
+        '隨著設備性能的不斷提升，越來越多的需求希望以動畫的形式去表達呈現。在 Web 開發中，動畫的實現成本無疑是重頭之一。如何選擇合適的實現方式，如何提高動畫的開發效率，值得大家一起探討。\n\n本次分享將圍繞“保質保量”高效動畫開發方式的主題，分享團隊的一些探索心得與成果。',
+    highly_available_react_ssr_enterprise_application_practice:
+        '深入淺出地分享“高可用 React SSR（服務端渲染）”技術棧在企業中應用實踐',
+    building_vue_component_library_detail:
+        ' 1. 為什麼要做組件庫？\n 2. 組件的設計\n 3. 模塊設計\n 4. 生態建設\n 5. 最佳實踐',
+    club: '社團',
+    project: '項目',
+    global_influence_chinese_linux_distribution:
+        '有全球影響力的中國 Linux 發行版',
+    lightweight_web_componentization_engine_detail:
+        '輕量級 Web 組件化引擎，基於 Web components（HTML 5.3、DOM 4.1）、ECMAScript 2018 和 裝飾器提案 提供 MVVM 模型，並有官方封裝的 BootStrap v4、Material Design 組件庫。',
+    h5ds_html5_design_software_detail:
+        'H5DS (HTML 5 設計軟件) 是一款 B/S 的 H5 代碼生成工具，通過可視化操作讓不會代碼的人也能輕鬆製作 H5 頁面',
+    react_loading_component_library: '基於 React 的 loading 組件庫',
+    ubuntu_kylin_detail:
+        '優麒麟（Ubuntu Kylin）是由中國 CCN（由 CSIP、Canonical、NUDT 三方聯合組建）開源創新聯合實驗室與天津麒麟信息技術有限公司主導開發的全球開源項目，其宗旨是通過研發用戶友好的桌面環境以及特定需求的應用軟件，為全球 Linux 桌面用戶帶來非凡的全新體驗！\n\n優麒麟操作系統是 Ubuntu 官方衍生版，得到來自 Debian、Ubuntu、Mate、LUPA 等國際社區及眾多國內外社區愛好者的廣泛參與和熱情支持！',
+    covariant_script_detail:
+        'Covariant Script 編程語言是一個新興的開源編程語言，發展前景廣闊',
+    react_antd_backend_management_solution:
+        '一套基於 React、Ant design 和 create-react-app 的後台管理系統解決方案。完整的代碼目錄結構設計、權限管理、自定義主題、路由配置以及 Redux 的基本用法等，一個完整且簡單的 demo 讓你快速上手 React 和後台系統。',
+    kaiyuanshe_open_source_alliance_description:
+        '開源社是由中國支持開源的企業，社區及個人所組織的一個開源聯盟，旨在推廣開源，各成員按照“共治、共識、貢獻”的原則自發設立。',
+    luoshu_protocol_asset_securitization_tokenization:
+        '洛書協議 —— 資產融通代幣化的開放協議',
+    chengdu_gnu_linux_community_description:
+        '成都GNU/Linux自組建以來，已經集聚了一批Linux愛好者、開發者、創業者。'
 } as const;

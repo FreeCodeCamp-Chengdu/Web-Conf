@@ -114,33 +114,37 @@ export default () => (
                     </h2>
 
                     <div className="row row-cols-1 row-cols-md-3 g-3">
-                        {projects.map(({ type, URL, title, detail, logo }) => (
-                            <div className="col" key={title}>
-                                <Card className="overflow-hidden">
-                                    <CardImg src={logo} />
-                                    <CardBody>
-                                        <CardTitle>
-                                            <a
-                                                className="stretched-link text-primary"
-                                                target="_blank"
-                                                href={URL}
+                        {projects().map(
+                            ({ type, URL, title, detail, logo }) => (
+                                <div className="col" key={title}>
+                                    <Card className="overflow-hidden">
+                                        <CardImg src={logo} />
+                                        <CardBody>
+                                            <CardTitle>
+                                                <a
+                                                    className="stretched-link text-primary"
+                                                    target="_blank"
+                                                    href={URL}
+                                                >
+                                                    {title}
+                                                </a>
+                                            </CardTitle>
+                                            <div
+                                                className={`cr cr-top cr-right cr-${
+                                                    type ? 'red' : 'blue'
+                                                }`}
                                             >
-                                                {title}
-                                            </a>
-                                        </CardTitle>
-                                        <div
-                                            className={`cr cr-top cr-right cr-${
-                                                type ? 'red' : 'blue'
-                                            }`}
-                                        >
-                                            {type ? '社团' : '项目'}
-                                        </div>
+                                                {type
+                                                    ? t('club')
+                                                    : t('project')}
+                                            </div>
 
-                                        {detail}
-                                    </CardBody>
-                                </Card>
-                            </div>
-                        ))}
+                                            {detail}
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                            )
+                        )}
                     </div>
                 </div>
                 <div id="Enterprise" className="text-center">

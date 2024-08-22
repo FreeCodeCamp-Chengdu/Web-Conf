@@ -75,7 +75,7 @@ export const awards = [
 export const vips = () => [
     {
         avatar: hushenquan,
-        name: t('hu_shenquan'), //http://localhost:1234打不开了，就搁置了，打算明天再看看。
+        name: t('hu_shenquan'),
         role: '专家评委',
         identity: '成都科技企业孵化器协会首席运营官',
         describe:
@@ -83,7 +83,7 @@ export const vips = () => [
     },
     {
         avatar: fanxiaobin,
-        name: '樊晓兵',
+        name: t('fan_xiaobin'),
         role: '专家评委',
         identity: '高新区创新创业服务中心创业服务处项目经理',
         describe:
@@ -91,7 +91,7 @@ export const vips = () => [
     },
     {
         avatar: shenchangkun,
-        name: '沈长锟',
+        name: t('shen_changkun'),
         role: '专家评委',
         identity: 'TEDx 中国区大使',
         describe:
@@ -99,7 +99,7 @@ export const vips = () => [
     },
     {
         avatar: maoyufeng,
-        name: '毛玉峰',
+        name: t('mao_yufeng'),
         role: '专家评委',
         identity: '新耀行集团董事长',
         describe:
@@ -107,7 +107,7 @@ export const vips = () => [
     },
     {
         avatar: wenqixiang,
-        name: '闻其详',
+        name: t('wen_qixiang'),
         role: '专家评委',
         identity: 'GNOME ASIA 重庆主席',
         describe:
@@ -115,7 +115,7 @@ export const vips = () => [
     },
     {
         avatar: liwanpeng,
-        name: '李万鹏',
+        name: t('li_wanpeng'),
         role: '专家评委',
         identity: '优聚加速器创始人&CEO',
         describe:
@@ -123,7 +123,7 @@ export const vips = () => [
     },
     {
         avatar: qinglinbo,
-        name: '卿粼波',
+        name: t('qing_linbo'),
         role: '专家评委',
         identity: '四川大学副教授&硕士生导师',
         describe:
@@ -131,7 +131,7 @@ export const vips = () => [
     },
     {
         avatar: zhangwei,
-        name: '张伟',
+        name: t('zhang_wei'),
         role: '特邀嘉宾',
         identity: 'BBD 基础架构部经理',
         describe:
@@ -139,7 +139,7 @@ export const vips = () => [
     },
     {
         avatar: liangtongming,
-        name: '梁桐铭',
+        name: t('liang_tongming'),
         role: '特邀嘉宾',
         identity: '微软最有价值专家(MVP)',
         describe:
@@ -147,7 +147,7 @@ export const vips = () => [
     },
     {
         avatar: lvyan,
-        name: '吕彦',
+        name: t('lv_yan'),
         role: '特邀嘉宾',
         identity: '高级项目经理',
         describe:
@@ -157,7 +157,7 @@ export const vips = () => [
 
 export const sponsors = [
     {
-        title: '主办单位',
+        title: t('host_unit'),
         list: [
             {
                 title: '高新区创新创业服务中心',
@@ -174,7 +174,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '冠名单位',
+        title: t('title_sponsor'),
         list: [
             {
                 title: '成都新耀行房产营销策划',
@@ -183,7 +183,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '承办单位',
+        title: t('organizer1'),
         list: [
             {
                 title: '合创新业',
@@ -196,7 +196,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '平台提供',
+        title: t('platform_provider'),
         list: [
             {
                 title: '梦思特科技(成都)',
@@ -205,7 +205,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '合作伙伴',
+        title: t('business_partner'),
         list: [
             {
                 title: 'Github',
@@ -286,7 +286,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '媒体伙伴',
+        title: t('media_partners'),
         list: [
             {
                 title: '四川省电视台',

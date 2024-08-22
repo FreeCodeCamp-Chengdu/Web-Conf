@@ -20,7 +20,7 @@ export default () => (
                 <div className="row">
                     <div className="col-xs-12 col-md-6">
                         <h1 className={`${style['main-title']} text-white`}>
-                            {t('hackathon_competition_2018')} //显示不了英文。
+                            {t('hackathon_competition_2018')}
                         </h1>
                         <h2 className="theme text-white">Code for City</h2>
 
@@ -30,7 +30,7 @@ export default () => (
                             target="_blank"
                             href="https://fcc.hackerearth.com/zh/"
                         >
-                            参赛通道 →
+                            {t('entry_channel')}
                         </Button>
 
                         <ul className="list-unstyled">
@@ -165,7 +165,7 @@ export default () => (
                     style={{ backgroundImage: `url(${BG_points})` }}
                 >
                     <section className="p-5">
-                        <h4 className="text-white">合作单位</h4>
+                        <h4 className="text-white">{t('cooperative_units')}</h4>
                         <div className="row">
                             {sponsors.map(({ title, list }) => (
                                 <div
