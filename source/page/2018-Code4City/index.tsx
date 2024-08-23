@@ -34,15 +34,9 @@ export default () => (
                         </Button>
 
                         <ul className="list-unstyled">
-                            <li>
-                                线上预赛：2018 年 1 月 12 日 20:00 ~ 2018 年 1
-                                月 14 日 20:00
-                            </li>
-                            <li>决赛日期：2018 年 1 月 20 日 9:00 ~ 19:00</li>
-                            <li>
-                                决赛地址：高新天府五街 200 号菁蓉国际广场 7 栋 1
-                                号菁蓉汇主会场
-                            </li>
+                            <li>{t('online_preliminary')}</li>
+                            <li>{t('finals_date')}</li>
+                            <li>{t('finals_venue')}</li>
                         </ul>
                     </div>
 
@@ -65,45 +59,35 @@ export default () => (
                         <h4
                             className={`${style['card-title']} ${style['line-center']} me-md-3`}
                         >
-                            大赛宗旨
+                            {t('competition_objective')}
                         </h4>
                         <ul
                             className={`list-unstyled ${style['card-content']} flex-fill`}
                         >
-                            <li>
-                                关注城市生活：以“Code For
-                                City”为主题，旨在用实际编程行动改变城市生活，让城市更美好
-                            </li>
-                            <li>
-                                鼓励技术创新：创意与实践相互结合，想象与行动二者并重，是本次大赛的重要评判标准之一
-                            </li>
-                            <li>
-                                提升行业氛围：创造有价值的产品，挖掘有潜力的团队，加强高新区对人才、企业资本的吸引力
-                            </li>
-                            <li>
-                                展现成都风采：打造一个广泛聚焦的舞台，一展成都程序员风采，彰显成都IT新一线的城市风貌
-                            </li>
+                            <li>{t('focus_on_city_life')}</li>
+                            <li>{t('encourage_technological')}</li>
+                            <li>{t('enhance_industry_atmosphere')}</li>
+                            <li>{t('showcase_chengdu_charm')}</li>
                         </ul>
                     </div>
                     <div className="d-md-flex w-100 align-items-start my-5 flex-row-reverse">
                         <h4
                             className={`${style['card-title']} ${style['line-center']} ml-md-3`}
                         >
-                            品牌理念
+                            {t('brand_philosophy')}
                         </h4>
                         <p className={style['card-content']}>
-                            Code for City 是 freeCodeCamp China
-                            的品牌活动，通过联合企业、高校、技术社区、公益组织等机构，以编程工作坊或黑客松等形式，赋能青年人为社会问题设计解决方案，旨在推动编程的普及，用技术影响世界。
+                            {t('code_for_city')}
                         </p>
                     </div>
                     <div className="col-md-12 col-xs-12 mt-md-5 text-center">
                         <h3
                             className={`${style.title} ${style['line-center']} text-white"`}
                         >
-                            大赛奖项
+                            {t('competition_awards')}
                         </h3>
                         <div className="my-4">
-                            {awards.map(({ title, detail }) => (
+                            {awards().map(({ title, detail }) => (
                                 <>
                                     <h4 className="text-white">{title}</h4>
                                     <p>{detail}</p>
@@ -112,7 +96,7 @@ export default () => (
                         </div>
                         <div className="col-md-12 my-4">
                             <p style={{ color: 'darkgray' }}>
-                                所有奖项以现金或同等价值奖品发放
+                                {t('all_awards')}
                             </p>
                         </div>
                     </div>
@@ -126,33 +110,34 @@ export default () => (
                     <h4
                         className={`${style.title} ${style['line-center']} text-white text-center"`}
                     >
-                        大赛参赛队伍规模及规则
+                        {t('competition_team_size_and_rules')}
                     </h4>
                     <small className="p-3">
-                        <span className="pe-4">海选期：不限</span>
-                        决赛日：6支
+                        <span className="pe-4">
+                            {t('preliminary_phase_unlimited')}
+                        </span>
+                        {t('finals_day_6_teams')}
                     </small>
                     <ol className={style['rule-list']}>
-                        <li>参赛队长通过官方链接或者官方微信群报名</li>
                         <li>
-                            队长在获得官方授予的权限之后，拉队员进入自己的Team（GitHub
-                            对应的 team、repository 自动创建）
+                            {t(
+                                'team_captains_register_through_official_link_or_wechat_group'
+                            )}
                         </li>
-                        <li>
-                            参赛队成员在比赛开始时才被赋予代码库 push
-                            权限，在评选阶段暂时失去 push 权限，赛后会取得 admin
-                            权限以便继续开发
-                        </li>
+                        <li>{t('after_obtaining_permissions')}</li>
+                        <li>{t('team_members_granted')}</li>
                     </ol>
                 </section>
                 <section className="text-center">
                     <h4
                         className={`${style.title} ${style['line-center']} text-white"`}
                     >
-                        嘉宾评委介绍
+                        {t('introduction_to_guest_judges')}
                     </h4>
 
-                    <small style={{ color: '#697078' }}>按首字母排序</small>
+                    <small style={{ color: '#697078' }}>
+                        {t('sorted_by_initial_letter')}
+                    </small>
 
                     <div className="d-flex flex-wrap">
                         {vips().map(VIP => (
