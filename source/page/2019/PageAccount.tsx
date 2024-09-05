@@ -3,9 +3,9 @@ import { parseTextTable } from 'web-utility';
 import { Table } from 'boot-cell';
 import { computed, observable } from 'mobx';
 
+import { i18n } from '../../i18n';
 import { PageFrame } from './PageFrame';
 
-import { i18n } from '../../i18n';
 const { t } = i18n;
 
 type Account = Record<'item' | 'manager' | 'date' | 'remark', string> &
