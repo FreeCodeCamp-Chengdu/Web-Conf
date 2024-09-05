@@ -18,6 +18,9 @@ const topicGroups = Object.entries(
 );
 const partnerGroups = Object.entries(groupBy(data.partners, 'title'));
 
+import { i18n } from '../../i18n';
+const { t } = i18n;
+
 export default () => (
     <PageFrame>
         <Jumbotron
@@ -25,7 +28,7 @@ export default () => (
             title={data.title}
             description={
                 <ul className="list-unstyled my-4">
-                    <li>2019 年 11 月 16 ~ 17 日</li>
+                    <li>{t('event_date')}</li>
                     <li>{data.address}</li>
                 </ul>
             }
@@ -37,12 +40,12 @@ export default () => (
                 className="mt-5"
                 href="http://fcc-chengdu.mikecrm.com/7pG2aOh"
             >
-                即刻报名
+                {t('register_now1')}
             </Button>
         </Jumbotron>
 
         <h2 className="text-center my-4" id="Topic">
-            大会议程
+            {t('conference_agenda')}
         </h2>
         <Tabs
         // mode="pills" tabAlign="center"
@@ -59,9 +62,9 @@ export default () => (
         <hr className="m-5" />
 
         <h2 className="text-center" id="Mentor">
-            大咖讲师
+            {t('keynote_speakers')}
         </h2>
-        <p className="lead text-center">（排名不分先后）</p>
+        <p className="lead text-center">{t('no_particular_order')}</p>
 
         <section className="row cols-1 row-cols-sm-2 row-cols-md-4 g-3">
             {data.mentors.map(
@@ -90,7 +93,7 @@ export default () => (
         <hr className="m-5" />
 
         <h2 className="text-center" id="Contributor">
-            共创伙伴
+            {t('co_creation_partners')}
         </h2>
         <section className="text-center">
             {partnerGroups.map(([title, list]) => (
@@ -100,7 +103,7 @@ export default () => (
         <hr className="m-5" />
 
         <h2 className="text-center" id="Address">
-            会场交通
+            {t('venue_transportation')}
         </h2>
         <p className="lead text-center mt-4 mb-5">{data.address}</p>
         <Ratio aspectRatio="21x9">
@@ -111,7 +114,7 @@ export default () => (
         </Ratio>
         <hr className="m-5" />
 
-        <h2 className="text-center">报名通道</h2>
+        <h2 className="text-center">{t('registration_channel')}</h2>
         <img
             className="d-block mx-auto my-5"
             style={{ width: '20rem' }}

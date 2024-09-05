@@ -15,7 +15,7 @@ import * as style from './SummitCard.module.less';
 
 const { t } = i18n;
 
-export type SummitCardProps = (typeof summits)[0] & CardProps;
+export type SummitCardProps = ReturnType<typeof summits>[0] & CardProps;
 
 export const SummitCard: FC<SummitCardProps> = observer(
     ({ className = '', title, banner, date, URL, children, ...props }) => {

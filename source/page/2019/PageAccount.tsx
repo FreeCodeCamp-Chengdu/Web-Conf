@@ -3,7 +3,10 @@ import { parseTextTable } from 'web-utility';
 import { Table } from 'boot-cell';
 import { computed, observable } from 'mobx';
 
+import { i18n } from '../../i18n';
 import { PageFrame } from './PageFrame';
+
+const { t } = i18n;
 
 type Account = Record<'item' | 'manager' | 'date' | 'remark', string> &
     Record<'price' | 'count', number>;
@@ -68,28 +71,30 @@ export default class AccountPage extends HTMLElement implements WebCell {
 
         return (
             <PageFrame>
-                <h2 className="py-5 text-center">收支账目</h2>
+                <h2 className="py-5 text-center">
+                    {t('income_expenditure_account')}
+                </h2>
 
                 <Table striped hover>
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>事项</th>
-                            <th>单价（人民币￥）</th>
-                            <th>数量</th>
-                            <th>经办</th>
-                            <th>日期</th>
-                            <th>备注</th>
+                            <th>{t('item')}</th>
+                            <th>{t('unit_price_cny')}</th>
+                            <th>{t('quantity')}</th>
+                            <th>{t('handler')}</th>
+                            <th>{t('date')}</th>
+                            <th>{t('remark')}</th>
                         </tr>
                     </thead>
                     <tbody>{list.map(this.renderRow)}</tbody>
                     <tfoot>
                         <tr>
-                            <th>总支出（人民币￥）</th>
+                            <th>{t('total_expenditure_cny')}</th>
                             <td>{expenditure.toFixed(2)}</td>
-                            <th>总收入（人民币￥）</th>
+                            <th>{t('total_revenue_cny')}</th>
                             <td>{revenue.toFixed(2)}</td>
-                            <th>总结余（人民币￥）</th>
+                            <th>{t('total_balance_cny')}</th>
                             <td>{(revenue + expenditure).toFixed(2)}</td>
                         </tr>
                     </tfoot>

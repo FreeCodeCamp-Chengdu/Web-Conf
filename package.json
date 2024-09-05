@@ -23,7 +23,7 @@
         "prepare": "husky",
         "test": "lint-staged  &&  tsc --noEmit",
         "clean": "rm -rf dist/ .parcel-cache/",
-        "start": "npm run clean  &&  parcel source/index.html --open",
+        "start": "npm run clean  &&  parcel source/index.html",
         "pack-sw": "rm -f dist/sw.js.map  &&  workbox generateSW",
         "build": "npm run clean  &&  parcel build source/index.html --public-url .  &&  npm run pack-sw"
     },

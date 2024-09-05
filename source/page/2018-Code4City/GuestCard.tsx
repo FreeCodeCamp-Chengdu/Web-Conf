@@ -4,7 +4,8 @@ import { Image } from 'boot-cell';
 import * as style from './index.module.less';
 import { vips } from './data';
 
-export type GuestCardProps = (typeof vips)[0] & WebCellProps<HTMLDivElement>;
+export type GuestCardProps = ReturnType<typeof vips>[0] &
+    WebCellProps<HTMLDivElement>;
 
 export const GuestCard: FC<GuestCardProps> = ({
     className = 'col-md-6 col-xs-12',

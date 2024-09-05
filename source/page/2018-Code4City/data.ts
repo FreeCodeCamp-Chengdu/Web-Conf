@@ -1,4 +1,5 @@
 import gallery from './image/gallery';
+import { i18n } from '../../i18n';
 import {
     hushenquan,
     fanxiaobin,
@@ -50,111 +51,105 @@ import {
     DKS
 } from '../2017/image/logos';
 
-export const awards = [
+const { t } = i18n;
+
+export const awards = () => [
     {
-        title: '一等奖',
+        title: t('first_prize'),
         detail: '￥10000+'
     },
     {
-        title: '二等奖',
+        title: t('second_prize'),
         detail: '￥5000+'
     },
     {
-        title: '三等奖',
+        title: t('third_prize'),
         detail: '￥3000+'
     },
     {
-        title: '特别奖项',
-        detail: '若干'
+        title: t('special_award'),
+        detail: t('several')
     }
 ];
 
-export const vips = [
+export const vips = () => [
     {
         avatar: hushenquan,
-        name: '胡胜全',
-        role: '专家评委',
-        identity: '成都科技企业孵化器协会首席运营官',
-        describe:
-            '长期负责“成都科技创业导师”评选、创业项目辅导、创业孵化行业人才培养等工作，完成了上百场训练营、创新创业大赛等活动，累计培训辅导项目上千个。'
+        name: t('hu_shenquan'),
+        role: t('expert_judge'),
+        identity: t('chief_operating_officer'),
+        describe: t('long_term_responsibility')
     },
     {
         avatar: fanxiaobin,
-        name: '樊晓兵',
-        role: '专家评委',
-        identity: '高新区创新创业服务中心创业服务处项目经理',
-        describe:
-            '长期从事科技创新创业服务工作、天府创业联盟创始人、资深技术经纪人，天府创联®核心竞争力系统发明人，专注并擅长于创新创业政策解读、技术转移和战略规划等。'
+        name: t('fan_xiaobin'),
+        role: t('expert_judge'),
+        identity: t('project_manager'),
+        describe: t('long_term_involvement')
     },
     {
         avatar: shenchangkun,
-        name: '沈长锟',
-        role: '专家评委',
-        identity: 'TEDx 中国区大使',
-        describe:
-            'TEDx 中国区大使，TEDxChengdu 及 TEDxChongqing 策展人。自2012年起创办 TEDxChongqing，2016年当选 TEDx 中国区大使，并在2017年发起 TEDxChengdu。气候政策研究者，世界银行第五期CDD项目专员。2011年起先后入选 Rio+20 联合国里约地球峰会、COP17 联合国德班气候大会、COP18 联合国多哈气候大会、土耳其 Global Power Shift 气候论坛中国青年代表。'
+        name: t('shen_changkun'),
+        role: t('expert_judge'),
+        identity: t('tedx_ambassador_china'),
+        describe: t('tedx_ambassador_china_curator')
     },
     {
         avatar: maoyufeng,
-        name: '毛玉峰',
-        role: '专家评委',
-        identity: '新耀行集团董事长',
-        describe:
-            '曾就职于中原地产，有近二十年地产专业服务运营从业经验。毛玉峰先生带领新耀行集团深耕中国商业地产，致力于商业地产价值最大化挖掘，引领商业地产新思维的崛起，并为我们的城市和居民提升更为美好的社区商业场景而坚定前行！'
+        name: t('mao_yufeng'),
+        role: t('expert_judge'),
+        identity: t('chairman_xinyao_group'),
+        describe: t('previously_employed_zhongyuan')
     },
     {
         avatar: wenqixiang,
-        name: '闻其详',
-        role: '专家评委',
-        identity: 'GNOME ASIA 重庆主席',
-        describe:
-            '自 2007年开始接触 Linux 和开源软件就投身到开源浪潮之中，喜爱开放协作的包容文化，认同开源文化的社会意义和生产力价值。目前是 GNOME 基金会成员，中华民国软体自由协会成员，现主要关注在推广开源、应用开源技术和开源理念贡献教育领域，创办有公益小组开放教育反应堆和开源工场。'
+        name: t('wen_qixiang'),
+        role: t('expert_judge'),
+        identity: t('gnome_asia_chongqing_chair'),
+        describe: t('since_2007_upon_contacting')
     },
     {
         avatar: liwanpeng,
-        name: '李万鹏',
-        role: '专家评委',
-        identity: '优聚加速器创始人&CEO',
-        describe:
-            '优聚加速器创始人&CEO，成都科技创业导师；iWeb成都站负责人；在移动互联网行业拥有十四年的实操经验；“优聚加速器”2016年上半年也成功投资和孵化2家VR公司，目前已经获得高速的发展，在去年10月成功获得科技部颁布的“国家级众创空间”的荣誉。'
+        name: t('li_wanpeng'),
+        role: t('expert_judge'),
+        identity: t('founder_ceo_youju_accelerator'),
+        describe: t('founder_ceo_youju_accelerator_chengdu')
     },
     {
         avatar: qinglinbo,
-        name: '卿粼波',
-        role: '专家评委',
-        identity: '四川大学副教授&硕士生导师',
-        describe:
-            '具有多年从事图像处理，人工智能，嵌入式系统等领域理论和技术研究的经验。 美国视觉科学学会（Vision Science Society)会员，亚太信号与信息处理协会(APSIPA)会员。 担任IEEE Transactions on Multimedia, IEEE Transactions on Circuits and Systems for Video Technology, International Jounal of Electrical Power and Energy Systems, Journal of Computational and Applied Mathematecs等多个国际学术期刊的审稿人。'
+        name: t('qing_linbo'),
+        role: t('expert_judge'),
+        identity: t(
+            'associate_professor_masters_supervisor_sichuan_university'
+        ),
+        describe: t('with_years_experience_theoretical')
     },
     {
         avatar: zhangwei,
-        name: '张伟',
-        role: '特邀嘉宾',
-        identity: 'BBD 基础架构部经理',
-        describe:
-            '曾就职于Oracle，在Oracle China Offshore Center部门担任Middleware Consultant。曾就职于Alipay，在金融核心技术部担任研发工程师，参与过双11核心交易系统的开发工作。现负责BBD中间件基础设施的建设，对企业级中间件、区块链有浓厚的兴趣。'
+        name: t('zhang_wei'),
+        role: t('special_guest'),
+        identity: t('manager_bbd_infrastructure_department'),
+        describe: t('previously_employed_oracle')
     },
     {
         avatar: liangtongming,
-        name: '梁桐铭',
-        role: '特邀嘉宾',
-        identity: '微软最有价值专家(MVP)',
-        describe:
-            '从2015年5月开始在国内的开源社区中进行推广ASP.NETBoilerplate Project开源框架，创建了”角落的白板报”博客及公众号，发表一些基础性文章来帮助大家提高开发技巧!代码生成器(ABP Code Generator)作者，辅助ABP框架以提高开发人员的效率。现主要关注于VSTS、Devops、区块链等方向的实践和落地。'
+        name: t('liang_tongming'),
+        role: t('special_guest'),
+        identity: t('microsoft_most_valuable_professional_mvp'),
+        describe: t('starting_from_may_2015_promote')
     },
     {
         avatar: lvyan,
-        name: '吕彦',
-        role: '特邀嘉宾',
-        identity: '高级项目经理',
-        describe:
-            '微软大中华区创新技术合作事业部高级项目经理。具有14年IT行业B2B市场经验，负责微软中国社区及校园精英项目'
+        name: t('lv_yan'),
+        role: t('special_guest'),
+        identity: t('senior_project_manager'),
+        describe: t('senior_project_manager_innovation')
     }
 ];
 
 export const sponsors = [
     {
-        title: '主办单位',
+        title: t('host_unit'),
         list: [
             {
                 title: '高新区创新创业服务中心',
@@ -171,7 +166,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '冠名单位',
+        title: t('title_sponsor'),
         list: [
             {
                 title: '成都新耀行房产营销策划',
@@ -180,7 +175,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '承办单位',
+        title: t('organizer1'),
         list: [
             {
                 title: '合创新业',
@@ -193,7 +188,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '平台提供',
+        title: t('platform_provider'),
         list: [
             {
                 title: '梦思特科技(成都)',
@@ -202,7 +197,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '合作伙伴',
+        title: t('business_partner'),
         list: [
             {
                 title: 'Github',
@@ -283,7 +278,7 @@ export const sponsors = [
         ]
     },
     {
-        title: '媒体伙伴',
+        title: t('media_partners'),
         list: [
             {
                 title: '四川省电视台',
