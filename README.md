@@ -39,7 +39,7 @@ npm start
 ### 导入素材
 
 ```shell
-node toolkit/import-assets path/to/media/folder
+npx tsx toolkit/import-assets path/to/media/folder
 ```
 
 [2]: https://github.com/FreeCodeCamp-Chengdu/Web-Conf/actions/workflows/main.yml

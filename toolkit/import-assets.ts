@@ -1,9 +1,7 @@
-#! /usr/bin/env node
+#! /usr/bin/env -S npx tsx
 
-const { extname, basename, join } = require('path'),
-    {
-        promises: { readdir, writeFile }
-    } = require('fs');
+import { readdir, writeFile } from 'fs/promises';
+import { basename, extname, join } from 'path';
 
 const folder = process.argv[2] || '.';
 
