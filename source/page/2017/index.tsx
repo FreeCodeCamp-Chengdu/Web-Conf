@@ -1,20 +1,20 @@
-import { Card, CardBody, CardImg, CardTitle, Button, Ratio } from 'boot-cell';
+import { Button, Card, CardBody, CardImg, CardTitle, Ratio } from 'boot-cell';
 import {
     Accordion,
     AccordionBody,
     AccordionHeader,
     AccordionItem
 } from 'boot-cell';
-import { i18n } from '../../i18n';
-import { LogoList } from './LogoList';
-import * as style from './index.module.less';
-import { guests, flows, logos, title } from './data';
+import { observer } from 'web-cell';
+
+import { t } from '../../i18n';
+import { flows, guests, logos, title } from './data';
 import { banner, qrcode } from './image';
+import * as style from './index.module.less';
+import { LogoList } from './LogoList';
 
-const { t } = i18n;
-
-export default () => (
-    <>
+export default observer(() => (
+    <div>
         <main className="container">
             <header id={style.logo}>
                 <img className="w-100" src={banner} />
@@ -32,7 +32,7 @@ export default () => (
                 </h2>
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
                     {guests().map(({ avatar, name, description }) => (
-                        <div className="col" key={name}>
+                        <div key={name} className="col">
                             <Card id={'guest_' + name}>
                                 <CardImg src={avatar} />
                                 <CardBody>
@@ -106,7 +106,11 @@ export default () => (
             <img className={style.qrcode} src={qrcode} />
             <p className="mt-0">
                 {t('special_thanks')}&nbsp;
-                <a target="_blank" href="http://918930.lofter.com">
+                <a
+                    target="_blank"
+                    href="http://918930.lofter.com"
+                    rel="noreferrer"
+                >
                     BBD - {t('wang_bo')}
                 </a>
                 &nbsp;
@@ -119,5 +123,5 @@ export default () => (
                 />
             </Ratio>
         </footer>
-    </>
-);
+    </div>
+));

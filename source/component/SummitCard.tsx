@@ -9,11 +9,9 @@ import {
 import { FC, observer } from 'web-cell';
 import { isXDomain } from 'web-utility';
 
-import { i18n } from '../i18n';
+import { t } from '../i18n';
 import { summits } from '../page/data';
 import * as style from './SummitCard.module.less';
-
-const { t } = i18n;
 
 export type SummitCardProps = ReturnType<typeof summits>[0] & CardProps;
 

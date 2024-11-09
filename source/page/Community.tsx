@@ -1,16 +1,14 @@
 import { Image } from 'boot-cell';
+import { observer } from 'web-cell';
 
-import { TopNavBar } from '../component/TopNavBar';
 import { Feature } from '../component/Feature';
-import { common_menu, features } from './data';
+import { TopNavBar } from '../component/TopNavBar';
+import { t } from '../i18n';
 import { FCC_CDC } from './2018/image';
+import { common_menu, features } from './data';
 
-import { i18n } from '../i18n';
-
-const { t } = i18n;
-
-export default () => (
-    <>
+export default observer(() => (
+    <div>
         <TopNavBar menu={common_menu()} />
         <header
             className="d-flex flex-column justify-content-center align-items-center"
@@ -29,5 +27,5 @@ export default () => (
                 </>
             ))}
         </main>
-    </>
-);
+    </div>
+));

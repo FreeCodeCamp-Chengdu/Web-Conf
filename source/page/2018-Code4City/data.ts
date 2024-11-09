@@ -1,57 +1,55 @@
-import gallery from './image/gallery';
-import { i18n } from '../../i18n';
+import { t } from '../../i18n';
 import {
-    hushenquan,
-    fanxiaobin,
-    shenchangkun,
-    maoyufeng,
-    wenqixiang,
-    liwanpeng,
-    qinglinbo,
-    zhangwei,
-    liangtongming,
-    lvyan
-} from './image/avatar';
-import {
-    cdht,
-    cdkfx,
-    XinYaoHang,
-    JRsquare,
-    Monstarlab,
-    github,
-    Microsoft,
-    tap4fun,
-    jhspace,
-    SegmentFault,
-    ThoughtWorks,
-    tedxChengDu,
-    mikecrm,
-    first,
-    jintai,
-    lvs,
-    yunpian,
-    sctv,
-    cdtv,
-    cdhttv,
-    sinasc,
-    scdaily,
-    fm940,
-    kct
-} from './image/logo';
-import {
-    FCC_CDG,
     BBD,
-    GDG,
     DevEco,
+    DKS,
+    FCC_CDG,
+    GDG,
     GT,
-    SYL,
     HCXY,
     JueJin,
     OSChina,
-    DKS
+    SYL
 } from '../2017/image/logos';
-
-const { t } = i18n;
+import {
+    fanxiaobin,
+    hushenquan,
+    liangtongming,
+    liwanpeng,
+    lvyan,
+    maoyufeng,
+    qinglinbo,
+    shenchangkun,
+    wenqixiang,
+    zhangwei
+} from './image/avatar';
+import gallery from './image/gallery';
+import {
+    cdht,
+    cdhttv,
+    cdkfx,
+    cdtv,
+    first,
+    fm940,
+    github,
+    jhspace,
+    jintai,
+    JRsquare,
+    kct,
+    lvs,
+    Microsoft,
+    mikecrm,
+    Monstarlab,
+    scdaily,
+    sctv,
+    SegmentFault,
+    sinasc,
+    tap4fun,
+    tedxChengDu,
+    ThoughtWorks,
+    XinYaoHang,
+    yunpian
+} from './image/logo';
 
 export const awards = () => [
     {

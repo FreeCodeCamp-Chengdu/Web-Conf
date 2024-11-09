@@ -1,20 +1,18 @@
-import { FC, observer } from 'web-cell';
 import {
     NavLink,
     NavLinkProps,
     OffcanvasNavbar,
     OffcanvasNavbarProps
 } from 'boot-cell';
+import { FC, observer } from 'web-cell';
 
-import { i18n, LanguageName } from '../i18n';
+import { i18n, LanguageName, t } from '../i18n';
 
 export interface TopNavBarProps extends OffcanvasNavbarProps {
     menu?: NavLinkProps[];
 }
 
 const OriginalURLPattern = /^(https?|#)/;
-
-const { t } = i18n;
 
 export const TopNavBar: FC<TopNavBarProps> = observer(
     ({ menu = [], ...rest }) => (

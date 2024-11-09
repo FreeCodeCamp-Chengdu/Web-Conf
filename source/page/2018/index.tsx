@@ -1,31 +1,30 @@
 import { Container, Ratio, Table } from 'boot-cell';
 import { Button, Image, Nav, NavLink } from 'boot-cell';
-import { Card, CardImg, CardBody, CardTitle } from 'boot-cell';
+import { Card, CardBody, CardImg, CardTitle } from 'boot-cell';
 import { marked } from 'marked';
+import { observer } from 'web-cell';
 
 import { TopNavBar } from '../../component/TopNavBar';
-import { LogoList } from './LogoList';
-import * as style from './index.module.less';
+import { t } from '../../i18n';
 import {
-    title,
-    sections,
-    lecturers,
-    schedule,
-    projects,
-    topics,
-    review,
+    companies,
     hosts,
-    sponsors,
+    lecturers,
     partners,
-    companies
+    projects,
+    review,
+    schedule,
+    sections,
+    sponsors,
+    title,
+    topics
 } from './data';
 import { poster, undraw_01, undraw_04 } from './image';
 import photos from './image/photos';
+import * as style from './index.module.less';
+import { LogoList } from './LogoList';
 
-import { i18n } from '../../i18n';
-const { t } = i18n;
-
-export default () => (
+export default observer(() => (
     <main className={style.root}>
         <TopNavBar
             brand={title()}
@@ -116,7 +115,7 @@ export default () => (
                     <div className="row row-cols-1 row-cols-md-3 g-3">
                         {projects().map(
                             ({ type, URL, title, detail, logo }) => (
-                                <div className="col" key={title}>
+                                <div key={title} className="col">
                                     <Card className="overflow-hidden">
                                         <CardImg src={logo} />
                                         <CardBody>
@@ -125,6 +124,7 @@ export default () => (
                                                     className="stretched-link text-primary"
                                                     target="_blank"
                                                     href={URL}
+                                                    rel="noreferrer"
                                                 >
                                                     {title}
                                                 </a>
@@ -293,4 +293,4 @@ export default () => (
             </Container>
         </footer>
     </main>
-);
+));

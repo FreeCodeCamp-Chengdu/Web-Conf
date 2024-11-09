@@ -1,16 +1,15 @@
-import { Container, Button, Image } from 'boot-cell';
+import { Button, Container, Image } from 'boot-cell';
 import { Carousel, CarouselCaption, CarouselItem } from 'boot-cell';
+import { observer } from 'web-cell';
 
+import { t } from '../../i18n';
+import { awards, review, sponsors, vips } from './data';
 import { GuestCard } from './GuestCard';
-import * as style from './index.module.less';
 import BG_mountain from './image/BG-mountain.png';
 import BG_points from './image/BG-points.png';
-import { review, awards, vips, sponsors } from './data';
+import * as style from './index.module.less';
 
-import { i18n } from '../../i18n';
-const { t } = i18n;
-
-export default () => (
+export default observer(() => (
     <main>
         <div
             className="text-light"
@@ -187,4 +186,4 @@ export default () => (
             </Container>
         </div>
     </main>
-);
+));

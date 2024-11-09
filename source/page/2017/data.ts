@@ -1,30 +1,27 @@
+import { t } from '../../i18n';
 import avatars from './image/guests';
 import {
-    QRGJ,
-    FCC_CDG,
-    BBD,
-    HCXY,
     _3W,
-    DevEco,
+    BBD,
     BW,
-    GT,
-    SYL,
-    QE,
-    JueJin,
-    OSChina,
-    SF,
-    ZDK,
-    MZ,
+    DevEco,
+    DKS,
+    FCC_CDG,
     GDG,
-    TW,
+    GT,
+    HCXY,
+    JueJin,
+    MZ,
+    OSChina,
+    QE,
+    QRGJ,
+    SF,
+    SYL,
     TH,
+    TW,
     WORK,
-    DKS
+    ZDK
 } from './image/logos';
-
-import { i18n } from '../../i18n';
-
-const { t } = i18n;
 
 export const title = () => t('chengdu_web_frontend_conference_2017');
 

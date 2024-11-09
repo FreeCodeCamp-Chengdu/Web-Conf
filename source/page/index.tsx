@@ -1,11 +1,9 @@
 import { createRouter } from 'cell-router';
 import { lazy, observer } from 'web-cell';
 
-import { i18n } from '../i18n';
+import { t } from '../i18n';
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import { HomePage } from './Home';
-
-const { t } = i18n;
 
 const CommunityPage = lazy(() => import('./Community')),
     ActivityPage = lazy(() => import('./Activity')),
@@ -41,14 +39,22 @@ const Footer = observer(() => (
                 <h4>{t('about_us')}</h4>
                 <p className="text-muted">
                     {t('nonprofit_organization')} &nbsp;
-                    <a target="_blank" href="https://www.freecodecamp.org/" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.freecodecamp.org/"
+                        rel="noreferrer"
+                    >
                         freeCodeCamp
                     </a>{' '}
                     &nbsp;
                     {t('since2014')}
                 </p>
                 <p className="text-muted">
-                    <a target="_blank" href="https://fcc-cd.dev/" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://fcc-cd.dev/"
+                        rel="noreferrer"
+                    >
                         freeCodeCamp {t('chengdu_community')}
                     </a>{' '}
                     &nbsp;

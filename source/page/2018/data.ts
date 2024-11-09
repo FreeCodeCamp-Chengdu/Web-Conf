@@ -1,38 +1,36 @@
+import { t } from '../../i18n';
+import { BW, JueJin, OSChina, SF, SYL } from '../2017/image/logos';
 import { FCC_CDC } from './image';
-import { JueJin, BW, SYL, OSChina, SF } from '../2017/image/logos';
+import {
+    Guo_DaFeng,
+    Guo_LinShuo,
+    Huang_Yi,
+    Quincy_Larson,
+    Si_Yue,
+    Xiong_Jie,
+    Yu_Che
+} from './image/lecturer';
 import {
     epubit,
     fezaoduke,
+    mikecrm,
     turing,
-    young,
-    mikecrm
+    young
 } from './image/logo/partner';
 import { BaiCiZhan, baozun, cocoet, sxl } from './image/logo/sponsor';
 import {
-    Quincy_Larson,
-    Xiong_Jie,
-    Huang_Yi,
-    Si_Yue,
-    Yu_Che,
-    Guo_LinShuo,
-    Guo_DaFeng
-} from './image/lecturer';
-import {
-    Deepin,
-    WebCell,
-    H5DS,
-    Fun_loading,
-    UKylin,
+    CD_LUG,
     Covariant_Script,
+    Deepin,
+    Fun_loading,
+    H5DS,
+    KaiYuanShe,
     PI6,
     React_Admin,
-    KaiYuanShe,
+    UKylin,
     Vena_Network,
-    CD_LUG
+    WebCell
 } from './image/project';
-import { i18n } from '../../i18n';
-
-const { t } = i18n;
 
 export const title = () => t('chengdu_web_frontend_conference_2018');
 
