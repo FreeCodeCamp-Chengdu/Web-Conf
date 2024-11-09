@@ -4,11 +4,8 @@ import { FC, observer } from 'web-cell';
 
 import { SummitCard } from '../component/SummitCard';
 import { TopNavBar } from '../component/TopNavBar';
+import { t } from '../i18n';
 import { common_menu, summits } from './data';
-
-import { i18n } from '../i18n';
-
-const { t } = i18n;
 
 export const HomePage: FC<PageProps> = observer(props => (
     <div {...props}>

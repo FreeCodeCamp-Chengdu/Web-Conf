@@ -1,13 +1,14 @@
-import groupBy from 'lodash.groupby';
-import { Jumbotron, Button, Tab, Tabs, Ratio, CountDown } from 'boot-cell';
+import { Button, CountDown, Jumbotron, Ratio, Tab, Tabs } from 'boot-cell';
 import { Card, CardBody, CardImg, CardTitle } from 'boot-cell';
+import groupBy from 'lodash.groupby';
+import { observer } from 'web-cell';
 
-import { PageFrame } from './PageFrame';
-import { TopicGroup, Topic } from './TopicGroup';
-import { PartnerGroup } from './PartnerGroup';
-
-import data from './data/index.json';
+import { t } from '../../i18n';
 import BuyCode from './data/BuyCode.png';
+import data from './data/index.json';
+import { PageFrame } from './PageFrame';
+import { PartnerGroup } from './PartnerGroup';
+import { Topic, TopicGroup } from './TopicGroup';
 
 const topicGroups = Object.entries(
     groupBy(data.topics, ({ date, place }) => `${date} ${place}`)
@@ -18,10 +19,7 @@ const topicGroups = Object.entries(
 );
 const partnerGroups = Object.entries(groupBy(data.partners, 'title'));
 
-import { i18n } from '../../i18n';
-const { t } = i18n;
-
-export default () => (
+export default observer(() => (
     <PageFrame>
         <Jumbotron
             className="text-center"
@@ -81,6 +79,7 @@ export default () => (
                                     className="stretched-link"
                                     target="_blank"
                                     href={'https://github.com/' + GitHub}
+                                    rel="noreferrer"
                                 >
                                     @{GitHub}
                                 </a>
@@ -121,5 +120,4 @@ export default () => (
             src={BuyCode}
         />
     </PageFrame>
-);
-//
+));

@@ -9,6 +9,8 @@ export const i18n = new TranslationModel({
     'en-US': () => import('./en-US')
 });
 
+export const { t } = i18n;
+
 export const LanguageName: Record<(typeof i18n)['currentLanguage'], string> = {
     'zh-CN': '简体中文',
     'zh-TW': '正體中文',

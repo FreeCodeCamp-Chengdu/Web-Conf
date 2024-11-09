@@ -19,7 +19,7 @@ export class Session extends BaseModel {
 
             return (this.user = body);
         } catch (error) {
-            if ((error as HTTPError).status !== 401) throw error;
+            if ((error as HTTPError).response.status !== 401) throw error;
         }
     }
 

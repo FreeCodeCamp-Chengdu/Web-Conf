@@ -1,13 +1,10 @@
+import { t } from '../i18n';
 import WeChat_QRC from '../image/FCC-CDG-WeChat.png';
 import { wechatLogo as banner_2017 } from './2017/image';
+import { FCC_CDC, poster as banner_2018 } from './2018/image';
 import gallery_Code4City from './2018-Code4City/image/gallery';
 import banner_2018_React from './2018-React/React-ChengDu.jpg';
-import { FCC_CDC, poster as banner_2018 } from './2018/image';
 import banner_2019 from './2019/data/banner.jpg';
-
-import { i18n } from '../i18n';
-
-const { t } = i18n;
 
 export const common_menu = () => [
     { title: t('organizer_introduction'), href: 'community' },

@@ -6,11 +6,13 @@
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "target": "ES6",
-        "allowJs": true,
+        "checkJs": true,
         "useDefineForClassFields": true,
         "jsx": "react-jsx",
         "jsxImportSource": "dom-renderer",
-        "lib": ["ES2023", "DOM"]
+        "skipLibCheck": true,
+        "lib": ["ESNext", "DOM"],
+        "outDir": "dist"
     },
-    "include": ["./source/**/*"]
+    "include": ["**/*", "*.mjs"]
 }

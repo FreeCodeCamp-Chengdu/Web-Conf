@@ -1,12 +1,10 @@
-import { WebCell, component, observer } from 'web-cell';
-import { parseTextTable } from 'web-utility';
 import { Table } from 'boot-cell';
 import { computed, observable } from 'mobx';
+import { component, observer, WebCell } from 'web-cell';
+import { parseTextTable } from 'web-utility';
 
-import { i18n } from '../../i18n';
+import { t } from '../../i18n';
 import { PageFrame } from './PageFrame';
-
-const { t } = i18n;
 
 type Account = Record<'item' | 'manager' | 'date' | 'remark', string> &
     Record<'price' | 'count', number>;
@@ -56,7 +54,11 @@ export default class AccountPage extends HTMLElement implements WebCell {
             <td className="text-right">{count}</td>
             <td>
                 {manager && (
-                    <a target="_blank" href={'https://github.com/' + manager}>
+                    <a
+                        target="_blank"
+                        href={'https://github.com/' + manager}
+                        rel="noreferrer"
+                    >
                         @{manager}
                     </a>
                 )}
